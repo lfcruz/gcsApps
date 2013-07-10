@@ -41,30 +41,30 @@
     $accounttype4=$_POST['accounttype4'];
     $alias4=$_POST['alias4'];
     
-    $account5=$_POST['account4'];
-    $accounttype5=$_POST['accounttype4'];
-    $alias5=$_POST['alias4'];
+    $account5=$_POST['account5'];
+    $accounttype5=$_POST['accounttype5'];
+    $alias5=$_POST['alias5'];
 
-    $account6=$_POST['account4'];
-    $accounttype6=$_POST['accounttype4'];
-    $alias6=$_POST['alias4'];
+    $account6=$_POST['account6'];
+    $accounttype6=$_POST['accounttype6'];
+    $alias6=$_POST['alias6'];
 
-    $account7=$_POST['account4'];
-    $accounttype7=$_POST['accounttype4'];
-    $alias7=$_POST['alias4'];
+    $account7=$_POST['account7'];
+    $accounttype7=$_POST['accounttype7'];
+    $alias7=$_POST['alias7'];
 
-    $account8=$_POST['account4'];
-    $accounttype8=$_POST['accounttype4'];
-    $alias8=$_POST['alias4'];
+    $account8=$_POST['account8'];
+    $accounttype8=$_POST['accounttype8'];
+    $alias8=$_POST['alias8'];
     
     $cuenta1=$_POST['cuenta1'];
     $cuenta2=$_POST['cuenta2'];
     $cuenta3=$_POST['cuenta3'];
     $cuenta4=$_POST['cuenta4'];
-    $cuenta5=$_POST['cuenta1'];
-    $cuenta6=$_POST['cuenta2'];
-    $cuenta7=$_POST['cuenta3'];
-    $cuenta8=$_POST['cuenta4'];
+    $cuenta5=$_POST['cuenta5'];
+    $cuenta6=$_POST['cuenta6'];
+    $cuenta7=$_POST['cuenta7'];
+    $cuenta8=$_POST['cuenta8'];
 
 
 //Define the form components on page load --------------------------------------
@@ -72,7 +72,7 @@
         echo '<form name="form1" method="post" action="">';
             echo 'Seleccione el Ambiente: ';
             echo '<select name="environment">';
-                echo '<option value="172.19.3.23">Desarrollo</option>';
+                echo '<option value="172.19.1.19">Desarrollo</option>';
                 echo '<option value="172.19.3.12">Staging</option>';
                 echo '<option value="172.19.3.41">Neoris</option>';
                 echo '</select></br>';
@@ -100,7 +100,7 @@
                 echo '<option value="PASAPORTE">Pasaporte</option>';
                 echo '</select></br>';
             echo 'Digite Telefono : <input type="text" name="MSISDN" value="">';
-            echo 'Digite la Cedula: <input type="text" name="documento" value=""><br/>';
+            echo 'Digite la Cedula: <input type="text" name="documento" value=""><br/>';            
             echo 'Cuenta 1: <input type="checkbox" name="cuenta1" value="active"><input type="text" name="account" value="*****3631" readonly>';
                 echo 'Tipo 1: <input type="text" name="accounttype" value="SAV">';
                 echo 'Alias 1: <input type="text" name="alias" value="sav01-" ><br/>';
@@ -110,7 +110,6 @@
             echo 'Cuenta 3: <input type="checkbox" name="cuenta3" value="active"><input type="text" name="account3" value="*****3633" readonly>';
                 echo 'Tipo 3: <input type="text" name="accounttype3" value="SAV">';
                 echo 'Alias 3: <input type="text" name="alias3" value="sav03-" ><br/>';
-                
             echo 'Cuenta 4: <input type="checkbox" name="cuenta4" value="active"><input type="text" name="account4" value="*****3634" readonly>';
                 echo 'Tipo 4: <input type="text" name="accounttype4" value="DDA">';
                 echo 'Alias 4: <input type="text" name="alias4" value="dda01-" ><br/>';
