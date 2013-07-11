@@ -240,78 +240,80 @@ if($bank != null && $environment != null && $telco != null && $tipodoc != null) 
         $tmp["BANKID"]=$bank;
         $tmp->CLIENT["ID"]=$documento;
         if($tipodoc=="CEDULA"){
-        $tmp->CLIENT["TYPE"]="CEDULA";
-        }else $tmp->CLIENT["TYPE"]="PASAPORTE";
+            $tmp->CLIENT["TYPE"]="CEDULA";
+        }else{
+            $tmp->CLIENT["TYPE"]="PASAPORTE";
+        }
         $tmp->CLIENT["TELEPHONE"]=$msisdn;
         $tmp->CLIENT["TELCOID"]=$telco;
         $tmp->CLIENT["BPSEQUENCE"]=str_pad(rand(0,999999), 6, "0", STR_PAD_LEFT);
 
         $order=0;
         if($cuenta1 != null){
-        $tmp->PRODUCTS->PRODUCT[$order]["ID"]="01";
-        $tmp->PRODUCTS->PRODUCT[$order]["ACCOUNT"]=$account;
-        $tmp->PRODUCTS->PRODUCT[$order]["TYPE"]=$accounttype;
-        $tmp->PRODUCTS->PRODUCT[$order]["CURRENCY"]="DOP";
-        $tmp->PRODUCTS->PRODUCT[$order]["ALIAS"]=$alias;
+            $tmp->PRODUCTS->PRODUCT[$order]["ID"]='0'.$order+1;
+            $tmp->PRODUCTS->PRODUCT[$order]["ACCOUNT"]=$account;
+            $tmp->PRODUCTS->PRODUCT[$order]["TYPE"]=$accounttype;
+            $tmp->PRODUCTS->PRODUCT[$order]["CURRENCY"]="DOP";
+            $tmp->PRODUCTS->PRODUCT[$order]["ALIAS"]=$alias;
         $order+=1;
         }
         if($cuenta2 != null){
-        $tmp->PRODUCTS->PRODUCT[$order]["ID"]="02";
-        $tmp->PRODUCTS->PRODUCT[$order]["ACCOUNT"]=$account2;
-        $tmp->PRODUCTS->PRODUCT[$order]["TYPE"]=$accounttype2;
-        $tmp->PRODUCTS->PRODUCT[$order]["CURRENCY"]="DOP";
-        $tmp->PRODUCTS->PRODUCT[$order]["ALIAS"]=$alias2;
-        $order+=1;
+            $tmp->PRODUCTS->PRODUCT[$order]["ID"]='0'.$order+1;
+            $tmp->PRODUCTS->PRODUCT[$order]["ACCOUNT"]=$account2;
+            $tmp->PRODUCTS->PRODUCT[$order]["TYPE"]=$accounttype2;
+            $tmp->PRODUCTS->PRODUCT[$order]["CURRENCY"]="DOP";
+            $tmp->PRODUCTS->PRODUCT[$order]["ALIAS"]=$alias2;
+            $order+=1;
         }
         if($cuenta3 != null){
-        $tmp->PRODUCTS->PRODUCT[$order]["ID"]="03";
-        $tmp->PRODUCTS->PRODUCT[$order]["ACCOUNT"]=$account3;
-        $tmp->PRODUCTS->PRODUCT[$order]["TYPE"]=$accounttype3;
-        $tmp->PRODUCTS->PRODUCT[$order]["CURRENCY"]="DOP";
-        $tmp->PRODUCTS->PRODUCT[$order]["ALIAS"]=$alias3;
-        $order+=1;
+            $tmp->PRODUCTS->PRODUCT[$order]["ID"]='0'.$order+1;
+            $tmp->PRODUCTS->PRODUCT[$order]["ACCOUNT"]=$account3;
+            $tmp->PRODUCTS->PRODUCT[$order]["TYPE"]=$accounttype3;
+            $tmp->PRODUCTS->PRODUCT[$order]["CURRENCY"]="DOP";
+            $tmp->PRODUCTS->PRODUCT[$order]["ALIAS"]=$alias3;
+            $order+=1;
         }
         if($cuenta4 != null){
-        $tmp->PRODUCTS->PRODUCT[$order]["ID"]="04";
-        $tmp->PRODUCTS->PRODUCT[$order]["ACCOUNT"]=$account4;
-        $tmp->PRODUCTS->PRODUCT[$order]["TYPE"]=$accounttype4;
-        $tmp->PRODUCTS->PRODUCT[$order]["CURRENCY"]="DOP";
-        $tmp->PRODUCTS->PRODUCT[$order]["ALIAS"]=$alias4;
-        $order+=1;
+            $tmp->PRODUCTS->PRODUCT[$order]["ID"]='0'.$order+1;
+            $tmp->PRODUCTS->PRODUCT[$order]["ACCOUNT"]=$account4;
+            $tmp->PRODUCTS->PRODUCT[$order]["TYPE"]=$accounttype4;
+            $tmp->PRODUCTS->PRODUCT[$order]["CURRENCY"]="DOP";
+            $tmp->PRODUCTS->PRODUCT[$order]["ALIAS"]=$alias4;
+            $order+=1;
         }
         if($cuenta5 != null){
-        $tmp->PRODUCTS->PRODUCT[$order]["ID"]="05";
-        $tmp->PRODUCTS->PRODUCT[$order]["ACCOUNT"]=$account5;
-        $tmp->PRODUCTS->PRODUCT[$order]["TYPE"]=$accounttype5;
-        $tmp->PRODUCTS->PRODUCT[$order]["CURRENCY"]="DOP";
-        $tmp->PRODUCTS->PRODUCT[$order]["ALIAS"]=$alias5;
-        $order+=1;
+            $tmp->PRODUCTS->PRODUCT[$order]["ID"]='0'.$order+1;
+            $tmp->PRODUCTS->PRODUCT[$order]["ACCOUNT"]=$account5;
+            $tmp->PRODUCTS->PRODUCT[$order]["TYPE"]=$accounttype5;
+            $tmp->PRODUCTS->PRODUCT[$order]["CURRENCY"]="DOP";
+            $tmp->PRODUCTS->PRODUCT[$order]["ALIAS"]=$alias5;
+            $order+=1;
         }
         if($cuenta6 != null){
-        $tmp->PRODUCTS->PRODUCT[$order]["ID"]="06";
-        $tmp->PRODUCTS->PRODUCT[$order]["ACCOUNT"]=$account6;
-        $tmp->PRODUCTS->PRODUCT[$order]["TYPE"]=$accounttype6;
-        $tmp->PRODUCTS->PRODUCT[$order]["CURRENCY"]="DOP";
-        $tmp->PRODUCTS->PRODUCT[$order]["ALIAS"]=$alias6;
-        $order+=1;
+            $tmp->PRODUCTS->PRODUCT[$order]["ID"]='0'.$order+1;
+            $tmp->PRODUCTS->PRODUCT[$order]["ACCOUNT"]=$account6;
+            $tmp->PRODUCTS->PRODUCT[$order]["TYPE"]=$accounttype6;
+            $tmp->PRODUCTS->PRODUCT[$order]["CURRENCY"]="DOP";
+            $tmp->PRODUCTS->PRODUCT[$order]["ALIAS"]=$alias6;
+            $order+=1;
         }
         if($cuenta7 != null){
-        $tmp->PRODUCTS->PRODUCT[$order]["ID"]="07";
-        $tmp->PRODUCTS->PRODUCT[$order]["ACCOUNT"]=$account7;
-        $tmp->PRODUCTS->PRODUCT[$order]["TYPE"]=$accounttype7;
-        $tmp->PRODUCTS->PRODUCT[$order]["CURRENCY"]="DOP";
-        $tmp->PRODUCTS->PRODUCT[$order]["ALIAS"]=$alias7;
-        $order+=1;
+            $tmp->PRODUCTS->PRODUCT[$order]["ID"]='0'.$order+1;
+            $tmp->PRODUCTS->PRODUCT[$order]["ACCOUNT"]=$account7;
+            $tmp->PRODUCTS->PRODUCT[$order]["TYPE"]=$accounttype7;
+            $tmp->PRODUCTS->PRODUCT[$order]["CURRENCY"]="DOP";
+            $tmp->PRODUCTS->PRODUCT[$order]["ALIAS"]=$alias7;
+            $order+=1;
         }
         if($cuenta8 != null){
-        $tmp->PRODUCTS->PRODUCT[$order]["ID"]="08";
-        $tmp->PRODUCTS->PRODUCT[$order]["ACCOUNT"]=$account8;
-        $tmp->PRODUCTS->PRODUCT[$order]["TYPE"]=$accounttype8;
-        $tmp->PRODUCTS->PRODUCT[$order]["CURRENCY"]="DOP";
-        $tmp->PRODUCTS->PRODUCT[$order]["ALIAS"]=$alias8;
+            $tmp->PRODUCTS->PRODUCT[$order]["ID"]='0'.$order+1;
+            $tmp->PRODUCTS->PRODUCT[$order]["ACCOUNT"]=$account8;
+            $tmp->PRODUCTS->PRODUCT[$order]["TYPE"]=$accounttype8;
+            $tmp->PRODUCTS->PRODUCT[$order]["CURRENCY"]="DOP";
+            $tmp->PRODUCTS->PRODUCT[$order]["ALIAS"]=$alias8;
         }
 
-        //var_dump($tmp);
+        var_dump($tmp);
 
         //send message 800 to core
         $sock = socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
