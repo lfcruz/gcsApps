@@ -313,7 +313,7 @@ if($bank != null && $environment != null && $telco != null && $tipodoc != null) 
             $tmp->PRODUCTS->PRODUCT[$order]["ALIAS"]=$alias8;
         }
 
-        var_dump($tmp);
+        //var_dump($tmp);
 
         //send message 800 to core
         $sock = socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
