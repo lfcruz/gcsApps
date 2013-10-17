@@ -27,7 +27,7 @@ $today = date("Ymd");
 $now = date("His");
 //ABRIR SOCKET PARA ENVIAR MSG
 $socket  = socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
-socket_connect($socket, "172.19.1.19", 8888);
+socket_connect($socket, "172.19.1.20", 8556);
 //ARMAR MENSAJE Y PONERLO EN LA VARIABLE $OUT
 
 // pregunto si la identificacion es cedula
@@ -63,7 +63,7 @@ $responsecode= $tmp->TRANSACTION["RESPONSECODE"];
 if ($responsecode=='0') {
     echo "<b>La Desafiliacion ha sido exitosa!!!!</b>";
     $docInfo = dbpg_query($dbpgStructure);
-    $detachResult = detachPhone('172.19.1.243', $docInfo[1], $docInfo[2], $docInfo[0]);
+    $detachResult = detachPhone('172.19.1.20', $docInfo[1], $docInfo[2], $docInfo[0]);
 header('Location: unEnrollment.php');
 }else {
 echo "se ha producido un error en el proceso. El Error fue..".$responsecode;

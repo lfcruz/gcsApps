@@ -93,7 +93,7 @@ function attachPhone($enviroment,$docType,$docNumber,$phoneNumber)
 function detachPhone($enviroment,$docType,$docNumber,$phoneNumber)
 {
     global $mwHeader;
-    $url = "http://$enviroment:8443/cardholder/$docType/$docNumber/phones/$phoneNumber";
+    $url = "http://$enviroment:6080/cardholder/$docType/$docNumber/phones/$phoneNumber";
     $requestResult = do_post_request($url, null, $mwHeader, 'DELETE');
     $jsonResult = json_decode($requestResult,true);
     return $jsonResult;
@@ -166,7 +166,7 @@ function accountsAttach($enviroment,$msg)
 function vCashFinantials($enviroment,$financialStructure,$docType,$docNumber)
 {
     global $mwHeader;
-    $url = "http://$enviroment:8443/cardholder/$docType/$docNumber/financial";
+    $url = "http://$enviroment:6080/cardholder/$docType/$docNumber/financial";
     $requestResult = do_post_request($url, json_encode($financialStructure), $mwHeader, 'POST');
     $jsonResult = json_decode($requestResult,true);
     return $jsonResult;    
@@ -303,31 +303,21 @@ function dbpg_query($dbpgStructure)
     return $recordString;
 }
 
-function dbora_query($dbpgStructure)
+function dbora_query($dboraStructure)
 {
     // Connecting to Database ------------------------------------------------------
-    $connectorString = "host=".$dbpgStructure['dbIP'].
-                       " port=".$dbpgStructure['dbPort'].
-                       " dbname=".$dbpgStructure['dbName'].
-                       " user=".$dbpgStructure['dbUser'].
-                       " password=".$dbpgStructure['dbPassword'];
-    $dbConnector = pg_connect($connectorString);
+    $connectorString = '(DESCRIPTION = (CONNECT_TIMEOUT=5) (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST ='.$dboraStructure['dbIP'].')(PORT = '.$dboraStructure['dbPort'].')))(CONNECT_DATA=(SID= '.$dboraStructure['dbName'].')))';
+    $dbConnector = oci_connect($dboraStructure['dbUser'],$dboraStructure['dbPassword'],$connectorString);
     if (!$dbConnector){
         echo 'Failed connection.......';
     }
     else {
-        pg_prepare($dbConnector,$dbpgStructure['dbQueryName'],$dbpgStructure['dbQuery']);
+        $oraQuery = oci_parse($dbConnector,$dbpgStructure['dbQueryName'],$dbpgStructure['dbQuery']);
     }
     
-    $queryResult = pg_execute($dbConnector,$dbpgStructure['dbQueryName'],$dbpgStructure['dbQueryVariables']);
-    
-    if (!$queryResult){
-        echo 'Failed to get result......';
-    }
-    else {
-        $recordString = pg_fetch_row($queryResult);
-    }
-    pg_close($dbConnector);
+    oci_execute($oraQuery);
+    $recordString = pg_fetch_row($oraQuery);
+    oci_close($dbConnector);
     return $recordString;
 }
 
@@ -335,9 +325,29 @@ function dbora_query($dbpgStructure)
 function vCashOut($enviroment,$phone,$amount)
 {
     global $mwHeader;
-    $url = "http://$enviroment:8443/cashout/$phone";
+    $url = "http://$enviroment:6080/cashout/$phone";
     $requestResult = do_post_request($url, json_encode($amount), $mwHeader, 'PUT');
     $jsonResult = json_decode($requestResult,true);
     return $jsonResult;    
+}
+
+function sentToSocket($enviroment,$port,$msg){
+  //create a socket to send message to core
+    $sock = socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
+    socket_connect($sock, $enviroment, $port);
+    $sent = socket_write($sock, $msg->asXML(), strlen($msg->asXML()));
+
+    //read response message from core
+    $input = socket_read($sock, 1024);
+    $dom = new DOMDocument;
+    $dom->loadXML($input);
+    if (!$dom) {
+        $result = '9903';
+    }
+    else{
+        $result = simplexml_import_dom($dom);
+    }
+    socket_close($sock);
+    return $result;
 }
 ?>

@@ -7,7 +7,7 @@
 <body>
 <?php
         include 'addedFunctions.php';
-        $dbpgStructure = array ("dbIP" => "172.19.1.236",
+        $dbpgStructure = array ("dbIP" => $_POST['enviroment1'],
                                     "dbPort" => "5432",
                                     "dbName" => "vcash",
                                     "dbUser" => "sa",
@@ -27,12 +27,17 @@
                                                          "name" => "Purperia Pancracio",
                                                          "city" => "San Salvador",
                                                          "country" => "SV"));
+        $enviroment = $_POST['enviroment1'];
                     
         echo '<div id="header">';
         echo '<h2> Cash In </h2>';
         echo '</div>';
         echo '<form name="form1" method="post" action="">';
         echo 'Por favor introduzca la informacion solicitada:<br/>';
+        echo '<select name="environment1">';
+        echo '<option value="172.19.3.39">Cafe</option>';
+        echo '<option value="172.19.3.41">Neoris</option>';
+        echo '</select></br>';
         echo 'Telefono: <input type="text" name="phone1" value=""><br/>';
         echo 'Monto   : <input type="text" name="amount1" value=""><br/>';
         echo '<div>';
@@ -42,7 +47,7 @@
 
         if($cashInStructure['phone'] !== null and $cashInStructure['amount'] !== null){
             $docInfo = dbpg_query($dbpgStructure);
-            $cashInResult = vCashFinantials('172.19.1.243', $cashInStructure, $docInfo[1], $docInfo[2]);
+            $cashInResult = vCashFinantials($enviroment, $cashInStructure, $docInfo[1], $docInfo[2]);
             if ($cashInResult == null){
                 echo "<br/><p>Resultado Cash-In: 0000 </p><br/>";
             }
