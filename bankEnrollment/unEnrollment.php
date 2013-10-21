@@ -17,12 +17,11 @@ $telefono=$_POST['telefono'];
 
 $user='gcsdevusr';
 $pass='gcsdevusr';
-$db = '(DESCRIPTION = (CONNECT_TIMEOUT=5) (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = 172.19.1.240)(PORT = 1521)))(CONNECT_DATA=(SID=gcsdev2)))';
+$db = '(DESCRIPTION = (CONNECT_TIMEOUT=5) (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = 172.19.3.44)(PORT = 1521)))(CONNECT_DATA=(SID=gcsdev2)))';
 $c=  oci_connect($user, $pass, $db);
 echo 'Connected.......<br/>';
 //$s = oci_parse($c, "select * from v_enrollment WHERE MSISDN='$telefono' and status='A'");
-$s = oci_parse($c, "select a.msisdn,c.partner_id,b.id,a.status cel_status,b.status ced_status,b.id_type id_type from pre_gcscustomer_enrollment_m a,
-r_gcscustomer_account_m b, partner_m c where a.gcs_account_id=b.gcs_account_id and a.partner_code=c.partner_code and a.status in ('A','PA','PAB') and b.status in ('A','NA') and msisdn='$telefono'");
+$s = oci_parse($c, "select a.msisdn,c.partner_id,b.id,a.status cel_status,b.status ced_status,b.id_type id_type from pre_gcscustomer_enrollment_m a,r_gcscustomer_account_m b, partner_m c where a.gcs_account_id=b.gcs_account_id and a.partner_code=c.partner_code and a.status in ('A','PA','PAB') and b.status in ('A','NA') and msisdn='$telefono'");
 oci_execute($s);
 //while (($row = oci_fetch_array($s, OCI_ASSOC))) {
   //    echo "BANCO....".$row['PARTNER_CODE']. "\n";

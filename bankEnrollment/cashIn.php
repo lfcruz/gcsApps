@@ -34,7 +34,7 @@
         echo '</div>';
         echo '<form name="form1" method="post" action="">';
         echo 'Por favor introduzca la informacion solicitada:<br/>';
-        echo '<select name="environment1">';
+        echo '<select name="enviroment1">';
         echo '<option value="172.19.3.39">Cafe</option>';
         echo '<option value="172.19.3.41">Neoris</option>';
         echo '</select></br>';

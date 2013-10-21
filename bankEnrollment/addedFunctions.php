@@ -285,7 +285,7 @@ function dbpg_query($dbpgStructure)
                        " password=".$dbpgStructure['dbPassword'];
     $dbConnector = pg_connect($connectorString);
     if (!$dbConnector){
-        echo 'Failed connection.......';
+        echo 'Failed connection.......'  . $dbpgStructure['dbIP'] . ' ' . $dbpgStructure['dbPort'];
     }
     else {
         pg_prepare($dbConnector,$dbpgStructure['dbQueryName'],$dbpgStructure['dbQuery']);
@@ -312,15 +312,14 @@ function dbora_query($dboraStructure)
         echo 'Failed connection.......';
     }
     else {
-        $oraQuery = oci_parse($dbConnector,$dbpgStructure['dbQueryName'],$dbpgStructure['dbQuery']);
+        $oraQuery = oci_parse($dbConnector,$dboraStructure['dbQuery']);
     }
     
     oci_execute($oraQuery);
-    $recordString = pg_fetch_row($oraQuery);
+    $recordString = oci_fetch_row($oraQuery);
     oci_close($dbConnector);
     return $recordString;
 }
-
 
 function vCashOut($enviroment,$phone,$amount)
 {
