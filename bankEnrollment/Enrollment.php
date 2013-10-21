@@ -104,11 +104,21 @@ if($formStructure["bank"] != null && $formStructure["enviroment"] != null && $fo
     //complete message mobileWalle Structure
     $mwStructure["bankId"] = 'BPD'; //$formStructure["bank"];.
     $mwStructure["id"] = $formStructure["document"];
-    if($formStructure["docType"] == "CEDULA"){
-        $mwStructure["idType"] = "CSV";
+    if ($enviroment === '172.19.3.41'){
+        if($formStructure["docType"] == "CEDULA"){
+            $mwStructure["idType"] = "CSV";
+        }
+        else{ 
+            $mwStructure["idType"] = "PSV";
+        }
     }
-    else{ 
-        $mwStructure["idType"] = "PSV";
+    else {
+        if($formStructure["docType"] == "CEDULA"){
+            $mwStructure["idType"] = "CDO";
+        }
+        else{ 
+            $mwStructure["idType"] = "PDO";
+        }        
     }
     $mwStructure["telephone"] = $formStructure["msisdn"];
     

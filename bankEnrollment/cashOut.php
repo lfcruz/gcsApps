@@ -20,7 +20,7 @@
                                       "operation" => "CASH-OUT",
                                       "phone" => $_POST['phone1'],
                                       "amount" => $_POST['amount1'],
-                                      "currency" => "USD",
+                                      "currency" => "DOP",
                                       "reasonCode" => "11404",
                                       "options" => array ("code" => $_POST['code1']),
                                       "origin" => array ("id" => "18828",
@@ -47,6 +47,9 @@
         echo '</form>';
 
         if($cashOutStructure['phone'] !== null and $cashOutStructure['amount'] !== null){
+            if ($_POST['enviroment1' == '172.19.3.41']){
+                $cashOutStructure['currency'] = "USD";
+            }
             $docInfo = dbpg_query($dbpgStructure);
             $cashOutResult = vCashFinantials($enviroment, $cashOutStructure, $docInfo[1], $docInfo[2]);    
             if ($cashOutResult == null){
