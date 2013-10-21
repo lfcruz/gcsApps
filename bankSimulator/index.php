@@ -33,7 +33,7 @@ $log->info("Super REP Bank Simulator ".date('d-m-Y h:i:s.u')."\nStatus: UP and W
 //==========================================================
 //Set address to listen and port
 $address = 'localhost';
-$port = 8889;
+$port = 8777;
 
 $sock = socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
 // Bind the socket to an address/port
@@ -67,9 +67,6 @@ $tmp = simplexml_import_dom($dom);
 
 switch($tmp["TYPE"]){
 
-    case "300":
-        $tmp2=msg300($tmp);
-        break;
     case "500":
         $tmp2=msg500($tmp);
         break;
@@ -78,33 +75,6 @@ switch($tmp["TYPE"]){
         break;
     case "400":
         $tmp2=msg400($tmp);
-        break;
-    case "540":
-        $tmp2=msg540($tmp);
-        break;
-    case "111":
-        $tmp2=msg111($tmp);
-        break;
-    case "879":
-        $tmp2=msg879($tmp);
-        break;
-    case "815":
-        $tmp2=msg815($tmp);
-        break;
-    case "920":
-        $tmp2=msg920($tmp);
-        break;
-    case "320":
-        $tmp2=msg320($tmp);
-        break;
-    case "415":
-        $tmp2=msg415($tmp);
-        break;
-    case "515":
-        $tmp2=msg515($tmp);
-        break;
-    case "517":
-        $tmp2=msg517($tmp);
         break;
     default:
         $log->warn("Message not created !!!\n");
