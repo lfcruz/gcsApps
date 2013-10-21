@@ -32,7 +32,7 @@ $log->info("Super REP Bank Simulator ".date('d-m-Y h:i:s.u')."\nStatus: UP and W
 
 //==========================================================
 //Set address to listen and port
-$address = '*';
+$address = 'localhost';
 $port = 8889;
 
 $sock = socket_create(AF_INET, SOCK_STREAM, SOL_TCP);

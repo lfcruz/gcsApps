@@ -89,10 +89,10 @@ function msg100($msg)
     $result = simplexml_import_dom($msg);
     
     if ($msg->CLIENT["TYPE"] == 'CEDULA'){
-        $docType = 'CSV';
+        $docType = 'CDO';
     }
     else {
-        $docType = 'PSV';
+        $docType = 'PDO';
     }
     
     $debcreStructure["id"] = $msg["CORRELATIONID"];
@@ -103,7 +103,7 @@ function msg100($msg)
     $debcreStructure["reasoncode"] = $msg->TRANSACTION["TRANSACTIONTYPE"]."-".$msg->TRANSACTION["SUBTRANSACTIONTYPE"];
     
     
-    $url = "http://$enviroment:6080/cardholder/$docType/".$msg->CLIENT["ID"]."/financial";
+    $url = "http://172.19.3.39:6080/cardholder/$docType/".$msg->CLIENT["ID"]."/financial";
     $requestResult = do_post_request($url, json_encode($debcreStructure), $mwHeader, 'POST');
     $jsonResult = json_decode($requestResult,true);
     
@@ -128,10 +128,10 @@ function msg400($msg)
     $result = simplexml_import_dom($msg);
     
     if ($msg->CLIENT["TYPE"] == 'CEDULA'){
-        $docType = 'CSV';
+        $docType = 'CDO';
     }
     else {
-        $docType = 'PSV';
+        $docType = 'PDO';
     }
     
     $debcreStructure["id"] = $msg["CORRELATIONID"];
@@ -142,7 +142,7 @@ function msg400($msg)
     $debcreStructure["reasoncode"] = $msg->TRANSACTION["TRANSACTIONTYPE"]."-".$msg->TRANSACTION["SUBTRANSACTIONTYPE"];
     
     
-    $url = "http://$enviroment:6080/cardholder/$docType/".$msg->CLIENT["ID"]."/financial";
+    $url = "http://172.19.3.39:6080/cardholder/$docType/".$msg->CLIENT["ID"]."/financial";
     $requestResult = do_post_request($url, json_encode($debcreStructure), $mwHeader, 'POST');
     $jsonResult = json_decode($requestResult,true);
     
@@ -159,7 +159,42 @@ function msg400($msg)
 
 }
 
+function msg500($msg)
+{
+    global $mwHeader;
+    $docType = "";
+    
+    $result = simplexml_import_dom($msg);
+    
+    if ($msg->CLIENT["TYPE"] == 'CEDULA'){
+        $docType = 'CDO';
+    }
+    else {
+        $docType = 'PDO';
+    }
+    
+    $url = "http://172.19.3.39:6080/cardholder/$docType/".$msg->CLIENT["ID"];
+    $requestResult = do_post_request($url, null, $mwHeader, 'GET');
+    $jsonResult = json_decode($requestResult,true);
+    
+    $result["TYPE"] = "510";
+    if (array_key_exists('error',$jsonResult)){
+        $result->TRANSACTION["RESPONSECODE"] = $jsonResult["error"]["code"];
+    }
+    else {
+        $result->TRANSACTION["RESPONSECODE"] = "0000";
+        $result->TRANSACTION["AMOUNT"] = $jsonResult['balance']['available'];
+        $result->TRANSACTION["CURRENTBALANCE"] = $jsonResult['balance']['available'];
+        $result->TRANSACTION["DUEPAYMENT"] = "0.00";
+        $result->TRANSACTION["PAYOFFAMOUNT"] = "";
+        $result->TRANSACTION["MINPAYMENT"] = "0.00";
+        $result->TRANSACTION["DUEDATE"] = "";
+    }
+    $result->TRANSACTION["BPSEQUENCE"] = str_pad(rand(0,999999), 6, "0", STR_PAD_LEFT);
+    
+    return $result;
 
+}
 
 
 ?>

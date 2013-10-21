@@ -3,3 +3,80 @@ INFO - Super REP Bank Simulator 29-09-2013 06:58:22.000000
 Status: UP and Waiting for Messages 
 
 ERROR - Cannot bind address, port already use?
+INFO - Super REP Bank Simulator 16-10-2013 06:24:26.000000
+Status: UP and Waiting for Messages 
+
+ERROR - Cannot bind address, port already use?
+INFO - Super REP Bank Simulator 16-10-2013 06:25:54.000000
+Status: UP and Waiting for Messages 
+
+INFO - =================== Socket Open =================== 16-10-2013 06:26:04.000000
+
+INFO - <- Receive -> 
+fsdf
+
+
+WARN - Message not created !!!
+
+INFO - =================== Socket Close ================== 16-10-2013 06:26:04.000000
+
+INFO - =================== Socket Open =================== 16-10-2013 06:26:25.000000
+
+INFO - <- Receive -> 
+
+
+
+WARN - Message not created !!!
+
+INFO - =================== Socket Close ================== 16-10-2013 06:26:25.000000
+
+INFO - =================== Socket Open =================== 16-10-2013 06:37:40.000000
+
+INFO - <- Receive -> 
+<MESSAGE TYPE="100" BANKID="DKT" CORRELATIONID="YYYYMMDD999999"><CLIENT ID="00112875455" TYPE="CEDULA" GCSSEQUENCE="123456" TELEPHONE="62008235" />
+
+
+WARN - Message not created !!!
+
+INFO - =================== Socket Close ================== 16-10-2013 06:37:40.000000
+
+INFO - =================== Socket Open =================== 16-10-2013 06:39:54.000000
+
+INFO - <- Receive -> 
+<MESSAGE TYPE="100" BANKID="DKT" CORRELATIONID="YYYYMMDD999999"><CLIENT ID="00112875455" TYPE="CEDULA" GCSSEQUENCE="123456" TELEPHONE="62008235" />
+
+
+WARN - Message not created !!!
+
+INFO - =================== Socket Close ================== 16-10-2013 06:39:54.000000
+
+INFO - =================== Socket Open =================== 16-10-2013 06:40:15.000000
+
+INFO - <- Receive -> 
+<MESSAGE TYPE="100" BANKID="DKT" CORRELATIONID="YYYYMMDD999999"><CLIENT ID="00112875455" TYPE="CEDULA" GCSSEQUENCE="123456" TELEPHONE="62008235" />
+
+
+WARN - Message not created !!!
+
+INFO - =================== Socket Close ================== 16-10-2013 06:40:15.000000
+
+INFO - =================== Socket Open =================== 16-10-2013 06:41:21.000000
+
+INFO - <- Receive -> 
+<MESSAGE TYPE="100" BANKID="DKT" CORRELATIONID="YYYYMMDD999999"><CLIENT ID="00112875455" TYPE="CEDULA" GCSSEQUENCE="123456" TELEPHONE="62008235" /><TRANSACTION TRANSACTIONTYPE="##" SUBTRANSACTION-TYPE="##YY" ACCOUNT="999999999999" TYPE="PPA" CURRENCY="USD" AMOUNT="999999999999" COMMENT="TEST" MERCHANTID="999999999" TRANSACTIONTYPE="99" BENEFICIARY="TEST MAN" CONTRACTNUMBER="TEXT CONTRACT" DATE="DDMMYYYY" TIME="HHMMSS" TERMINALID="" MCC="" /></MESSAGE>
+
+
+WARN - Message not created !!!
+
+INFO - =================== Socket Close ================== 16-10-2013 06:41:21.000000
+
+INFO - =================== Socket Open =================== 16-10-2013 06:41:55.000000
+
+INFO - <- Receive -> 
+<MESSAGE TYPE="100" BANKID="DKT" CORRELATIONID="YYYYMMDD999999"><CLIENT ID="00112875455" TYPE="CEDULA" GCSSEQUENCE="123456" TELEPHONE="62008235" /><TRANSACTION TRANSACTION TYPE="##" SUBTRANSACTION-TYPE="##YY" ACCOUNT="999999999999" TYPE="PPA" CURRENCY="USD" AMOUNT="999999999999" COMMENT="TEST" MERCHANTID="999999999" TRANSACTIONTYPE="99" BENEFICIARY="TEST MAN" CONTRACTNUMBER="TEXT CONTRACT" DATE="DDMMYYYY" TIME="HHMMSS" TERMINALID="" MCC="" /></MESSAGE>
+
+
+WARN - Message not created !!!
+
+INFO - =================== Socket Close ================== 16-10-2013 06:41:55.000000
+
