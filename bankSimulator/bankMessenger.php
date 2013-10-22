@@ -6,7 +6,7 @@
  */
 
 //import library with all messages
-require_once 'msg.php';
+require_once 'vMsg.php';
 //Set running time and timezone
 set_time_limit (0);
 date_default_timezone_set("America/La_Paz");
@@ -32,7 +32,7 @@ $log->info("Super REP Bank Simulator ".date('d-m-Y h:i:s.u')."\nStatus: UP and W
 
 //==========================================================
 //Set address to listen and port
-$address = 'localhost';
+$address = '172.19.3.35';
 $port = 8777;
 
 $sock = socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
@@ -76,6 +76,16 @@ switch($tmp["TYPE"]){
     case "400":
         $tmp2=msg400($tmp);
         break;
+    case "815":
+        $tmp2=msg815($tmp);
+        break;
+    case "920":
+        $tmp2=msg920($tmp);
+        break;
+    case "300":
+        $tmp2=msg300($tmp);
+        break;
+
     default:
         $log->warn("Message not created !!!\n");
     break;

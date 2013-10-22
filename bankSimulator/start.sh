@@ -1,1 +1,1 @@
-nohup php index.php &
+nohup php bankMessenger.php &
