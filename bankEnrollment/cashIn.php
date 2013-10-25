@@ -46,16 +46,27 @@
         echo '</form>';
 
         if($cashInStructure['phone'] !== null and $cashInStructure['amount'] !== null){
-            if ($_POST['enviroment1' == '172.19.3.41']){
+            if ($_POST['enviroment1'] == '172.19.3.41'){
                 $cashInStructure['currency'] = "USD";
             }
             $docInfo = dbpg_query($dbpgStructure);
             $cashInResult = vCashFinantials($enviroment, $cashInStructure, $docInfo[1], $docInfo[2]);
             if ($cashInResult == null){
                 echo "<br/><p>Resultado Cash-In: 0000 </p><br/>";
+                $cashInStructure['operation'] = "DEBIT";
+                $cashInStructure['amount'] = "2.00";
+                $cashInStructure['reasonCode'] = "A".$cashInStructure['id'];
+                $cashInStructure['id']=rand(0,999999);
+                $debitResult = vCashFinantials($enviroment, $cashInStructure, $docInfo[1], $docInfo[2]);
+                if ($debitResult == null){
+                    echo "<br/><p>Resultado Debito Comision: 0000 </p><br/>";
+                }
+                else{
+                    echo '<br/><p>Resultado Debito Comision: '.$debitResult['error']['code'].' / '.$debitResult['error']['description'].'</p><br/>';
+                }
             }
             else {
-                echo "<br/><p>Resultado Cash-In: $cashInResult</p><br/>";
+                echo '<br/><p>Resultado Cash-In: '.$cashInResult['error']['code'].' / '.$cashInResult['error']['description'].'</p><br/>';
             }
         }
 ?>

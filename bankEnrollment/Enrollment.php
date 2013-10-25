@@ -42,6 +42,26 @@ include_once 'addedFunctions.php';
                                              "city" => "San Salvador",
                                              "country" => "SV")
                          );
+        $dbpgStructure = array ("dbIP" => $_POST['environment'],
+                                    "dbPort" => "5432",
+                                    "dbName" => "vcash",
+                                    "dbUser" => "sa",
+                                    "dbPassword" => "password",
+                                    "dbQueryName" => "findDocData",
+                                    "dbQuery" => "select a.phone,substr(b.realid,1,3)as doctype, substr(b.realid,5,length(b.realid))as docnumber from dakota_phone a, cardholder b where b.id = a.cardholder_id and a.phone = $1",
+                                    "dbQueryVariables" => array($_POST['MSISDN']));
+                
+        $cashInStructure = array ("id" => rand(0,999999),
+                                      "operation" => "CASH-IN",
+                                      "phone" => $_POST['MSISDN'],
+                                      "amount" => "200.00",
+                                      "currency" => "DOP",
+                                      "reasonCode" => "E",
+                                      "options" => array ("" => ""),
+                                      "origin" => array ("id" => "18828",
+                                                         "name" => "Purperia Pancracio",
+                                                         "city" => "San Salvador",
+                                                         "country" => "SV"));
 
    
     $formStructure["bank"] = $_POST['bank'];
@@ -104,7 +124,8 @@ if($formStructure["bank"] != null && $formStructure["enviroment"] != null && $fo
     //complete message mobileWalle Structure
     $mwStructure["bankId"] = 'BPD'; //$formStructure["bank"];.
     $mwStructure["id"] = $formStructure["document"];
-    if ($enviroment === '172.19.3.41'){
+    if ($formStructure['enviroment'] == "172.19.3.41"){
+        $cashInStructure['currency'] = "USD";
         if($formStructure["docType"] == "CEDULA"){
             $mwStructure["idType"] = "CSV";
         }
@@ -140,6 +161,25 @@ if($formStructure["bank"] != null && $formStructure["enviroment"] != null && $fo
             
             if($enrollResult == "0000"){
                 echo '<br/>Enrolamiento Exitoso !!! Codigo de Activacion: '.str_pad(rand(0,9999), 4, "0", STR_PAD_LEFT);
+                $docInfo = dbpg_query($dbpgStructure);
+                $cashInResult = vCashFinantials($formStructure['enviroment'], $cashInStructure, $docInfo[1], $docInfo[2]);
+                if ($cashInResult == null){
+                    echo "<br/><p>Resultado Cash-In: 0000 </p><br/>";
+                    $cashInStructure['operation'] = "DEBIT";
+                    $cashInStructure['amount'] = "100.00";
+                    $cashInStructure['reasonCode'] = "A".$cashInStructure['id'];
+                    $cashInStructure['id']=rand(0,999999);
+                    $debitResult = vCashFinantials($formStructure['enviroment'], $cashInStructure, $docInfo[1], $docInfo[2]);
+                    if ($debitResult == null){
+                        echo "<br/><p>Resultado Debito Comision: 0000 </p><br/>";
+                    }
+                    else{
+                        echo '<br/><p>Resultado Debito Comision: '.$debitResult['error']['code'].' / '.$debitResult['error']['description'].'</p><br/>';
+                    }
+                }
+                else {
+                    echo '<br/><p>Resultado Cash-In: '.$cashInResult['error']['code'].' / '.$cashInResult['error']['description'].'</p><br/>';
+                }
             }
             else {
                 echo '<br/>Respuesta 800: '.$enrollResult;
