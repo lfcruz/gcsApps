@@ -56,7 +56,7 @@
                 echo "<br/><p>Resultado Cash-Out: 0000 </p><br/>";
                 $cashOutStructure['operation'] = "DEBIT";
                 $cashOutStructure['amount'] = "4.00";
-                $cashOutStructure['reasonCode'] = "A".$cashOutStructure['id'];
+                $cashOutStructure['reasonCode'] = "R".$cashOutStructure['id'];
                 $cashOutStructure['id']=rand(0,999999);
                 $debitResult = vCashFinantials($enviroment, $cashOutStructure, $docInfo[1], $docInfo[2]);
                 if ($debitResult == null){

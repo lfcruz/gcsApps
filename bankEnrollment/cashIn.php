@@ -55,7 +55,7 @@
                 echo "<br/><p>Resultado Cash-In: 0000 </p><br/>";
                 $cashInStructure['operation'] = "DEBIT";
                 $cashInStructure['amount'] = "2.00";
-                $cashInStructure['reasonCode'] = "A".$cashInStructure['id'];
+                $cashInStructure['reasonCode'] = "D".$cashInStructure['id'];
                 $cashInStructure['id']=rand(0,999999);
                 $debitResult = vCashFinantials($enviroment, $cashInStructure, $docInfo[1], $docInfo[2]);
                 if ($debitResult == null){

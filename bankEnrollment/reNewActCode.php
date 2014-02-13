@@ -21,8 +21,8 @@
                             "dbName" => "gcsdev2",
                             "dbUser" => "gcsdevusr",
                             "dbPassword" => "gcsdevusr",
-                            "dbQuery" => "select a.MSISDN,b.ID_TYPE,b.ID from pre_gcscustomer_enrollment_m a, r_gcscustomer_account_m b where b.GCS_ACCOUNT_ID=a.GCS_ACCOUNT_ID and a.STATUS = 'PAB' and a.MSISDN = '".$_POST['phone1']."'");
-
+                            "dbQuery" => "select a.MSISDN,b.ID_TYPE,b.ID,d.PARTNER_ID from pre_gcscustomer_enrollment_m a, r_gcscustomer_account_m b, r_gcscustomer_msisdn_mp c, partner_m d where b.GCS_ACCOUNT_ID=a.GCS_ACCOUNT_ID and c.GCS_ACCOUNT_ID=a.GCS_ACCOUNT_ID and d.PARTNER_CODE=a.PARTNER_CODE and ((a.STATUS in ('PAB') and c.STATUS in ('A','PAB','AB')) or (a.STATUS in ('A') and c.STATUS in ('AB'))) and a.MSISDN = '".$_POST['phone1']."'");
+    
     $enviroment = $_POST['enviroment1'];
 
 
@@ -34,6 +34,8 @@
         echo '<select name="enviroment1">';
         echo '<option value="172.19.3.39">Cafe</option>';
         echo '<option value="172.19.3.41">Neoris</option>';
+        echo '<option value="172.19.3.23">tPago Dev</option>';
+        echo '<option value="172.19.3.12">tPago Stag</option>';
         echo '</select></br>';
         echo 'Telefono: <input type="text" name="phone1" value=""><br/>';
         echo '<div>';
@@ -49,6 +51,18 @@
                     $dbConnectorStructure['dbUser'] = 'oramdev2';
                     $dbConnectorStructure['dbPassword'] = 'oramdev22013';
                     break;
+                case "172.19.3.23":
+                    $dbConnectorStructure['dbIP'] = '172.19.3.27';
+                    $dbConnectorStructure['dbName'] = 'gcstest';
+                    $dbConnectorStructure['dbUser'] = 'gcsdev';
+                    $dbConnectorStructure['dbPassword'] = 'gcs2013';
+                    break;
+                case "172.19.3.12":
+                    $dbConnectorStructure['dbIP'] = '172.19.3.26';
+                    $dbConnectorStructure['dbName'] = 'gcstest';
+                    $dbConnectorStructure['dbUser'] = 'gcs501';
+                    $dbConnectorStructure['dbPassword'] = 'gcs';
+                    break;
                 case "172.19.3.41":
                     $dbConnectorStructure['dbIP'] = '172.19.3.44';
                     break;
@@ -61,6 +75,7 @@
                 $formStructure['docType'] = "PASAPORTE";
             }
             $formStructure['document'] = $docInfo[2];
+            $formStructure['bank'] = $docInfo[3];
             $msg = buildMessages(UNBLOK_ACT, $formStructure);
             $rsp = sentToSocket($enviroment, CORE_PORT, $msg);
             if ($rsp->TRANSACTION["RESPONSECODE"] == "0000"){

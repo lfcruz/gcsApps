@@ -34,6 +34,8 @@
         echo '<select name="enviroment1">';
         echo '<option value="172.19.3.39">Cafe</option>';
         echo '<option value="172.19.3.41">Neoris</option>';
+        echo '<option value="172.19.3.23">tPago Dev</option>';
+        echo '<option value="172.19.3.12">tPago Stag</option>';
         echo '</select></br>';
         echo 'Telefono: <input type="text" name="phone1" value=""><br/>';
         echo '<div>';
@@ -48,6 +50,18 @@
                     $dbConnectorStructure['dbName'] = 'gcstest';
                     $dbConnectorStructure['dbUser'] = 'oramdev2';
                     $dbConnectorStructure['dbPassword'] = 'oramdev22013';
+                    break;
+                case "172.19.3.23":
+                    $dbConnectorStructure['dbIP'] = '172.19.3.27';
+                    $dbConnectorStructure['dbName'] = 'gcsdev';
+                    $dbConnectorStructure['dbUser'] = 'gcsdev';
+                    $dbConnectorStructure['dbPassword'] = 'gcs2013';
+                    break;
+                case "172.19.3.12":
+                    $dbConnectorStructure['dbIP'] = '172.19.3.26';
+                    $dbConnectorStructure['dbName'] = 'gcs501';
+                    $dbConnectorStructure['dbUser'] = 'gcs501';
+                    $dbConnectorStructure['dbPassword'] = 'gcs';
                     break;
                 case "172.19.3.41":
                     $dbConnectorStructure['dbIP'] = '172.19.3.44';
