@@ -79,7 +79,7 @@ function do_post_request($url, $data, $optional_headers,$requestType)
   return $urlResponse;
 }
 
-function msg100($msg)
+function msg100($msg,$ipRemote)
 {
     global $debcreStructure,$mwHeader;
     $docType = "";
@@ -99,7 +99,17 @@ function msg100($msg)
     $debcreStructure["currency"] = (string) $msg->TRANSACTION["CURRENCY"];
     $debcreStructure["reasonCode"] = (string) $msg->TRANSACTION["SUBTRANSACTIONTYPE"];
 
-    $url = "http://172.19.3.39:6080/cardholder/$docType/".$msg->CLIENT["ID"]."/financial";
+    switch ($ipRemote){
+        case "172.19.3.39":
+            $url = "http://172.19.3.39:6080/cardholder/$docType/".$msg->CLIENT["ID"]."/financial";
+            break;
+        case "172.19.3.41":
+            $url = "http://172.19.3.41:6080/cardholder/$docType/".$msg->CLIENT["ID"]."/financial";
+            break;
+        default:
+            $url = "http://172.19.3.12:6080/cardholder/$docType/".$msg->CLIENT["ID"]."/financial";
+            break;
+    }
     $requestResult = do_post_request($url, json_encode($debcreStructure), $mwHeader, 'POST');
     $jsonResult = json_decode($requestResult,true);
 

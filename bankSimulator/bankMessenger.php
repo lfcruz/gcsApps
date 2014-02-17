@@ -47,6 +47,8 @@ while(true){
 
 
 $client = socket_accept($sock);
+
+if (socket_getpeername($sock, $remoteIP)){
 // Read the input from the client &#8211; 1024 bytes
 $input = socket_read($client, 1024);
 
@@ -71,7 +73,7 @@ switch($tmp["TYPE"]){
         $tmp2=msg500($tmp);
         break;
     case "100":
-        $tmp2=msg100($tmp);
+        $tmp2=msg100($tmp,$remoteIP);
         break;
     case "400":
         $tmp2=msg400($tmp);
@@ -90,6 +92,13 @@ switch($tmp["TYPE"]){
         $log->warn("Message not created !!!\n");
     break;
 
+}
+
+}
+else {
+    $temp2 = simplexml_import_dom($dom);
+    $temp2->TRANSACTION["REASONCODE"] = "9899";
+    $temp2->TRANSACTION["BPSEQUENCE"] = str_pad(rand(0,999999), 6, "0", STR_PAD_LEFT);
 }
 
 if($tmp2){
