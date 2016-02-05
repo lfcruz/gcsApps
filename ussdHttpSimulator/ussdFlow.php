@@ -25,9 +25,13 @@ $ussdReqStructure = array ('transactionId' => $_POST[transactionid],
     $vtext = '<input type="hidden" name="text" value="'.$_POST[option].'">';
         if(substr($menuResult,0,1) === "1"){
             $vstatus = '<input type="hidden" name="status" value="continue">';
+            $vselector1 = 'Select Option: <input type="text" name="option" value=""><br/>';
+            $vselector2 = '<div><input type="submit" value="submit"></div>';
         }
         else{
             $vstatus = '<input type="hidden" name="status" value="end">';
+            $vselector1 = '<br/>';
+            $vselector2 = '<br/>';
         }
         echo '<form name="mobScreen" method="post" action="/ussdHttpSimulator/ussdFlow.php">';
         echo substr($menuResult,1,  strlen($menuResult));
@@ -36,8 +40,9 @@ $ussdReqStructure = array ('transactionId' => $_POST[transactionid],
         echo $vnumber;
         echo $vtext;
         echo $vstatus;
-        echo 'Select Option: <input type="text" name="option" value=""><br/>';
-        echo '<div><input type="submit" value="submit"></div></form>';
+        echo $vselector1;
+        echo $vselector2;
+        echo '</form>';
 ?>
     </body>
 </html>

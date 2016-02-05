@@ -11,4 +11,13 @@ switch ($option) {
         echo "1Menu Principal tPago\nSeleccione una opcion:\n1.Pagos\n2.Consultas\n3.Transferencias\n4.Compras\n5.Recargas\n6.Retiros\n";
         break;
 }
+<HTML memory="menu_id=5">
+<HEAD><TITLE>GCS Systems International</TITLE></HEAD>
+<BODY>
+<p>Bienvenidos a un mundo de servicios en pagos moviles.</p>
+</BODY>
+</HTML>
+
+
+
 ?>
