@@ -90,6 +90,15 @@ function attachPhone($enviroment,$docType,$docNumber,$phoneNumber)
     return $jsonResult;
 }
 
+function setActivationCode($enviroment,$docType,$docNumber,$phoneNumber)
+{
+    global $mwHeader;
+    $url = "http://$enviroment:6088/cardholder/$docType/$docNumber/activation/$phoneNumber";
+    $requestResult = do_post_request($url, null, $mwHeader, 'GET');
+    $jsonResult = json_decode($requestResult,true);
+    return $jsonResult;
+}
+
 function detachPhone($enviroment,$docType,$docNumber,$phoneNumber)
 {
     global $mwHeader;
