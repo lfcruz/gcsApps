@@ -11,7 +11,7 @@ global $configStructure;
                     header("HTTP/1.1 400 Invalid request");
                 }
                 elseif (verifyCard(json_decode(file_get_contents('php://input'),true))){
-                    header("HTTP/1.1 204 Valid Card");
+                    header("HTTP/1.1 200 Valid Card");
                 }
                 else {
                     header("HTTP/1.1 404 Invalid Card");
@@ -25,9 +25,10 @@ global $configStructure;
             if (pg_connection_status($dbConnector) <> PGSQL_CONNECTION_BAD){
                 openDB("Off");
             }
-            header("HTTP/1.1 503 Out of service");
+            header("HTTP/1.1 503 On Maintenance");
             break;
         default:
+            header("HTTP/1.1 504 Out of Service - Report to Administrator");
             break;
     }
     openDB("Off");
