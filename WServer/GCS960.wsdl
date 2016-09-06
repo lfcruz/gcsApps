@@ -1,0 +1,1792 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="AvanceEfectivo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:AvanceEfectivoRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AvanceEfectivoRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RequestHeader">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Producto" type="tns:Producto" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProductoDestino" type="tns:Producto" />
+              <s:element minOccurs="0" maxOccurs="1" name="Importe" type="tns:Importe" />
+              <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="RequestHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Canal" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Terminal" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FechaHora" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Version" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Producto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NumeroProducto" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TipoProducto" type="tns:TiposProductos" />
+          <s:element minOccurs="1" maxOccurs="1" name="Moneda" type="tns:Moneda" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="TiposProductos">
+        <s:restriction base="s:string">
+          <s:enumeration value="CuentaCorriente" />
+          <s:enumeration value="CuentaAhorro" />
+          <s:enumeration value="TarjetaCredito" />
+          <s:enumeration value="Certificado" />
+          <s:enumeration value="TarjetaDebito" />
+          <s:enumeration value="Prestamo" />
+          <s:enumeration value="CartaCredito" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="Moneda">
+        <s:restriction base="s:string">
+          <s:enumeration value="DOP" />
+          <s:enumeration value="USD" />
+          <s:enumeration value="EUR" />
+          <s:enumeration value="MULTIMONEDA" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="Importe">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Moneda" type="tns:Moneda" />
+          <s:element minOccurs="1" maxOccurs="1" name="Monto" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AvanceEfectivoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AvanceEfectivoResult" type="tns:AvanceEfectivoResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AvanceEfectivoResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ResponseHeader" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ResponseHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Canal" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Terminal" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FechaHora" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TRN_ID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Resultado" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mensaje" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Version" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ConsolidacionRs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:ConsolidacionRsRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ConsolidacionRsRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RequestHeader">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Identificacion" type="tns:Identificacion" />
+              <s:element minOccurs="0" maxOccurs="1" name="Producto" type="tns:Producto" />
+              <s:element minOccurs="1" maxOccurs="1" name="Rs" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Identificacion">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NumeroIdentificacion" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TipoIdentificacion" type="tns:TiposDocumento" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="TiposDocumento">
+        <s:restriction base="s:string">
+          <s:enumeration value="Cedula" />
+          <s:enumeration value="Pasaporte" />
+          <s:enumeration value="RNC" />
+          <s:enumeration value="GrupoEconomico" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="ConsolidacionRsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsolidacionRsResult" type="tns:ConsolidacionRsResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ConsolidacionRsResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ResponseHeader" />
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="ConsultaBancosCorresponsales">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:ConsultaBancosCorresponsalesRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ConsultaBancosCorresponsalesRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RequestHeader" />
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="ConsultaBancosCorresponsalesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaBancosCorresponsalesResult" type="tns:ConsultaBancosCorresponsalesResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ConsultaBancosCorresponsalesResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ResponseHeader">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="BancosCorresponsales" type="tns:ArrayOfBancoCorresponsal" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfBancoCorresponsal">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="BancoCorresponsal" nillable="true" type="tns:BancoCorresponsal" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BancoCorresponsal">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NombreBanco" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodigoBancoCorresponsal" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Moneda" type="tns:Moneda" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodigoACH" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ConsultaBeneficiarios">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:ConsultaBeneficiariosRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ConsultaBeneficiariosRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RequestHeader">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Identificacion" type="tns:Identificacion" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="ConsultaBeneficiariosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaBeneficiariosResult" type="tns:ConsultaBeneficiariosResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ConsultaBeneficiariosResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ResponseHeader">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Beneficiarios" type="tns:ArrayOfBeneficiario" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfBeneficiario">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Beneficiario" nillable="true" type="tns:Beneficiario" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Beneficiario">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Codigo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Producto" type="tns:Producto" />
+          <s:element minOccurs="0" maxOccurs="1" name="NombreCuenta" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ConsultaGeneralProducto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:ConsultaGeneralProductoRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ConsultaGeneralProductoRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RequestHeader">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Producto" type="tns:Producto" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="ConsultaGeneralProductoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaGeneralProductoResult" type="tns:ConsultaGeneralProductoResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ConsultaGeneralProductoResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ResponseHeader">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Estado" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Identificacion" type="tns:Identificacion" />
+              <s:element minOccurs="1" maxOccurs="1" name="Moneda" type="tns:Moneda" />
+              <s:element minOccurs="0" maxOccurs="1" name="FechaExpiracion" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="TipoProducto" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="CreaBeneficiario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:CreaBeneficiarioRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CreaBeneficiarioRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RequestHeader">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Identificacion" type="tns:Identificacion" />
+              <s:element minOccurs="0" maxOccurs="1" name="IdentificacionBeneficiario" type="tns:Identificacion" />
+              <s:element minOccurs="0" maxOccurs="1" name="Producto" type="tns:Producto" />
+              <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Alias" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="CreaBeneficiarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreaBeneficiarioResult" type="tns:CreaBeneficiarioResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CreaBeneficiarioResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ResponseHeader">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Codigo" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="DetalleCertificado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:DetalleCertificadoRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DetalleCertificadoRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RequestHeader">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Producto" type="tns:Producto" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="DetalleCertificadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DetalleCertificadoResult" type="tns:DetalleCertificadoResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DetalleCertificadoResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ResponseHeader">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Moneda" type="tns:Moneda" />
+              <s:element minOccurs="0" maxOccurs="1" name="Producto" type="tns:Producto" />
+              <s:element minOccurs="1" maxOccurs="1" name="MontoInicial" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="MontoActual" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="MontoCancelacion" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="MontoPenalizacion" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="TasaInteres" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="NumRenovaciones" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="FechaApertura" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="FechaRenovacion" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="FechaVencimiento" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="CuentaAcreditar" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="InteresMesAnterior" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="InteresMes" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="InteresesAcumulados" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="DiasTermino" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="DetalleCuentas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:DetalleCuentasRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DetalleCuentasRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RequestHeader">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Producto" type="tns:Producto" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="DetalleCuentasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DetalleCuentasResult" type="tns:DetalleCuentasResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DetalleCuentasResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ResponseHeader">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Producto" type="tns:Producto" />
+              <s:element minOccurs="1" maxOccurs="1" name="BalanceTotal" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="BalanceTotalAyer" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="BalanceEfectivo" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="BalanceDisponible" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="ChequesHoy" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="InteresAcumulado" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="InteresPeriodoAnterior" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="Embargos" type="s:decimal" />
+              <s:element minOccurs="0" maxOccurs="1" name="Oficial" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="FechaApertura" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="FechaUltActividad" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="BalanceTransito" type="s:decimal" />
+              <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="UltimoDeposito" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="BalUltimoEstado" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="MontoBloqueado" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="MontoReversado" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="MontoAutorizado" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="MontoFianzas" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="Tasa" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="ComisionCierre" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="ComisionRetirosMensuales" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="ComisionRetiroAnticipado" type="s:decimal" />
+              <s:element minOccurs="0" maxOccurs="1" name="Estado" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="DetallePrestamo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:DetallePrestamoRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DetallePrestamoRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RequestHeader">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Producto" type="tns:Producto" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="DetallePrestamoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DetallePrestamoResult" type="tns:DetallePrestamoResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DetallePrestamoResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ResponseHeader">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Producto" type="tns:Producto" />
+              <s:element minOccurs="1" maxOccurs="1" name="MontoAprobado" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="MontoDesembolsado" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="FechaDesembolso" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="FechaUltPago" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="TotalAdeudado" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="CapitalAdeudado" type="s:decimal" />
+              <s:element minOccurs="0" maxOccurs="1" name="CuentaDebitar" type="tns:Producto" />
+              <s:element minOccurs="1" maxOccurs="1" name="InteresesGenerados" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="Mora" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="OtrosAdeudados" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="FechaPago" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="CuotaRegular" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="Cuotas" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="Plazo" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Estado" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Facturas" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="Oficial" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="DiaPago" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="Tasa" type="s:decimal" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="DetalleTarjeta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:DetalleTarjetaRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DetalleTarjetaRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RequestHeader">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Producto" type="tns:Producto" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="DetalleTarjetaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DetalleTarjetaResult" type="tns:DetalleTarjetaResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DetalleTarjetaResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ResponseHeader">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Producto" type="tns:Producto" />
+              <s:element minOccurs="1" maxOccurs="1" name="RsAcumuladas" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Detalle" type="tns:ArrayOfDetalleTarjeta" />
+              <s:element minOccurs="1" maxOccurs="1" name="FechaCorte" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="PageAntesDe" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="MontoUltimoPago" type="s:decimal" />
+              <s:element minOccurs="0" maxOccurs="1" name="Estado" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="LimiteCredimas" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="CapitaPendienteCredimas" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="DisponibleCredimas" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="PagoPendienteCredimas" type="s:decimal" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfDetalleTarjeta">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DetalleTarjeta" nillable="true" type="tns:DetalleTarjeta" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DetalleTarjeta">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Moneda" type="tns:Moneda" />
+          <s:element minOccurs="1" maxOccurs="1" name="Limite" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="BalanceCorte" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalAutorizaciones" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="BalanceUltEstado" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="CuotasVencidas" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MontoVencido" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PagoMinimo" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="DisponibleConsumo" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaUltActividad" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaUltPago" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="MontoUltPago" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="LimiteCliente" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="BalancealaFecha" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Tasa" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ISConsulta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:ISConsultaRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ISConsultaRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RequestHeader">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="IS_UID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Referencia" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="TipoReferencia" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="ISConsultaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ISConsultaResult" type="tns:ISConsultaResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ISConsultaResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ResponseHeader">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ISConsultas" type="tns:ArrayOfConsulta" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfConsulta">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Consulta" nillable="true" type="tns:Consulta" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Consulta">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Monto" type="tns:Importe" />
+          <s:element minOccurs="0" maxOccurs="1" name="MontoAtraso" type="tns:Importe" />
+          <s:element minOccurs="0" maxOccurs="1" name="MontoMinimo" type="tns:Importe" />
+          <s:element minOccurs="0" maxOccurs="1" name="Periodo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tipo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Identificacion" type="tns:Identificacion" />
+          <s:element minOccurs="0" maxOccurs="1" name="Referencia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TipoReferencia" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaVencimiento" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaEmision" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Estado" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ISPago">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:ISPagoRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ISPagoRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RequestHeader">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="IS_UID" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Referencia" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="TipoReferencia" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Identificacion" type="tns:Identificacion" />
+              <s:element minOccurs="0" maxOccurs="1" name="Producto" type="tns:Producto" />
+              <s:element minOccurs="0" maxOccurs="1" name="Importe" type="tns:Importe" />
+              <s:element minOccurs="1" maxOccurs="1" name="FechaEmision" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="ISPagoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ISPagoResult" type="tns:ISPagoResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ISPagoResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ResponseHeader" />
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="MovimientosCuenta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:MovimientosCuentaRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MovimientosCuentaRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RequestHeader">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Producto" type="tns:Producto" />
+              <s:element minOccurs="1" maxOccurs="1" name="CantidadMovimientos" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="FechaInicial" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="FechaFinal" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="MontoMenor" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="MontoMayor" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="TipoTransaccion" type="tns:TiposTransacciones" />
+              <s:element minOccurs="0" maxOccurs="1" name="IdPaginacion" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Direccion" type="tns:DireccionPaginacion" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:simpleType name="TiposTransacciones">
+        <s:restriction base="s:string">
+          <s:enumeration value="Debito" />
+          <s:enumeration value="Credito" />
+          <s:enumeration value="Ambos" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="DireccionPaginacion">
+        <s:restriction base="s:string">
+          <s:enumeration value="Proximo" />
+          <s:enumeration value="Anterior" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="MovimientosCuentaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MovimientosCuentaResult" type="tns:MovimientosCuentaResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MovimientosCuentaResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ResponseHeader">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="UltimaPagina" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DetalleMovimientosCuenta" type="tns:ArrayOfMovimientoCuenta" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfMovimientoCuenta">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MovimientoCuenta" nillable="true" type="tns:MovimientoCuenta" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MovimientoCuenta">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="NroTransaccion" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="Fecha" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Debito" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Credito" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Concepto" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Balance" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Moneda" type="tns:Moneda" />
+          <s:element minOccurs="0" maxOccurs="1" name="Referencia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IdPaginacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Oficina" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaReal" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Causal" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MovimientosPrestamo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:MovimientosPrestamoRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MovimientosPrestamoRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RequestHeader">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Producto" type="tns:Producto" />
+              <s:element minOccurs="1" maxOccurs="1" name="CantidadMovimientos" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="FechaInicial" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="FechaFinal" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="MontoMenor" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="MontoMayor" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="TipoTransaccion" type="tns:TiposTransacciones" />
+              <s:element minOccurs="0" maxOccurs="1" name="IdPaginacion" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Direccion" type="tns:DireccionPaginacion" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="MovimientosPrestamoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MovimientosPrestamoResult" type="tns:MovimientosPrestamoResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MovimientosPrestamoResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ResponseHeader">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Movimientos" type="tns:ArrayOfMovimientoPrestamo" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfMovimientoPrestamo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MovimientoPrestamo" nillable="true" type="tns:MovimientoPrestamo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MovimientoPrestamo">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MovimientoCuenta" />
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="MovimientosTarjeta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:MovimientosTarjetaRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MovimientosTarjetaRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RequestHeader">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Producto" type="tns:Producto" />
+              <s:element minOccurs="1" maxOccurs="1" name="Moneda" type="tns:Moneda" />
+              <s:element minOccurs="1" maxOccurs="1" name="FechaInicial" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="FechaFinal" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="MontoInicial" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="MontoFinal" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="TipoTransaccion" type="tns:TiposTransacciones" />
+              <s:element minOccurs="1" maxOccurs="1" name="CantidadMovimientos" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="IdMovimiento" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Direccion" type="tns:DireccionPaginacion" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="MovimientosTarjetaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MovimientosTarjetaResult" type="tns:MovimientosTarjetaResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MovimientosTarjetaResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ResponseHeader">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="UltimaPagina" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="Movimientos" type="tns:ArrayOfMovimientoTarjeta" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfMovimientoTarjeta">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MovimientoTarjeta" nillable="true" type="tns:MovimientoTarjeta" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MovimientoTarjeta">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MovimientoCuenta" />
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="PagoPrestamo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:PagoPrestamoRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PagoPrestamoRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RequestHeader">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Producto" type="tns:Producto" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProductoDestino" type="tns:Producto" />
+              <s:element minOccurs="0" maxOccurs="1" name="Importe" type="tns:Importe" />
+              <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="PagoPrestamoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PagoPrestamoResult" type="tns:PagoPrestamoResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PagoPrestamoResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ResponseHeader" />
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="PagoTarjeta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:PagoTarjetaRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PagoTarjetaRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RequestHeader">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Producto" type="tns:Producto" />
+              <s:element minOccurs="0" maxOccurs="1" name="Importe" type="tns:Importe" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProductoDestino" type="tns:Producto" />
+              <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="PagoTarjetaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PagoTarjetaResult" type="tns:PagoTarjetaResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PagoTarjetaResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ResponseHeader" />
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="PosicionConsolidada">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:PosicionConsolidadaRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PosicionConsolidadaRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RequestHeader">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Identificacion" type="tns:Identificacion" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="PosicionConsolidadaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PosicionConsolidadaResult" type="tns:PosicionConsolidadaResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PosicionConsolidadaResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ResponseHeader">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Cuentas" type="tns:ArrayOfConsolidadoCuenta" />
+              <s:element minOccurs="0" maxOccurs="1" name="Tarjetas" type="tns:ArrayOfConsolidadoTarjeta" />
+              <s:element minOccurs="0" maxOccurs="1" name="Prestamos" type="tns:ArrayOfConsolidadoPrestamo" />
+              <s:element minOccurs="0" maxOccurs="1" name="Certificados" type="tns:ArrayOfConsolidadoCertificado" />
+              <s:element minOccurs="0" maxOccurs="1" name="TarjetasDebito" type="tns:ArrayOfConsolidadoTarjetaDebito" />
+              <s:element minOccurs="0" maxOccurs="1" name="CartasCredito" type="tns:ArrayOfConsolidadoCartaCredito" />
+              <s:element minOccurs="0" maxOccurs="1" name="LineasCredito" type="tns:ArrayOfConsolidadoLineaCredito" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfConsolidadoCuenta">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ConsolidadoCuenta" nillable="true" type="tns:ConsolidadoCuenta" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ConsolidadoCuenta">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Producto" type="tns:Producto" />
+          <s:element minOccurs="1" maxOccurs="1" name="Balance" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Disponible" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="MontoAutorizado" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PuntosGanados" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PuntosAcumulados" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Estado" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfConsolidadoTarjeta">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ConsolidadoTarjeta" nillable="true" type="tns:ConsolidadoTarjeta" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ConsolidadoTarjeta">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Producto" type="tns:Producto" />
+          <s:element minOccurs="1" maxOccurs="1" name="BalanceRD" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="DisponibleRD" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="BalanceUS" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="DisponibleUS" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="VencimientoPago" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="PendienteActivacion" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="InteresALaFecha" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="InteresALaFechaUS" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="BalanceCorte" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PuntosGanados" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PuntosAcumulados" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="UltimaActividad" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Estado" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfConsolidadoPrestamo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ConsolidadoPrestamo" nillable="true" type="tns:ConsolidadoPrestamo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ConsolidadoPrestamo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Producto" type="tns:Producto" />
+          <s:element minOccurs="1" maxOccurs="1" name="DeudaActual" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="DeudaVencida" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaProximoPago" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="InteresALaFecha" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="MontoCuotas" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="CuotasPendientes" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Tasa" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Estado" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfConsolidadoCertificado">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ConsolidadoCertificado" nillable="true" type="tns:ConsolidadoCertificado" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ConsolidadoCertificado">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Producto" type="tns:Producto" />
+          <s:element minOccurs="1" maxOccurs="1" name="MontoActual" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="TasaVigente" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaVencimiento" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Estado" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="InteresMes" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfConsolidadoTarjetaDebito">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ConsolidadoTarjetaDebito" nillable="true" type="tns:ConsolidadoTarjetaDebito" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ConsolidadoTarjetaDebito">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Producto" type="tns:Producto" />
+          <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaEmision" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="LimiteATM" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="LimitePOS" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="CuentaDesignada" type="tns:Producto" />
+          <s:element minOccurs="1" maxOccurs="1" name="Estado" type="tns:EstadosTarjetaDebito" />
+          <s:element minOccurs="0" maxOccurs="1" name="DescripcionEstado" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="EstadosTarjetaDebito">
+        <s:restriction base="s:string">
+          <s:enumeration value="Normal" />
+          <s:enumeration value="MaximoIntentosFallidosExcedido" />
+          <s:enumeration value="NoEmitida" />
+          <s:enumeration value="Expirada" />
+          <s:enumeration value="Perdida" />
+          <s:enumeration value="Robada" />
+          <s:enumeration value="CerradaPorElCliente" />
+          <s:enumeration value="CanceladaPorElBanco" />
+          <s:enumeration value="UsoFraudulento" />
+          <s:enumeration value="Inactiva" />
+          <s:enumeration value="Bloqueda" />
+          <s:enumeration value="Deteriorada" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfConsolidadoCartaCredito">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ConsolidadoCartaCredito" nillable="true" type="tns:ConsolidadoCartaCredito" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ConsolidadoCartaCredito">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Importe" type="tns:Importe" />
+          <s:element minOccurs="1" maxOccurs="1" name="InteresALaFecha" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfConsolidadoLineaCredito">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ConsolidadoLineaCredito" nillable="true" type="tns:ConsolidadoLineaCredito" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ConsolidadoLineaCredito">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Producto" type="tns:Producto" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaApertura" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaVencimiento" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="MontoTotal" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="MontoAdeudado" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Disponible" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Estado" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RedencionRs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:RedencionRsRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RedencionRsRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RequestHeader">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Producto" type="tns:Producto" />
+              <s:element minOccurs="0" maxOccurs="1" name="Importe" type="tns:Importe" />
+              <s:element minOccurs="1" maxOccurs="1" name="CantidadRs" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="RedencionRsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RedencionRsResult" type="tns:RedencionRsResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RedencionRsResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ResponseHeader" />
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="RemoverBeneficiario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:RemoverBeneficiarioRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RemoverBeneficiarioRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RequestHeader">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="BeneficiarioId" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="RemoverBeneficiarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RemoverBeneficiarioResult" type="tns:RemoverBeneficiarioResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RemoverBeneficiarioResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ResponseHeader">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Ok" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="RsCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:RsClienteRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RsClienteRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RequestHeader">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Identificacion" type="tns:Identificacion" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="RsClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RsClienteResult" type="tns:RsClienteResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RsClienteResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ResponseHeader">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" name="ConsolidadoRs" type="tns:ConsolidadoRs" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ConsolidadoRs">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Producto" type="tns:Producto" />
+          <s:element minOccurs="1" maxOccurs="1" name="Rs" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="TransaccionACH">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:TransaccionACHRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TransaccionACHRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RequestHeader">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Banco" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Producto" type="tns:Producto" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProductoDestino" type="tns:Producto" />
+              <s:element minOccurs="0" maxOccurs="1" name="Importe" type="tns:Importe" />
+              <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Identificacion" type="tns:Identificacion" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="TransaccionACHResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TransaccionACHResult" type="tns:TransaccionACHResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TransaccionACHResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ResponseHeader" />
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="Transferencia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:TransferenciaRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TransferenciaRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RequestHeader">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Producto" type="tns:Producto" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProductoDestino" type="tns:Producto" />
+              <s:element minOccurs="0" maxOccurs="1" name="Importe" type="tns:Importe" />
+              <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Tipo" type="tns:TipoTransferencia" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:simpleType name="TipoTransferencia">
+        <s:restriction base="s:string">
+          <s:enumeration value="Propia" />
+          <s:enumeration value="Tercero" />
+          <s:enumeration value="GrupoEconomico" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="TransferenciaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TransferenciaResult" type="tns:TransferenciaResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TransferenciaResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ResponseHeader" />
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="TransferenciaRs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:TransferenciaRsRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TransferenciaRsRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RequestHeader">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Producto" type="tns:Producto" />
+              <s:element minOccurs="0" maxOccurs="1" name="ProductoDestino" type="tns:Producto" />
+              <s:element minOccurs="1" maxOccurs="1" name="Rs" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="TransferenciaRsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TransferenciaRsResult" type="tns:TransferenciaRsResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TransferenciaRsResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ResponseHeader" />
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="ValidaTarjetaCodigo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:ValidaTarjetaCodigoRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ValidaTarjetaCodigoRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RequestHeader">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Identificacion" type="tns:Identificacion" />
+              <s:element minOccurs="1" maxOccurs="1" name="Posicion" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Codigo" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="ValidaTarjetaCodigoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidaTarjetaCodigoResult" type="tns:ValidaTarjetaCodigoResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ValidaTarjetaCodigoResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ResponseHeader">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Valido" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="ConsultaBalanceRs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:ConsultaBalanceRsRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ConsultaBalanceRsRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:RequestHeader">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Producto" type="tns:Producto" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="ConsultaBalanceRsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaBalanceRsResult" type="tns:ConsultaBalanceRsResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ConsultaBalanceRsResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ResponseHeader">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Acumuladas" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="Ganadas" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="Redimidas" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AvanceEfectivoSoapIn">
+    <wsdl:part name="parameters" element="tns:AvanceEfectivo" />
+  </wsdl:message>
+  <wsdl:message name="AvanceEfectivoSoapOut">
+    <wsdl:part name="parameters" element="tns:AvanceEfectivoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsolidacionRsSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsolidacionRs" />
+  </wsdl:message>
+  <wsdl:message name="ConsolidacionRsSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsolidacionRsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaBancosCorresponsalesSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaBancosCorresponsales" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaBancosCorresponsalesSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaBancosCorresponsalesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaBeneficiariosSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaBeneficiarios" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaBeneficiariosSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaBeneficiariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaGeneralProductoSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaGeneralProducto" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaGeneralProductoSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaGeneralProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreaBeneficiarioSoapIn">
+    <wsdl:part name="parameters" element="tns:CreaBeneficiario" />
+  </wsdl:message>
+  <wsdl:message name="CreaBeneficiarioSoapOut">
+    <wsdl:part name="parameters" element="tns:CreaBeneficiarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="DetalleCertificadoSoapIn">
+    <wsdl:part name="parameters" element="tns:DetalleCertificado" />
+  </wsdl:message>
+  <wsdl:message name="DetalleCertificadoSoapOut">
+    <wsdl:part name="parameters" element="tns:DetalleCertificadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="DetalleCuentasSoapIn">
+    <wsdl:part name="parameters" element="tns:DetalleCuentas" />
+  </wsdl:message>
+  <wsdl:message name="DetalleCuentasSoapOut">
+    <wsdl:part name="parameters" element="tns:DetalleCuentasResponse" />
+  </wsdl:message>
+  <wsdl:message name="DetallePrestamoSoapIn">
+    <wsdl:part name="parameters" element="tns:DetallePrestamo" />
+  </wsdl:message>
+  <wsdl:message name="DetallePrestamoSoapOut">
+    <wsdl:part name="parameters" element="tns:DetallePrestamoResponse" />
+  </wsdl:message>
+  <wsdl:message name="DetalleTarjetaSoapIn">
+    <wsdl:part name="parameters" element="tns:DetalleTarjeta" />
+  </wsdl:message>
+  <wsdl:message name="DetalleTarjetaSoapOut">
+    <wsdl:part name="parameters" element="tns:DetalleTarjetaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISConsultaSoapIn">
+    <wsdl:part name="parameters" element="tns:ISConsulta" />
+  </wsdl:message>
+  <wsdl:message name="ISConsultaSoapOut">
+    <wsdl:part name="parameters" element="tns:ISConsultaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISPagoSoapIn">
+    <wsdl:part name="parameters" element="tns:ISPago" />
+  </wsdl:message>
+  <wsdl:message name="ISPagoSoapOut">
+    <wsdl:part name="parameters" element="tns:ISPagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="MovimientosCuentaSoapIn">
+    <wsdl:part name="parameters" element="tns:MovimientosCuenta" />
+  </wsdl:message>
+  <wsdl:message name="MovimientosCuentaSoapOut">
+    <wsdl:part name="parameters" element="tns:MovimientosCuentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="MovimientosPrestamoSoapIn">
+    <wsdl:part name="parameters" element="tns:MovimientosPrestamo" />
+  </wsdl:message>
+  <wsdl:message name="MovimientosPrestamoSoapOut">
+    <wsdl:part name="parameters" element="tns:MovimientosPrestamoResponse" />
+  </wsdl:message>
+  <wsdl:message name="MovimientosTarjetaSoapIn">
+    <wsdl:part name="parameters" element="tns:MovimientosTarjeta" />
+  </wsdl:message>
+  <wsdl:message name="MovimientosTarjetaSoapOut">
+    <wsdl:part name="parameters" element="tns:MovimientosTarjetaResponse" />
+  </wsdl:message>
+  <wsdl:message name="PagoPrestamoSoapIn">
+    <wsdl:part name="parameters" element="tns:PagoPrestamo" />
+  </wsdl:message>
+  <wsdl:message name="PagoPrestamoSoapOut">
+    <wsdl:part name="parameters" element="tns:PagoPrestamoResponse" />
+  </wsdl:message>
+  <wsdl:message name="PagoTarjetaSoapIn">
+    <wsdl:part name="parameters" element="tns:PagoTarjeta" />
+  </wsdl:message>
+  <wsdl:message name="PagoTarjetaSoapOut">
+    <wsdl:part name="parameters" element="tns:PagoTarjetaResponse" />
+  </wsdl:message>
+  <wsdl:message name="PosicionConsolidadaSoapIn">
+    <wsdl:part name="parameters" element="tns:PosicionConsolidada" />
+  </wsdl:message>
+  <wsdl:message name="PosicionConsolidadaSoapOut">
+    <wsdl:part name="parameters" element="tns:PosicionConsolidadaResponse" />
+  </wsdl:message>
+  <wsdl:message name="RedencionRsSoapIn">
+    <wsdl:part name="parameters" element="tns:RedencionRs" />
+  </wsdl:message>
+  <wsdl:message name="RedencionRsSoapOut">
+    <wsdl:part name="parameters" element="tns:RedencionRsResponse" />
+  </wsdl:message>
+  <wsdl:message name="RemoverBeneficiarioSoapIn">
+    <wsdl:part name="parameters" element="tns:RemoverBeneficiario" />
+  </wsdl:message>
+  <wsdl:message name="RemoverBeneficiarioSoapOut">
+    <wsdl:part name="parameters" element="tns:RemoverBeneficiarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="RsClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:RsCliente" />
+  </wsdl:message>
+  <wsdl:message name="RsClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:RsClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="TransaccionACHSoapIn">
+    <wsdl:part name="parameters" element="tns:TransaccionACH" />
+  </wsdl:message>
+  <wsdl:message name="TransaccionACHSoapOut">
+    <wsdl:part name="parameters" element="tns:TransaccionACHResponse" />
+  </wsdl:message>
+  <wsdl:message name="TransferenciaSoapIn">
+    <wsdl:part name="parameters" element="tns:Transferencia" />
+  </wsdl:message>
+  <wsdl:message name="TransferenciaSoapOut">
+    <wsdl:part name="parameters" element="tns:TransferenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="TransferenciaRsSoapIn">
+    <wsdl:part name="parameters" element="tns:TransferenciaRs" />
+  </wsdl:message>
+  <wsdl:message name="TransferenciaRsSoapOut">
+    <wsdl:part name="parameters" element="tns:TransferenciaRsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidaTarjetaCodigoSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidaTarjetaCodigo" />
+  </wsdl:message>
+  <wsdl:message name="ValidaTarjetaCodigoSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidaTarjetaCodigoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaBalanceRsSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaBalanceRs" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaBalanceRsSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaBalanceRsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="BackEndServiceSoap">
+    <wsdl:operation name="AvanceEfectivo">
+      <wsdl:input message="tns:AvanceEfectivoSoapIn" />
+      <wsdl:output message="tns:AvanceEfectivoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsolidacionRs">
+      <wsdl:input message="tns:ConsolidacionRsSoapIn" />
+      <wsdl:output message="tns:ConsolidacionRsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaBancosCorresponsales">
+      <wsdl:input message="tns:ConsultaBancosCorresponsalesSoapIn" />
+      <wsdl:output message="tns:ConsultaBancosCorresponsalesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaBeneficiarios">
+      <wsdl:input message="tns:ConsultaBeneficiariosSoapIn" />
+      <wsdl:output message="tns:ConsultaBeneficiariosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaGeneralProducto">
+      <wsdl:input message="tns:ConsultaGeneralProductoSoapIn" />
+      <wsdl:output message="tns:ConsultaGeneralProductoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreaBeneficiario">
+      <wsdl:input message="tns:CreaBeneficiarioSoapIn" />
+      <wsdl:output message="tns:CreaBeneficiarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DetalleCertificado">
+      <wsdl:input message="tns:DetalleCertificadoSoapIn" />
+      <wsdl:output message="tns:DetalleCertificadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DetalleCuentas">
+      <wsdl:input message="tns:DetalleCuentasSoapIn" />
+      <wsdl:output message="tns:DetalleCuentasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DetallePrestamo">
+      <wsdl:input message="tns:DetallePrestamoSoapIn" />
+      <wsdl:output message="tns:DetallePrestamoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DetalleTarjeta">
+      <wsdl:input message="tns:DetalleTarjetaSoapIn" />
+      <wsdl:output message="tns:DetalleTarjetaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ISConsulta">
+      <wsdl:input message="tns:ISConsultaSoapIn" />
+      <wsdl:output message="tns:ISConsultaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ISPago">
+      <wsdl:input message="tns:ISPagoSoapIn" />
+      <wsdl:output message="tns:ISPagoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MovimientosCuenta">
+      <wsdl:input message="tns:MovimientosCuentaSoapIn" />
+      <wsdl:output message="tns:MovimientosCuentaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MovimientosPrestamo">
+      <wsdl:input message="tns:MovimientosPrestamoSoapIn" />
+      <wsdl:output message="tns:MovimientosPrestamoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MovimientosTarjeta">
+      <wsdl:input message="tns:MovimientosTarjetaSoapIn" />
+      <wsdl:output message="tns:MovimientosTarjetaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PagoPrestamo">
+      <wsdl:input message="tns:PagoPrestamoSoapIn" />
+      <wsdl:output message="tns:PagoPrestamoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PagoTarjeta">
+      <wsdl:input message="tns:PagoTarjetaSoapIn" />
+      <wsdl:output message="tns:PagoTarjetaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PosicionConsolidada">
+      <wsdl:input message="tns:PosicionConsolidadaSoapIn" />
+      <wsdl:output message="tns:PosicionConsolidadaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RedencionRs">
+      <wsdl:input message="tns:RedencionRsSoapIn" />
+      <wsdl:output message="tns:RedencionRsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoverBeneficiario">
+      <wsdl:input message="tns:RemoverBeneficiarioSoapIn" />
+      <wsdl:output message="tns:RemoverBeneficiarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RsCliente">
+      <wsdl:input message="tns:RsClienteSoapIn" />
+      <wsdl:output message="tns:RsClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TransaccionACH">
+      <wsdl:input message="tns:TransaccionACHSoapIn" />
+      <wsdl:output message="tns:TransaccionACHSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Transferencia">
+      <wsdl:input message="tns:TransferenciaSoapIn" />
+      <wsdl:output message="tns:TransferenciaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TransferenciaRs">
+      <wsdl:input message="tns:TransferenciaRsSoapIn" />
+      <wsdl:output message="tns:TransferenciaRsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidaTarjetaCodigo">
+      <wsdl:input message="tns:ValidaTarjetaCodigoSoapIn" />
+      <wsdl:output message="tns:ValidaTarjetaCodigoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaBalanceRs">
+      <wsdl:input message="tns:ConsultaBalanceRsSoapIn" />
+      <wsdl:output message="tns:ConsultaBalanceRsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BackEndServiceSoap" type="tns:BackEndServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AvanceEfectivo">
+      <soap:operation soapAction="http://tempuri.org/AvanceEfectivo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsolidacionRs">
+      <soap:operation soapAction="http://tempuri.org/ConsolidacionRs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaBancosCorresponsales">
+      <soap:operation soapAction="http://tempuri.org/ConsultaBancosCorresponsales" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaBeneficiarios">
+      <soap:operation soapAction="http://tempuri.org/ConsultaBeneficiarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaGeneralProducto">
+      <soap:operation soapAction="http://tempuri.org/ConsultaGeneralProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreaBeneficiario">
+      <soap:operation soapAction="http://tempuri.org/CreaBeneficiario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetalleCertificado">
+      <soap:operation soapAction="http://tempuri.org/DetalleCertificado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetalleCuentas">
+      <soap:operation soapAction="http://tempuri.org/DetalleCuentas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetallePrestamo">
+      <soap:operation soapAction="http://tempuri.org/DetallePrestamo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetalleTarjeta">
+      <soap:operation soapAction="http://tempuri.org/DetalleTarjeta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ISConsulta">
+      <soap:operation soapAction="http://tempuri.org/ISConsulta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ISPago">
+      <soap:operation soapAction="http://tempuri.org/ISPago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MovimientosCuenta">
+      <soap:operation soapAction="http://tempuri.org/MovimientosCuenta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MovimientosPrestamo">
+      <soap:operation soapAction="http://tempuri.org/MovimientosPrestamo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MovimientosTarjeta">
+      <soap:operation soapAction="http://tempuri.org/MovimientosTarjeta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PagoPrestamo">
+      <soap:operation soapAction="http://tempuri.org/PagoPrestamo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PagoTarjeta">
+      <soap:operation soapAction="http://tempuri.org/PagoTarjeta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PosicionConsolidada">
+      <soap:operation soapAction="http://tempuri.org/PosicionConsolidada" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RedencionRs">
+      <soap:operation soapAction="http://tempuri.org/RedencionRs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoverBeneficiario">
+      <soap:operation soapAction="http://tempuri.org/RemoverBeneficiario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RsCliente">
+      <soap:operation soapAction="http://tempuri.org/RsCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransaccionACH">
+      <soap:operation soapAction="http://tempuri.org/TransaccionACH" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Transferencia">
+      <soap:operation soapAction="http://tempuri.org/Transferencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransferenciaRs">
+      <soap:operation soapAction="http://tempuri.org/TransferenciaRs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidaTarjetaCodigo">
+      <soap:operation soapAction="http://tempuri.org/ValidaTarjetaCodigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaBalanceRs">
+      <soap:operation soapAction="http://tempuri.org/ConsultaBalanceRs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BackEndService">
+    <wsdl:port name="BackEndServiceSoap" binding="tns:BackEndServiceSoap">
+      <soap:address location="http://172.22.42.111/BackEndService960/BackEndService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
