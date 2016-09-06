@@ -37,15 +37,9 @@ class socketProcessor {
     }*/
 
     public function receiveMessage(){
-        $input = null;
-        $remoteIP = null;
-        $validXML = new DOMDocument;
-        $xmlMessage = null;
         $this->client = socket_accept($this->socket);
         $input = socket_read($this->client, 1024);
-        $validXML->loadXML($input);
-        $xmlMessage = simplexml_import_dom($validXML);
-        return $xmlMessage;
+        return $input;
     }
     
     public function returnMessage($vxmlMessage){

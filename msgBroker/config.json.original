@@ -1,0 +1,15 @@
+{
+    "dbType": "PSG",
+    "dbIP": "localhost",
+    "dbPort": "55432",
+    "dbName": "mako",
+    "dbUser": "sa",
+    "dbPassword": "password",
+    "conectorIP": "localhost",
+    "conectorPort": "58888",
+    "lastTrx": 955,
+    "bulkread": 10,
+    "monitortime": 5,
+    "msg115": "<MESSAGE TYPE=\"115\" BANKID=\"234\" CORRELATIONID=\"\" COUNTRY=\"DO\" CHANNEL=\"POS\" PARTNERID=\"791\" AGENCYID=\"792\" TERMINALID=\"276\" SHIFTID=\"285\" USERNAME=\"lcruz\"><CLIENT ID=\"\" TYPE=\"\" GCSSEQUENCE=\"\" TELEPHONE=\"\" /><TRANSACTION DATE=\"\" TIME=\"\" TRANSACTIONTYPE=\"16\" SUBTRANSACTIONTYPE=\"1618\" ACCOUNT=\"\" TYPE=\"\" CURRENCY=\"DOP\" AMOUNT=\"\" COMMENT=\"\" MERCHANTID=\"\" BENEFICIARY=\"\" CONTRACTNUMBER=\"\" TERMINALID=\"\" /></MESSAGE>",
+    "msg417": "<MESSAGE TYPE=\"417\" BANKID=\"234\" CORRELATIONID=\"\" COUNTRY=\"DO\" CHANNEL=\"POS\" PARTNERID=\"791\" AGENCYID=\"792\" TERMINALID=\"276\" SHIFTID=\"285\" USERNAME=\"lcruz\"><CLIENT ID=\"\" TYPE=\"\" GCSSEQUENCE=\"\" TELEPHONE=\"\" /><TRANSACTION DATE=\"\" TIME=\"\" TRANSACTIONTYPE=\"03\" SUBTRANSACTIONTYPE=\"0356\" CURRENCY=\"DOP\" AMOUNT=\"\" GCSSEQUENCE=\"\" /></MESSAGE>"
+}
