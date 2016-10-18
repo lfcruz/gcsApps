@@ -1,0 +1,14 @@
+{
+    "dkt": {"dbType":"MSQL", 
+            "dbIP":"172.19.1.36",
+            "dbPort":"1433",
+            "dbName":"SII.Omega.GCS",
+            "dbUser":"posusr",
+            "dbPassword":"p0zuSr4"},
+    "mako" : {"dbType":"PGS", 
+              "dbIP":"172.19.1.114",
+              "dbPort":"5432",
+              "dbName":"mako",
+              "dbUser":"sa",
+              "dbPassword":"password"}
+}
