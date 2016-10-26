@@ -21,7 +21,7 @@ function getDKTTerminals($terminalFilter){
                              ." a.additionalAddressInfo as street, d.description as city, c.isocode_2 as region,"
                              ." c.isocode_number as country "
                        ."from Partners a, DealerTerminalsDef b, Countries c, Cities d "
-                       ."where b.dealerID = a.ID and c.ID = a.countryID and d.ID = a.cityID and b.id not in (".$terminalFilter.")"
+                       ."where b.dealerID = a.ID and c.ID = a.countryID and d.ID = a.cityID and b.id not in (".$terminalFilter.") "
                        ."order by a.ID";
     $dktConnector->setQuery($query, []);
     $result = $dktConnector->execQry();
@@ -34,14 +34,15 @@ function getDKTTerminals($terminalFilter){
 
 function getMAKOTerminals(){
     global $makoConnector;
-    $termString = '';
+    $termString = '  ';
     $reg = [];
     $makoConnector->setQuery('select terminalid from dktterminalrelation', []);
     $getResult = $makoConnector->execQry();
     foreach($getResult as $reg){
         $termString .= $reg['terminalid'].", ";
     }
-    $termString = substr($termString, 0, strlen($termString)-2);
+    //$termString = substr($termString, 0, strlen($termString)-2);
+    $termString .= "0";
     return $termString;
 }
 
@@ -58,7 +59,7 @@ function putMAKOTerminals($data){
             error_log("Terminal ".$reg['terminalid']." not registred.\n", 3, "../log/loader.log");
         }
     }
-}
+} 
 
 function refreshdata(){
     $dataMAKO = getMAKOTerminals();

@@ -16,7 +16,7 @@ $qInsertTerminalInfo = null;
 $sabInfo = $_POST;
 $saveResult = "";
 $saveResutlMsg = "";
-$validMerchant = true;
+$validMerchant = false;
 
 //Functions ====================================================================
 function findMerchant($mid){
@@ -50,15 +50,15 @@ if(empty($vMerchantId)){
 $vTerminalId = getSequenceId();
 $qInsertTerminal = "insert into terminal (id,terminalid,info,softversion,currentbatch,merchant,profile) values (".$vTerminalId.",'".$sabInfo['tid']."','Terminal001',null,null,".$vMerchantId.",12)";
 $qInsertTerminalInfo = "insert into terminal_external_info (id,mid,tid,interchangeid) values (".$vTerminalId.",'".str_pad($sabInfo['mid'], 15, 0, STR_PAD_LEFT)."','".str_pad($sabInfo['tid'], 8, 0, STR_PAD_LEFT)."','BPD')";
-if($validMerchant){
+if(!empty($vMerchantId)){
     $makoConnector->setQuery($qInsertTerminal, []);
-    if($makoConnector->execQry()){
+    if(!empty($makoConnector->execQry())){
         $makoConnector->setQuery($qInsertTerminalInfo, []);
         if(!$makoConnector->execQry()){
             $makoConnector->setQuery("delete terminal where id = $vTerminalId", []);
             $saveResult = "HTTP/1.1 304 Not Modified.";
             $saveResutlMsg = error_get_last();
-            error_log($saveResult, $message_type, $qInsertTerminalInfo);
+            error_log($saveResult, 3, $qInsertTerminalInfo);
         }
     }else {
         $saveResult = "HTTP/1.1 200 OK.";
@@ -66,7 +66,7 @@ if($validMerchant){
 }else{
     $saveResult = "HTTP/1.1 304 Not Modified.";
     $saveResutlMsg = error_get_last();
-    error_log($saveResult, $message_type, $qInsertTerminalInfo);
+    error_log($saveResult, 3, $qInsertTerminalInfo);
 }
 header($saveResult);
 ?>

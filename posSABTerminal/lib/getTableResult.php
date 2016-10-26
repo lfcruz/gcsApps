@@ -1,6 +1,9 @@
 <?php
 include_once 'dbClass.php';
 include_once 'configClass.php';
+$searchPartern = $_POST['search'];
+$isActiveList = $_POST['list'];
+$searchList = "''";
 $conf = new configLoader('../config/dbProperties.json');
 $makoConnector = new dbRequest($conf->structure['mako']['dbType'],
                                    $conf->structure['mako']['dbIP'],
@@ -8,11 +11,23 @@ $makoConnector = new dbRequest($conf->structure['mako']['dbType'],
                                    $conf->structure['mako']['dbName'],
                                    $conf->structure['mako']['dbUser'],
                                    $conf->structure['mako']['dbPassword']);
-$query = "select * from dktterminalrelation a "
-        ."where a.terminalid not in (select terminalid from terminal) "
-        ."and (a.terminalid like '".$_POST['search']."%' "
-             ."or a.name like '%".$_POST['search']."%')"
-        . "order by terminalid ";
+if($isActiveList == 'true'){
+    $query = "select a.merchantid as agencyid, b.terminalid as terminalid, a.ca_name as name, "
+            ."a.ca_street as street, a.ca_city as city, a.ca_region as region, a.ca_country as country "
+            ."from merchant a, terminal b, terminal_external_info c "
+            ."where b.merchant = a.id and c.id = b.id ";
+}else {
+    $query = "select * from dktterminalrelation where terminalid not in (select terminalid from terminal) ";
+}
+
+if(strpos($searchPartern, ',') !== false){
+    foreach(explode(',', $searchPartern) as $value){
+        $searchList .= ", '".trim($value)."'";
+    }
+    $query .= "and terminalid in (".$searchList.") order by terminalid ";
+}else {
+    $query .= "and terminalid like '".$searchPartern."%' order by terminalid ";
+}
 $makoConnector->setQuery($query, Array());
 $output = '';
 $postData = '';
@@ -34,9 +49,12 @@ if($result) {
                         <td>".$vReg["terminalid"]."</td>  
                         <td>".$vReg["name"]."</td>  
                         <td>".$vReg["street"]."</td>  
-                        <td>".$vReg["city"]."</td>  
-                        <td width='5%'><button type='button' id='".$vReg['terminalid']."' class='btn btn-info btnViewTargets' onclick='buttonClicked(".$postData.")'>\n<span class='glyphicon glyphicon-time'></span></button></td>  
-                    </tr>";  
+                        <td>".$vReg["city"]."</td>";
+        if($isActiveList == 'true'){
+            $output .= "<td width='5%'><button type='button' id='".$vReg['terminalid']."' disabled class='btn btn-info btnViewTargets' onclick='buttonClicked(".$postData.")'>\n<span class='glyphicon glyphicon-export'></span></button></td></tr>";
+        }else {
+            $output .= "<td width='5%'><button type='button' id='".$vReg['terminalid']."' class='btn btn-info btnViewTargets' onclick='buttonClicked(".$postData.")'>\n<span class='glyphicon glyphicon-link'></span></button></td></tr>";
+        }            
     }  
     echo $output;  
 }else {

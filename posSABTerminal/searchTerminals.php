@@ -4,7 +4,7 @@ if(date("H:i") > date($_SESSION['expiretime'])){
     session_destroy();
     header("Location: index.php");
 }
-$_SESSION['expiretime'] = date("H:i", strtotime('+20 minutes'));
+$_SESSION['expiretime'] = date("H:i", strtotime('+5 minutes'));
 ?>
 <html>  
     <head>  
@@ -35,11 +35,12 @@ $_SESSION['expiretime'] = date("H:i", strtotime('+20 minutes'));
         <div class="container">  
             <br />
             <img src="img/tPago.png" alt="logo"/>
-            <h2>switchPOS Terminal Loader</h2><br />  
+            <h2>switchPOS Terminal Loader</h2><br />
+            <input type="checkbox" id="activeList"> Active List<br>
             <div class="form-group">  
                 <div class="input-group">  
                     <span class="input-group-addon">Search</span>  
-                    <input type="text" name="search_text" id="search_text" placeholder="Search by Agency Name or Terminal ID" class="form-control" />  
+                    <input type="text" name="search_text" id="search_text" placeholder="Search by Terminal ID (List with comma separator)" class="form-control" />  
                 </div>  
             </div>  
             <br />  
@@ -48,14 +49,23 @@ $_SESSION['expiretime'] = date("H:i", strtotime('+20 minutes'));
     </body>  
  </html>  
  <script>  
- $(document).ready(function(){  
+ $(document).ready(function(){
+        $('#activeList').click(function(){
+            if($(this).is(":checked")){
+                alert("ACTIVE terminals for SAB withdrawal will be shown.");
+            }else {
+                alert("INACTIVE terminals for SAB withdrawal will be shown.");
+            }
+        });
         $('#search_text').keyup(function(){  
-            var txt = $(this).val();  
-            if(txt != '') {  
+            var txt = $(this).val();
+            var chk = $('#activeList').is(":checked");
+            if(txt !== '') {
                 $.ajax({  
                     url:"lib/getTableResult.php",  
                     method:"post",  
-                    data:{search:txt},  
+                    data:{search:txt,
+                          list:chk},  
                     dataType:"text",  
                     success:function(data) {  
                         $('#result').html(data);  
@@ -69,7 +79,6 @@ $_SESSION['expiretime'] = date("H:i", strtotime('+20 minutes'));
 </script>
 <script type="text/javascript">
 function buttonClicked(tid,mid,name,street,city,region,country){
-    alert("Terminal number "+tid+", "+mid+", "+name);
     $.ajax({
         url:"lib/saveTerminal.php",
         method:"post",
@@ -82,7 +91,17 @@ function buttonClicked(tid,mid,name,street,city,region,country){
             country:country},
         dateType:"text",
         success:function(data){
-            $('#result').html('');
+            var txtReturn = $('#search_text').val();
+            alert("Terminal number "+tid+", "+mid+", "+name+" was succesfuly saved.");
+            $.ajax({  
+                url:"lib/getTableResult.php",  
+                method:"post",  
+                data:{search:txtReturn},  
+                dataType:"text",  
+                success:function(data) {           
+                    $('#result').html(data);  
+                }  
+            });  
         },
         error:function(data){
             alert(data);

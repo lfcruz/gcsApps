@@ -47,6 +47,7 @@ class dbRequest {
                 $oraQuery = oci_parse($dbConnector,'commit');
                 oci_execute($oraQuery);
                 $rowsnum = oci_fetch_all($oraQuery,$recordCommit);
+                $recordFetched = true;
             }
         }
         oci_close($dbConnector);
@@ -67,6 +68,7 @@ class dbRequest {
         }else {
             $recordFetched = pg_fetch_all($queryResult);
             if(!(substr($this->queryStructure['dbQuery'], 0, 6) == "select")){
+                $recordFetched = true;
                 pg_prepare($dbConnector,'commit','commit');
                 pg_exec($dbConnector, 'commit');
             }
