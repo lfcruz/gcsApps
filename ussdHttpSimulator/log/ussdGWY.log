@@ -1,0 +1,1458 @@
+
+---- New session for MSISDN: 18094380771 with TRANSACTION: PTC.
+
+
+
+
+
+---- New session for MSISDN: 18094380771 with TRANSACTION: PTC.
+---- New session for MSISDN: 18094380771 with TRANSACTION: PTC.
+Array
+(
+    [Pagos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=2&sessionId=201701061018048923084168
+    [Compras] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=5&sessionId=201701061018048923084168
+    [Transferencias] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=3&sessionId=201701061018048923084168
+    [Consultas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=4&sessionId=201701061018048923084168
+    [Recargas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061018048923084168
+    [Retiros] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=Retiros&sessionId=201701061018048923084168
+    [Servicios Administrativos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=6&sessionId=201701061018048923084168
+)
+
+Array
+(
+    [Factura] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061018048923084168
+    [Financiero] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=2&sessionId=201701061018048923084168
+    [Pago a Suplidores CITI] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=5&sessionId=201701061018048923084168
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=3&sessionId=201701061018048923084168
+)
+
+Array
+(
+    [Tarjeta de Credito] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061018048923084168
+    [Prestamo] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=2&sessionId=201701061018048923084168
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=3&sessionId=201701061018048923084168
+)
+
+Array
+(
+    [T1-BDI 6044] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061018048923084168
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=00&sessionId=201701061018048923084168
+)
+
+Array
+(
+)
+
+---- New session for MSISDN: 18094380771 with TRANSACTION: PTC.
+>>> MainMenu:
+Array
+(
+    [Pagos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=2&sessionId=201701061021550904175355
+    [Compras] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=5&sessionId=201701061021550904175355
+    [Transferencias] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=3&sessionId=201701061021550904175355
+    [Consultas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=4&sessionId=201701061021550904175355
+    [Recargas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061021550904175355
+    [Retiros] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=Retiros&sessionId=201701061021550904175355
+    [Servicios Administrativos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=6&sessionId=201701061021550904175355
+)
+
+
+Array
+(
+    [Factura] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061021550904175355
+    [Financiero] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=2&sessionId=201701061021550904175355
+    [Pago a Suplidores CITI] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=5&sessionId=201701061021550904175355
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=3&sessionId=201701061021550904175355
+)
+
+
+Array
+(
+    [Tarjeta de Credito] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061021550904175355
+    [Prestamo] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=2&sessionId=201701061021550904175355
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=3&sessionId=201701061021550904175355
+)
+
+
+Array
+(
+    [T1-BDI 6044] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061021550904175355
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=00&sessionId=201701061021550904175355
+)
+
+
+Array
+(
+)
+
+
+---- New session for MSISDN: 18094380771 with TRANSACTION: PTC.
+>>> MainMenu:
+Array
+(
+    [Pagos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=2&sessionId=201701061022096364461418
+    [Compras] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=5&sessionId=201701061022096364461418
+    [Transferencias] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=3&sessionId=201701061022096364461418
+    [Consultas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=4&sessionId=201701061022096364461418
+    [Recargas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061022096364461418
+    [Retiros] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=Retiros&sessionId=201701061022096364461418
+    [Servicios Administrativos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=6&sessionId=201701061022096364461418
+)
+
+
+Array
+(
+    [Factura] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061022096364461418
+    [Financiero] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=2&sessionId=201701061022096364461418
+    [Pago a Suplidores CITI] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=5&sessionId=201701061022096364461418
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=3&sessionId=201701061022096364461418
+)
+
+
+Array
+(
+    [Tarjeta de Credito] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061022096364461418
+    [Prestamo] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=2&sessionId=201701061022096364461418
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=3&sessionId=201701061022096364461418
+)
+
+
+Array
+(
+    [T1-BDI 6044] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061022096364461418
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=00&sessionId=201701061022096364461418
+)
+
+
+Array
+(
+)
+
+
+---- New session for MSISDN: 18094380771 with TRANSACTION: PTC.
+>>> MainMenu:
+Array
+(
+    [Pagos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=2&sessionId=201701061024479378648707
+    [Compras] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=5&sessionId=201701061024479378648707
+    [Transferencias] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=3&sessionId=201701061024479378648707
+    [Consultas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=4&sessionId=201701061024479378648707
+    [Recargas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061024479378648707
+    [Retiros] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=Retiros&sessionId=201701061024479378648707
+    [Servicios Administrativos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=6&sessionId=201701061024479378648707
+)
+
+
+>>>Pagos
+Array
+(
+    [Factura] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061024479378648707
+    [Financiero] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=2&sessionId=201701061024479378648707
+    [Pago a Suplidores CITI] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=5&sessionId=201701061024479378648707
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=3&sessionId=201701061024479378648707
+)
+
+
+>>>Financiero
+Array
+(
+    [Tarjeta de Credito] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061024479378648707
+    [Prestamo] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=2&sessionId=201701061024479378648707
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=3&sessionId=201701061024479378648707
+)
+
+
+>>>Tarjeta de Credito
+Array
+(
+    [T1-BDI 6044] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061024479378648707
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=00&sessionId=201701061024479378648707
+)
+
+
+>>>Input-TC
+Array
+(
+)
+
+
+---- New session for MSISDN: 18094380771 with TRANSACTION: PTC.
+>>> MainMenu:
+Array
+(
+    [Pagos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=2&sessionId=201701061044417424431010
+    [Compras] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=5&sessionId=201701061044417424431010
+    [Transferencias] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=3&sessionId=201701061044417424431010
+    [Consultas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=4&sessionId=201701061044417424431010
+    [Recargas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061044417424431010
+    [Retiros] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=Retiros&sessionId=201701061044417424431010
+    [Servicios Administrativos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=6&sessionId=201701061044417424431010
+)
+
+
+>>> Pagos
+Array
+(
+)
+
+
+---- New session for MSISDN: 18094380771 with TRANSACTION: PTC.
+>>> MainMenu:
+Array
+(
+    [Pagos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=2&sessionId=201701061045358881530878
+    [Compras] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=5&sessionId=201701061045358881530878
+    [Transferencias] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=3&sessionId=201701061045358881530878
+    [Consultas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=4&sessionId=201701061045358881530878
+    [Recargas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061045358881530878
+    [Retiros] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=Retiros&sessionId=201701061045358881530878
+    [Servicios Administrativos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=6&sessionId=201701061045358881530878
+)
+
+
+>>> Pagos
+Array
+(
+)
+
+
+---- New session for MSISDN: 18094380771 with TRANSACTION: PTC.
+>>> MainMenu:
+Array
+(
+    [Pagos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=2&sessionId=201701061047508421736821
+    [Compras] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=5&sessionId=201701061047508421736821
+    [Transferencias] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=3&sessionId=201701061047508421736821
+    [Consultas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=4&sessionId=201701061047508421736821
+    [Recargas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061047508421736821
+    [Retiros] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=Retiros&sessionId=201701061047508421736821
+    [Servicios Administrativos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=6&sessionId=201701061047508421736821
+)
+
+
+>>> Pagos
+Array
+(
+    [Factura] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061047508421736821
+    [Financiero] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=2&sessionId=201701061047508421736821
+    [Pago a Suplidores CITI] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=5&sessionId=201701061047508421736821
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=3&sessionId=201701061047508421736821
+)
+
+
+>>> Financiero
+Array
+(
+    [Tarjeta de Credito] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061047508421736821
+    [Prestamo] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=2&sessionId=201701061047508421736821
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=3&sessionId=201701061047508421736821
+)
+
+
+>>> Tarjeta de Credito
+Array
+(
+    [T1-BDI 6044] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061047508421736821
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=00&sessionId=201701061047508421736821
+)
+
+
+>>> Input-TC
+Array
+(
+    [Balance al corte RD$1,000.00] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?typeOfPayment=1&sessionId=201701061047508421736821
+    [Minimo RD$0.00] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?typeOfPayment=2&sessionId=201701061047508421736821
+    [A la fecha RD$30,000.00] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?typeOfPayment=3&sessionId=201701061047508421736821
+    [Otro Monto] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?typeOfPayment=4&sessionId=201701061047508421736821
+)
+
+
+>>> A la fecha RD$30,000.00
+Array
+(
+    [S1-BDP 3631] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?fundAccountChoice=1&sessionId=201701061047508421736821
+    [D1-BDP 3634] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?fundAccountChoice=2&sessionId=201701061047508421736821
+)
+
+
+>>> Input-Funding
+Array
+(
+    [url] => Array
+        (
+            [url] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?msisdn=8094380771
+        )
+
+    [pin] => Array
+        (
+            [pin] => 
+        )
+
+    [sessionId] => Array
+        (
+            [sessionId] => 201701061047508421736821
+        )
+
+)
+
+
+---- New session for MSISDN: 18094380771 with TRANSACTION: PTC.
+>>> MainMenu:
+Array
+(
+    [Pagos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=2&sessionId=201701061053415603460272
+    [Compras] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=5&sessionId=201701061053415603460272
+    [Transferencias] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=3&sessionId=201701061053415603460272
+    [Consultas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=4&sessionId=201701061053415603460272
+    [Recargas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061053415603460272
+    [Retiros] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=Retiros&sessionId=201701061053415603460272
+    [Servicios Administrativos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=6&sessionId=201701061053415603460272
+)
+
+
+>>> Pagos
+Array
+(
+    [Factura] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061053415603460272
+    [Financiero] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=2&sessionId=201701061053415603460272
+    [Pago a Suplidores CITI] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=5&sessionId=201701061053415603460272
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=3&sessionId=201701061053415603460272
+)
+
+
+>>> Financiero
+Array
+(
+    [Tarjeta de Credito] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061053415603460272
+    [Prestamo] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=2&sessionId=201701061053415603460272
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=3&sessionId=201701061053415603460272
+)
+
+
+>>> Tarjeta de Credito
+Array
+(
+    [T1-BDI 6044] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061053415603460272
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=00&sessionId=201701061053415603460272
+)
+
+
+>>> Input-TC
+Array
+(
+    [Balance al corte RD$1,000.00] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?typeOfPayment=1&sessionId=201701061053415603460272
+    [Minimo RD$0.00] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?typeOfPayment=2&sessionId=201701061053415603460272
+    [A la fecha RD$30,000.00] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?typeOfPayment=3&sessionId=201701061053415603460272
+    [Otro Monto] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?typeOfPayment=4&sessionId=201701061053415603460272
+)
+
+
+>>> A la fecha RD$30,000.00
+Array
+(
+    [S1-BDP 3631] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?fundAccountChoice=1&sessionId=201701061053415603460272
+    [D1-BDP 3634] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?fundAccountChoice=2&sessionId=201701061053415603460272
+)
+
+
+>>> Input-Funding
+Array
+(
+    [url] => Array
+        (
+            [url] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?msisdn=8094380771
+        )
+
+    [pin] => Array
+        (
+            [pin] => 
+        )
+
+    [sessionId] => Array
+        (
+            [sessionId] => 201701061053415603460272
+        )
+
+)
+
+
+---- New session for MSISDN: 18094380771 with TRANSACTION: PTC.
+>>> MainMenu:
+Array
+(
+    [Pagos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=2&sessionId=201701061055105100620282
+    [Compras] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=5&sessionId=201701061055105100620282
+    [Transferencias] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=3&sessionId=201701061055105100620282
+    [Consultas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=4&sessionId=201701061055105100620282
+    [Recargas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061055105100620282
+    [Retiros] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=Retiros&sessionId=201701061055105100620282
+    [Servicios Administrativos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=6&sessionId=201701061055105100620282
+)
+
+
+>>> Pagos
+Array
+(
+    [Factura] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061055105100620282
+    [Financiero] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=2&sessionId=201701061055105100620282
+    [Pago a Suplidores CITI] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=5&sessionId=201701061055105100620282
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=3&sessionId=201701061055105100620282
+)
+
+
+>>> Financiero
+Array
+(
+    [Tarjeta de Credito] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061055105100620282
+    [Prestamo] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=2&sessionId=201701061055105100620282
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=3&sessionId=201701061055105100620282
+)
+
+
+>>> Tarjeta de Credito
+Array
+(
+    [T1-BDI 6044] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061055105100620282
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=00&sessionId=201701061055105100620282
+)
+
+
+>>> Input-TC
+Array
+(
+    [Balance al corte RD$1,000.00] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?typeOfPayment=1&sessionId=201701061055105100620282
+    [Minimo RD$0.00] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?typeOfPayment=2&sessionId=201701061055105100620282
+    [A la fecha RD$30,000.00] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?typeOfPayment=3&sessionId=201701061055105100620282
+    [Otro Monto] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?typeOfPayment=4&sessionId=201701061055105100620282
+)
+
+
+>>> A la fecha RD$30,000.00
+Array
+(
+    [S1-BDP 3631] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?fundAccountChoice=1&sessionId=201701061055105100620282
+    [D1-BDP 3634] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?fundAccountChoice=2&sessionId=201701061055105100620282
+)
+
+
+>>> Input-Funding
+Array
+(
+    [url] => Array
+        (
+            [url] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?msisdn=8094380771
+        )
+
+    [pin] => Array
+        (
+            [pin] => 
+        )
+
+    [sessionId] => Array
+        (
+            [sessionId] => 201701061055105100620282
+        )
+
+)
+
+
+>>> Input-Pin
+Array
+(
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=00&sessionId=201701061055105100620282
+)
+
+
+>>> 
+Array
+(
+)
+
+
+---- New session for MSISDN: 18094380771 with TRANSACTION: CCT.
+>>> MainMenu:
+Array
+(
+    [Pagos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=2&sessionId=201701061102198446410414
+    [Compras] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=5&sessionId=201701061102198446410414
+    [Transferencias] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=3&sessionId=201701061102198446410414
+    [Consultas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=4&sessionId=201701061102198446410414
+    [Recargas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061102198446410414
+    [Retiros] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=Retiros&sessionId=201701061102198446410414
+    [Servicios Administrativos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=6&sessionId=201701061102198446410414
+)
+
+
+>>> Consultas
+Array
+(
+    [Cuentas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=BI&sessionId=201701061102198446410414
+    [Tarjetas de Credito] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=CBI&sessionId=201701061102198446410414
+    [Prestamos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=LBI&sessionId=201701061102198446410414
+    [Ultimas Transacciones] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=TH&sessionId=201701061102198446410414
+    [Boletos Generados] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=ETI&sessionId=201701061102198446410414
+    [Ver Mas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=VM&sessionId=201701061102198446410414
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=MM&sessionId=201701061102198446410414
+)
+
+
+>>> Cuentas
+Array
+(
+    [S1-BDP 3631] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=1&sessionId=201701061102198446410414
+    [D1-BDP 3634] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=2&sessionId=201701061102198446410414
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=00&sessionId=201701061102198446410414
+)
+
+
+>>> Input-Funding
+Array
+(
+    [url] => Array
+        (
+            [url] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?msisdn=8094380771
+        )
+
+    [pin] => Array
+        (
+            [pin] => 
+        )
+
+    [sessionId] => Array
+        (
+            [sessionId] => 201701061102198446410414
+        )
+
+)
+
+
+>>> Input-Pin
+Array
+(
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=00&sessionId=201701061102198446410414
+)
+
+
+>>> End
+Array
+(
+)
+
+
+---- New session for MSISDN: 18094380771 with TRANSACTION: RPR.
+>>> MainMenu:
+Array
+(
+    [Pagos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=2&sessionId=201701061106162763478745
+    [Compras] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=5&sessionId=201701061106162763478745
+    [Transferencias] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=3&sessionId=201701061106162763478745
+    [Consultas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=4&sessionId=201701061106162763478745
+    [Recargas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061106162763478745
+    [Retiros] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=Retiros&sessionId=201701061106162763478745
+    [Servicios Administrativos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=6&sessionId=201701061106162763478745
+)
+
+
+>>> Recargas
+Array
+(
+    [Mi telefono] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=MyPhone&sessionId=201701061106162763478745
+    [Recarga rapida] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=directTopUp&sessionId=201701061106162763478745
+    [Agregar/Eliminar telefono] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=addRemove&sessionId=201701061106162763478745
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=00&sessionId=201701061106162763478745
+)
+
+
+>>> Mi telefono
+Array
+(
+    [url] => Array
+        (
+            [url] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?msisdn=8094380771
+        )
+
+    [Amount] => Array
+        (
+            [Amount] => 
+        )
+
+    [sessionId] => Array
+        (
+            [sessionId] => 201701061106162763478745
+        )
+
+)
+
+
+>>> Input-Amount
+Array
+(
+    [Cuentas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=1&sessionId=201701061106162763478745
+    [Tarjeta de Credito] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=2&sessionId=201701061106162763478745
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=00&sessionId=201701061106162763478745
+)
+
+
+>>> 
+Array
+(
+)
+
+
+---- New session for MSISDN: 18094380771 with TRANSACTION: RPR.
+>>> MainMenu:
+Array
+(
+    [Pagos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=2&sessionId=201701061108334628172086
+    [Compras] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=5&sessionId=201701061108334628172086
+    [Transferencias] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=3&sessionId=201701061108334628172086
+    [Consultas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=4&sessionId=201701061108334628172086
+    [Recargas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061108334628172086
+    [Retiros] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=Retiros&sessionId=201701061108334628172086
+    [Servicios Administrativos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=6&sessionId=201701061108334628172086
+)
+
+
+>>> Recargas
+Array
+(
+    [Mi telefono] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=MyPhone&sessionId=201701061108334628172086
+    [Recarga rapida] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=directTopUp&sessionId=201701061108334628172086
+    [Agregar/Eliminar telefono] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=addRemove&sessionId=201701061108334628172086
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=00&sessionId=201701061108334628172086
+)
+
+
+>>> Mi telefono
+Array
+(
+    [url] => Array
+        (
+            [url] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?msisdn=8094380771
+        )
+
+    [Amount] => Array
+        (
+            [Amount] => 
+        )
+
+    [sessionId] => Array
+        (
+            [sessionId] => 201701061108334628172086
+        )
+
+)
+
+
+>>> Input-Amount
+Array
+(
+    [Cuentas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=1&sessionId=201701061108334628172086
+    [Tarjeta de Credito] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=2&sessionId=201701061108334628172086
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=00&sessionId=201701061108334628172086
+)
+
+
+>>> Cuentas
+Array
+(
+    [S1-BDP 3631] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=1&sessionId=201701061108334628172086
+    [D1-BDP 3634] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=2&sessionId=201701061108334628172086
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=00&sessionId=201701061108334628172086
+)
+
+
+>>> Input-Funding
+Array
+(
+    [url] => Array
+        (
+            [url] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?msisdn=8094380771
+        )
+
+    [pin] => Array
+        (
+            [pin] => 
+        )
+
+    [sessionId] => Array
+        (
+            [sessionId] => 201701061108334628172086
+        )
+
+)
+
+
+>>> Input-Pin
+Array
+(
+    [Pagos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=2&sessionId=201701061108334628172086http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?msisdn=8094380771
+    [Compras] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=5&sessionId=201701061108334628172086http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?msisdn=8094380771
+    [Transferencias] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=3&sessionId=201701061108334628172086http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?msisdn=8094380771
+    [Consultas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=4&sessionId=201701061108334628172086http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?msisdn=8094380771
+    [Recargas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061108334628172086http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?msisdn=8094380771
+    [Retiros] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=Retiros&sessionId=201701061108334628172086http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?msisdn=8094380771
+    [Servicios Administrativos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=6&sessionId=201701061108334628172086http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?msisdn=8094380771
+)
+
+
+>>> End
+Array
+(
+)
+
+
+---- New session for MSISDN: 18094380771 with TRANSACTION: RPR.
+>>> MainMenu:
+Array
+(
+    [Pagos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=2&sessionId=201701061110539807476853
+    [Compras] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=5&sessionId=201701061110539807476853
+    [Transferencias] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=3&sessionId=201701061110539807476853
+    [Consultas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=4&sessionId=201701061110539807476853
+    [Recargas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061110539807476853
+    [Retiros] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=Retiros&sessionId=201701061110539807476853
+    [Servicios Administrativos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=6&sessionId=201701061110539807476853
+)
+
+
+>>> Recargas
+Array
+(
+    [Mi telefono] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=MyPhone&sessionId=201701061110539807476853
+    [Recarga rapida] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=directTopUp&sessionId=201701061110539807476853
+    [Agregar/Eliminar telefono] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=addRemove&sessionId=201701061110539807476853
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=00&sessionId=201701061110539807476853
+)
+
+
+>>> Mi telefono
+Array
+(
+    [url] => Array
+        (
+            [url] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?msisdn=8094380771
+        )
+
+    [Amount] => Array
+        (
+            [Amount] => 
+        )
+
+    [sessionId] => Array
+        (
+            [sessionId] => 201701061110539807476853
+        )
+
+)
+
+
+>>> Input-Amount
+Array
+(
+    [Cuentas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=1&sessionId=201701061110539807476853
+    [Tarjeta de Credito] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=2&sessionId=201701061110539807476853
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=00&sessionId=201701061110539807476853
+)
+
+
+>>> Cuentas
+Array
+(
+    [S1-BDP 3631] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=1&sessionId=201701061110539807476853
+    [D1-BDP 3634] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=2&sessionId=201701061110539807476853
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=00&sessionId=201701061110539807476853
+)
+
+
+>>> Input-Funding
+Array
+(
+    [url] => Array
+        (
+            [url] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?msisdn=8094380771
+        )
+
+    [pin] => Array
+        (
+            [pin] => 
+        )
+
+    [sessionId] => Array
+        (
+            [sessionId] => 201701061110539807476853
+        )
+
+)
+
+
+>>> Input-Pin
+Array
+(
+    [Pagos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=2&sessionId=201701061110539807476853http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?msisdn=8094380771
+    [Compras] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=5&sessionId=201701061110539807476853http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?msisdn=8094380771
+    [Transferencias] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=3&sessionId=201701061110539807476853http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?msisdn=8094380771
+    [Consultas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=4&sessionId=201701061110539807476853http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?msisdn=8094380771
+    [Recargas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061110539807476853http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?msisdn=8094380771
+    [Retiros] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=Retiros&sessionId=201701061110539807476853http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?msisdn=8094380771
+    [Servicios Administrativos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=6&sessionId=201701061110539807476853http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?msisdn=8094380771
+)
+
+
+>>> End
+Array
+(
+)
+
+
+---- New session for MSISDN: 18094380771 with TRANSACTION: RPR.
+>>> MainMenu:
+Array
+(
+    [Pagos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=2&sessionId=201701061113525771736674
+    [Compras] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=5&sessionId=201701061113525771736674
+    [Transferencias] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=3&sessionId=201701061113525771736674
+    [Consultas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=4&sessionId=201701061113525771736674
+    [Recargas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061113525771736674
+    [Retiros] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=Retiros&sessionId=201701061113525771736674
+    [Servicios Administrativos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=6&sessionId=201701061113525771736674
+)
+
+
+>>> Recargas
+Array
+(
+    [Mi telefono] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=MyPhone&sessionId=201701061113525771736674
+    [Recarga rapida] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=directTopUp&sessionId=201701061113525771736674
+    [Agregar/Eliminar telefono] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=addRemove&sessionId=201701061113525771736674
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=00&sessionId=201701061113525771736674
+)
+
+
+>>> Mi telefono
+Array
+(
+    [url] => Array
+        (
+            [url] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?msisdn=8094380771
+        )
+
+    [Amount] => Array
+        (
+            [Amount] => 
+        )
+
+    [sessionId] => Array
+        (
+            [sessionId] => 201701061113525771736674
+        )
+
+)
+
+
+>>> Input-Amount
+Array
+(
+    [Cuentas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=1&sessionId=201701061113525771736674
+    [Tarjeta de Credito] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=2&sessionId=201701061113525771736674
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=00&sessionId=201701061113525771736674
+)
+
+
+>>> Cuentas
+Array
+(
+    [S1-BDP 3631] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=1&sessionId=201701061113525771736674
+    [D1-BDP 3634] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=2&sessionId=201701061113525771736674
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=00&sessionId=201701061113525771736674
+)
+
+
+>>> Input-Funding
+Array
+(
+    [url] => Array
+        (
+            [url] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?msisdn=8094380771
+        )
+
+    [pin] => Array
+        (
+            [pin] => 
+        )
+
+    [sessionId] => Array
+        (
+            [sessionId] => 201701061113525771736674
+        )
+
+)
+
+
+>>> Input-Pin
+Array
+(
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=00&sessionId=201701061113525771736674
+)
+
+
+>>> End
+Array
+(
+)
+
+
+---- New session for MSISDN: 18094380771 with TRANSACTION: RRP.
+>>> MainMenu:
+Array
+(
+    [Pagos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=2&sessionId=201701061118050386212616
+    [Compras] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=5&sessionId=201701061118050386212616
+    [Transferencias] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=3&sessionId=201701061118050386212616
+    [Consultas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=4&sessionId=201701061118050386212616
+    [Recargas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061118050386212616
+    [Retiros] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=Retiros&sessionId=201701061118050386212616
+    [Servicios Administrativos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=6&sessionId=201701061118050386212616
+)
+
+
+>>> Recargas
+Array
+(
+    [Mi telefono] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=MyPhone&sessionId=201701061118050386212616
+    [Recarga rapida] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=directTopUp&sessionId=201701061118050386212616
+    [Agregar/Eliminar telefono] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=addRemove&sessionId=201701061118050386212616
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=00&sessionId=201701061118050386212616
+)
+
+
+>>> Recarga Rapida
+Array
+(
+)
+
+
+---- New session for MSISDN: 18094380771 with TRANSACTION: RRP.
+>>> MainMenu:
+Array
+(
+    [Pagos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=2&sessionId=201701061118358241808752
+    [Compras] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=5&sessionId=201701061118358241808752
+    [Transferencias] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=3&sessionId=201701061118358241808752
+    [Consultas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=4&sessionId=201701061118358241808752
+    [Recargas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061118358241808752
+    [Retiros] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=Retiros&sessionId=201701061118358241808752
+    [Servicios Administrativos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=6&sessionId=201701061118358241808752
+)
+
+
+>>> Recargas
+Array
+(
+    [Mi telefono] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=MyPhone&sessionId=201701061118358241808752
+    [Recarga rapida] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=directTopUp&sessionId=201701061118358241808752
+    [Agregar/Eliminar telefono] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=addRemove&sessionId=201701061118358241808752
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=00&sessionId=201701061118358241808752
+)
+
+
+>>> Recarga rapida
+Array
+(
+    [CODETEL/Claro] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=2&sessionId=201701061118358241808752
+    [Orange] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=8&sessionId=201701061118358241808752
+    [VIVA] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=10&sessionId=201701061118358241808752
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=00&sessionId=201701061118358241808752
+)
+
+
+>>> 
+Array
+(
+)
+
+
+---- New session for MSISDN: 18094380771 with TRANSACTION: RRP.
+>>> MainMenu:
+Array
+(
+    [Pagos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=2&sessionId=201701061119313578707048
+    [Compras] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=5&sessionId=201701061119313578707048
+    [Transferencias] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=3&sessionId=201701061119313578707048
+    [Consultas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=4&sessionId=201701061119313578707048
+    [Recargas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061119313578707048
+    [Retiros] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=Retiros&sessionId=201701061119313578707048
+    [Servicios Administrativos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=6&sessionId=201701061119313578707048
+)
+
+
+>>> Recargas
+Array
+(
+    [Mi telefono] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=MyPhone&sessionId=201701061119313578707048
+    [Recarga rapida] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=directTopUp&sessionId=201701061119313578707048
+    [Agregar/Eliminar telefono] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=addRemove&sessionId=201701061119313578707048
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=00&sessionId=201701061119313578707048
+)
+
+
+>>> Recarga rapida
+Array
+(
+    [CODETEL/Claro] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=2&sessionId=201701061119313578707048
+    [Orange] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=8&sessionId=201701061119313578707048
+    [VIVA] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=10&sessionId=201701061119313578707048
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=00&sessionId=201701061119313578707048
+)
+
+
+>>> Input-Telco
+Array
+(
+)
+
+
+---- New session for MSISDN: 18094380771 with TRANSACTION: RRP.
+>>> MainMenu:
+Array
+(
+    [Pagos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=2&sessionId=201701061120147143247230
+    [Compras] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=5&sessionId=201701061120147143247230
+    [Transferencias] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=3&sessionId=201701061120147143247230
+    [Consultas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=4&sessionId=201701061120147143247230
+    [Recargas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061120147143247230
+    [Retiros] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=Retiros&sessionId=201701061120147143247230
+    [Servicios Administrativos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=6&sessionId=201701061120147143247230
+)
+
+
+>>> Recargas
+Array
+(
+    [Mi telefono] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=MyPhone&sessionId=201701061120147143247230
+    [Recarga rapida] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=directTopUp&sessionId=201701061120147143247230
+    [Agregar/Eliminar telefono] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=addRemove&sessionId=201701061120147143247230
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=00&sessionId=201701061120147143247230
+)
+
+
+>>> Recarga rapida
+Array
+(
+    [CODETEL/Claro] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=2&sessionId=201701061120147143247230
+    [Orange] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=8&sessionId=201701061120147143247230
+    [VIVA] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=10&sessionId=201701061120147143247230
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=00&sessionId=201701061120147143247230
+)
+
+
+>>> Input-Telco
+Array
+(
+)
+
+
+---- New session for MSISDN: 18094380771 with TRANSACTION: RRP.
+>>> MainMenu:
+Array
+(
+    [Pagos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=2&sessionId=201701061122004041164407
+    [Compras] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=5&sessionId=201701061122004041164407
+    [Transferencias] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=3&sessionId=201701061122004041164407
+    [Consultas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=4&sessionId=201701061122004041164407
+    [Recargas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061122004041164407
+    [Retiros] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=Retiros&sessionId=201701061122004041164407
+    [Servicios Administrativos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=6&sessionId=201701061122004041164407
+)
+
+
+>>> Recargas
+Array
+(
+    [Mi telefono] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=MyPhone&sessionId=201701061122004041164407
+    [Recarga rapida] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=directTopUp&sessionId=201701061122004041164407
+    [Agregar/Eliminar telefono] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=addRemove&sessionId=201701061122004041164407
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=00&sessionId=201701061122004041164407
+)
+
+
+>>> Recarga rapida
+Array
+(
+    [CODETEL/Claro] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=2&sessionId=201701061122004041164407
+    [Orange] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=8&sessionId=201701061122004041164407
+    [VIVA] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=10&sessionId=201701061122004041164407
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=00&sessionId=201701061122004041164407
+)
+
+
+>>> Input-Telco
+Array
+(
+    [url] => Array
+        (
+            [url] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?msisdn=8094380771
+        )
+
+    [msisdnnum] => Array
+        (
+            [msisdnnum] => 
+        )
+
+    [sessionId] => Array
+        (
+            [sessionId] => 201701061122004041164407
+        )
+
+)
+
+
+>>> 
+Array
+(
+)
+
+
+---- New session for MSISDN: 18094380771 with TRANSACTION: RRP.
+>>> MainMenu:
+Array
+(
+    [Pagos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=2&sessionId=201701061122411835816101
+    [Compras] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=5&sessionId=201701061122411835816101
+    [Transferencias] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=3&sessionId=201701061122411835816101
+    [Consultas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=4&sessionId=201701061122411835816101
+    [Recargas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061122411835816101
+    [Retiros] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=Retiros&sessionId=201701061122411835816101
+    [Servicios Administrativos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=6&sessionId=201701061122411835816101
+)
+
+
+>>> Recargas
+Array
+(
+    [Mi telefono] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=MyPhone&sessionId=201701061122411835816101
+    [Recarga rapida] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=directTopUp&sessionId=201701061122411835816101
+    [Agregar/Eliminar telefono] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=addRemove&sessionId=201701061122411835816101
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=00&sessionId=201701061122411835816101
+)
+
+
+>>> Recarga rapida
+Array
+(
+    [CODETEL/Claro] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=2&sessionId=201701061122411835816101
+    [Orange] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=8&sessionId=201701061122411835816101
+    [VIVA] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=10&sessionId=201701061122411835816101
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=00&sessionId=201701061122411835816101
+)
+
+
+>>> Input-Telco
+Array
+(
+    [url] => Array
+        (
+            [url] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?msisdn=8094380771
+        )
+
+    [msisdnnum] => Array
+        (
+            [msisdnnum] => 
+        )
+
+    [sessionId] => Array
+        (
+            [sessionId] => 201701061122411835816101
+        )
+
+)
+
+
+>>> Input-Msisdn
+Array
+(
+    [url] => Array
+        (
+            [url] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?msisdn=8094380771
+        )
+
+    [amount] => Array
+        (
+            [amount] => 
+        )
+
+    [sessionId] => Array
+        (
+            [sessionId] => 201701061122411835816101
+        )
+
+)
+
+
+>>> 
+Array
+(
+    [url] => Array
+        (
+            [url] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?msisdn=8094380771
+        )
+
+    [amount] => Array
+        (
+            [amount] => 
+        )
+
+    [sessionId] => Array
+        (
+            [sessionId] => 201701061122411835816101
+        )
+
+)
+
+
+>>> Input-Pin
+Array
+(
+    [url] => Array
+        (
+            [url] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?msisdn=8094380771
+        )
+
+    [amount] => Array
+        (
+            [amount] => 
+        )
+
+    [sessionId] => Array
+        (
+            [sessionId] => 201701061122411835816101
+        )
+
+)
+
+
+>>> End
+Array
+(
+)
+
+
+---- New session for MSISDN: 18094380771 with TRANSACTION: RRP.
+>>> MainMenu:
+Array
+(
+    [Pagos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=2&sessionId=201701061123247382602117
+    [Compras] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=5&sessionId=201701061123247382602117
+    [Transferencias] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=3&sessionId=201701061123247382602117
+    [Consultas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=4&sessionId=201701061123247382602117
+    [Recargas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061123247382602117
+    [Retiros] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=Retiros&sessionId=201701061123247382602117
+    [Servicios Administrativos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=6&sessionId=201701061123247382602117
+)
+
+
+>>> Recargas
+Array
+(
+    [Mi telefono] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=MyPhone&sessionId=201701061123247382602117
+    [Recarga rapida] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=directTopUp&sessionId=201701061123247382602117
+    [Agregar/Eliminar telefono] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=addRemove&sessionId=201701061123247382602117
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=00&sessionId=201701061123247382602117
+)
+
+
+>>> Recarga rapida
+Array
+(
+    [CODETEL/Claro] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=2&sessionId=201701061123247382602117
+    [Orange] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=8&sessionId=201701061123247382602117
+    [VIVA] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=10&sessionId=201701061123247382602117
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=00&sessionId=201701061123247382602117
+)
+
+
+>>> Input-Telco
+Array
+(
+    [url] => Array
+        (
+            [url] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?msisdn=8094380771
+        )
+
+    [msisdnnum] => Array
+        (
+            [msisdnnum] => 
+        )
+
+    [sessionId] => Array
+        (
+            [sessionId] => 201701061123247382602117
+        )
+
+)
+
+
+>>> Input-Msisdn
+Array
+(
+    [url] => Array
+        (
+            [url] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?msisdn=8094380771
+        )
+
+    [amount] => Array
+        (
+            [amount] => 
+        )
+
+    [sessionId] => Array
+        (
+            [sessionId] => 201701061123247382602117
+        )
+
+)
+
+
+>>> Input-Amount
+Array
+(
+    [Cuentas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=1&sessionId=201701061123247382602117
+    [Tarjeta de Credito] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=2&sessionId=201701061123247382602117
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=00&sessionId=201701061123247382602117
+)
+
+
+>>> 
+Array
+(
+)
+
+
+---- New session for MSISDN: 18094380771 with TRANSACTION: RRP.
+>>> MainMenu:
+Array
+(
+    [Pagos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=2&sessionId=201701061124321292015888
+    [Compras] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=5&sessionId=201701061124321292015888
+    [Transferencias] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=3&sessionId=201701061124321292015888
+    [Consultas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=4&sessionId=201701061124321292015888
+    [Recargas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=1&sessionId=201701061124321292015888
+    [Retiros] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=Retiros&sessionId=201701061124321292015888
+    [Servicios Administrativos] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKey=6&sessionId=201701061124321292015888
+)
+
+
+>>> Recargas
+Array
+(
+    [Mi telefono] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=MyPhone&sessionId=201701061124321292015888
+    [Recarga rapida] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=directTopUp&sessionId=201701061124321292015888
+    [Agregar/Eliminar telefono] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=addRemove&sessionId=201701061124321292015888
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=00&sessionId=201701061124321292015888
+)
+
+
+>>> Recarga rapida
+Array
+(
+    [CODETEL/Claro] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=2&sessionId=201701061124321292015888
+    [Orange] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=8&sessionId=201701061124321292015888
+    [VIVA] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=10&sessionId=201701061124321292015888
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=00&sessionId=201701061124321292015888
+)
+
+
+>>> Input-Telco
+Array
+(
+    [url] => Array
+        (
+            [url] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?msisdn=8094380771
+        )
+
+    [msisdnnum] => Array
+        (
+            [msisdnnum] => 
+        )
+
+    [sessionId] => Array
+        (
+            [sessionId] => 201701061124321292015888
+        )
+
+)
+
+
+>>> Input-Msisdn
+Array
+(
+    [url] => Array
+        (
+            [url] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?msisdn=8094380771
+        )
+
+    [amount] => Array
+        (
+            [amount] => 
+        )
+
+    [sessionId] => Array
+        (
+            [sessionId] => 201701061124321292015888
+        )
+
+)
+
+
+>>> Input-Amount
+Array
+(
+    [Cuentas] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=1&sessionId=201701061124321292015888
+    [Tarjeta de Credito] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=2&sessionId=201701061124321292015888
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=00&sessionId=201701061124321292015888
+)
+
+
+>>> Cuentas
+Array
+(
+    [S1-BDP 3631] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=1&sessionId=201701061124321292015888
+    [D1-BDP 3634] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=2&sessionId=201701061124321292015888
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=00&sessionId=201701061124321292015888
+)
+
+
+>>> Input-Funding
+Array
+(
+    [url] => Array
+        (
+            [url] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?msisdn=8094380771
+        )
+
+    [pin] => Array
+        (
+            [pin] => 
+        )
+
+    [sessionId] => Array
+        (
+            [sessionId] => 201701061124321292015888
+        )
+
+)
+
+
+>>> Input-Pin
+Array
+(
+    [Volver a menu tPago] => http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController?menuKeys=00&sessionId=201701061124321292015888
+)
+
+
+>>> End
+Array
+(
+)
+
+

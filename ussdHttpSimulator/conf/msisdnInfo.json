@@ -1,0 +1,10 @@
+{
+    "1" : {"msisdn" : "18094380771",
+           "Pin" : "2016",
+           "FundingAcct" : "S1-BDP 3631",
+           "TargetAcct" : "D1-BDP 3632",
+           "CreditCard" : "T1-BDI 6044",
+           "Loan" : "L1-BDI 3638",
+           "Rechmsisdn" : "8093305335",
+           "Rechtelco" : "CODETEL/Claro"}
+}

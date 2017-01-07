@@ -1,0 +1,11 @@
+{
+    "MainMenu" : "http://172.19.1.8/mann-ussd-http-1.0.1/servlet/HttpController",
+    "PTC" : {"1" : "Pagos", "2" : "Financiero", "3" : "Tarjeta de Credito", "4" : "Input-TC", "5" : "A la fecha RD$30,000.00", "6" : "Input-Funding", "7" : "Input-Pin", "8" : "End"},
+    "PLO" : {"1" : "Pagos", "2" : "Financiero", "3" : "Prestamo", "4" : "Input-LO", "5" : "A la fecha RD$30,000.00", "6" : "Input-Funding", "7" : "Input-Pin", "8" : "End"},
+    "Compras" : {"1" : "", "2" : "", "3" : "", "4" : "", "5" : ""},
+    "Transferencias" : {"1" : "Transferencias", "2" : "Transferir entre cuentas propias", "3" : "Input-Target", "4" : "Input-Funding", "5" : "Input-Pin"},
+    "CCT" : {"1" : "Consultas", "2" : "Cuentas", "3" : "Input-Funding", "4" : "Input-Pin", "5" : "End"},
+    "RPR" : {"1" : "Recargas", "2" : "Mi telefono", "3" : "Input-Amount", "4" : "Cuentas", "5" : "Input-Funding", "6" : "Input-Pin", "7" : "End"},
+    "RRP" : {"1" : "Recargas", "2" : "Recarga rapida", "3" : "Input-Telco", "4" : "Input-Msisdn", "5" : "Input-Amount", "6" : "Cuentas", "7" : "Input-Funding", "8" : "Input-Pin", "9" : "End"},
+    "Retiros" : {"1" : "", "2" : "", "3" : "", "4" : "", "5" : ""}
+}
