@@ -15,7 +15,7 @@ class configLoader {
             }
         } else {
             $putError = error_get_last();
-            $message = date('Y-m-d')." - Configuration file ". $confFile." no existe. : [".$putError['type']."][".$putError['file']."][".$error['line']."]";
+            $message = date('Y-m-d')." - Configuration file ". $confFile." no existe. : [".$putError['type']."][".$putError['file']."][".$putError['line']."]";
             error_log($message, 3, '../log/loader.log');
             $this->structure = array();
             $this->status = false;

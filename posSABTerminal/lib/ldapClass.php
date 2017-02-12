@@ -5,7 +5,7 @@ class ldapComm {
     private $ldapEntity;
     
     function __construct() {
-        $this->config = new configLoader('../conf/ldapProperties.json');
+        $this->config = new configLoader('../config/ldapProperties.json');
         $this->ldapEntity = ldap_connect($this->config->structure['ldap_host']);
         ldap_set_option($this->ldapEntity, LDAP_OPT_PROTOCOL_VERSION,3);
         ldap_set_option($this->ldapEntity, LDAP_OPT_REFERRALS,0);
@@ -13,10 +13,10 @@ class ldapComm {
 
     public function authUser($user, $password) {
         try {
-            $bind = @ldap_bind($this->ldapEntity, $user . $this->config->structure['ldap_usr_dom'], $password);
+            $bind = ldap_bind($this->ldapEntity, $user.$this->config->structure['ldap_usr_dom'], $password);
             ldap_unbind($this->ldapEntity);
         } catch (Exception $ex) {
-            //error log class catching
+            error_log($ex->getMessage(), 3, '../log/ldap.log');
         }
         if($bind){
             return true;
