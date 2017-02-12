@@ -1,7 +1,7 @@
 <?php
 include_once 'lib/httpClientClass.php';
 include_once 'lib/configLoader.php';
-$argTrx = 'RRP';
+$argTrx = 'PFA';
 $msisdn = getMsisdnInfo(1);
 $flow = new configLoader('conf/trxMap.json');
 $flowTerminate = false;
@@ -104,10 +104,16 @@ function getNextFlow($vFlowID){
             $result = $msisdn['TargetAcct'];
             break;
         case "Input-Telco":
-            $result = $msisdn['Rechtelco'];
+            $result = $msisdn['Telefonica'];
             break;
         case "Input-Msisdn":
             $result = $msisdn['Rechmsisdn'];
+            break;
+        case "Input-Facturador":
+            $result = $msisdn['Facturador'];
+            break;
+        case "Input-Nic":
+            $result = $msisdn['Contrato'];
             break;
         default:
             $result = $vFlowID;
