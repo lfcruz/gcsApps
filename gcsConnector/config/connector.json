@@ -1,0 +1,12 @@
+{
+    "coreip": "127.0.0.1",
+    "coreport" : "6080",
+    "bankcodes" : { "102" : "BPD",
+                    "ADO" : "ADO",
+                    "BDI" : "BDI",
+                    "BRD" : "BRD"},
+    "accounttypes" : { "SAV" : "S",
+                       "DDA" : "D",
+                       "CC" : "C",
+                       "LOAN" : "L"}
+}

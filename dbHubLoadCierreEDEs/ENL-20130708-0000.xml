@@ -1,0 +1,1 @@
+<?xml version='1.0' encoding='UTF-8'?><recibo-conciliacion><mensaje><codigo>E04</codigo><descripcion>Problema de autentificacion</descripcion><error>true</error></mensaje><transaccion><cajaid>48</cajaid><loteid>-1</loteid><transaccionid>7754</transaccionid><usuarioid>tpago_debito</usuarioid></transaccion></recibo-conciliacion>
