@@ -24,6 +24,8 @@ Class connectorProcessor {
     private $connectorHttpResource;
     private $resourceUrl;
     private $originalMessage;
+    
+//Constructor functions --------------------------------------------------------    
     function __construct() {
         $this->connectorConfig = new configLoader('config/connector.json');
         $this->connectorHttpResource = new httpClient();
@@ -90,6 +92,29 @@ Class connectorProcessor {
         $this->originalMessage->TRANSACTION["BPSEQUENCE"] = str_pad(rand(0,999999), 6, "0", STR_PAD_LEFT);
     }
     
+    private function msg300(){
+        $tmp["TYPE"]="310";
+        if($this->originalMessage->TRANSACTION["ACCOUNT"] == ""){
+            $this->originalMessage->TRANSACTION["RESPONSECODE"]="9899";
+        }else {
+            $tmp->TRANSACTION["RESPONSECODE"]="0000";
+            $this->originalMessage->TRANSACTION["NAME"] = "NELSON MANDELA";
+            $this->originalMessage->TRANSACTION["TYPE"]="DDA";
+            $this->originalMessage->TRANSACTION["CURRENCY"]="DOP";
+            $this->originalMessage->TRANSACTION["VALID-THRU"]="";
+        }
+        $this->originalMessage->TRANSACTION["BPSEQUENCE"] = str_pad(rand(0,999999), 6, "0", STR_PAD_LEFT);
+    }
+    
+    private function msg320(){
+        $this->originalMessage["TYPE"]="321";
+        $this->originalMessage->TRANSACTION["COMPANYID"]="15";
+        $this->originalMessage->TRANSACTION["COMPANYNAME"]="AVON";
+        $this->originalMessage->TRANSACTION["VENDORNAME"]="Yoselin De los Santos";
+        $this->originalMessage->TRANSACTION["RESPONSECODE"]="0000";
+        $this->originalMessage->TRANSACTION["BPSEQUENCE"]= str_pad(rand(0,999999), 6, "0", STR_PAD_LEFT);
+    }
+
     private function msg400() {
         $this->coreApiFinantialStructure['id'] = (string) $this->originalMessage['CORRELATIONID'];
         $this->coreApiFinantialStructure['operation'] = "CREDIT";
@@ -110,7 +135,19 @@ Class connectorProcessor {
         $this->originalMessage->TRANSACTION['BPSEQUENCE'] = str_pad(rand(0,999999), 6, "0", STR_PAD_LEFT);
     }
     
-    function msg500() {
+    private function msg415(){
+        $this->originalMessage["TYPE"]="416";
+            if($this->originalMessage->TRANSACTION["AMOUNT"]=="350.00"){
+                $this->originalMessage->TRANSACTION["RESPONSECODE"]="9850";
+            } else {
+                $this->originalMessage->TRANSACTION["RESPONSECODE"]="0000"; 
+            }
+        $this->originalMessage->TRANSACTION["TYPE"]="02";
+        $this->originalMessage->TRANSACTION["AUTHNUMBER"]="2147";
+        $this->originalMessage->TRANSACTION["BPSEQUENCE"] = str_pad(rand(0,999999), 6, "0", STR_PAD_LEFT);
+    }
+
+    private function msg500() {
         $this->connectorHttpResource->setURL($this->setURLCoreApi('view'));
         $coreApiResult = json_decode($this->connectorHttpResource->httpRequest('GET', $this->coreApiHeaders),true);
         
