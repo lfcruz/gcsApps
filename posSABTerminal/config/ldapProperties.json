@@ -1,0 +1,7 @@
+{
+"ldap_host" : "172.22.1.4",
+"ldap_dn" : "dc=gcs,dc=local",
+"ldap_user_group" : "switchpos",
+"ldap_manager_group" : "switchpos",
+"ldap_usr_dom" : "@gcs.local"
+}
