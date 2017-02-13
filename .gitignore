@@ -1,2 +1,6 @@
 fuel/app/logs/*/*/*
 fuel/app/cache/*/*
+/nbproject/private/
+/gcsConnector/nbproject/private/
+/msgBroker/nbproject/private/
+/bankSimulator/nbproject/private/
