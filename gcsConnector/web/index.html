@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<title>GCS Banks Simulator</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="icons/tPago.ico" type="image/x-icon" />
+<link rel="stylesheet" href="css/w3.css">
+<!--link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" -->
+<link rel="fonts/fonts-googleapis1.woff2">
+<link rel="fonts/fonts-googleapis2.woff2">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+    background-image: url('img/gcstPago.png');
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+</style>
+<body>
+    <div class="bgimg w3-display-container w3-animate-opacity">
+        <div class="w3-display-topright w3-padding-large w3-xlarge">
+            <button onclick="document.getElementById('login').style.display='block'" class="w3-btn">Login</button>
+        </div>
+        <div class="w3-display-bottomleft w3-padding-large">
+            Powered by <a href="https://www.crossTechnologies.com" target="_blank">
+            </a>
+        </div>
+    </div>
+    
+    <!-- Login Form -->
+    <div id="login" class="w3-modal">
+        <div class="w3-modal-content w3-card-8 w3-animate-zoom" style="max-width:300px">
+            <div class="w3-center w3-cyan"><br>
+                <span onclick="document.getElementById('login').style.display='none'" class="w3-closebtn w3-container w3-padding-8 w3-display-topright" title="Close Modal">&times;</span>
+                <img src="img/loginAvatar.jpg" alt="Avatar" style="width:30%" class="w3-circle w3-margin-top">
+            </div>
+            <form class="w3-container" action="/action_page.php">
+                <div class="w3-section">
+                    <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Email" name="usrname" required>
+                    <input class="w3-input w3-border" type="password" placeholder="Password" name="psw" required>
+                    <button class="w3-btn-block w3-green w3-section w3-padding" type="submit">Login</button>
+                    <input class="w3-check w3-margin-top" type="checkbox" checked="checked"> Remember me
+                </div>
+            </form>
+            <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+                <button onclick="document.getElementById('login').style.display='none'" type="button" class="w3-btn w3-red">Cancel</button>
+                <span class="w3-right w3-padding w3-hide-small">Forgot <a style="color:cyan" href="#">password?</a></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

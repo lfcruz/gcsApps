@@ -11,120 +11,13 @@
 
 
 
-function msg515($input){
-    //Mensaje Consulta Balance Vendedor Citi
-    $tmp = simplexml_import_dom($input);
-    //Format response message 
-    $tmp["TYPE"]="516";
-    $tmp->TRANSACTION["CURRENCY"]="DOP";
-    $tmp->TRANSACTION["CURRENTBALANCE"]="2479.0000";
-    $tmp->TRANSACTION["RESPONSECODE"]="0000";
-    $bpsequence=str_pad(rand(0,999999), 6, "0", STR_PAD_LEFT);
-    $tmp->TRANSACTION["BPSEQUENCE"]=$bpsequence;
-    return $tmp;    
-    
-}
 
-function msg517($input){
-    //Mensaje Consulta Historial Vendedor Citi
-    $tmp = simplexml_import_dom($input);
-    //Format response message 
-    $tmp["TYPE"]="518";
-    $tmp->TRANSACTION["CURRENCY"]="DOP";
-    $tmp->TRANSACTION["CURRENTBALANCE"]="";
-    $tmp->TRANSACTION["RESPONSECODE"]="0000";
-    $bpsequence=str_pad(rand(0,999999), 6, "0", STR_PAD_LEFT);
-    $tmp->TRANSACTION["BPSEQUENCE"]=$bpsequence;
-    return $tmp;    
-    
-}
 
-function msg540($input){
-    
-    $tmp = simplexml_import_dom($input);
-    //Format response message 
-    $tmp["TYPE"]="545";
-    switch ($tmp["BANKID"]) {
-/*	case "BDI":
-		$tmp->TRANSACTION["ACCOUNT"]="5424180279791732";
-		$tmp->TRANSACTION["EXPDATE"]="04/16";
-                #$tmp->TRANSACTION["ACCOUNT"]="4761340000000043";
-                #$tmp->TRANSACTION["EXPDATE"]="12/17";
-		break;
-	case "ADO":
-		$tmp->TRANSACTION["ACCOUNT"]="4761340000000043";
-                $tmp->TRANSACTION["EXPDATE"]="12/17";
-                break;
-        case "BDP":
-                $tmp->TRANSACTION["ACCOUNT"]="541950001998048";
-                #$tmp->TRANSACTION["ACCOUNT"]="4509750047107304";
-                $tmp->TRANSACTION["EXPDATE"]="08/14";
-                #$tmp->TRANSACTION["ACCOUNT"]="377880301750014";
-                #$tmp->TRANSACTION["EXPDATE"]="05/16";
-                break; */
-	default:
-		// Tarjetas Ambiente pruebas FDR
-    			//$tmp->TRANSACTION["ACCOUNT"]="5188920007758163";
-    			//$tmp->TRANSACTION["ACCOUNT"]="4484600022222222";
-			$tmp->TRANSACTION["ACCOUNT"]="4111111111111111";
-    			//$tmp->TRANSACTION["ACCOUNT"]="5000506501237221";
-			
-			// Tarjeta Visa
-    			//$tmp->TRANSACTION["ACCOUNT"]="4012000033330026";
 
-			//Tarjeta Mastercard
-    			//$tmp->TRANSACTION["ACCOUNT"]="5424180279791732";
 
-			//Tarjeta AMEX
-			//$tmp->TRANSACTION["ACCOUNT"]="377883875670642";
-			//$tmp->TRANSACTION["ACCOUNT"]="377881913435648";
 
-    			//$tmp->TRANSACTION["ACCOUNT"]="377880301750014";
-    			//$tmp->TRANSACTION["ACCOUNT"]="6011000990099818";
-    			//$tmp->TRANSACTION["ACCOUNT"]="4004410000000017";
-    			//$tmp->TRANSACTION["ACCOUNT"]="4004830000000016";
-    			//$tmp->TRANSACTION["ACCOUNT"]="5418480000000017";
-    			//$tmp->TRANSACTION["ACCOUNT"]="5415990000000018";
-    			//$tmp->TRANSACTION["ACCOUNT"]="4594130000000017";
-    			//$tmp->TRANSACTION["ACCOUNT"]="5166910000000009";
-    			//$tmp->TRANSACTION["ACCOUNT"]="5000506501515642";
-    			//$tmp->TRANSACTION["EXPDATE"]="04/16";
-			$tmp->TRANSACTION["EXPDATE"]="12/49";
-			//$tmp->TRANSACTION["EXPDATE"]="07/20";
-			//$tmp->TRANSACTION["EXPDATE"]="10/20";
-		// Tarjeta Ambiente prueba Cardnet
-    			//$tmp->TRANSACTION["ACCOUNT"]="4761340000000043";
-    			//$tmp->TRANSACTION["EXPDATE"]="12/17";
-    }
-    $tmp->TRANSACTION["RESPONSECODE"]="0000";
-    $bpsequence=str_pad(rand(0,999999), 6, "0", STR_PAD_LEFT);
-    $tmp->TRANSACTION["BPSEQUENCE"]=$bpsequence;
-    return $tmp;    
-    
-}
 
-function msg111($input){
-    
-    $tmp = simplexml_import_dom($input);
-    //Format response message 
-    $tmp["TYPE"]="112";
-    ////Error condition on amount = 330 / return 9899 general error
-        if($tmp->TRANSACTION["ACCOUNT"]=="749772323" and $tmp->TRANSACTION["TRANSACTIONTYPE"]=="03"){
-                $tmp->TRANSACTION["RESPONSECODE"]="9850";
-        }
-        elseif($tmp->TRANSACTION["AMOUNT"]=="850.00"){
-                $tmp->TRANSACTION["RESPONSECODE"]="9850";
-        }elseif($tmp->TRANSACTION["AMOUNT"]=="150.00" and $tmp->TRANSACTION["SUBTRANSACTIONTYPE"]=="0350"){
-		$tmp->TRANSACTION["RESPONSECODE"]="9899";
-	}
-        else {
-                $tmp->TRANSACTION["RESPONSECODE"]="0000";
-        }
-    $bpsequence=str_pad(rand(0,999999), 6, "0", STR_PAD_LEFT);
-    $tmp->TRANSACTION["BPSEQUENCE"]=$bpsequence;
-    return $tmp;    
-    
-}
+
 
 
 function msg615($input){
@@ -229,22 +122,7 @@ function msg715($input){
 
 
 
-function msg815($input){
-    
-    $tmp = simplexml_import_dom($input);
-    //Format response message 
-    $tmp["TYPE"]="816";
-    ////Error condition on security code = 1234 / return 9899 general error
-    if($tmp->TRANSACTION["SECURITYCODE"]=="1234"){
-        $tmp->TRANSACTION["RESPONSECODE"]="9899";
-    }else {
-    $tmp->TRANSACTION["RESPONSECODE"]="0000";
-    }
-    $bpsequence=str_pad(rand(0,999999), 6, "0", STR_PAD_LEFT);
-    $tmp->TRANSACTION["BPSEQUENCE"]=$bpsequence;
-    return $tmp;    
-    
-}
+
 
 function msg920($input){
     

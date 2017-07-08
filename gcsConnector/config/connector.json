@@ -1,6 +1,12 @@
 {
     "coreip": "127.0.0.1",
     "coreport" : "6080",
+    "dbtype" : "PGS",
+    "dbhost" : "localhost",
+    "dbport" : "5432",
+    "dbname" : "gcsconnector",
+    "dbuser" : "devuser",
+    "dbpass" : "L1nux2kkk",
     "bankcodes" : { "102" : "BPD",
                     "ADO" : "ADO",
                     "BDI" : "BDI",
