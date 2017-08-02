@@ -1,0 +1,8 @@
+{
+    "dbtype" : "PGS",
+    "dbhost" : "localhost",
+    "dbport" : "5432",
+    "dbname" : "Utilities",
+    "dbuser" : "devuser",
+    "dbpass" : "L1nux2kkk"
+}
