@@ -1,0 +1,154 @@
+Consulta...................................
+array(29) {
+  ["GCS_ACCOUNT_ID"]=>
+  array(1) {
+    [0]=>
+    string(4) "7207"
+  }
+  ["MSISDN"]=>
+  array(1) {
+    [0]=>
+    string(10) "8093305635"
+  }
+  ["REGISTRATION_DATE"]=>
+  array(1) {
+    [0]=>
+    string(28) "27-JUL-10 09.00.10.903000 AM"
+  }
+  ["REGISTRATION_INITIATIONTIME"]=>
+  array(1) {
+    [0]=>
+    string(28) "27-JUL-10 09.00.10.903000 AM"
+  }
+  ["PIN"]=>
+  array(1) {
+    [0]=>
+    string(1) "0"
+  }
+  ["SUPERPIN"]=>
+  array(1) {
+    [0]=>
+    string(1) "0"
+  }
+  ["SECURITYTOKEN"]=>
+  array(1) {
+    [0]=>
+    string(1) "0"
+  }
+  ["LAST_MODFIFIED_DATE"]=>
+  array(1) {
+    [0]=>
+    string(28) "04-APR-17 04.48.24.490000 PM"
+  }
+  ["CREATION_DATE"]=>
+  array(1) {
+    [0]=>
+    string(28) "27-JUL-10 09.00.10.903000 AM"
+  }
+  ["STATUS"]=>
+  array(1) {
+    [0]=>
+    string(1) "A"
+  }
+  ["IS_PRIMARY_MOBILE"]=>
+  array(1) {
+    [0]=>
+    string(1) "Y"
+  }
+  ["PIN_COUNTER"]=>
+  array(1) {
+    [0]=>
+    string(1) "1"
+  }
+  ["MODIFIED_BY"]=>
+  array(1) {
+    [0]=>
+    string(10) "8093305635"
+  }
+  ["PAYMENT_NOTIFICATION_REQUIRED"]=>
+  array(1) {
+    [0]=>
+    string(1) "Y"
+  }
+  ["PAYER_ID"]=>
+  array(1) {
+    [0]=>
+    string(10) "4133036707"
+  }
+  ["IS_PIN_CHANGED"]=>
+  array(1) {
+    [0]=>
+    string(1) "Y"
+  }
+  ["ACTUAL_SUPERPIN"]=>
+  array(1) {
+    [0]=>
+    string(1) " "
+  }
+  ["ACTUAL_SUPERPIN_DATE"]=>
+  array(1) {
+    [0]=>
+    string(28) "27-JUL-10 09.00.10.903000 AM"
+  }
+  ["TELCO_CODE"]=>
+  array(1) {
+    [0]=>
+    string(1) "8"
+  }
+  ["LAST_LOGIN"]=>
+  array(1) {
+    [0]=>
+    NULL
+  }
+  ["HASH_TYPE"]=>
+  array(1) {
+    [0]=>
+    NULL
+  }
+  ["WB_PASSWORD"]=>
+  array(1) {
+    [0]=>
+    NULL
+  }
+  ["WB_SALT_VAL"]=>
+  array(1) {
+    [0]=>
+    NULL
+  }
+  ["WB_IS_TEMPORARY"]=>
+  array(1) {
+    [0]=>
+    string(1) "Y"
+  }
+  ["WB_PSWD_CHANGE_DATE"]=>
+  array(1) {
+    [0]=>
+    NULL
+  }
+  ["WB_LOCK_VAL"]=>
+  array(1) {
+    [0]=>
+    string(2) "UL"
+  }
+  ["WB_BAD_CRD_COUNTER"]=>
+  array(1) {
+    [0]=>
+    string(1) "0"
+  }
+  ["WB_LOCK_DATE"]=>
+  array(1) {
+    [0]=>
+    NULL
+  }
+  ["PREFERENCE_LANGUAGE"]=>
+  array(1) {
+    [0]=>
+    string(2) "es"
+  }
+}
+Update...................................
+array(0) {
+}
+Valida...................................
+array(0) {
+}

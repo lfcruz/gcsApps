@@ -1,0 +1,28 @@
+{
+    "incoming" : {"header" : {"1" : {"name" : "companyname", "position" : "2", "length" : "10", "padding" : " "},
+                              "2" : {"name" : "recordscount", "position" : "12", "length" : "15"},
+                              "3" : {"name" : "totalamount", "position" : "27", "length" : "15"},
+                              "4" : {"name" : "processdatetime", "position" : "42", "length" : "19"}
+                             },
+                  "body" : {"1" : {"name" : "nic", "position" : "2", "length" : "10"},
+                            "2" : {"name" : "amount", "position" : "12", "length" : "13"},
+                            "3" : {"name" : "billcycle", "position" : "25", "length" : "6"},
+                            "4" : {"name" : "clientname", "position" : "31", "length" : "100"},
+                            "5" : {"name" : "clientaddrs", "position" : "131", "length" : "100"},
+                            "6" : {"name" : "clientdocument", "position" : "231", "length" : "16"}
+                           }
+                 },
+    "outgoing" : {"header" : {"1" : {"name" : "companyname", "position" : "3", "length" : "5", "padding" : " "},
+                              "2" : {"name" : "brokerid", "position" : "8", "length" : "8"},
+                              "3" : {"name" : "recordscount", "position" : "16", "length" : "7"},
+                              "4" : {"name" : "totalamount", "position" : "23", "length" : "15"},
+                              "5" : {"name" : "processdate", "position" : "38", "length" : "18"}
+                             },
+                  "body" : {"1" : {"name" : "transactionid", "position" : "3", "length" : "20"},
+                            "2" : {"name" : "paymentmethod", "position" : "23", "length" : "2"},
+                            "3" : {"name" : "amount", "position" : "25", "length" : "13"},
+                            "4" : {"name" : "paymentdate", "position" : "38", "length" : "8"},
+                            "5" : {"name" : "nic", "position" : "46", "length" : "10"}
+                           }
+                 }
+}
