@@ -2,13 +2,16 @@
 include_once 'dbClass.php';
 include_once 'configClass.php';
 include_once 'constants.php';
+include_once 'LogClass.php';
 class gdmPayments {
     public $paymentinfo = Array();
     public $virtualid;
     private $dbConnector;
     private $conf;
+    private $log;
     
     function __construct($vPaymentID = null) {
+        $this->log = new Logger();
         $this->conf = new configLoader('../config/db.json');
         $this->dbConnector = new dbRequest($this->conf->structure['dbtype'],
                                            $this->conf->structure['dbhost'],
@@ -29,17 +32,41 @@ class gdmPayments {
     }
     
     private function getNextPaymentId(){
-        $this->dbConnector->setQuery("select nextval('seq_postedpayments')", Array());
-        $vPaymentID = $this->dbConnector->execQry();
-        return (!empty($vPaymentID)) ? $vPaymentID[0]['nextval'] : false;
+        try {
+            $this->dbConnector->startTransactions();
+            $this->dbConnector->setQuery("select nextval('seq_postedpayments')", Array());
+            $vPaymentID = $this->dbConnector->execQry();
+            if(!empty($vPaymentID)){
+                $this->dbConnector->commitTransactions();
+                return $vPaymentID[0]['nextval'];
+            }else {
+                return false;
+            }
+            //return (!empty($vPaymentID)) ? $vPaymentID[0]['nextval'] : false;
+        } catch (Exception $e){
+            $this->dbConnector->rollbacTransactions();
+            $this->log->writeLog(LOGERROR, $e->getTraceAsString());
+        }
         
     }
     
     //PUBLIC FUNCTIONS ********************************************************************
     public function recordPayment($vCustomerInfo, $vBillerInfo){
-        $this->dbConnector->setQuery("insert into t_postedpayments (id,nic,id_biller,amount,postdate,applydate,status) "
+        try {
+            $this->dbConnector->startTransactions();
+            $this->dbConnector->setQuery("insert into t_postedpayments (id,nic,id_biller,amount,postdate,applydate,status) "
                 ."values ($1,$2,$3,$4,default,default,$5)", Array((int)$this->virtualid, $vCustomerInfo['nic'],(int)$vBillerInfo['billerid'], (float)$vCustomerInfo['maxamount'], "C"));
-        return ($this->dbConnector->execQry()) ? true : false;
+            if($this->dbConnector->execQry()){
+                $this->dbConnector->commitTransactions();
+                return true;
+            }else {
+                return false;
+            }
+        } catch (Exception $e){
+            $this->dbConnector->rollbacTransactions();
+            $this->log->writeLog(LOGERROR, $e->getTraceAsString());
+        }
+        //return ($this->dbConnector->execQry()) ? true : false;
     }
     
  //End of the Class   

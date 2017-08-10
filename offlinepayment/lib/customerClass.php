@@ -2,13 +2,16 @@
 include_once 'dbClass.php';
 include_once 'configClass.php';
 include_once 'constants.php';
+include_once 'LogClass.php';
 class gdmCustomer {
     public $billerinfo = Array();
     public $nicinfo = Array();
     private $dbConnector;
     private $conf;
+    private $log;
     
     function __construct($vNicId, $vBillerId) {
+        $this->log = new Logger();
         $this->conf = new configLoader('../config/db.json');
         $this->dbConnector = new dbRequest($this->conf->structure['dbtype'],
                                            $this->conf->structure['dbhost'],
@@ -26,7 +29,7 @@ class gdmCustomer {
         $billerdata = $this->dbConnector->execQry();
         if(!empty($billerdata)){
             $this->billerinfo = $billerdata[0];
-            $this->dbConnector->setQuery("select * from t_clients where nic = $1 and id_billers = $2 and status = 'P'", Array($vNicId, (int)$this->billerinfo['billerid']));
+            $this->dbConnector->setQuery("select * from t_clients where nic = $1 and id_billers = $2 and status in ('P','C') order by id", Array($vNicId, (int)$this->billerinfo['billerid']));
             $nicdata = $this->dbConnector->execQry();
             if(!empty($nicdata)){
                 $this->nicinfo['nic'] = $vNicId;
@@ -40,15 +43,28 @@ class gdmCustomer {
     
     //PUBLIC FUNCTIONS ********************************************************************
     public function applyPayment($vAmount){
-        $this->dbConnector->setQuery("update t_clients set status = 'C' where nic = $1 and id_billers = $2", Array($this->nicinfo['nic'], (int)$this->billerinfo['billerid']));
-        return ((float)$vAmount == (float)$this->nicinfo['maxamount']) ? ($this->dbConnector->execQry()) ? true : false : null; 
-    }
+        try {
+            $this->dbConnector->startTransactions();
+            $this->dbConnector->setQuery("update t_clients set status = 'C' where nic = $1 and id_billers = $2", Array($this->nicinfo['nic'], (int)$this->billerinfo['billerid']));
+            if((float)$vAmount == (float)$this->nicinfo['maxamount']){
+                if($this->dbConnector->execQry()){
+                    $this->dbConnector->commitTransactions();
+                    return true;
+                }else {
+                    return false;
+                }
+            }else {
+                return null;
+            }
+        } catch (Exception $e) {
+            $this->dbConnector->rollbacTransactions();
+            $this->log->writeLog(LOGERROR, $e->getTraceAsString());
+        }
+    } 
     
-    public function rollbackPayment(){
-        $this->dbConnector->setQuery("update t_clients set status = 'P' where nic = $1 and id_billers = $2", Array($this->nicinfo['nic'], (int)$this->billerinfo['billerid']));
-        return ($this->dbConnector->execQry()) ? true : false;
+    public function rollbackPayment($nada){
+        return true;
     }
-    
  //End of the Class   
  }
 ?>

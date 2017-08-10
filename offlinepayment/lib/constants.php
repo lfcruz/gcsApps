@@ -40,6 +40,9 @@ define("TOTAL_BILLS","maxbills");
 define("MININUM_BILLS","minbills");
 define("FILE_HEADER","01");
 define("FILE_RECORD","02");
+define("LOGERROR", "ERROR");
+define("LOGINFO", "INFO");
+define("LOGWARN", "WARNING");
 
 
 ?>

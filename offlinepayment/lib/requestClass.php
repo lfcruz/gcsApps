@@ -7,10 +7,12 @@ include_once "configClass.php";
 class coreRequest {
     private $httpRequest;
     private $conf;
+    private $dbConnector;
     
     function __construct($vRequest){
         $this->httpRequest = $vRequest;
         $this->conf = new configLoader('../config/db.json');
+        $this->dbConnector = new dbRequest($this->conf->structure['dbtype'], $this->conf->structure['dbhost'], $this->conf->structure['dbport'], $this->conf->structure['dbname'], $this->conf->structure['dbuser'], $this->conf->structure['dbpass']);
     }
     
     public function process (){
@@ -48,10 +50,9 @@ class coreRequest {
     }
     
     private function generateResponse($vErrorCode, $vPayload = null){
-        $dbConnector = new dbRequest($this->conf->structure['dbtype'], $this->conf->structure['dbhost'], $this->conf->structure['dbport'], $this->conf->structure['dbname'], $this->conf->structure['dbuser'], $this->conf->structure['dbpass']);
-        $dbConnector->setQuery("select * from error_codes where error_code = $1", Array($vErrorCode));
+        $this->dbConnector->setQuery("select * from error_codes where error_code = $1", Array($vErrorCode));
         $responseStructure = ["http_rsp_code" => null,"proc_rsp_code" => null,"data" => null];
-        $responseStructure["proc_rsp_code"] = $dbConnector->execQry();
+        $responseStructure["proc_rsp_code"] = $this->dbConnector->execQry();
         $responseStructure["data"] = $vPayload;
         switch (substr($vErrorCode, 0, 1)){
             case "0":
@@ -77,7 +78,6 @@ class coreRequest {
             $data = (empty($customer->nicinfo)) ? $data = $this->generateResponse(E_INVALID_NIC): Array();
         if(empty($data)){
             $paymentResult = $customer->applyPayment($this->httpRequest[3]);
-            var_dump($paymentResult);
             $data = (is_null($paymentResult)) ? $this->generateResponse(E_INVALID_AMOUNT) : 
                 $data = (!$paymentResult) ? $this->generateResponse(E_INTERNAL) :             
                     $data = ($paymentEntity->recordPayment($customer->nicinfo, $customer->billerinfo)) ? $this->generateResponse(PROC_OK,Array("transactionid" => $paymentEntity->virtualid)) : 
