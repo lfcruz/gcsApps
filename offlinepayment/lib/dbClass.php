@@ -29,7 +29,7 @@ class dbRequest {
                 break;
             case "PGS":
                 $this->connectorString = "host=".$this->connectorStructure['dbIP']." port=".$this->connectorStructure['dbPort']." dbname=".$this->connectorStructure['dbName']." user=".$this->connectorStructure['dbUser']." password=".$this->connectorStructure['dbPassword'];
-                $this->dbConnector = pg_connect($this->connectorString);
+                $this->dbConnector = pg_connect($this->connectorString, PGSQL_CONNECT_FORCE_NEW);
                 if (!$this->dbConnector){
                     echo 'Failed connection.......';
                 }else {

@@ -1,18 +1,18 @@
 <?php
 include_once "customerClass.php";
-include_once "paymentsClass.php";
+include_once "paymentsClass.php";   
 include_once "constants.php";
 include_once "dbClass.php";
 include_once "configClass.php";
 class coreRequest {
     private $httpRequest;
     private $conf;
-    private $dbConnector;
+    private $dbLinkRequest;
     
     function __construct($vRequest){
         $this->httpRequest = $vRequest;
         $this->conf = new configLoader('../config/db.json');
-        $this->dbConnector = new dbRequest($this->conf->structure['dbtype'], $this->conf->structure['dbhost'], $this->conf->structure['dbport'], $this->conf->structure['dbname'], $this->conf->structure['dbuser'], $this->conf->structure['dbpass']);
+        $this->dbLinkRequest = new dbRequest($this->conf->structure['dbtype'], $this->conf->structure['dbhost'], $this->conf->structure['dbport'], $this->conf->structure['dbname'], $this->conf->structure['dbuser'], $this->conf->structure['dbpass']);
     }
     
     public function process (){
@@ -50,9 +50,9 @@ class coreRequest {
     }
     
     private function generateResponse($vErrorCode, $vPayload = null){
-        $this->dbConnector->setQuery("select * from error_codes where error_code = $1", Array($vErrorCode));
+        $this->dbLinkRequest->setQuery("select * from error_codes where error_code = $1", Array($vErrorCode));
         $responseStructure = ["http_rsp_code" => null,"proc_rsp_code" => null,"data" => null];
-        $responseStructure["proc_rsp_code"] = $this->dbConnector->execQry();
+        $responseStructure["proc_rsp_code"] = $this->dbLinkRequest->execQry();
         $responseStructure["data"] = $vPayload;
         switch (substr($vErrorCode, 0, 1)){
             case "0":
@@ -72,16 +72,17 @@ class coreRequest {
     }
     
     private function handlerPayment(){
-        $paymentEntity = new gdmPayments();
         $customer = new gdmCustomer($this->httpRequest[2], $this->httpRequest[1]);
         $data = (empty($customer->billerinfo)) ? $this->generateResponse(E_INVALID_BILLER) :
-            $data = (empty($customer->nicinfo)) ? $data = $this->generateResponse(E_INVALID_NIC): Array();
-        if(empty($data)){
-            $paymentResult = $customer->applyPayment($this->httpRequest[3]);
-            $data = (is_null($paymentResult)) ? $this->generateResponse(E_INVALID_AMOUNT) : 
-                $data = (!$paymentResult) ? $this->generateResponse(E_INTERNAL) :             
-                    $data = ($paymentEntity->recordPayment($customer->nicinfo, $customer->billerinfo)) ? $this->generateResponse(PROC_OK,Array("transactionid" => $paymentEntity->virtualid)) : 
-                        $data = ($customer->rollbackPayment($this->httpRequest[3])) ? $this->generateResponse(E_INTERNAL) : $this->generateResponse(E_PAYMENT_ERROR);
+            $data = (empty($customer->nicinfo)) ? $data = $this->generateResponse(E_INVALID_NIC): null;
+        if(is_null($data)){
+            if($customer->nicinfo['status'] == 'P'){
+                $paymentResult = $customer->applyPayment($this->httpRequest[3]);
+                $data = (is_null($paymentResult)) ? $this->generateResponse(E_INVALID_AMOUNT) : 
+                    $data = (!$paymentResult) ? $this->generateResponse(E_PAYMENT_ERROR) : $this->generateResponse(PROC_OK,Array("transactionid" => $customer->paymentid));
+            }else {
+                $data = $this->generateResponse(W_NO_PENDING_BILLS);
+            }
         }
         return $data;
     } //Done.
@@ -91,6 +92,12 @@ class coreRequest {
         $data = (empty($customer->billerinfo)) ? $this->generateResponse(E_INVALID_BILLER) :
             $data = (empty($customer->nicinfo)) ? $data = $this->generateResponse(E_INVALID_NIC):
                 $data = (($customer->nicinfo['maxamount'] + $customer->nicinfo['minamount']) == 0.00 ) ? $data = $this->generateResponse(W_NO_PENDING_BILLS) : $this->generateResponse(PROC_OK,$customer->nicinfo);
+        return $data;
+    }
+    
+    private function handlerPaymentInfo(){
+        $payment = new gdmPayments($this->httpRequest[1]);
+        $data = (!empty($payment->paymentinfo)) ? $this->generateResponse(PROC_OK, $payment->paymentinfo) : $this->generateResponse(E_INVALID_PAYMENT);
         return $data;
     }
  

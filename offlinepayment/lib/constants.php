@@ -22,6 +22,7 @@ define("E_AUTH_FAILED","9903");
 define("E_INVALID_BILLER","9904");
 define("E_INVALID_NIC","9005");
 define("E_INVALID_AMOUNT","9006");
+define("E_INVALID_PAYMENT","9007");
 define("E_PAYMENT_ERROR","9900");
 
 define("W_ACCOUNT_EXPIRING","0001");
