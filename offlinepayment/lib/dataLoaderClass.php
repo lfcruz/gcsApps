@@ -72,12 +72,12 @@ class gdmLoader {
         $resultRecord = Array();
         switch ($vType){
             case FILE_HEADER:
-                foreach ($this->packager->structure['incoming']['header'] as $vPackage) {
+                foreach ($this->packager->structure['header']['structure'] as $vPackage) {
                     $resultRecord[$vPackage['name']] = utf8_encode(trim(substr($vRecord, $vPackage['position'], $vPackage['length'])));
                 }
                 break;
             case FILE_RECORD:
-                foreach ($this->packager->structure['incoming']['body'] as $vPackage) {
+                foreach ($this->packager->structure['body']['structure'] as $vPackage) {
                     $resultRecord[$vPackage['name']] = utf8_encode(trim(substr($vRecord, $vPackage['position'], $vPackage['length'])));
                 }
                 break;
