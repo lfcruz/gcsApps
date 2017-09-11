@@ -52,7 +52,8 @@ class coreRequest {
     private function generateResponse($vErrorCode, $vPayload = null){
         $this->dbLinkRequest->setQuery("select * from error_codes where error_code = $1", Array($vErrorCode));
         $responseStructure = ["http_rsp_code" => null,"proc_rsp_code" => null,"data" => null];
-        $responseStructure["proc_rsp_code"] = $this->dbLinkRequest->execQry();
+        $procCode = $this->dbLinkRequest->execQry();
+        $responseStructure["proc_rsp_code"] = $procCode[0];
         $responseStructure["data"] = $vPayload;
         switch (substr($vErrorCode, 0, 1)){
             case "0":

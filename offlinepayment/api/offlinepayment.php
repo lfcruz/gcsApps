@@ -10,6 +10,7 @@ include_once "../lib/requestClass.php";
     $request = new coreRequest($vRequest);
     $response = $request->process();
     header($response["http_rsp_code"]);
+    header('Content-Type: application/json');
     $finalResponse['data'] = $response['data'];
     $finalResponse['responsecode'] = $response['proc_rsp_code'];
     echo json_encode($finalResponse);
