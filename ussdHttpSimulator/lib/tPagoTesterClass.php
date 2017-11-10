@@ -7,8 +7,8 @@ Class tPagoTester {
     private $msisdn;
     private $measureddata;
     
-    function __construct($vtrxid) {
-        $this->msisdn = $this->getRandomMSISDN();
+    function __construct($vtrxid, $vmsisdnid) {
+        $this->msisdn = $this->getMsisdnInfo($vmsisdnid);
         $this->trxmap = $this->getTransactionMap();
         $this->trxid = $vtrxid;
     }
@@ -19,9 +19,9 @@ Class tPagoTester {
         return $confMap->structure;
     }
     
-    private function getRandomMSISDN(){
+    private function getMsisdnInfo($vmsisdnid){
         $msisdnList = new configLoader('conf/msisdnInfo.json');
-        return $msisdnList->structure[rand(1,3)];
+        return $msisdnList->structure[$vmsisdnid];
     }
     
     private function parseMenu($vresult){
@@ -85,6 +85,10 @@ Class tPagoTester {
         return $result;
     }
     
+    private function evaluateEndPoing(){
+        exit(1);
+    }
+    
     // Public Fucntions ------------------------------------------------
     public function process(){
         $flowTerminate = false;
@@ -92,23 +96,29 @@ Class tPagoTester {
         $trxmapPointer = 0;
         $execFlow = "";
         $newurl = "";
+        $httmethod = "GET";
 
         //Calling Main Menu ---------------------------------------------------------
         $ussdClaro = new httpClient($this->trxmap['MainMenu'], $this->msisdn['msisdn']);
-        $result = $ussdClaro->httpRequest("GET");
+        $result = $ussdClaro->httpRequest($httmethod);
+        
         error_log("---- New session for MSISDN: ".$this->msisdn['msisdn']." with TRANSACTION: ".$this->trxid.".\n", 3, 'log/ussdGWY.log');
-        error_log(">>> MainMenu:\n", 3, 'log/ussdGWY.log');
+        echo("---- New session for MSISDN: ".$this->msisdn['msisdn']." with TRANSACTION: ".$this->trxid.".\n");
+        
+        error_log(">>> Trying MainMenu...... :\n", 3, 'log/ussdGWY.log');
+        echo(">>> Trying MainMenu...... :\n");
         
         //Transaction Flow ----------------------------------------------------------
         while(!$flowTerminate){
             $menu = $this->parseMenu($result);
-            error_log(print_r($menu, true)."\n\n", 3, 'log/ussdGWY.log');
-    
-            if(empty($menu)) { exit(1);}
+            
+            error_log(print_r($menu, true), 3, 'log/ussdGWY.log');
+            echo(print_r($menu, true));
+            
+            if(empty($menu)) { $this->evaluateEndPoing();}
             if(array_key_exists('url', $menu)){
                 $trxmapPointer += 1;
                 $execFlow = $this->getNextFlow($this->trxmap[$this->trxid][$trxmapPointer]);
-                var_dump($execFlow);
                 foreach($menu as $urlkey){
                     if(key($urlkey) == "url"){
                         $newurl .= $urlkey['url'];
@@ -125,7 +135,7 @@ Class tPagoTester {
             }else {
                 $trxmapPointer += 1;
                 $execFlow = $this->getNextFlow($this->trxmap[$this->trxid][$trxmapPointer]);
-                echo "\n\n-$execFlow-\n\n";
+                //echo "\n\n-$execFlow-\n\n";
                 //$ussdClaro->setURL(str_replace('.1.20', '.1.8', $menu[$flow->structure[$argTrx][$flowPointer]]));
                 $ussdClaro->setURL(str_replace('172.19.1.20:8080', 'localhost:58080', $menu[$execFlow]));
             }
@@ -133,7 +143,9 @@ Class tPagoTester {
             if($this->trxmap[$this->trxid][$trxmapPointer] == "End") {
                 $flowTerminate = true;
             }
-            error_log(">>> ".$this->trxmap[$this->trxid][$trxmapPointer]."\n", 3, 'log/ussdGWY.log');
+            
+            error_log("\n\n\n---------------------------------------------------------\n>>> Trying [".$execFlow."]...... :\n\n", 3, 'log/ussdGWY.log');
+            echo("\n\n\n--------------------------------------------------------\n>>> Trying [".$execFlow."]...... :\n\n");
         }
         return $flowTerminate;
     }
