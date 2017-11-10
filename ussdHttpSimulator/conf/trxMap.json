@@ -1,9 +1,9 @@
 {
-    "MainMenu" : "http://172.19.1.9/mann-ussd-http-1.0.1/servlet/HttpController",
+    "MainMenu" : "http://localhost:58080/mann-ussd-http-1.0.1/servlet/HttpController",
     "PTC" : {"1" : "Pagos", "2" : "Financiero", "3" : "Tarjeta de Credito", "4" : "Input-TC", "5" : "A la fecha RD$30,000.00", "6" : "Input-Funding", "7" : "Input-Pin", "8" : "End"},
     "PLO" : {"1" : "Pagos", "2" : "Financiero", "3" : "Prestamo", "4" : "Input-LO", "5" : "A la fecha RD$30,000.00", "6" : "Input-Funding", "7" : "Input-Pin", "8" : "End"},
-    "AFA" : {"1" : "Pagos", "2" : "Factura", "3" : "Agregar/Eliminar Factura", "4" : "Agregar Factura", "5" : "Electricidad", "6" : "Input-Facturador", "7" : "Input-Nic", "8" : "Input-Pin", "9" : "End"},
-    "PFA" : {"1" : "Pagos", "2" : "Factura", "3" : "Electricidad", "4" : "Input-Facturador", "5" : "Input-Nic", "6" : "Total RD$2,819.29", "7" : "Cuentas", "8" : "Input-Funding", "9" : "Input-Pin", "10" : "End"},
+    "AFA" : {"1" : "Pagos", "2" : "Factura", "3" : "Agregar/Eliminar Factura", "4" : "Agregar Factura", "5" : "Telefonicas", "6" : "Input-Facturador", "7" : "Input-Nic", "8" : "Input-Pin", "9" : "End"},
+    "PFA" : {"1" : "Pagos", "2" : "Factura", "3" : "Telefonicas", "4" : "Input-Facturador", "5" : "Input-Nic", "6" : "Total RD$2,819.29", "7" : "Cuentas", "8" : "Input-Funding", "9" : "Input-Pin", "10" : "End"},
     "Compras" : {"1" : "", "2" : "", "3" : "", "4" : "", "5" : ""},
     "TPR" : {"1" : "Transferencias", "2" : "Transferir entre cuentas propias", "3" : "Input-Target", "4" : "Input-Funding", "5" : "Input-Amount", "6" : "Input-Pin", "7" : "End"},
     "CCT" : {"1" : "Consultas", "2" : "Cuentas", "3" : "Input-Funding", "4" : "Input-Pin", "5" : "End"},

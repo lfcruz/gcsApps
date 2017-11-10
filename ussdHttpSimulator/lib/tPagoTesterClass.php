@@ -21,7 +21,7 @@ Class tPagoTester {
     
     private function getRandomMSISDN(){
         $msisdnList = new configLoader('conf/msisdnInfo.json');
-        return $msisdnList->structure[rand(1,6)];
+        return $msisdnList->structure[rand(1,3)];
     }
     
     private function parseMenu($vresult){
@@ -95,7 +95,7 @@ Class tPagoTester {
 
         //Calling Main Menu ---------------------------------------------------------
         $ussdClaro = new httpClient($this->trxmap['MainMenu'], $this->msisdn['msisdn']);
-        $result = $ussdClaro->httpRequest("POST");
+        $result = $ussdClaro->httpRequest("GET");
         error_log("---- New session for MSISDN: ".$this->msisdn['msisdn']." with TRANSACTION: ".$this->trxid.".\n", 3, 'log/ussdGWY.log');
         error_log(">>> MainMenu:\n", 3, 'log/ussdGWY.log');
         
@@ -120,16 +120,16 @@ Class tPagoTester {
                         }
                     }
                 }
-                $ussdClaro->setURL(str_replace('.1.20', '.1.8', $newurl), $this->msisdn['msisdn']);
+                $ussdClaro->setURL(str_replace('172.19.1.20:8080', 'localhost:58080', $newurl), $this->msisdn['msisdn']);
                 $newurl = "";
             }else {
                 $trxmapPointer += 1;
                 $execFlow = $this->getNextFlow($this->trxmap[$this->trxid][$trxmapPointer]);
                 echo "\n\n-$execFlow-\n\n";
                 //$ussdClaro->setURL(str_replace('.1.20', '.1.8', $menu[$flow->structure[$argTrx][$flowPointer]]));
-                $ussdClaro->setURL(str_replace('.1.20', '.1.8', $menu[$execFlow]));
+                $ussdClaro->setURL(str_replace('172.19.1.20:8080', 'localhost:58080', $menu[$execFlow]));
             }
-            $result = $ussdClaro->httpRequest("POST");
+            $result = $ussdClaro->httpRequest("GET");
             if($this->trxmap[$this->trxid][$trxmapPointer] == "End") {
                 $flowTerminate = true;
             }
