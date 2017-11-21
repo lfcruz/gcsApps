@@ -9,7 +9,7 @@ class Logger {
     }
     
     public function writeLog($errorType, $customMessage = null, $objException = null){
-        error_log($customMessage, 4, $this->conf->structure['logfile']."\n");
+        error_log($customMessage, 3, $this->conf->structure['logfile']."\n");
     }
 }
 /* 

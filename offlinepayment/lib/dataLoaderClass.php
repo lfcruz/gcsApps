@@ -10,6 +10,7 @@ class gdmLoader {
     private $fileHandler;
     private $fileID;
     private $billerID;
+    private $billerIFormat;
     private $filename;
     private $log;
     
@@ -19,32 +20,56 @@ class gdmLoader {
         $this->filename = $datafile;
         try {
             $this->conf['database'] = new configLoader('../config/db.json');
-            $this->packager = new configLoader('../config/packager.json');
+            $this->packager = new configLoader('../config/incoming_packager.json');
             $this->dbConnector = new dbRequest($this->conf['database']->structure['dbtype'],
                                            $this->conf['database']->structure['dbhost'],
                                            $this->conf['database']->structure['dbport'],
                                            $this->conf['database']->structure['dbname'],
                                            $this->conf['database']->structure['dbuser'],
                                            $this->conf['database']->structure['dbpass']);
-            $this->fileValidation();
+            $this->fileValidation($this->getBillerFromFile());
         } catch (Exception $e) {
             $this->log->writeLog(LOGERROR, $e->getTraceAsString());
         }
     }
     
     // PRIVATE FUNCTIONS ******************************************************************
-    private function fileValidation(){
+    private function getBillerFromFile(){
+        $this->fileHandler = fopen($this->filename, 'r');
+        $fileString = fgets($this->fileHandler);
+        //fclose($this->fileHandler);
+        if (substr($fileString, 0, 2) == "01") {
+            $vBillerCode = substr($fileString, 2, 5);
+            $this->dbConnector->setQuery("select id,iformat from t_billers where externalid = $1", Array(trim($vBillerCode)));
+            $this->billerID = $this->dbConnector->execQry();
+            $this->billerIFormat = (string)$this->billerID[0]['iformat'];
+            $this->billerID = (int)$this->billerID[0]['id'];
+            var_dump($vBillerCode);
+            var_dump($this->billerID);
+            var_dump($this->billerIFormat);
+            
+        }else {
+            fclose($this->fileHandler);
+            $this->log->writeLog(LOGERROR, "Biller name from file is invalid, please verify file integrity and try again.");
+            exit(1);
+        }
+        return $fileString;
+    }
+    
+    private function fileValidation($fileString){
         $recordsCount = 0;
         $recordsFailed = 0;
         $recordsAmounts = (float)0;
-        $this->fileHandler = fopen($this->filename, 'r');
-        $fileString = fgets($this->fileHandler);
-        echo "$fileString\n";
-            if (substr($fileString, 0, 2) == "01" and strlen($fileString) == 73) {
+        //$this->fileHandler = fopen($this->filename, 'r');
+        //$fileString = fgets($this->fileHandler);
+        //echo "$fileString\n";
+            //if (substr($fileString, 0, 2) == "01" and strlen($fileString) == 73) {
                 $vHeader = $this->parseRecord($fileString, substr($fileString, 0, 2));
-                $this->dbConnector->setQuery("select id from t_billers where externalid = $1", Array(trim($vHeader['companyname'])));
-                $this->billerID = $this->dbConnector->execQry();
-                $this->billerID = (int)$this->billerID[0]['id'];
+                //$this->dbConnector->setQuery("select id,iformat from t_billers where externalid = $1", Array(trim($vHeader['companyname'])));
+                //$this->billerID = $this->dbConnector->execQry();
+                //var_dump($this->billerID);
+                //$this->billerIFormat = (string)$this->billerID[0]['iformat'];
+                //$this->billerID = (int)$this->billerID[0]['id'];
                 while($this->billerID and !feof($this->fileHandler)){
                     $fileString = fgets($this->fileHandler);
                     if(strlen($fileString) > 200 /*259*/ and substr($fileString, 0, 2) == "02"){
@@ -55,7 +80,7 @@ class gdmLoader {
                          $recordsFailed += 1;
                      }
                 }
-            }
+            //}
         fclose($this->fileHandler);
         echo "###########   Header Parsed   ##############\n";
         echo "Partner: ".$vHeader['companyname']."\n";
@@ -66,18 +91,21 @@ class gdmLoader {
         echo "Valid amount: $recordsAmounts\n";
         echo "Bad records: $recordsFailed\n";
         echo "############################################\n\n\n";
+        
+        //var_dump($this->billerIFormat);
+        //var_dump($this->billerID);
     }
     
     private function parseRecord($vRecord, $vType){
         $resultRecord = Array();
         switch ($vType){
             case FILE_HEADER:
-                foreach ($this->packager->structure['header']['structure'] as $vPackage) {
+                foreach ($this->packager->structure[$this->billerIFormat]['header']['structure'] as $vPackage) {
                     $resultRecord[$vPackage['name']] = utf8_encode(trim(substr($vRecord, $vPackage['position'], $vPackage['length'])));
                 }
                 break;
             case FILE_RECORD:
-                foreach ($this->packager->structure['body']['structure'] as $vPackage) {
+                foreach ($this->packager->structure[$this->billerIFormat]['body']['structure'] as $vPackage) {
                     $resultRecord[$vPackage['name']] = utf8_encode(trim(substr($vRecord, $vPackage['position'], $vPackage['length'])));
                 }
                 break;

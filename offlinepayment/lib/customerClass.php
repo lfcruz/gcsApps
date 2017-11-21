@@ -50,7 +50,7 @@ class gdmCustomer {
             if((float)$vAmount == (float)$this->nicinfo['maxamount']){
                 $paymentEntity = new gdmPayments();
                 $this->dbLinkCustomer->startTransactions();
-                $this->dbLinkCustomer->setQuery("update t_clients set status = 'C', amount = $1 where nic = $2 and id_billers = $3", Array(0.00, $this->nicinfo['nic'], (int)$this->billerinfo['billerid']));
+                $this->dbLinkCustomer->setQuery("update t_clients set status = 'C', amount = $1 where nic = $2 and id_billers = $3 and status = 'P'", Array(0.00, $this->nicinfo['nic'], (int)$this->billerinfo['billerid']));
                 if($this->dbLinkCustomer->execQry()){
                     if($paymentEntity->recordPayment($this->nicinfo, $this->billerinfo)){
                         $this->dbLinkCustomer->commitTransactions();
