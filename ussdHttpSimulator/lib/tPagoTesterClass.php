@@ -107,14 +107,14 @@ Class tPagoTester {
         
         error_log(">>> Trying MainMenu...... :\n", 3, 'log/ussdGWY.log');
         echo(">>> Trying MainMenu...... :\n");
-        
+
         //Transaction Flow ----------------------------------------------------------
         while(!$flowTerminate){
             $menu = $this->parseMenu($result);
             
             error_log(print_r($menu, true), 3, 'log/ussdGWY.log');
             echo(print_r($menu, true));
-            
+            //echo($result);
             if(empty($menu)) { $this->evaluateEndPoing();}
             if(array_key_exists('url', $menu)){
                 $trxmapPointer += 1;
