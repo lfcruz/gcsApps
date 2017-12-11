@@ -2,8 +2,8 @@
 Class httpClient {
     private $url;
     
-    function __construct() {
-        $this->url = "";
+    function __construct($vurl = null) {
+        $this->url = $vurl;
     }
     
     public function setURL($vurl){
