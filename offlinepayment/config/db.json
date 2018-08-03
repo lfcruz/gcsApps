@@ -1,7 +1,7 @@
 {
     "dbtype" : "PGS",
     "dbhost" : "localhost",
-    "dbport" : "5432",
+    "dbport" : "55430",
     "dbname" : "offlinepayment",
     "dbuser" : "devuser",
     "dbpass" : "L1nux2kkk"
