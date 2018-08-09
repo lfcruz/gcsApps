@@ -72,7 +72,7 @@ class conciliationReport {
         $conciliationName = "../".$this->conf['file']->structure[$this->billerInfo['externalid']]['outputFileDirectory'].$this->billerInfo['externalid']."_reporte_pagos_".date('Ymd').".txt";
         $this->fileHandler = fopen($conciliationName, 'w');
         foreach ($this->reconData['header'] as $record){
-            $stringLine = "";
+            $stringLine = $this->packager['header']['id'];
             foreach ($this->packager['header']['structure'] as $field){
                 $stringLine .= $this->formatFileField($record, $field);
             }
@@ -80,7 +80,7 @@ class conciliationReport {
             fwrite($this->fileHandler, $stringLine);
         }
         foreach ($this->reconData['body'] as $record){
-            $stringLine = "";
+            $stringLine = $this->packager['body']['id'];
             foreach ($this->packager['body']['structure'] as $field){
                 $stringLine .= $this->formatFileField($record, $field);
             }
