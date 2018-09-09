@@ -6,7 +6,7 @@ include_once 'lib/sftpEndPoint.php';
 $taskid = $argv[1];
 
 try{
-    $conf = new configLoader('conf/porgrammedTransfers.json');
+    $conf = new configLoader('conf/transferTask.json');
     $task = $conf->structure[$taskid];
 } catch (Exception $e) {
     echo "Exception : ".$e->getMessage();
