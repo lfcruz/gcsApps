@@ -1,0 +1,54 @@
+{
+    "df" : {    "1" : {}
+        },
+    "01" : {
+                "1" : {"name" : "fecha", "position" : "6", "length" : "8"},
+                "2" : {"name" : "hora", "position" : "14", "length" : "6"},
+                "3" : {"name" : "trxid", "position" : "20", "length" : "12"},
+                "4" : {"name" : "entidad", "position" : "32", "length" : "3"},
+                "5" : {"name" : "guion", "position" : "35", "length" : "1"},
+                "6" : {"name" : "agencia", "position" : "36", "length" : "7"},
+                "7" : {"name" : "trxid", "position" : "20", "length" : "12"},
+                "8" : {"name" : "entidad", "position" : "32", "length" : "3"},
+                "9" : {"name" : "guion", "position" : "35", "length" : "1"},
+                "10" : {"name" : "agencia", "position" : "36", "length" : "7"},
+                "11" : {"name" : "tipocuenta", "position" : "43", "length" : "1"},
+                "12" : {"name" : "numerocuenta", "position" : "44", "length" : "15"},
+                "13" : {"name" : "correlation", "position" : "59", "length" : "20"},
+                "14" : {"name" : "efectivo", "position" : "79", "length" : "13"},
+                "15" : {"name" : "chequepropio", "position" : "92", "length" : "13"},
+                "16" : {"name" : "chequeotro", "position" : "105", "length" : "13"},
+                "17" : {"name" : "total", "position" : "118", "length" : "13"},
+                "18" : {"name" : "tipodocumento", "position" : "131", "length" : "1"},
+                "19" : {"name" : "numerodocumento", "position" : "132", "length" : "20"},
+                "20" : {"name" : "fechaexpiracion", "position" : "152", "length" : "4"}
+        },
+    "03" : { 
+                "1" : {"name" : "fecha", "position" : "6", "length" : "8"},
+                "2" : {"name" : "hora", "position" : "14", "length" : "6"},
+                "3" : {"name" : "referencia", "position" : "20", "length" : "12"},
+                "4" : {"name" : "entidad", "position" : "32", "length" : "2"},
+                "5" : {"name" : "guion", "position" : "35", "length" : "1"},
+                "6" : {"name" : "agencia", "position" : "36", "length" : "7"},
+                "15" : {"name" : "tipocuenta", "position" : "43", "length" : "1"},
+                "15" : {"name" : "numerocuenta", "position" : "44", "length" : "15"},
+                "15" : {"name" : "correlation", "position" : "59", "length" : "20"}
+        },
+    "53" : {
+                "1" : {"name" : "referencia", "position" : "6", "length" : "12", "paddingCharacter" : "0", "paddingDirection" : "0"},
+                "2" : {"name" : "balance", "position" : "18", "length" : "13", "paddingCharacter" : "0", "paddingDirection" : "0"},
+                "3" : {"name" : "nombre", "position" : "31", "length" : "60", "paddingCharacter" : " ", "paddingDirection" : "1"},
+                "4" : {"name" : "apellido", "position" : "91", "length" : "60", "paddingCharacter" : " ", "paddingDirection" : "1"},
+                "5" : {"name" : "status", "position" : "151", "length" : "2", "paddingCharacter" : "0", "paddingDirection" : "0"},
+                "6" : {"name" : "descripcion", "position" : "153", "length" : "80", "paddingCharacter" : " ", "paddingDirection" : "1"}
+        },
+    "51" : { 
+                "1" : {"name" : "referencia", "position" : "6", "length" : "12", "paddingCharacter" : "0", "paddingDirection" : "0"},
+                "2" : {"name" : "autorizacion", "position" : "18", "length" : "6", "paddingCharacter" : "0", "paddingDirection" : "0"},
+                "3" : {"name" : "saldo", "position" : "24", "length" : "13", "paddingCharacter" : "0", "paddingDirection" : "0"},
+                "4" : {"name" : "nombre", "position" : "37", "length" : "60", "paddingCharacter" : " ", "paddingDirection" : "1"},
+                "5" : {"name" : "apellido", "position" : "97", "length" : "60", "paddingCharacter" : " ", "paddingDirection" : "1"},
+                "6" : {"name" : "status", "position" : "157", "length" : "2", "paddingCharacter" : "0", "paddingDirection" : "0"},
+                "15" : {"name" : "descripcion", "position" : "159", "length" : "80", "paddingCharacter" : " ", "paddingDirection" : "1"}
+        }
+}

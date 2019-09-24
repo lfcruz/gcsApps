@@ -1,0 +1,56 @@
+PHP Notice:  Undefined index: 
+ in /apps/movistarISOSim/lib/packagerClass.php on line 30
+PHP Warning:  Invalid argument supplied for foreach() in /apps/movistarISOSim/lib/packagerClass.php on line 38
+PHP Notice:  Undefined index: 
+ in /apps/movistarISOSim/testMovistarGTISO.php on line 79
+PHP Notice:  Undefined index: name in /apps/movistarISOSim/lib/packagerClass.php on line 46
+PHP Notice:  Undefined index:  in /apps/movistarISOSim/lib/packagerClass.php on line 46
+PHP Notice:  Undefined index: length in /apps/movistarISOSim/lib/packagerClass.php on line 46
+PHP Notice:  Undefined index: paddingCharacter in /apps/movistarISOSim/lib/packagerClass.php on line 46
+PHP Notice:  Undefined index: paddingDirection in /apps/movistarISOSim/lib/packagerClass.php on line 46
+PHP Warning:  str_pad() expects parameter 4 to be long, string given in /apps/movistarISOSim/lib/packagerClass.php on line 46
+PHP Notice:  Undefined index: name in /apps/movistarISOSim/lib/packagerClass.php on line 39
+PHP Notice:  Undefined index: position in /apps/movistarISOSim/lib/packagerClass.php on line 39
+PHP Notice:  Undefined index: length in /apps/movistarISOSim/lib/packagerClass.php on line 39
+PHP Notice:  Undefined offset: 0 in /apps/movistarISOSim/testMovistarGTISO.php on line 79
+PHP Notice:  Undefined index: name in /apps/movistarISOSim/lib/packagerClass.php on line 46
+PHP Notice:  Undefined index: length in /apps/movistarISOSim/lib/packagerClass.php on line 46
+PHP Notice:  Undefined index: paddingCharacter in /apps/movistarISOSim/lib/packagerClass.php on line 46
+PHP Notice:  Undefined index: paddingDirection in /apps/movistarISOSim/lib/packagerClass.php on line 46
+PHP Warning:  str_pad() expects parameter 4 to be long, string given in /apps/movistarISOSim/lib/packagerClass.php on line 46
+PHP Notice:  Undefined index:  in /apps/movistarISOSim/lib/packagerClass.php on line 30
+PHP Warning:  Invalid argument supplied for foreach() in /apps/movistarISOSim/lib/packagerClass.php on line 38
+PHP Notice:  Undefined index:  in /apps/movistarISOSim/testMovistarGTISO.php on line 79
+PHP Notice:  Undefined index: name in /apps/movistarISOSim/lib/packagerClass.php on line 46
+PHP Notice:  Undefined index:  in /apps/movistarISOSim/lib/packagerClass.php on line 46
+PHP Notice:  Undefined index: length in /apps/movistarISOSim/lib/packagerClass.php on line 46
+PHP Notice:  Undefined index: paddingCharacter in /apps/movistarISOSim/lib/packagerClass.php on line 46
+PHP Notice:  Undefined index: paddingDirection in /apps/movistarISOSim/lib/packagerClass.php on line 46
+PHP Warning:  str_pad() expects parameter 4 to be long, string given in /apps/movistarISOSim/lib/packagerClass.php on line 46
+PHP Notice:  Undefined index:  in /apps/movistarISOSim/lib/packagerClass.php on line 30
+PHP Warning:  Invalid argument supplied for foreach() in /apps/movistarISOSim/lib/packagerClass.php on line 38
+PHP Notice:  Undefined index:  in /apps/movistarISOSim/testMovistarGTISO.php on line 79
+PHP Notice:  Undefined index: name in /apps/movistarISOSim/lib/packagerClass.php on line 46
+PHP Notice:  Undefined index:  in /apps/movistarISOSim/lib/packagerClass.php on line 46
+PHP Notice:  Undefined index: length in /apps/movistarISOSim/lib/packagerClass.php on line 46
+PHP Notice:  Undefined index: paddingCharacter in /apps/movistarISOSim/lib/packagerClass.php on line 46
+PHP Notice:  Undefined index: paddingDirection in /apps/movistarISOSim/lib/packagerClass.php on line 46
+PHP Warning:  str_pad() expects parameter 4 to be long, string given in /apps/movistarISOSim/lib/packagerClass.php on line 46
+PHP Notice:  Undefined index:  in /apps/movistarISOSim/lib/packagerClass.php on line 30
+PHP Warning:  Invalid argument supplied for foreach() in /apps/movistarISOSim/lib/packagerClass.php on line 38
+PHP Notice:  Undefined index:  in /apps/movistarISOSim/testMovistarGTISO.php on line 79
+PHP Notice:  Undefined index: name in /apps/movistarISOSim/lib/packagerClass.php on line 46
+PHP Notice:  Undefined index:  in /apps/movistarISOSim/lib/packagerClass.php on line 46
+PHP Notice:  Undefined index: length in /apps/movistarISOSim/lib/packagerClass.php on line 46
+PHP Notice:  Undefined index: paddingCharacter in /apps/movistarISOSim/lib/packagerClass.php on line 46
+PHP Notice:  Undefined index: paddingDirection in /apps/movistarISOSim/lib/packagerClass.php on line 46
+PHP Warning:  str_pad() expects parameter 4 to be long, string given in /apps/movistarISOSim/lib/packagerClass.php on line 46
+PHP Notice:  Undefined index:  in /apps/movistarISOSim/lib/packagerClass.php on line 30
+PHP Warning:  Invalid argument supplied for foreach() in /apps/movistarISOSim/lib/packagerClass.php on line 38
+PHP Notice:  Undefined index:  in /apps/movistarISOSim/testMovistarGTISO.php on line 109
+PHP Notice:  Undefined index: name in /apps/movistarISOSim/lib/packagerClass.php on line 46
+PHP Notice:  Undefined index:  in /apps/movistarISOSim/lib/packagerClass.php on line 46
+PHP Notice:  Undefined index: length in /apps/movistarISOSim/lib/packagerClass.php on line 46
+PHP Notice:  Undefined index: paddingCharacter in /apps/movistarISOSim/lib/packagerClass.php on line 46
+PHP Notice:  Undefined index: paddingDirection in /apps/movistarISOSim/lib/packagerClass.php on line 46
+PHP Warning:  str_pad() expects parameter 4 to be long, string given in /apps/movistarISOSim/lib/packagerClass.php on line 46

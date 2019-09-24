@@ -1,0 +1,21 @@
+{
+    "df" : {    "1" : {}
+        },
+    "53" : {
+                "1" : {"name" : "referencia", "position" : "6", "length" : "12", "paddingCharacter" : "0", "paddingDirection" : "L"},
+                "2" : {"name" : "balance", "position" : "18", "length" : "13", "paddingCharacter" : "0", "paddingDirection" : "L"},
+                "3" : {"name" : "nombre", "position" : "31", "length" : "60", "paddingCharacter" : " ", "paddingDirection" : "R"},
+                "4" : {"name" : "apellido", "position" : "91", "length" : "60", "paddingCharacter" : " ", "paddingDirection" : "R"},
+                "5" : {"name" : "status", "position" : "151", "length" : "2", "paddingCharacter" : "0", "paddingDirection" : "L"},
+                "6" : {"name" : "descripcion", "position" : "153", "length" : "80", "paddingCharacter" : " ", "paddingDirection" : "R"}
+        },
+    "51" : { 
+                "1" : {"name" : "referencia", "position" : "6", "length" : "12", "paddingCharacter" : "0", "paddingDirection" : "L"},
+                "2" : {"name" : "autorizacion", "position" : "18", "length" : "6", "paddingCharacter" : "0", "paddingDirection" : "L"},
+                "3" : {"name" : "saldo", "position" : "24", "length" : "13", "paddingCharacter" : "0", "paddingDirection" : "L"},
+                "4" : {"name" : "nombre", "position" : "37", "length" : "60", "paddingCharacter" : " ", "paddingDirection" : "R"},
+                "5" : {"name" : "apellido", "position" : "97", "length" : "60", "paddingCharacter" : " ", "paddingDirection" : "R"},
+                "6" : {"name" : "status", "position" : "157", "length" : "2", "paddingCharacter" : "0", "paddingDirection" : "L"},
+                "15" : {"name" : "descripcion", "position" : "159", "length" : "80", "paddingCharacter" : " ", "paddingDirection" : "R"}
+        }
+}
