@@ -131,11 +131,11 @@ class isoPack {
         128	=> array('b', 16, 0)
     );
     
-    private $_data	= array();
-    private $_bitmap	= '';
-    private $_mti	= '';
-    private $_iso	= '';
-    private $_valid	= array();
+    private $_data = [];
+    private $_bitmap = '';
+    private $_mti = '';
+    private $_iso = '';
+    private $_valid = [];
 
 
     
@@ -246,40 +246,39 @@ class isoPack {
 
     //Clear Data
     private function _clear() {
-        $this->_mti	= '';
-        $this->_bitmap	= '';
-        $this->_data	= '';
-        $this->_iso	= '';
+        $this->_mti = '';
+        $this->_bitmap = '';
+        $this->_data = [];
+        $this->_iso = '';
     }
 
     //Get Bitmap    
     private function _parseBitmap() {
         $this->_valid['bitmap']	= false;
-        $inp	= substr($this->_iso, 4, 32);
-        if (strlen($inp)>=16) {
-            $primary	= '';
-            $secondary	= '';
-            for ($i=0; $i<16; $i++) {
-                $primary	.= sprintf("%04d", base_convert($inp[$i], 16, 2));
-            }
-            if ($primary[0]==1 && strlen($inp)>=32) {
-                for ($i=16; $i<32; $i++) {
-                    $secondary	.= sprintf("%04d", base_convert($inp[$i], 16, 2));
-                }
-                $this->_valid['bitmap'] = true;
-            }
-            if ($secondary=='') $this->_valid['bitmap']	= true;
+        $inp = substr($this->_iso, 4, 32);
+        $primary = '';
+        $secondary = '';
+        for ($i=0; $i<16; $i++) {
+            $primary .= sprintf("%04d", base_convert($inp[$i], 16, 2));
         }
-
-        $tmp	= $primary. $secondary;
-        for ($i=0; $i<strlen($tmp); $i++) {
-            if ($tmp[$i]==1) {
-                $this->_data[$i+1]	= '?';
+        if ($primary[0]==1) {
+            for ($i=16; $i<32; $i++) {
+                $secondary .= sprintf("%04d", base_convert($inp[$i], 16, 2));
+            }
+            $this->_valid['bitmap'] = true;
+            $this->_bitmap = $primary.$secondary;
+        }else {
+            $this->_valid['bitmap'] = true;
+            $this->_bitmap = $primary;
+        }
+        $this->_data[1] = '';
+        for ($i=0; $i<strlen($this->_bitmap); $i++) {
+            if ($this->_bitmap[$i]==1) {
+                $bitPlace = $i+1;
+                $this->_data[$bitPlace] = '?';                
             }
         }
-        $this->_bitmap	= $tmp;
-
-        return $tmp;
+        return $this->_bitmap;
     }
 
     //Decode ISO to Array
@@ -349,7 +348,7 @@ class isoPack {
                     }
                 }
                 else {
-                    $tmp	= substr($this->_iso, 4+16, 16);
+                    $tmp = substr($this->_iso, 4+16, 16);
                     if (strlen($tmp)==16) {
                         $this->_data[$key]	= substr($this->_iso, 4+16, 16);
                         $this->_valid['de'][$key]	= true;
@@ -417,7 +416,12 @@ class isoPack {
             $this->_iso	= $iso;    
             $this->_parseMTI();
             $this->_parseBitmap();
-            $this->_parseData();            
+            $this->_parseData();
+            var_dump($this->_iso);
+            var_dump($this->_data);
+            foreach ($this->_data as $key=>$val){
+                echo "[bit: $key] ==> ".json_encode($this->DATA_ELEMENT[$key])."\n";
+            }
         }
     }
     
