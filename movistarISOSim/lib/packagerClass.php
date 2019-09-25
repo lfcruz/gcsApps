@@ -5,82 +5,69 @@ include_once 'LogClass.php';
 include_once 'movistarGTISOPackager.php';
 class isoPackager {
     private $ISOMessage;
+    private $jack;
     
     function __construct($vISOMessage) {
         $this->ISOMessage = $vISOMessage;
+        $this->jack = new isoPack();
     }
     
     // PRIVATE FUNCTIONS ******************************************************************
-    private function unPackMessage(){
-        echo "-------------------------------------------------------------------\n";
+    private function unpackMessage(){
+        echo "UNPACKET DATA -------------------------------------------------------------------\n";
         $unpackedData = unpack('H*',$this->ISOMessage);
         $message = substr($unpackedData[1], 14);
-        $jack = new isoPack();
-        $jack->addISO($message);
-            
-    /*$packResult = "";
-    $jack->addMTI('0210');
-    $jack->addData(2, substr($message,36,8));
-    $jack->addData(3, substr($message,44,6));
-    $jack->addData(4, (int) substr($message,50,12));
-    $jack->addData(11, substr($message,62,6));
-    $jack->addData(12, substr($message,68,6));
-    $jack->addData(13, substr($message,74,4));
-    $jack->addData(24, '119');
-    //$jack->addData(24, (int) substr($message,78,4));
-    $jack->addData(38, (string) rand(100000,99999));
-    $jack->addData(39, '00');
-    $jack->addData(41, pack('H*', substr($message,82,16)));
-    $jack->addData(42, pack('H*', substr($message,98,30)));    
-    $data = $jack->getData();
-    var_dump($data);
-    $packResult .= pack('H*', $jack->getMTI());
-    $packResult .= pack('H*', $jack->getBitmap());
-    $packResult .= pack('H*', $data[2]);
-    $packResult .= pack('H*', $data[3]);
-    $packResult .= pack('H*', $data[4]);
-    $packResult .= pack('H*', $data[11]);
-    $packResult .= pack('H*', $data[12]);
-    $packResult .= pack('H*', $data[13]);
-    $packResult .= pack('n*', $data[24]);
-    $packResult .= $data[38];
-    $packResult .= $data[39];
-    $packResult .= $data[41];
-    $packResult .= $data[42];
-    $packResult = pack('H*', "6000000003").$packResult;
-    $isoLength = strlen($packResult);
-    $packResult = pack('n*', $isoLength).$packResult;
-    unset($jack);
-    var_dump(unpack('H*', $packResult));*/
-    return true;
-    }
-    // PUBLIC FUNCTIONS ******************************************************************
-    public function process(){
-        return ($this->unPackMessage()) ? true : false;
-    }
-
-    public function setPackagerId($vPackager){
-        try{
-            $this->packagerid = $vPackager;
-            $this->parser = ($this->packagerid == null) ? $this->packager->structure['df'] : $this->packager->structure[$this->packagerid];
-        } catch (Exception $e) {
-            $this->log->writeLog(LOGERROR, $e->getTraceAsString());
-        }
+        $this->jack->addISO($message);
+        return $this->jack->getData();
     }
     
-    public function parseRecord($vRecord){
-        $this->recordStructured = Array();
-        foreach ($this->parser as $vRecordField) {
-            $this->recordStructured[$vRecordField['name']] = utf8_encode(trim(substr($vRecord, $vRecordField['position'], $vRecordField['length'])));
+    private function packMessage($vData){
+        echo "PACKET DATA -------------------------------------------------------------------\n";
+        $packResult = pack('H*',"6000000003");
+        $this->jack->addMTI('0210');
+        foreach ($vData as $bit) {
+            switch ($bit){
+                case 4:
+                    $this->jack->addData($bit, (int) str_replace('.', '', (string) number_format((float) $vData[$bit], 2, '.', '')));
+                    break;
+                default:
+                    $this->jack->addData($bit, $vData[$bit]);
+                    break;    
+            }
         }
+        $vData = $this->jack->getData();
+        $packResult .= pack('H*', $this->jack->getMTI());
+        $packResult .= pack('H*', $this->jack->getBitmap());
+        foreach ($vData as $bit) {
+            switch ($bit){
+                case 24:
+                    $packResult .= pack('n*', $vData[$bit]);
+                    break;
+                case 38:
+                case 39:
+                case 41:
+                case 42:
+                    $packResult .= $vData[$bit];
+                    break;
+                default:
+                    $packResult .= pack('H*', $vData[$bit]);
+                    break;    
+            }
+        }
+        $isoLength = strlen($packResult);
+        $packResult = pack('n*', $isoLength).$packResult;
+        return $packResult;
     }
-
-    public function createRecord($dataStructure){
-	$this->recordString = "";
-        foreach ($this->parser as $vRecordField) {
-            $this->recordString .= str_pad($dataStructure[$vRecordField['name']], $vRecordField['length'], $vRecordField['paddingCharacter'], strval($vRecordField['paddingDirection']));
-        }
-        $this->recordString = str_pad((string)strlen($this->recordString), 4, '0', STR_PAD_LEFT).$this->packagerid.$this->recordString;
+    
+    
+    
+    // PUBLIC FUNCTIONS ******************************************************************
+    public function getUnpacketData(){
+        return $this->unpackMessage();
+    }
+    
+    public function setPacketData($vData){
+        return $this->packMessage($vData);
     }
  //End of the Class   
  }

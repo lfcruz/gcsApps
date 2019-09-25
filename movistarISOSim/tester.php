@@ -14,7 +14,7 @@ include_once 'lib/movistarGTISOPackager.php';
     //$jack->addData(24, (int) substr($message,78,4));
     //$jack->addData(38, (string) rand(100000,99999));
     //$jack->addData(39, '00');
-    $jack->addData(41, '1234567');
+    $jack->addData(41, '12345678');
     $jack->addData(42, '123456789012345');    
     $data = $jack->getData();
     var_dump($jack->getBitmap());

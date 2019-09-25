@@ -24,7 +24,7 @@ class isoPack {
         21	=> array('n', 3, 0),
         22	=> array('n', 3, 0),
         23	=> array('n', 4, 0),
-        24	=> array('n', 3, 0),
+        24	=> array('nb', 3, 0),
         25	=> array('n', 2, 0),
         26	=> array('n', 2, 0),
         27	=> array('n', 1, 0),
@@ -41,7 +41,7 @@ class isoPack {
         38	=> array('an', 6, 0),
         39	=> array('an', 2, 0),
         40	=> array('an', 3, 0),
-        41	=> array('ans', 9, 4),
+        41	=> array('ans', 8, 4),
         42	=> array('ans', 15, 3),
         43	=> array('ans', 40, 0),
         44	=> array('an', 25, 1),
@@ -146,7 +146,7 @@ class isoPack {
         $result	= "";
 
         //Numeric
-        if ($data_element[0] == 'n' && is_numeric($data) && strlen($data) <= $data_element[1]) {
+        if (($data_element[0] == 'n' or $data_element[0] == 'nb') && is_numeric($data) && strlen($data) <= $data_element[1]) {
             $data = str_replace(".", "", $data);
             switch ($data_element[2]) {
                 case 1:
@@ -271,7 +271,7 @@ class isoPack {
             $this->_valid['bitmap'] = true;
             $this->_bitmap = $primary;
         }
-        $this->_data[1] = '';
+        //$this->_data[1] = '';
         for ($i=0; $i<strlen($this->_bitmap); $i++) {
             if ($this->_bitmap[$i]==1) {
                 $bitPlace = $i+1;
@@ -295,25 +295,31 @@ class isoPack {
           $this->_valid['data']	= true;
           foreach ($this->_data as $key=>$val) {
             $this->_valid['de'][$key]	= false;
-            if ($this->DATA_ELEMENT[$key][0]!='b') {
-
-                if ($this->DATA_ELEMENT[$key][2]==0) {
-                    $tmp	= substr($inp, 0, $this->DATA_ELEMENT[$key][1]);
-                    if (strlen($tmp)==$this->DATA_ELEMENT[$key][1]) {
-                        if ($this->DATA_ELEMENT[$key][0]=='n') {
+            if ($this->DATA_ELEMENT[$key][0] != 'b') {
+                if ($this->DATA_ELEMENT[$key][2] == 0) {
+                    $tmp = substr($inp, 0, $this->DATA_ELEMENT[$key][1]);
+                    if (strlen($tmp) == $this->DATA_ELEMENT[$key][1]) {
+                        if ($this->DATA_ELEMENT[$key][0] == 'n') {
                             $this->_data[$key]	= substr($inp, 0, $this->DATA_ELEMENT[$key][1]);
-                        }
-                        else {
+                            $inp = substr($inp, $this->DATA_ELEMENT[$key][1], strlen($inp)-$this->DATA_ELEMENT[$key][1]);
+                        }elseif ($this->DATA_ELEMENT[$key][0] == 'nb') {
+                            $this->_data[$key]	= base_convert(substr($inp, 0, $this->DATA_ELEMENT[$key][1] + 1), 16, 10);
+                            $inp = substr($inp, $this->DATA_ELEMENT[$key][1] + 1, strlen($inp)-$this->DATA_ELEMENT[$key][1] + 1);
+                        }else {
                             $this->_data[$key]	= ltrim(substr($inp, 0, $this->DATA_ELEMENT[$key][1]));
+                            $inp = substr($inp, $this->DATA_ELEMENT[$key][1], strlen($inp)-$this->DATA_ELEMENT[$key][1]);
                         }
-                        $this->_valid['de'][$key]	= true;
-                        $inp	= substr($inp, $this->DATA_ELEMENT[$key][1], strlen($inp)-$this->DATA_ELEMENT[$key][1]);
+                        $this->_valid['de'][$key] = true;
+                        //$inp	= substr($inp, $this->DATA_ELEMENT[$key][1], strlen($inp)-$this->DATA_ELEMENT[$key][1]);
                     }
-                }
-
-                else {
-                    $len	= strlen($this->DATA_ELEMENT[$key][1]);
-                    $tmp	= substr($inp, 0, $len);
+                }elseif (($this->DATA_ELEMENT[$key][2] == 4 or $this->DATA_ELEMENT[$key][2] == 3) and $this->DATA_ELEMENT[$key][0] == 'ans'){
+                    $tmp = substr($inp, 0, $this->DATA_ELEMENT[$key][1] * 2);
+                    $this->_data[$key] = pack('H*', $tmp);
+                    $this->_valid['de'][$key] = true;
+                    $inp = substr($inp, $this->DATA_ELEMENT[$key][1] * 2, strlen($inp)-$this->DATA_ELEMENT[$key][1] * 2);  
+                }else {
+                    $len = strlen($this->DATA_ELEMENT[$key][1]);
+                    $tmp = substr($inp, 0, $len);
                     if (strlen($tmp)==$len ) {
                         $num	= (integer) $tmp;
                         $inp	= substr($inp, $len, strlen($inp)-$len);
@@ -348,14 +354,14 @@ class isoPack {
                     }
                 }
                 else {
-                    $tmp = substr($this->_iso, 4+16, 16);
-                    if (strlen($tmp)==16) {
-                        $this->_data[$key]	= substr($this->_iso, 4+16, 16);
-                        $this->_valid['de'][$key]	= true;
+                    $tmp = substr($this->_iso, 4, 16);
+                    if (strlen($tmp) == 16) {
+                        $this->_data[$key] = substr($this->_iso, 4, 16);
+                        $this->_valid['de'][$key] = true;
                     }
                 }
             }
-            if (!$this->_valid['de'][$key]) $this->_valid['data']	= false;
+            if (!$this->_valid['de'][$key]) $this->_valid['data'] = false;
           }
         }
 
@@ -417,11 +423,6 @@ class isoPack {
             $this->_parseMTI();
             $this->_parseBitmap();
             $this->_parseData();
-            var_dump($this->_iso);
-            var_dump($this->_data);
-            foreach ($this->_data as $key=>$val){
-                echo "[bit: $key] ==> ".json_encode($this->DATA_ELEMENT[$key])."\n";
-            }
         }
     }
     
