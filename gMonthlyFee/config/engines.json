@@ -1,0 +1,54 @@
+{
+    "TPGDR":{
+        "Default":{
+            "active": false
+        },
+        "Ageing":{
+            "active": false,
+            "queues":{
+                "1": {
+                    "bot_days": 0,
+                    "top_days": 30
+                },
+                "2": {
+                    "bot_days": 31,
+                    "top_days": 60
+                },
+                "3": {
+                    "bot_days": 61,
+                    "top_days": 90
+                }
+            }
+        },
+        "Banks":{
+            "active": true,
+            "bank_codes":"'102','SCT','BRD','APA'"
+        }
+    },
+    "TPGGT":{
+        "Default":{
+            "active": false
+        },
+        "Ageing":{
+            "active": false,
+            "queues":{
+                "1": {
+                    "bot_days": 0,
+                    "top_days": 30
+                },
+                "2": {
+                    "bot_days": 31,
+                    "top_days": 60
+                },
+                "3": {
+                    "bot_days": 61,
+                    "top_days": 90
+                }
+            }
+        },
+        "Banks":{
+            "active": false,
+            "bank_codes":"'102','SCT','BRD','APA'"
+        }
+    }
+}

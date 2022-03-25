@@ -1,0 +1,21 @@
+{
+    "active": true,
+    "logger":{
+        "file":"logs/mflog.log",
+        "level":"DEBUG"
+    },
+    "channels":{
+        "TPGDR":{
+            "active": true,
+            "db_profile":"tpgdr_db",
+            "mf_parameters":"'CollectorSchedulerDays','CustomerMonthlyFee','GCSInActivityFee','InactivityDays','MONTHLY_NSF_FEE'",
+            "bulk_size": 100
+        },
+        "TPGGT":{
+            "active": false,
+            "db_profile":"tpggt_db",
+            "mf_parameters":"'CollectorSchedulerDays','CustomerMonthlyFee','GCSInActivityFee','InactivityDays','MONTHLY_NSF_FEE'",
+            "bulk_size": 100
+        }
+    }
+}

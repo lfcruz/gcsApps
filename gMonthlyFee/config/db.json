@@ -1,0 +1,18 @@
+{
+    "tpgdr_db":{
+        "dbtype" : "PGS",
+        "dbhost" : "10.226.192.121",
+        "dbport" : "55431",
+        "dbname" : "txndev",
+        "dbuser" : "sa",
+        "dbpass" : "password"
+    },
+    "tpggt_db":{
+        "dbtype" : "ORA",
+        "dbhost" : "172.19.3.27",
+        "dbport" : "1521",
+        "dbname" : "gcstest",
+        "dbuser" : "gtdev",
+        "dbpass" : ""
+    } 
+}

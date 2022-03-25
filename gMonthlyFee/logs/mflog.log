@@ -1,0 +1,191 @@
+2022-03-25T08:56:31 -  - 3 - Channel TPGDR active status is: 
+2022-03-25T09:27:45 -  - 3 - Channel TPGDR active status is: 
+2022-03-25T09:31:52 -  - 3 - Channel TPGDR active status is: false
+2022-03-25T09:33:41 -  - 3 - Channel TPGDR active status is: true
+2022-03-25T09:33:41 -  - 2 - Getting General Parameters......
+2022-03-25T09:36:24 -  - 3 - Channel TPGDR active status is: false
+2022-03-25T09:40:17 -  - 3 - Channel TPGDR active status is: true
+2022-03-25T09:40:17 -  - 2 - Getting General Parameters......
+2022-03-25T09:40:17 -  - 1 - No general parameters found for channel TPGDR
+2022-03-25T09:43:10 -  - 3 - Channel TPGDR active status is: true
+2022-03-25T09:43:10 -  - 2 - Getting General Parameters......
+2022-03-25T09:43:10 -  - 1 - No general parameters found for channel TPGDR
+2022-03-25T09:57:37 -  - 3 - Channel TPGDR active status is: true
+2022-03-25T09:57:37 -  - 2 - Getting General Parameters......
+2022-03-25T09:57:37 -  - 1 - No general parameters found for channel TPGDR
+2022-03-25T09:59:43 -  - 3 - Channel TPGDR active status is: true
+2022-03-25T09:59:43 -  - 2 - Getting General Parameters......
+2022-03-25T09:59:43 -  - 1 - No general parameters found for channel TPGDR
+2022-03-25T10:02:37 -  - 3 - Channel TPGDR active status is: true
+2022-03-25T10:02:37 -  - 2 - Getting General Parameters......
+2022-03-25T10:02:37 -  - 1 - No general parameters found for channel TPGDR
+2022-03-25T10:05:24 -  - 3 - Channel TPGDR active status is: true
+2022-03-25T10:05:24 -  - 2 - Getting General Parameters......
+2022-03-25T10:05:24 -  - 3 - Engine Default active status is: false
+2022-03-25T10:05:24 -  - 3 - Engine Ageing active status is: false
+2022-03-25T10:05:24 -  - 3 - Engine Banks active status is: false
+2022-03-25T10:16:42 -  - 3 - Channel TPGDR active status is: true
+2022-03-25T10:16:42 -  - 2 - Getting General Parameters......
+2022-03-25T10:16:42 -  - 3 - Engine Default active status is: false
+2022-03-25T10:16:42 -  - 3 - Engine Ageing active status is: false
+2022-03-25T10:16:42 -  - 3 - Engine Banks active status is: false
+2022-03-25T10:16:42 -  - 1 - Invalid engine  on channel TPGDR
+2022-03-25T10:26:18 -  - 3 - Channel TPGDR active status is: true
+2022-03-25T10:26:18 -  - 2 - Getting General Parameters......
+2022-03-25T10:26:18 -  - 3 - Engine Default active status is: false
+2022-03-25T10:26:18 -  - 3 - Engine Ageing active status is: false
+2022-03-25T10:26:18 -  - 3 - Engine Banks active status is: false
+2022-03-25T10:26:18 -  - 1 - Invalid engine  on channel TPGDR
+2022-03-25T10:30:13 -  - 3 - Channel TPGDR active status is: true
+2022-03-25T10:30:13 -  - 2 - Getting General Parameters......
+2022-03-25T10:30:13 -  - 3 - Engine Default active status is: false
+2022-03-25T10:30:13 -  - 3 - Engine Ageing active status is: false
+2022-03-25T10:30:13 - gMFConfigure - 1 - Configuration error, there are more than one engine active for channel TPGDR
+2022-03-25T10:30:13 -  - 3 - Engine Banks active status is: false
+2022-03-25T10:30:13 - gMFConfigure - 1 - Configuration error, there are more than one engine active for channel TPGDR
+2022-03-25T10:30:13 -  - 1 - Invalid engine  on channel TPGDR
+2022-03-25T11:02:29 -  - 3 - Channel TPGDR active status is: true
+2022-03-25T11:02:29 -  - 2 - Getting General Parameters......
+2022-03-25T11:02:29 -  - 3 - Engine Default active status is: false
+2022-03-25T11:02:29 -  - 3 - Engine Ageing active status is: false
+2022-03-25T11:02:29 -  - 3 - Engine Banks active status is: false
+2022-03-25T11:02:29 -  - 1 - Invalid engine  on channel TPGDR
+2022-03-25T11:10:02 - gMFConfigure - 3 - Channel TPGDR active status is: true
+2022-03-25T11:10:02 - gMFConfigure - 2 - Getting General Parameters......
+2022-03-25T11:10:02 - gMFConfigure - 3 - Engine Default active status is: false
+2022-03-25T11:10:02 - gMFConfigure - 3 - Engine Ageing active status is: false
+2022-03-25T11:10:02 - gMFConfigure - 3 - Engine Banks active status is: false
+2022-03-25T11:10:02 - gMFConfigure - 1 - Invalid engine  on channel TPGDR
+2022-03-25T11:25:24 - gMFConfigure - 3 - Channel TPGDR active status is: true
+2022-03-25T11:25:24 - gMFConfigure - 2 - Getting General Parameters......
+2022-03-25T11:25:24 - gMFConfigure - 3 - Engine Default active status is: false
+2022-03-25T11:25:24 - gMFConfigure - 3 - Engine Ageing active status is: false
+2022-03-25T11:25:24 - gMFConfigure - 3 - Engine Banks active status is: false
+2022-03-25T11:25:24 - gMFConfigure - 1 - Invalid engine  on channel TPGDR
+2022-03-25T11:26:25 - gMFConfigure - 3 - Channel TPGDR active status is: true
+2022-03-25T11:26:25 - gMFConfigure - 2 - Getting General Parameters......
+2022-03-25T11:26:25 - gMFConfigure - 3 - Engine Default active status is: false
+2022-03-25T11:26:25 - gMFConfigure - 3 - Engine Ageing active status is: false
+2022-03-25T11:26:25 - gMFConfigure - 3 - Engine Banks active status is: false
+2022-03-25T11:26:25 - gMFConfigure - 1 - Configuration error, there is no engine active for channel TPGDR
+2022-03-25T11:26:55 - gMFConfigure - 3 - Channel TPGDR active status is: true
+2022-03-25T11:26:55 - gMFConfigure - 2 - Getting General Parameters......
+2022-03-25T11:26:55 - gMFConfigure - 3 - Engine Default active status is: true
+2022-03-25T11:26:55 - gMFConfigure - 3 - Engine Ageing active status is: false
+2022-03-25T11:26:55 - gMFConfigure - 3 - Engine Banks active status is: true
+2022-03-25T11:26:55 - gMFConfigure - 1 - Configuration error, there are more than one () engine active for channel TPGDR
+2022-03-25T11:27:21 - gMFConfigure - 3 - Channel TPGDR active status is: true
+2022-03-25T11:27:21 - gMFConfigure - 2 - Getting General Parameters......
+2022-03-25T11:27:21 - gMFConfigure - 3 - Engine Default active status is: true
+2022-03-25T11:27:21 - gMFConfigure - 3 - Engine Ageing active status is: false
+2022-03-25T11:27:21 - gMFConfigure - 3 - Engine Banks active status is: true
+2022-03-25T11:27:21 - gMFConfigure - 1 - Configuration error, there are more than one (2) engine active for channel TPGDR
+2022-03-25T11:28:26 - gMFConfigure - 3 - Channel TPGDR active status is: true
+2022-03-25T11:28:26 - gMFConfigure - 2 - Getting General Parameters......
+2022-03-25T11:28:26 - gMFConfigure - 3 - Engine Default active status is: false
+2022-03-25T11:28:26 - gMFConfigure - 3 - Engine Ageing active status is: true
+2022-03-25T11:28:26 - gMFConfigure - 3 - Engine Banks active status is: true
+2022-03-25T11:28:26 - gMFConfigure - 1 - Configuration error, there are more than one (2) engine active for channel TPGDR
+2022-03-25T11:29:48 - gMFConfigure - 3 - Channel TPGDR active status is: true
+2022-03-25T11:29:48 - gMFConfigure - 2 - Getting General Parameters......
+2022-03-25T11:29:48 - gMFConfigure - 3 - Engine Default active status is: false
+2022-03-25T11:29:48 - gMFConfigure - 3 - Engine Ageing active status is: false
+2022-03-25T11:29:48 - gMFConfigure - 3 - Engine Banks active status is: true
+2022-03-25T11:29:48 - gMFConfigure - 1 - Invalid engine  on channel TPGDR
+2022-03-25T11:40:12 - gMFConfigure - 3 - Channel TPGDR active status is: true
+2022-03-25T11:40:12 - gMFConfigure - 2 - Getting General Parameters......
+2022-03-25T11:40:13 - gMFConfigure - 3 - Engine Default active status is: false
+2022-03-25T11:40:13 - gMFConfigure - 3 - Engine Ageing active status is: false
+2022-03-25T11:40:13 - gMFConfigure - 3 - Engine Banks active status is: true
+2022-03-25T11:40:13 - gMFConfigure - 1 - Invalid engine  on channel TPGDR
+2022-03-25T11:40:53 - gMFConfigure - 3 - Channel TPGDR active status is: true
+2022-03-25T11:40:53 - gMFConfigure - 2 - Getting General Parameters......
+2022-03-25T11:40:53 - gMFConfigure - 3 - Engine Default active status is: false
+2022-03-25T11:40:53 - gMFConfigure - 3 - Engine Ageing active status is: false
+2022-03-25T11:40:53 - gMFConfigure - 3 - Engine Banks active status is: true
+2022-03-25T11:40:53 - gMFConfigure - 1 - Invalid engine  on channel TPGDR
+2022-03-25T11:41:25 - gMFConfigure - 3 - Channel TPGDR active status is: true
+2022-03-25T11:41:25 - gMFConfigure - 2 - Getting General Parameters......
+2022-03-25T11:41:25 - gMFConfigure - 3 - Engine Default active status is: false
+2022-03-25T11:41:25 - gMFConfigure - 3 - Engine Ageing active status is: false
+2022-03-25T11:41:25 - gMFConfigure - 3 - Engine Banks active status is: true
+2022-03-25T11:41:25 - gMFConfigure - 1 - Invalid engine  on channel TPGDR
+2022-03-25T11:43:02 - gMFConfigure - 3 - Channel TPGDR active status is: true
+2022-03-25T11:43:02 - gMFConfigure - 2 - Getting General Parameters......
+2022-03-25T11:43:02 - gMFConfigure - 3 - Engine Default active status is: false
+2022-03-25T11:43:02 - gMFConfigure - 3 - Engine Ageing active status is: false
+2022-03-25T11:43:02 - gMFConfigure - 3 - Engine Banks active status is: true
+2022-03-25T11:43:02 - gMFConfigure - 1 - Invalid engine  on channel TPGDR
+2022-03-25T11:44:27 - gMFConfigure - 3 - Channel TPGDR active status is: true
+2022-03-25T11:44:27 - gMFConfigure - 2 - Getting General Parameters......
+2022-03-25T11:44:27 - gMFConfigure - 3 - Engine Default active status is: false
+2022-03-25T11:44:27 - gMFConfigure - 3 - Engine Ageing active status is: false
+2022-03-25T11:44:27 - gMFConfigure - 3 - Engine Banks active status is: true
+2022-03-25T11:46:51 - gMFConfigure - 3 - Channel TPGDR active status is: true
+2022-03-25T11:46:51 - gMFConfigure - 2 - Getting General Parameters......
+2022-03-25T11:46:51 - gMFConfigure - 3 - Engine Default active status is: false
+2022-03-25T11:46:51 - gMFConfigure - 3 - Engine Ageing active status is: false
+2022-03-25T11:46:51 - gMFConfigure - 3 - Engine Banks active status is: true
+2022-03-25T11:50:17 - gMFConfigure - 3 - Channel TPGDR active status is: true
+2022-03-25T11:50:17 - gMFConfigure - 2 - Getting General Parameters......
+2022-03-25T11:50:17 - gMFConfigure - 3 - Engine Default active status is: false
+2022-03-25T11:50:17 - gMFConfigure - 3 - Engine Ageing active status is: false
+2022-03-25T11:50:17 - gMFConfigure - 3 - Engine Banks active status is: true
+2022-03-25T11:52:52 - gMFConfigure - 3 - Channel TPGDR active status is: true
+2022-03-25T11:52:52 - gMFConfigure - 2 - Getting General Parameters......
+2022-03-25T11:52:52 - gMFConfigure - 2 - Getting channel paramerters......
+2022-03-25T11:52:52 - gMFConfigure - 3 - Engine Default active status is: false
+2022-03-25T11:52:52 - gMFConfigure - 3 - Engine Ageing active status is: false
+2022-03-25T11:52:52 - gMFConfigure - 3 - Engine Banks active status is: true
+2022-03-25T12:12:08 - gMFConfigure - 3 - Channel TPGDR active status is: true
+2022-03-25T12:12:08 - gMFConfigure - 2 - Getting General Parameters......
+2022-03-25T12:12:08 - gMFConfigure - 3 - 
+2022-03-25T12:12:08 - gMFConfigure - 2 - Getting channel paramerters......
+2022-03-25T12:12:08 - gMFConfigure - 3 - Engine Default active status is: false
+2022-03-25T12:12:08 - gMFConfigure - 3 - Engine Ageing active status is: false
+2022-03-25T12:12:08 - gMFConfigure - 3 - Engine Banks active status is: true
+2022-03-25T12:12:08 - gMFConfigure - 3 - 
+2022-03-25T12:12:46 - gMFConfigure - 3 - Channel TPGDR active status is: true
+2022-03-25T12:12:46 - gMFConfigure - 2 - Getting General Parameters......
+2022-03-25T12:12:46 - gMFConfigure - 3 - 
+2022-03-25T12:12:46 - gMFConfigure - 2 - Getting channel paramerters......
+2022-03-25T12:12:46 - gMFConfigure - 3 - Engine Default active status is: false
+2022-03-25T12:12:46 - gMFConfigure - 3 - Engine Ageing active status is: false
+2022-03-25T12:12:46 - gMFConfigure - 3 - Engine Banks active status is: true
+2022-03-25T12:12:46 - gMFConfigure - 3 - Array
+2022-03-25T12:14:10 - gMFConfigure - 3 - Channel TPGDR active status is: true
+2022-03-25T12:14:10 - gMFConfigure - 2 - Getting General Parameters......
+2022-03-25T12:14:10 - gMFConfigure - 3 - 
+2022-03-25T12:14:10 - gMFConfigure - 2 - Getting channel paramerters......
+2022-03-25T12:14:10 - gMFConfigure - 3 - Engine Default active status is: false
+2022-03-25T12:14:10 - gMFConfigure - 3 - Engine Ageing active status is: false
+2022-03-25T12:14:10 - gMFConfigure - 3 - Engine Banks active status is: true
+2022-03-25T12:14:10 - gMFConfigure - 3 - Array
+2022-03-25T12:14:42 - gMFConfigure - 3 - Channel TPGDR active status is: true
+2022-03-25T12:14:42 - gMFConfigure - 2 - Getting General Parameters......
+2022-03-25T12:14:42 - gMFConfigure - 3 - 
+2022-03-25T12:14:42 - gMFConfigure - 2 - Getting channel paramerters......
+2022-03-25T12:14:42 - gMFConfigure - 3 - Engine Default active status is: false
+2022-03-25T12:14:42 - gMFConfigure - 3 - Engine Ageing active status is: false
+2022-03-25T12:14:42 - gMFConfigure - 3 - Engine Banks active status is: true
+2022-03-25T12:14:42 - gMFConfigure - 3 - 
+2022-03-25T12:15:30 - gMFConfigure - 3 - Channel TPGDR active status is: true
+2022-03-25T12:15:30 - gMFConfigure - 2 - Getting General Parameters......
+2022-03-25T12:15:30 - gMFConfigure - 3 - 
+2022-03-25T12:15:30 - gMFConfigure - 2 - Getting channel paramerters......
+2022-03-25T12:15:30 - gMFConfigure - 3 - Engine Default active status is: false
+2022-03-25T12:15:30 - gMFConfigure - 3 - Engine Ageing active status is: false
+2022-03-25T12:15:30 - gMFConfigure - 3 - Engine Banks active status is: true
+2022-03-25T12:15:30 - gMFConfigure - 3 - 
+2022-03-25T12:19:41 - gMFConfigure - 3 - Channel TPGDR active status is: true
+2022-03-25T12:19:41 - gMFConfigure - 2 - Getting General Parameters......
+2022-03-25T12:19:41 - gMFConfigure - 2 - Getting channel paramerters......
+2022-03-25T12:19:41 - gMFConfigure - 3 - Engine Default active status is: false
+2022-03-25T12:19:41 - gMFConfigure - 3 - Engine Ageing active status is: false
+2022-03-25T12:19:41 - gMFConfigure - 3 - Engine Banks active status is: true
+2022-03-25T12:20:53 - gMFConfigure - 3 - Channel TPGDR active status is: true
+2022-03-25T12:20:53 - gMFConfigure - 2 - Getting General Parameters......
+2022-03-25T12:20:53 - gMFConfigure - 2 - Getting channel paramerters......
+2022-03-25T12:20:53 - gMFConfigure - 3 - Engine Default active status is: false
+2022-03-25T12:20:53 - gMFConfigure - 3 - Engine Ageing active status is: false
+2022-03-25T12:20:53 - gMFConfigure - 3 - Engine Banks active status is: true
