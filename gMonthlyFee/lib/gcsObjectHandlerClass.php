@@ -141,6 +141,8 @@ class gMFConfigure {
             $this->logger->writeLog(LOGDEBUG, $this->logger->logModule, $this->logger->logModule.' fail on constructor:',$gException);
             $response = false;
         }
+        var_dump($this->channelGeneralParameters);
+        var_dump($this->channelEngine);
         return $response;
     }
     
@@ -202,23 +204,30 @@ class gMFConfigure {
     }
     
     private function getGeneralParameters(){
-        //$qryParameters = "select GEN_PARAMETER_NAME, PARAM_DISPLAY_NAME, PARAMETER_VALUE from  GCSGENERIC_PARAMS_M where GEN_PARAMETER_NAME in ($1)";
-        $qryParameters = "select GEN_PARAMETER_NAME, PARAM_DISPLAY_NAME, PARAMETER_VALUE from  GCSGENERIC_PARAMS_M where GEN_PARAMETER_NAME in (".$this->appConfig->structure['channels'][$this->channel]['mf_parameters'].")";
         $this->logger->writeLog(LOGINFO, $this->logger->logModule, 'Getting General Parameters......');
         try {
-            //$this->dbConn->setQuery($qryParameters, Array($this->appConfig->structure['channels'][$this->channel]['mf_parameters']));
-            $this->dbConn->setQuery($qryParameters, Array());
-            $this->channelGeneralParameters = $this->dbConn->execQry();
-            if(empty($this->channelGeneralParameters)){
+            $this->dbConn->setQuery(QRY_GET_MF_PARAMS."(".$this->appConfig->structure['channels'][$this->channel]['mf_parameters'].")", Array());
+            $responseParameters = $this->dbConn->execQry();
+            if(empty($responseParameters)){
                 $this->logger->writeLog(LOGERROR, $this->logger->logModule, 'No general parameters found for channel '.$this->channel);
                 return false;
             }
+            $jsonParameters = '{';
+            foreach($responseParameters as $parameter){
+                if($jsonParameters == '{'){
+                    $jsonParameters .= '"'.$parameter['gen_parameter_name'].'":{"display_name":"'.$parameter['param_display_name'].'","param_value":"'.$parameter['parameter_value'].'"}';
+                }else {
+                    $jsonParameters .= ',"'.$parameter['gen_parameter_name'].'":{"display_name":"'.$parameter['param_display_name'].'","param_value":"'.$parameter['parameter_value'].'"}';
+                }
+            }
+            $jsonParameters .= '}';
         } catch (Exception $gException) {
                 $this->logger->writeLog(LOGERROR, $this->logger->logModule, 'There was an exception getting general parameters for channel '.$this->channel);
                 $this->logger->writeLog(LOGDEBUG, $this->logger->logModule, 'There was an exception getting general parameters for channel '.$this->channel, $gException);
                 return false;
         }
         //$this->logger->writeLog(LOGTRACE, $this->logger->logModule, var_dump(var_dump($this->channelGeneralParameters)));
+        $this->channelGeneralParameters = json_decode($jsonParameters, true);
         return true;
     }
     
