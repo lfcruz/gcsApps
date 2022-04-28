@@ -14,5 +14,13 @@
         "dbname" : "gcstest",
         "dbuser" : "gtdev",
         "dbpass" : ""
-    } 
+    },
+    "pools_db":{
+        "dbtype" : "PGS",
+        "dbhost" : "10.226.192.121",
+        "dbport" : "55431",
+        "dbname" : "jobpools",
+        "dbuser" : "sa",
+        "dbpass" : "password"
+    }
 }

@@ -101,6 +101,82 @@ class tpagoProfile {
  //End of the Class   
  }
  
+class gMFBills {
+     
+ /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  ATTRIBUTES DECLARATION
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+     private $logger;
+     private $appConfig;
+     private $dbConfig;
+     private $dbConn;
+     private $channel;
+     public $billsList;
+
+     
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ CONSTRUCTORS
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+     function __construct($vChannel) {
+         $this->channel = $vChannel;
+        try {
+            $this->appConfig = new configLoader('config/application.json');
+            $this->dbConfig = new configLoader('config/db.json');
+            $this->logger = new Logger($this->appConfig->structure['logger'], 'gMFBills');
+            $this->dbConn = new dbRequest($this->dbConfig->structure[$this->appConfig->structure['channels'][$this->channel]['db_profile']]['dbtype'], 
+                                                      $this->dbConfig->structure[$this->appConfig->structure['channels'][$this->channel]['db_profile']]['dbhost'], 
+                                                      $this->dbConfig->structure[$this->appConfig->structure['channels'][$this->channel]['db_profile']]['dbport'], 
+                                                      $this->dbConfig->structure[$this->appConfig->structure['channels'][$this->channel]['db_profile']]['dbname'], 
+                                                      $this->dbConfig->structure[$this->appConfig->structure['channels'][$this->channel]['db_profile']]['dbuser'], 
+                                                      $this->dbConfig->structure[$this->appConfig->structure['channels'][$this->channel]['db_profile']]['dbpass']);
+            $response = ($this->appConfig->structure['active']) ? $this->isChannelActive() : false;
+        }catch (Exception $gException){
+            $this->logger->writeLog(LOGERROR, $this->logger->logModule, $this->logger->logModule.' fail on constructor');
+            $this->logger->writeLog(LOGDEBUG, $this->logger->logModule, $this->logger->logModule.' fail on constructor:',$gException);
+            $response = false;
+        }
+        return $response;
+     }
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ PRIVATE FUNCTIONS
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+    private function isChannelActive(){
+        $this->logger->writeLog(LOGTRACE, $this->logger->logModule, 'Channel '.$this->channel.' active status is: '.(($this->appConfig->structure['channels'][$this->channel]['active']) ? 'true' : 'false'));
+        return $this->appConfig->structure['channels'][$this->channel]['active'];
+    }
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ PUBLIC FUNCTIONS
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+    public function getMFBills($vMaxAge, $vMinAge = null){
+        try {
+            if($vMinAge == null){
+                $query = QRY_GET_MF_BASE.QRY_FILTER_DEFAULT.$vMaxAge.QRY_INTERVAL_DAY.QRY_FILTER_ACTIVE_ACCOUNTS;
+            }else {
+                $query = QRY_GET_MF_BASE.QRY_FILTER_ENGINE_AGEING_TOP.$vMaxAge.QRY_INTERVAL_DAY.QRY_FILTER_ENGINE_AGEING_BOT.$vMinAge.QRY_INTERVAL_DAY.QRY_FILTER_ACTIVE_ACCOUNTS;
+            }
+            $this->dbConn->setQuery($query, Array());
+            $vBillsList = $this->dbConn->execQry();
+        } catch (Exception $gException) {
+            $this->logger->writeLog(LOGERROR, $this->logger->logModule, 'There was an exception getting monthly bills.');
+            $this->logger->writeLog(LOGDEBUG, $this->logger->logModule, 'There was an exception getting monthly bills.', $gException);
+        }
+        $this->billsList = $vBillsList;
+        return $vBillsList;
+    }
+    
+    public function setMFCharge($vMFBillId, $vMFGcsSequence){
+        try {
+            $this->dbConn->setQuery(QRY_UPDATE_BILL_CHARGE, Array($vMFGcsSequence, $vMFBillId));
+            $response = $this->dbConn->execQry();
+        } catch (Exception $gException) {
+            $this->logger->writeLog(LOGERROR, $this->logger->logModule, 'There was an exception updating monthly bills charge.');
+            $this->logger->writeLog(LOGDEBUG, $this->logger->logModule, 'There was an exception updating monthly bills charge.', $gException);
+        }
+        return $response;
+    }
+    
+ }
+ 
 class gMFConfigure {
 
 /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -141,8 +217,8 @@ class gMFConfigure {
             $this->logger->writeLog(LOGDEBUG, $this->logger->logModule, $this->logger->logModule.' fail on constructor:',$gException);
             $response = false;
         }
-        var_dump($this->channelGeneralParameters);
-        var_dump($this->channelEngine);
+        //var_dump($this->channelGeneralParameters);
+        //var_dump($this->channelEngine);
         return $response;
     }
     
@@ -219,8 +295,8 @@ class gMFConfigure {
                 }else {
                     $jsonParameters .= ',"'.$parameter['gen_parameter_name'].'":{"display_name":"'.$parameter['param_display_name'].'","param_value":"'.$parameter['parameter_value'].'"}';
                 }
-            }
-            $jsonParameters .= '}';
+            }            
+            $jsonParameters .= ',"pools":'.$this->appConfig->structure['channels'][$this->channel]['pools'].',"by_subscribers":'.(int)$this->appConfig->structure['channels'][$this->channel]['by_subscribers'].',"bulk_size":'.$this->appConfig->structure['channels'][$this->channel]['bulk_size'].'}';
         } catch (Exception $gException) {
                 $this->logger->writeLog(LOGERROR, $this->logger->logModule, 'There was an exception getting general parameters for channel '.$this->channel);
                 $this->logger->writeLog(LOGDEBUG, $this->logger->logModule, 'There was an exception getting general parameters for channel '.$this->channel, $gException);
@@ -259,3 +335,70 @@ class gMFConfigure {
     
     
 }
+
+class gMFPools {
+ /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  ATTRIBUTES DECLARATION
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+     private $logger;
+     private $appConfig;
+     private $dbConfig;
+     private $dbConn;
+     private $channel;
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ CONSTRUCTORS
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+     function __construct($vChannel) {
+         $this->channel = $vChannel;
+        try {
+            $this->appConfig = new configLoader('config/application.json');
+            $this->dbConfig = new configLoader('config/db.json');
+            $this->logger = new Logger($this->appConfig->structure['logger'], 'gMFPools');
+            $this->dbConn = new dbRequest($this->dbConfig->structure[$this->appConfig->structure['channels'][$this->channel]['pool']['db_profile']]['dbtype'], 
+                                                      $this->dbConfig->structure[$this->appConfig->structure['channels'][$this->channel]['pool']['db_profile']]['dbhost'], 
+                                                      $this->dbConfig->structure[$this->appConfig->structure['channels'][$this->channel]['pool']['db_profile']]['dbport'], 
+                                                      $this->dbConfig->structure[$this->appConfig->structure['channels'][$this->channel]['pool']['db_profile']]['dbname'], 
+                                                      $this->dbConfig->structure[$this->appConfig->structure['channels'][$this->channel]['pool']['db_profile']]['dbuser'], 
+                                                      $this->dbConfig->structure[$this->appConfig->structure['channels'][$this->channel]['pool']['db_profile']]['dbpass']);
+            $response = ($this->appConfig->structure['active']) ? $this->isChannelActive() : false;
+        }catch (Exception $gException){
+            $this->logger->writeLog(LOGERROR, $this->logger->logModule, $this->logger->logModule.' fail on constructor');
+            $this->logger->writeLog(LOGDEBUG, $this->logger->logModule, $this->logger->logModule.' fail on constructor:',$gException);
+            $response = false;
+        }
+        return $response;
+     }
+
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ PRIVATE FUNCTIONS
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+     
+     
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ PUBLIC FUNCTIONS
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+     public function getTasksChunk(){
+         
+     }
+     
+     public function setTaskStatus(){
+         
+     }
+     
+     public function cleanTasks($vWipe = false){
+         
+     }
+     
+     public function putTask($vRegister){
+         
+     }
+     
+     public function putTasks($vRegisters){
+         
+     }
+
+}
+
+

@@ -7,13 +7,25 @@
     "channels":{
         "TPGDR":{
             "active": true,
+            "pool":{
+                "size": 5,
+                "db_profile":"pools_db"
+            },
+            "by_subscribers": false,
             "db_profile":"tpgdr_db",
+            "core_profile":"tpgdr_core",
             "mf_parameters":"'CollectorSchedulerDays','CustomerMonthlyFee','GCSInActivityFee','InactivityDays','MONTHLY_NSF_FEE'",
             "bulk_size": 100
         },
         "TPGGT":{
             "active": false,
+            "pool":{
+                "size": 5,
+                "db_profile":"pools_db"
+            },
+            "by_subscribers": false,
             "db_profile":"tpggt_db",
+            "core_profile":"tpggt_core",
             "mf_parameters":"'CollectorSchedulerDays','CustomerMonthlyFee','GCSInActivityFee','InactivityDays','MONTHLY_NSF_FEE'",
             "bulk_size": 100
         }
