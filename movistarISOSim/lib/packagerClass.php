@@ -25,7 +25,9 @@ class isoPackager {
         echo "PACKET DATA -------------------------------------------------------------------\n";
         $packResult = pack('H*',"6000000003");
         $this->jack->addMTI('0210');
-        foreach ($vData as $bit) {
+        foreach ($vData as $bit => $value) {
+            var_dump($bit);
+            var_dump($value);
             switch ($bit){
                 case 4:
                     $this->jack->addData($bit, (int) str_replace('.', '', (string) number_format((float) $vData[$bit], 2, '.', '')));
@@ -38,7 +40,7 @@ class isoPackager {
         $vData = $this->jack->getData();
         $packResult .= pack('H*', $this->jack->getMTI());
         $packResult .= pack('H*', $this->jack->getBitmap());
-        foreach ($vData as $bit) {
+        foreach ($vData as $bit => $value) {
             switch ($bit){
                 case 24:
                     $packResult .= pack('n*', $vData[$bit]);

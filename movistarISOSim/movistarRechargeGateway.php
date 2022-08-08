@@ -6,24 +6,6 @@ include_once 'lib/httpClientClass.php';
 
 $isoServer = new socketProcessor("0.0.0.0", 9000, "S");
 
-function validateClaro($vMsisdn){
-    $returnResponse = false;
-    $httpHeaders = ['Content-Type: application/vnd.tpago.billpayment+json',
-                    'Accept: application/vnd.tpago.billpayment+json',
-                    'UserId: demo',
-                    'Authentication: T3mp0r4ldev'];
-    $httpClient = new httpClient();
-    $httpClient->setURL('http://10.225.192.199:8080/api/bill-payment/invoice/200TU/'.$vMsisdn);
-    $httpResponse = $httpClient->httpRequest('GET', $httpHeaders);
-    if(substr($httpResponse['http_code'], -2) == 'OK'){
-        $returnResponse = true;
-    }
-    unset($httpClient);
-    unset($httpResponse);
-    unset($httpHeaders);
-    return $returnResponse;
-}
-
 function rechargeClaro($vRequestData){
     echo "Recharging Claro Number............\n";
     $returnResponse = false;
@@ -77,15 +59,15 @@ function rechargeMovistar($vIsoString){
 //Main Function --------------------------------------------------------------
 do{
     $isoRequest =  $isoServer->receiveMessage();
-    $isoPackager = new isoPackager($isoRequest);
+    $isoResponse = rechargeMovistar($isoRequest);
+    $isoPackager = new isoPackager($isoResponse);
     $isoRequestData = $isoPackager->getUnpacketData();
-    switch (validateClaro($isoRequestData[2])){
-        case true:
+    switch ($isoRequestData[39]) {
+        case '01':
             $responseData = rechargeClaro($isoRequestData);
             $isoResponse = $isoPackager->setPacketData($responseData);
             break;
-        default :
-            $isoResponse = rechargeMovistar($isoRequest);
+        default:
             break;
     }
     $isoServer->returnMessage($isoResponse);
