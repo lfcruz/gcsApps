@@ -1,10 +1,10 @@
 <?php
-/*session_start();
+session_start();
 if(date("H:i") > date($_SESSION['expiretime'])){
     session_destroy();
     header("Location: index.php");
 }
-$_SESSION['expiretime'] = date("H:i", strtotime('+20 minutes'));*/
+$_SESSION['expiretime'] = date("H:i", strtotime('+20 minutes'));
 ?>
 <!DOCTYPE html>
 <html>

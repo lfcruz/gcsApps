@@ -46,7 +46,7 @@ if (isset($_FILES['fileToUpload'])) {
             $file_name_new = uniqid( '', true) . '.' . $file_ext;
             $file_destination = 'uploads/' . $file_name;
             if(move_uploaded_file($file_tmp, $file_destination )) {
-                pgQResult("insert into t_targets (targets_id,name,description,status) values (DEFAULT, $1, $2, DEFAULT)", array($_POST['name'],$_POST['description']));
+                pgQResult("insert into t_targets (targets_id,name,description,status,country) values (DEFAULT, $1, $2, DEFAULT, $3)", array($_POST['name'], $_POST['description'], $_SESSION['country']));
                 $error = handleCSV($file_name);
             }
         } else {

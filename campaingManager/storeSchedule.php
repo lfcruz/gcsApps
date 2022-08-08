@@ -4,13 +4,13 @@ if(date("H:i") > date($_SESSION['expiretime'])){
     session_destroy();
     header("Location: index.php");
 }
-$_SESSION['expiretime'] = date("H:i", strtotime('+20 minutes'));
+$_SESSION['expiretime'] = date("H:i", strtotime('+10 minutes'));
 ?>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title> GCS Brocast Campaing Manager - Schedule Campaigns</title>
+        <title> GCS Broadcast Campaign Manager - Schedule Campaigns</title>
         <link rel="icon" href="img/tPago.ico" type="image/x-icon">
         <link href="css/bootstrap.css" rel="stylesheet">
         <style type="text/css">
@@ -33,6 +33,6 @@ $schedDate = $_POST['date']." ".$_POST['time'];
 pgQResult("update t_campaings set status = 'S', scheduled_date = $1 where campaing_id = $2", array($schedDate,$_POST['campaingid']));
 pgQResult("update t_targets set status = 'S' where targets_id = $1", array($_POST['targetid']));
 pgQResult("update t_targets_details set status = 'S' where targets_id = $1", array($_POST['targetid']));
-email("<Broadcast Manager>bmanager@gcs-systems.com","lcruz@gcs-systems.com", "New Broadcast Approval.", "http://".$_SERVER['SERVER_ADDR']."/broadcastCampaings/campaingManager/approveCampaigns.php");
+email("<Broadcast Manager>bmanager@gcs-systems.com","broadcastapproval@gcs-systems.com", "New Broadcast Approval Request.", "http://broadcastmanager.gcs.local/broadcastCampaings/campaingManager/approveCampaigns.php");
 header("Location: uploadCampaigns.php");
 ?>

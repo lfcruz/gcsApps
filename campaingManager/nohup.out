@@ -1,0 +1,71 @@
+--2015-12-17 13:20:46--  http://localhost/broadcastCampaings/campaingManager/process/queueEngine.php?pool=1
+Resolving localhost (localhost)... ::1, 127.0.0.1
+Connecting to localhost (localhost)|::1|:80... connected.
+HTTP request sent, awaiting response... Read error (Connection timed out) in headers.
+Retrying.
+
+--2015-12-17 13:35:47--  (try: 2)  http://localhost/broadcastCampaings/campaingManager/process/queueEngine.php?pool=1
+Connecting to localhost (localhost)|::1|:80... connected.
+HTTP request sent, awaiting response... Read error (Connection timed out) in headers.
+Retrying.
+
+--2015-12-17 13:50:49--  (try: 3)  http://localhost/broadcastCampaings/campaingManager/process/queueEngine.php?pool=1
+Connecting to localhost (localhost)|::1|:80... connected.
+HTTP request sent, awaiting response... Read error (Connection timed out) in headers.
+Retrying.
+
+--2015-12-17 14:05:52--  (try: 4)  http://localhost/broadcastCampaings/campaingManager/process/queueEngine.php?pool=1
+Connecting to localhost (localhost)|::1|:80... connected.
+HTTP request sent, awaiting response... Read error (Connection timed out) in headers.
+Retrying.
+
+--2015-12-17 14:20:56--  (try: 5)  http://localhost/broadcastCampaings/campaingManager/process/queueEngine.php?pool=1
+Connecting to localhost (localhost)|::1|:80... connected.
+HTTP request sent, awaiting response... Read error (Connection timed out) in headers.
+Retrying.
+
+--2015-12-17 14:36:02--  (try: 6)  http://localhost/broadcastCampaings/campaingManager/process/queueEngine.php?pool=1
+Connecting to localhost (localhost)|::1|:80... connected.
+HTTP request sent, awaiting response... Read error (Connection timed out) in headers.
+Retrying.
+
+--2015-12-17 14:51:08--  (try: 7)  http://localhost/broadcastCampaings/campaingManager/process/queueEngine.php?pool=1
+Connecting to localhost (localhost)|::1|:80... connected.
+HTTP request sent, awaiting response... Read error (Connection timed out) in headers.
+Retrying.
+
+--2015-12-17 15:06:15--  (try: 8)  http://localhost/broadcastCampaings/campaingManager/process/queueEngine.php?pool=1
+Connecting to localhost (localhost)|::1|:80... connected.
+HTTP request sent, awaiting response... Read error (Connection timed out) in headers.
+Retrying.
+
+--2015-12-17 15:21:23--  (try: 9)  http://localhost/broadcastCampaings/campaingManager/process/queueEngine.php?pool=1
+Connecting to localhost (localhost)|::1|:80... connected.
+HTTP request sent, awaiting response... Read error (Connection timed out) in headers.
+Retrying.
+
+--2015-12-17 15:36:32--  (try:10)  http://localhost/broadcastCampaings/campaingManager/process/queueEngine.php?pool=1
+Connecting to localhost (localhost)|::1|:80... connected.
+HTTP request sent, awaiting response... Read error (Connection timed out) in headers.
+Retrying.
+
+--2015-12-17 15:51:42--  (try:11)  http://localhost/broadcastCampaings/campaingManager/process/queueEngine.php?pool=1
+Connecting to localhost (localhost)|::1|:80... connected.
+HTTP request sent, awaiting response... Read error (Connection timed out) in headers.
+Retrying.
+
+--2015-12-17 16:06:52--  (try:12)  http://localhost/broadcastCampaings/campaingManager/process/queueEngine.php?pool=1
+Connecting to localhost (localhost)|::1|:80... connected.
+HTTP request sent, awaiting response... Read error (Connection timed out) in headers.
+Retrying.
+
+--2015-12-17 16:22:02--  (try:13)  http://localhost/broadcastCampaings/campaingManager/process/queueEngine.php?pool=1
+Connecting to localhost (localhost)|::1|:80... connected.
+HTTP request sent, awaiting response... Read error (Connection timed out) in headers.
+Retrying.
+
+--2015-12-17 16:37:12--  (try:14)  http://localhost/broadcastCampaings/campaingManager/process/queueEngine.php?pool=1
+Connecting to localhost (localhost)|::1|:80... connected.
+HTTP request sent, awaiting response... 500 Internal Server Error
+2015-12-17 16:37:12 ERROR 500: Internal Server Error.
+

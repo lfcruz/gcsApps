@@ -1,0 +1,10 @@
+#!/bin/bash
+echo "Starting Queues Handlers......."
+cd /apps/broadcastManager/process
+nohup php queueEngine.php 1 > ../logs/queueEngine_1.log &sleep 1
+nohup php queueEngine.php 2 > ../logs/queueEngine_2.log &sleep 1
+nohup php queueEngine.php 3 > ../logs/queueEngine_3.log &sleep 1
+nohup php queueEngine.php 4 > ../logs/queueEngine_4.log &sleep 1
+nohup php queueEngine.php 5 > ../logs/queueEngine_5.log &sleep 1
+nohup php queueEngine.php 6 > ../logs/queueEngine_6.log &sleep 1
+echo "Handlers started.-"

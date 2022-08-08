@@ -1,0 +1,5 @@
+#!/bin/bash
+echo "Starting Queues Monitor......."
+cd /apps/broadcastManager/process
+nohup php queueMonitor.php > ../logs/queueMonitor.log &sleep 1
+echo "Monitor started.-"

@@ -1,8 +1,8 @@
 {
 "BCMdbIp":"localhost",
-"BCMdbPort":"5432",
+"BCMdbPort":"15432",
 "BCMdbName":"campaings",
-"BCMdbUser":"pgadmin",
-"BCMdbPassword":"L1nux2kkk",
+"BCMdbUser":"postgres",
+"BCMdbPassword":"T3mp0r4ldev",
 "BCMQueue":"3"
 }

@@ -4,7 +4,7 @@ if(date("H:i") > date($_SESSION['expiretime'])){
     session_destroy();
     header("Location: index.php");
 }
-$_SESSION['expiretime'] = date("H:i", strtotime('+20 minutes'));
+$_SESSION['expiretime'] = date("H:i", strtotime('+10 minutes'));
 ?>
 <!DOCTYPE html>
 <html>
@@ -29,6 +29,6 @@ $_SESSION['expiretime'] = date("H:i", strtotime('+20 minutes'));
 </html>
 <?php
 include 'addedFunctions.php';
-pgQResult("insert into t_campaings (campaing_id,name,description,campaing_type,targets_id,created_date,status,global_message) values (DEFAULT,$1,$2,$3,$4,now(),DEFAULT,$5)", array($_POST['name'],$_POST['description'],$_POST['type'],$_POST['targetlist'],$_POST['message'],));
+pgQResult("insert into t_campaings (campaing_id,name,description,campaing_type,targets_id,created_date,status,global_message,country) values (DEFAULT,$1,$2,$3,$4,now(),DEFAULT,$5,$6)", array($_POST['name'],$_POST['description'],$_POST['type'],$_POST['targetlist'],$_POST['message'],$_SESSION['country']));
 header("Location: uploadCampaigns.php");
 ?>
