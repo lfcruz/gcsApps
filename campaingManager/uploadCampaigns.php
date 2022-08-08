@@ -4,7 +4,7 @@ if(date("H:i") > date($_SESSION['expiretime'])){
     session_destroy();
     header("Location: index.php");
 }
-$_SESSION['expiretime'] = date("H:i", strtotime('+20 minutes'));
+$_SESSION['expiretime'] = date("H:i", strtotime('+10 minutes'));
 ?>
 <!--
 To change this template, choose Tools | Templates
@@ -51,7 +51,7 @@ and open the template in the editor.
                     <tbody>
                         <?php
                         include 'addedFunctions.php';
-                        $campaignsDS = pgQResult("select * from v_campaignscounter",array());
+                        $campaignsDS = pgQResult("select * from v_campaignscounter where country = $1",array($_SESSION['country']));
                         if($campaignsDS['0']['name'] <> ""){
                             foreach ($campaignsDS as $ccRecord){
                                 echo "<tr>";

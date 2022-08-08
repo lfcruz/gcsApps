@@ -20,5 +20,37 @@
                 "6" : {"name" : "clientdocument", "position" : "231", "length" : "16"}
             }
         }
+    },
+    "SII800" : {
+        "header" : {
+            "id" : "H",
+            "structure" : {
+                "1" : {"name" : "filedate", "position" : "1", "length" : "8"},
+                "2" : {"name" : "function", "position" : "9", "length" : "3"},
+                "3" : {"name" : "filegenerationdate", "position" : "12", "length" : "8"},
+                "4" : {"name" : "filegenerationtime", "position" : "20", "length" : "6"},
+                "5" : {"name" : "filler", "position" : "26", "length" : "274"}
+            }
+        },
+        "body" : {
+            "id" : "D",
+            "structure" : { 
+                "1" : {"name" : "bankcode", "position" : "1", "length" : "4"},
+                "2" : {"name" : "documenttype", "position" : "5", "length" : "1"},
+                "3" : {"name" : "documentid", "position" : "6", "length" : "20"},
+                "4" : {"name" : "clientname", "position" : "26", "length" : "100"},
+                "5" : {"name" : "telcoid", "position" : "126", "length" : "3"},
+                "6" : {"name" : "phonenumber", "position" : "129", "length" : "10"},
+                "7" : {"name" : "accountnumber", "position" : "139", "length" : "20"},
+                "8" : {"name" : "accounttype", "position" : "159", "length" : "10"},
+                "9" : {"name" : "currency", "position" : "169", "length" : "3"},
+                "10" : {"name" : "accountalias", "position" : "172", "length" : "6"},
+                "11" : {"name" : "newaccountnumber", "position" : "178", "length" : "20"},
+                "12" : {"name" : "newaccounttype", "position" : "198", "length" : "10"},
+                "13" : {"name" : "newcurrency", "position" : "208", "length" : "3"},
+                "10" : {"name" : "newaccountalias", "position" : "211", "length" : "6"},
+                "11" : {"name" : "filler", "position" : "217", "length" : "83"}
+            }
+        }
     }
 }

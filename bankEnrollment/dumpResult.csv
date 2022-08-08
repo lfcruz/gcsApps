@@ -1,0 +1,795 @@
+  document_id  | document_type |           name            |        last_name        | client_id | phone_number | telco_id | enrollment_activation_code | phone_validation_result | enrollment_result 
+---------------+---------------+---------------------------+-------------------------+-----------+--------------+----------+----------------------------+-------------------------+-------------------
+ 2598612940101 | DPI           | Gilberto Alejandro        | Guzman Guerra           |         3 | 59516573     | Claro    | 8836                       |                         | 
+ 1607486150101 | DPI           | Edwin Adolfo              | Chojolan Palma          |         5 | 57150405     | Claro    | 8527                       |                         | 
+ 2318798650101 | DPI           | Jose Antonio              | Barrios Gutierrez       |         1 | 42258214     | Claro    | 8453                       | 0000                    | 0000
+ 2538994000101 | DPI           | Rony Roberto              | Juarez Dieguez          |         2 | 50188107     | Claro    | 7698                       | 0000                    | 0000
+ 2595151590101 | DPI           | Abinadab Gamaliel         | Flores Ruano            |         4 | 56001479     | Movistar | 8952                       | 0000                    | 
+ 1786203430101 | DPI           | Douglas Daniel            | Garcia Tetzaguic        |         6 | 55642005     | Claro    | 1319                       | 0000                    | 0000
+ 1610417520101 | DPI           | Alejandra Rosa Maria      | Rivera                  |         7 | 55799494     | Claro    | 5253                       | 0000                    | 0000
+ 1648001150101 | DPI           | Elder Manrique            | Ical Vicente            |         8 | 41232110     | Claro    | 4638                       | 0000                    | 0000
+ 2089072540101 | DPI           | Angela Gabriela Alejandra | Zacarias Abac           |         9 | 47370175     | Claro    | 7376                       | 0000                    | 0000
+ 2248268240101 | DPI           | Maria Jose                | Albizures Pereira       |        10 | 54177870     | Claro    | 1035                       |                         | 
+ 2601793960108 | DPI           | Estuardo Manfredo         | Ramos Morales           |        11 | 59799490     | Claro    | 6942                       |                         | 
+ 2628658740101 | DPI           | Leonela Susana            | Arana Solis             |        18 | 34828689     | Movistar | 3184                       |                         | 
+ 2597774200101 | DPI           | Ovidio Alfonso            | Meza Montenegro         |        28 | 50187056     | Claro    | 1889                       |                         | 
+ 1573742110101 | DPI           | Luis Danilo               | Gomez Lopez             |        30 | 58721555     | Claro    | 4183                       |                         | 
+ 2250212420101 | DPI           | Reyna Judith              | Marroquin Rodriguez     |        33 | 58749779     | Claro    | 2619                       |                         | 
+ 1620830170101 | DPI           | Edwin Wilfredo            | Tello Diaz              |        35 | 44710198     | Movistar | 6149                       |                         | 
+ 2235119860101 | DPI           | Dinorah Gabriela          | Mayen Lara              |        37 | 42201902     | Claro    | 2500                       |                         | 
+ 1979918150101 | DPI           | Ana Maria                 | Pelico Baten            |        40 | 55799957     | Claro    | 6118                       |                         | 
+ 2558544390101 | DPI           | Marvin Enrique            | Torres Gonzalez         |        41 | 56927062     | Claro    | 5699                       |                         | 
+ 1609049430609 | DPI           | Melvin Alfonso            | Chacon                  |        44 | 34987819     | Movistar | 4387                       |                         | 
+ 2456191431108 | DPI           | Mauro Rene                | Maldonado Calderon      |        48 | 58749781     | Claro    | 9898                       |                         | 
+ 2512332940101 | DPI           | Roxana Maricela           | Mazariegos Lopez        |        56 | 58259902     | Claro    | 2330                       |                         | 
+ 2049259832201 | DPI           | Nidia  Azucely            | Jacinto  Samayoa        |        58 | 54402664     | Claro    | 7357                       |                         | 
+ 2328909190101 | DPI           | Edgar Rodolfo             | Garcia Rodas            |        53 | 51009564     | Movistar | 1144                       | 0000                    | 
+ 1784002620101 | DPI           | Ronal Eduardo             | Orellana Cano           |        51 | 54143628     | Claro    | 5643                       | 0000                    | 0000
+ 1587422060101 | DPI           | Nancy Melissa             | Sierra Lemus            |        52 | 59567508     | Claro    | 4718                       | 0000                    | 0000
+ 1753289000101 | DPI           | Greycy Mariela            | Calvillo Lopez          |        24 | 42204304     | Claro    | 8459                       | 0000                    | 
+ 2515994260101 | DPI           | Zabdi Obed                | Lopez Ogaldez           |        54 | 55857288     | Claro    | 6520                       | 0000                    | 0000
+ 2669373060101 | DPI           | Bryan Lisardo             | Soto Ramos              |        55 | 54306196     | Claro    | 7948                       | 0000                    | 0000
+ 2428411200101 | DPI           | Evelyn Azucena            | Morataya Estrada        |        13 | 50189166     | Claro    | 2695                       | 0000                    | 0000
+ 1826671381218 | DPI           | Ruth Eunice               | Miranda Hernandez       |        14 | 58615547     | Claro    | 7662                       | 0000                    | 0000
+ 2089821751201 | DPI           | Mynor Artemio             | Mazariegos Escobar      |        15 | 41231294     | Claro    | 9138                       | 0000                    | 0000
+ 2199774102203 | DPI           | Leslie Iracenia           | Recinos Palma           |        16 | 58650109     | Claro    | 5988                       | 0000                    | 0000
+ 1607848830110 | DPI           | Eva Griselda              | Boror Garcia            |        17 | 55124301     | Claro    | 1188                       | 0000                    | 0000
+ 2249025390101 | DPI           | Abner Rene                | Guamuch Sanchez         |        19 | 58749724     | Claro    | 3946                       | 0000                    | 0000
+ 2330298690101 | DPI           | Francisco Alexander       | Orozco Hernandez        |        20 | 51211992     | Claro    | 3579                       | 0000                    | 0000
+ 2443743172101 | DPI           | Jorge Antonio             | Barrientos Lopez        |        21 | 58749607     | Claro    | 1560                       | 0000                    | 0000
+ 2501766611415 | DPI           | Luis Miguel               | Mendez Chitop           |        22 | 55100914     | Claro    | 8304                       | 0000                    | 0000
+ 2580344160101 | DPI           | Adelso                    | Mejia Lopez             |        23 | 55336510     | Claro    | 7129                       | 0000                    | 0000
+ 2083041500201 | DPI           | Glenda Karina             | Moran Ortega            |        49 | 57924290     | Movistar | 8435                       | 0000                    | 
+ 2177527480101 | DPI           | Agustina Guadalupe        | Garzo Mendez            |        25 | 44446221     | Movistar | 1096                       | 0000                    | 0000
+ 1980504100106 | DPI           | Leivy Anadeli             | Lic Galindo             |        26 | 47274670     | Claro    | 2571                       | 0000                    | 0000
+ 2645634170101 | DPI           | Juan Carlos               | Garcia Cruz             |        27 | 55160558     | Claro    | 7632                       | 0000                    | 0000
+ 1998176260101 | DPI           | Sergio Antonio            | Paz Giron               |        29 | 43046238     | Movistar | 4601                       | 0000                    | 0000
+ 2167433540101 | DPI           | Axel Estuardo             | Morales Estrada         |        31 | 58734517     | Claro    | 5126                       | 0000                    | 0000
+ 1621431410114 | DPI           | Lesbi Llojani             | Gonzalez Cruz           |        32 | 54141358     | Claro    | 3750                       | 0000                    | 0000
+ 1648394610920 | DPI           | Sandra Elizabeth          | Sanchez Barrera         |        34 | 58739238     | Claro    | 7389                       | 0000                    | 0000
+ 2249024820101 | DPI           | Henry Stuardo             | Alvarez Acevedo         |        36 | 54110037     | Claro    | 1008                       | 0000                    | 0000
+ 2251083640602 | DPI           | Cony Lizeth               | Meza Cordero            |        38 | 55753762     | Claro    | 2070                       | 0000                    | 0000
+ 2220161240101 | DPI           | Felix Manuel              | Vicente Monroy          |        39 | 41289703     | Claro    | 7395                       | 0000                    | 0000
+ 1831815731327 | DPI           | Brigida                   | Cifuentes Perez         |        42 | 55166035     | Claro    | 8483                       | 0000                    | 0000
+ 2465657721804 | DPI           | Vidal Antonio             | Lopez Calderon          |        43 | 57159293     | Claro    | 9272                       | 0000                    | 0000
+ 2448153722004 | DPI           | Julio David               | Garcia Mayorga          |        46 | 54604140     | Claro    | 6626                       | 0000                    | 0000
+ 2200223481905 | DPI           | Jose David                | Ramirez Veliz           |        47 | 50167903     | Claro    | 8323                       | 0000                    | 0000
+ 2979572280804 | DPI           | Ana Angela                | Saquic Cux              |        59 | 57168576     | Claro    | 8016                       | 0000                    | 
+ 2096895280101 | DPI           | Oswaldo Bladimir          | Higueros Reyes          |        57 | 55688156     | Claro    | 6090                       | 0000                    | 0000
+ 2774968021001 | DPI           | Victor  Alfonso           | Perez Velasquez         |        60 | 54662505     | Claro    | 4185                       | 0000                    | 0000
+ 2284752791801 | DPI           | Jose Arnoldo              | Hernandez Perez         |        61 | 44278826     | Movistar | 1181                       | 0000                    | 0000
+ 3030303640108 | DPI           | Ana Gabriela              | Sandoval  Cifuentes     |        62 | 42746714     | Claro    | 7883                       | 0000                    | 0000
+ 2814585962104 | DPI           | Nayri  Marili             | Rivera  Cartagena       |        63 | 50110359     | Claro    | 2501                       | 0000                    | 0000
+ 2598372450101 | DPI           | Maria  de los Angeles     | Diaz Flores             |        64 | 51342591     | Claro    | 8209                       | 0000                    | 0000
+ 2635119010301 | DPI           | Jessica Emilene           | Jauregui Belteton       |        65 | 44591943     | Movistar | 9901                       | 0000                    | 0000
+ 2252026380101 | DPI           | Carlos Emilio             | Sandoval Paz            |        66 | 41411842     | Claro    | 2073                       | 0000                    | 0000
+ 2181793321901 | DPI           | Jaime Josue               | Lopez Pineda            |        67 | 44204711     | Movistar | 8452                       | 0000                    | 0000
+ 2134271920108 | DPI           | Anderson Jhovanni         | Lopez  Vicente          |        68 | 41417346     | Claro    | 5948                       | 0000                    | 0000
+ 2711379910406 | DPI           | Jhannya  Mayte            | Griselda  Marquez       |        78 | 56368046     | Claro    | 2820                       |                         | 
+ 2423193780406 | DPI           | Jaquelin Xiomara          | Castillo  Azanon        |        79 | 41997786     | Claro    | 4879                       |                         | 
+ 3006667990101 | DPI           | Luis Fernando Jose        | Gomez Toj               |        86 | 51410569     | Movistar | 9314                       |                         | 
+ 2417596921414 | DPI           | Mario Roberto             | Ventura  Chach          |        89 | 42753865     | Claro    | 9424                       |                         | 
+ 2439916491903 | DPI           | Olga Faviola              | Garcia Franco           |        91 | 51247184     | Claro    | 7151                       |                         | 
+ 1853341480901 | DPI           | Mayra Karina              | Soc Ovalle              |        92 | 42584425     | Claro    | 6525                       |                         | 
+ 2117510061103 | DPI           | Francisco Ernesto         | Martinez Puac           |        94 | 59817499     | Claro    | 4732                       |                         | 
+ 1720792761401 | DPI           | Edgar Apolinario          | Pelico Zacarias         |        98 | 41425988     | Claro    | 9070                       |                         | 
+ 2514810260101 | DPI           | Evelin Marisol            | Chiguichon Raguay       |       104 | 41220804     | Claro    | 3993                       |                         | 
+ 2297231871401 | DPI           | Felipe Santos             | Chivalan Gomez          |       107 | 55574577     | Claro    | 1954                       |                         | 
+ 2124334580101 | DPI           | Cristian Alexander        | Martinez Noriega        |       116 | 56358737     | Claro    | 4717                       |                         | 
+ 3056656260301 | DPI           | Jose Carlos               | de Leon Mendez          |       118 | 42744325     | Claro    | 5102                       |                         | 
+ 1588266120101 | DPI           | Maria Lidia               | Morales Guerra          |       122 | 55100033     | Claro    | 3810                       |                         | 
+ 2458839670101 | DPI           | Erik Emilio               | Marroquin Guamuch       |       130 | 56618661     | Movistar | 3201                       |                         | 
+ 2201397170608 | DPI           | Maritza Verali            | Salazar Tolico          |       136 | 42941512     | Claro    | 2014                       |                         | 
+ 2797821870101 | DPI           | Iliana  Doresly           | Cifuentes Reyes         |        70 | 54497479     | Claro    | 4238                       | 0000                    | 
+ 2548597980406 | DPI           | Irma Guadalupe            | Surec Cumes             |        72 | 34681797     | Movistar | 4537                       | 0000                    | 
+ 2585617850101 | DPI           | Leslie Fabiola            | Montufar Caceres        |        71 | 54498805     | Claro    | 8745                       | 0000                    | 0000
+ 2616408440401 | DPI           | Catherine  Melissa        | Morales  Cienfuegos     |        80 | 41894593     | Claro    | 9796                       | 0000                    | 
+ 2284561850901 | DPI           | Christian Kevin           | Chaj Cifuentes          |        73 | 50996865     | Movistar | 5535                       | 0000                    | 0000
+ 2239854731506 | DPI           | Alida Raquel              | Valenzuela Garcia       |        74 | 58597384     | Claro    | 8604                       | 0000                    | 0000
+ 2509578920101 | DPI           | Mirza Ofelia              | Recinos Figueroa        |        75 | 54251633     | Claro    | 5815                       | 0000                    | 0000
+ 2545554970108 | DPI           | Jairo Dario               | Ramirez Itzep           |        76 | 56390765     | Claro    | 9530                       | 0000                    | 0000
+ 2773789901219 | DPI           | Adiliz Victoria           | Contreras Lopez         |        77 | 56007556     | Movistar | 4151                       | 0000                    | 0000
+ 2060822900901 | DPI           | Charlene  Abigail         | Siguenza Lopez          |        84 | 55885984     | Claro    | 3096                       | 0000                    | 
+ 2670378640101 | DPI           | Enyula                    | Duarte Trejo            |        81 | 42471377     | Claro    | 5264                       | 0000                    | 0000
+ 2977031961801 | DPI           | Brenda Michelle           | Sanchez  Guerra         |        82 | 42286312     | Claro    | 2866                       | 0000                    | 0000
+ 1978264902009 | DPI           | Lorena  Victoria          | Aceituno Perez          |        99 | 59822238     | Claro    | 6113                       | 0000                    | 
+ 2412903920106 | DPI           | Cristian Alexander        | Agosto  Guzman          |        85 | 54108244     | Claro    | 7505                       | 0000                    | 0000
+ 1640437480505 | DPI           | Marvin Raul               | Posadas Lucero          |        87 | 35064728     | Movistar | 4848                       | 0000                    | 0000
+ 2546132760101 | DPI           | Eddy Elly                 | Morales Gonzalez        |        88 | 59634305     | Claro    | 2727                       | 0000                    | 0000
+ 1737994420308 | DPI           | Carlos  Rolando           | Balan  Morales          |        90 | 54662426     | Claro    | 2123                       | 0000                    | 0000
+ 1785996110501 | DPI           | Jose Carlos               | Salazar Bran            |        93 | 54424938     | Claro    | 4834                       | 0000                    | 0000
+ 2048528540101 | DPI           | Vivian  Dayana            | Sandoval Marroquin      |        95 | 35191813     | Movistar | 1945                       | 0000                    | 0000
+ 2205911132213 | DPI           | Mayra Janeth              | Diaz Cortez             |        96 | 53954013     | Movistar | 5710                       | 0000                    | 0000
+ 2222200310502 | DPI           | Gerson Amilcar            | Galvez Aguilar          |        97 | 55555555     | Claro    | 8628                       | 0000                    | 0000
+ 1887488220101 | DPI           | Alba Estela               | Ramirez Ramirez         |       113 | 56532451     | Movistar | 6958                       | 0000                    | 
+ 2731036870101 | DPI           | Anthony Bryan             | Garcia Barrientos       |       100 | 35353900     | Movistar | 5953                       | 0000                    | 0000
+ 2460221080101 | DPI           | Debora  Mayarith          | Guzman Gracias          |       101 | 41229030     | Claro    | 6545                       | 0000                    | 0000
+ 2312280580101 | DPI           | Lilian                    | Ortiz Lopez             |       102 | 52797319     | Movistar | 6692                       | 0000                    | 0000
+ 3015819750101 | DPI           | Kimberly  Sucely          | Cano Perez              |       103 | 59140361     | Claro    | 2395                       | 0000                    | 0000
+ 1855707390101 | DPI           | Yeny Xiomara              | Florian Guevara         |       105 | 59711138     | Claro    | 9655                       | 0000                    | 0000
+ 2058137121603 | DPI           | Alex Adilson              | Tilom Pou               |       106 | 42108249     | Claro    | 2859                       | 0000                    | 0000
+ 2483810590502 | DPI           | Darlin Celeste            | Asibinac Juarez         |       109 | 52844364     | Movistar | 5722                       | 0000                    | 0000
+ 3218707000506 | DPI           | Alba Janeth               | Herrera Reanda          |       110 | 56863176     | Movistar | 7003                       | 0000                    | 0000
+ 1834989680101 | DPI           | Velvet Waleska            | Aguilar Alarcon         |       111 | 59237707     | Claro    | 6328                       | 0000                    | 0000
+ 2694317990101 | DPI           | Hilda Mariela             | Garcia Montenegro       |       112 | 55134302     | Claro    | 3590                       | 0000                    | 0000
+ 1723809521220 | DPI           | Nivia Maricel             | Garcia Ardeano          |       119 | 43759387     | Movistar | 1142                       | 0000                    | 
+ 2597867641615 | DPI           | Abner Benjamin            | Ojom Castro             |       114 | 42752864     | Claro    | 7541                       | 0000                    | 0000
+ 2560069970101 | DPI           | Candi Aime                | Ramirez Teni            |       115 | 42175458     | Claro    | 2671                       | 0000                    | 0000
+ 1899899550920 | DPI           | Fredy Gerardo             | Lopez Fernandez         |       117 | 41222921     | Claro    | 8598                       | 0000                    | 0000
+ 2286890740101 | DPI           | Alexia Azucena            | Perez Lopez             |       123 | 41054419     | Claro    | 9448                       | 0000                    | 
+ 2320803800902 | DPI           | Blas Oswaldo              | Marroquin               |       120 | 50181665     | Claro    | 8745                       | 0000                    | 0000
+ 2530771090101 | DPI           | Wendy Paola               | Conde Montufar          |       121 | 55831212     | Claro    | 2909                       | 0000                    | 0000
+ 1687115240302 | DPI           | Cruz Angelica             | Ordonez Turuy           |       124 | 42475206     | Claro    | 3058                       | 0000                    | 
+ 2488326110101 | DPI           | Monica Alejandra          | Pelaez Mairen           |       133 | 50212305     | Movistar | 8717                       | 0000                    | 
+ 2413946430101 | DPI           | Tania Claudette           | Bosch Lucero            |       125 | 41437813     | Claro    | 5493                       | 0000                    | 0000
+ 1820510050101 | DPI           | Eddy Estuardo             | Quevedo Lopez           |       126 | 54603744     | Claro    | 4768                       | 0000                    | 0000
+ 1987830510107 | DPI           | Israel                    | Oxcal Monroy            |       127 | 56888463     | Movistar | 9435                       | 0000                    | 0000
+ 1810975320922 | DPI           | Otman Waldemar            | Rabanales Siguenza      |       129 | 54108253     | Claro    | 6035                       | 0000                    | 0000
+ 2218487111804 | DPI           | Elio                      | Cordon Morales          |       131 | 54126871     | Claro    | 1336                       | 0000                    | 0000
+ 1724977280718 | DPI           | Lucia                     | Pichilla Navichoc       |       132 | 42173532     | Claro    | 6281                       | 0000                    | 0000
+ 2674081882101 | DPI           | Cesian Anaite             | Marroquin Orellana      |       134 | 42116206     | Claro    | 2112                       | 0000                    | 0000
+ 1621963341801 | DPI           | Jose Manuel               | Osorio Acevedo          |       135 | 52158405     | Movistar | 5974                       | 0000                    | 0000
+ 1581542310101 | DPI           | Diana Cristina            | Gomez Jacobo            |       141 | 47300953     | Claro    | 1092                       |                         | 
+ 1733839470701 | DPI           | Pedro Fernando            | Martin Ben              |       142 | 41282183     | Claro    | 4675                       |                         | 
+ 1654267480301 | DPI           | Angel Geovani             | Gonzalez Lopez          |       146 | 59236497     | Claro    | 6804                       |                         | 
+ 1744417380101 | DPI           | Marlon Estuardo           | Espana Salguero         |       147 | 55799814     | Claro    | 3130                       |                         | 
+ 3504928830101 | DPI           | Moises Geraldo            | Chavez Perez            |       148 | 58288063     | Claro    | 2310                       |                         | 
+ 3062051570309 | DPI           | Edgar Humberto            | Acajabon Garcia         |       152 | 41255278     | Claro    | 5813                       |                         | 
+ 2596199221410 | DPI           | Juan Antonio              | Franco                  |       154 | 54108247     | Claro    | 5018                       |                         | 
+ 2307981280101 | DPI           | Luis  Alberto             | Vicente Bautista        |       158 | 42643510     | Claro    | 6886                       |                         | 
+ 2190157830101 | DPI           | Yonatan Esmaily           | De Leon                 |       161 | 47320460     | Claro    | 9771                       |                         | 
+ 2954893830101 | DPI           | Joselin Cristina          | Mendez Hernandez        |       167 | 56001493     | Movistar | 9324                       |                         | 
+ 1619386711904 | DPI           | Luis Miguel               | Acevedo  Garcia         |       190 | 44053125     | Movistar | 4705                       |                         | 
+ 2209466040101 | DPI           | Marvin Leonel             | Tocay Chavac            |       199 | 59308625     | Claro    | 4461                       |                         | 
+ 2625081170101 | DPI           | Josue Estuardo            | Ramirez Echeverria      |       200 | 54605558     | Claro    | 4800                       |                         | 
+ 2266603460101 | DPI           | Manuel Jonatan            | Batz Puzul              |       201 | 55799946     | Claro    | 6697                       |                         | 
+ 2467457460101 | DPI           | Carina Aracely            | Villagran Morales       |       144 | 58437912     | Claro    | 4792                       | 0000                    | 
+ 1659804510101 | DPI           | Jason Leonel              | Castillo Sazo           |       138 | 35303077     | Movistar | 1255                       | 0000                    | 0000
+ 2674688060101 | DPI           | Evelyn Magdalena          | Quinonez Molina         |       139 | 55861289     | Claro    | 6187                       | 0000                    | 0000
+ 1645527581401 | DPI           | Jose Isaac                | Quiroa Sandoval         |       140 | 42206529     | Claro    | 8833                       | 0000                    | 0000
+ 2486666302001 | DPI           | Walter Enrique            | Lopez Juarez            |       143 | 42028996     | Claro    | 7764                       | 0000                    | 0000
+ 2622064471106 | DPI           | Augusto                   | Yotz Santay             |       145 | 55756511     | Claro    | 8433                       | 0000                    | 
+ 2129335150101 | DPI           | Lilian Consuelo           | Sacalxot Castro         |       155 | 55757387     | Claro    | 8157                       | 0000                    | 
+ 2537960081601 | DPI           | Wendy Eugenia             | Gonzalez Quej           |       150 | 42750148     | Claro    | 8578                       | 0000                    | 0000
+ 3002814120101 | DPI           | Emily Magaly              | Bolanos Perez           |       151 | 42046826     | Claro    | 6834                       | 0000                    | 0000
+ 2534071410101 | DPI           | Bryan Alexander           | Alvarez Yanes           |       153 | 41257291     | Claro    | 6734                       | 0000                    | 0000
+ 2434989340101 | DPI           | Hugo Leonel               | Flores Paredes          |       165 | 58537235     | Claro    | 1942                       | 0000                    | 
+ 1850862680101 | DPI           | Paulo De Jesus            | Cotzajay Ramos          |       156 | 47186591     | Claro    | 1547                       | 0000                    | 0000
+ 2102160930101 | DPI           | Hugo Rene                 | Ramirez                 |       157 | 55437432     | Claro    | 4681                       | 0000                    | 0000
+ 2584702832101 | DPI           | Ariel Eliezer             | Aquino Ramirez          |       159 | 42604436     | Claro    | 4991                       | 0000                    | 0000
+ 2091406900101 | DPI           | Luis Israel               | Garcia Soto             |       160 | 55953993     | Claro    | 3426                       | 0000                    | 0000
+ 2765953861801 | DPI           | Josue Emanuel             | Gutierrez Aceituno      |       162 | 47028193     | Claro    | 1249                       | 0000                    | 0000
+ 1777180800501 | DPI           | Lourdes Tatiana           | Barrundia Telon         |       163 | 55122646     | Claro    | 9870                       | 0000                    | 0000
+ 2215206001801 | DPI           | Ilsias Emmanoel           | Martinez Boteo          |       164 | 59816435     | Claro    | 2877                       | 0000                    | 0000
+ 1841657331501 | DPI           | Celsa  Maritza            | Galeano Alvarez         |       170 | 42246132     | Claro    | 2406                       | 0000                    | 
+ 2617898210101 | DPI           | Edwin Geovany             | Hernandez Aguilar       |       166 | 41975678     | Claro    | 4049                       | 0000                    | 0000
+ 2903972510101 | DPI           | Byron Alexander           | Alvarizaes Gamez        |       168 | 42108223     | Claro    | 3769                       | 0000                    | 0000
+ 2523507310101 | DPI           | Guisela Marcia Ileanova   | Perez Melgar            |       169 | 54828109     | Claro    | 3278                       | 0000                    | 0000
+ 2185539270101 | DPI           | Paula Liseth              | Izquierdo Miguel        |       177 | 54662301     | Claro    | 2759                       | 0000                    | 
+ 2083755380114 | DPI           | Mario Rolando             | Colindres Morales       |       171 | 41088842     | Claro    | 2993                       | 0000                    | 0000
+ 2994953530101 | DPI           | Anderson Jose Teodoro     | Chen  Esteban           |       172 | 59227645     | Claro    | 3754                       | 0000                    | 0000
+ 1819435140101 | DPI           | Maylen Nohemi             | Juarez Ramos            |       173 | 55172219     | Claro    | 8647                       | 0000                    | 0000
+ 1728724480614 | DPI           | Gladis Elizabeth          | Hernandez Samayoa       |       175 | 42563742     | Claro    | 5202                       | 0000                    | 0000
+ 2194286701501 | DPI           | Gerson Osbeli             | Enriquez  De Los Santos |       176 | 54662482     | Claro    | 7087                       | 0000                    | 0000
+ 2186007120101 | DPI           | Edgar Alfredo             | OMeany Castellanos      |       182 | 42105280     | Claro    | 3100                       | 0000                    | 
+ 2069330450110 | DPI           | Cesar                     | Suruy Patzan            |       178 | 58259939     | Claro    | 7056                       | 0000                    | 0000
+ 1959215771001 | DPI           | Jose Rogelio              | Alvarez Monterroso      |       179 | 57101763     | Claro    | 2121                       | 0000                    | 0000
+ 2198350980509 | DPI           | Lazaro Antonio            | Davila Ochoa            |       180 | 55121947     | Claro    | 2624                       | 0000                    | 0000
+ 1837314920207 | DPI           | Oscar Eduardo             | Cordon Eguizabal        |       181 | 42606903     | Claro    | 8709                       | 0000                    | 0000
+ 2506633171412 | DPI           | Walter Amilcar            | Figueroa Estrada        |       185 | 42758251     | Claro    | 9723                       | 0000                    | 
+ 1588087970101 | DPI           | Sergio Estuardo           | Gatica Rivera           |       183 | 51106770     | Claro    | 4101                       | 0000                    | 0000
+ 1994017721804 | DPI           | Elvin Rafael              | Retana  Contreras       |       184 | 54662677     | Claro    | 1874                       | 0000                    | 0000
+ 2050157191901 | DPI           | Pedro Luis                | Torres Pineda           |       202 | 54177748     | Claro    | 8847                       | 0000                    | 
+ 2289137481219 | DPI           | Dielman Ussiel            | Perez Lopez             |       186 | 55131694     | Claro    | 8890                       | 0000                    | 0000
+ 3016246070101 | DPI           | Kimberly Maria Paula      | Espina De Leon          |       187 | 59675100     | Claro    | 7434                       | 0000                    | 0000
+ 2685540132103 | DPI           | Herla Yadira              | Medina Avila            |       188 | 54416598     | Claro    | 6967                       | 0000                    | 0000
+ 2250212340101 | DPI           | Claudia   Liliana         | Cordova Lima            |       189 | 58749652     | Claro    | 8326                       | 0000                    | 0000
+ 1973881830921 | DPI           | Wilmer Josue              | Lopez de Leon           |       191 | 59521945     | Claro    | 9237                       | 0000                    | 0000
+ 2585029400901 | DPI           | Edwin Otoniel             | Rivas Alonzo            |       192 | 50938300     | Movistar | 2488                       | 0000                    | 0000
+ 2755299242214 | DPI           | Karen Oralia              | Lopez Recinos           |       193 | 55121530     | Claro    | 3411                       | 0000                    | 0000
+ 2116492791226 | DPI           | Mileydy Yuliza            | Arreaga Alvarado        |       195 | 34145812     | Movistar | 4275                       | 0000                    | 0000
+ 3586072991703 | DPI           | Sonia Lizzeth             | Rios Najera             |       196 | 54335125     | Claro    | 2160                       | 0000                    | 0000
+ 1629879001601 | DPI           | Jose Augusto              | Maas Quiix              |       197 | 58432913     | Claro    | 7430                       | 0000                    | 0000
+ 2250211610101 | DPI           | Juan Carlos               | Vasquez Morales         |       198 | 54124813     | Claro    | 7794                       | 0000                    | 0000
+ 1769674190110 | DPI           | Angela Del Rosario        | Bucaro Chacach          |       203 | 55799817     | Claro    | 6470                       | 0000                    | 0000
+ 1837857381001 | DPI           | Julio Gabriel             | Garcia Mendizabal       |       204 | 55124260     | Claro    | 8994                       | 0000                    | 0000
+ 2249024152212 | DPI           | Brenda Marivel            | Contreras Gonzalez      |       206 | 58749636     | Claro    | 9242                       |                         | 
+ 2065303660101 | DPI           | Nataly Gabriela           | Gil Alvarez             |       210 | 56336632     | Claro    | 8450                       |                         | 
+ 2626898550101 | DPI           | Mindy Yadira              | Velasco Enriquez        |       211 | 54122786     | Claro    | 4644                       |                         | 
+ 2569519341910 | DPI           | Marta Lucrecia            | Cordon Linares          |       212 | 58329588     | Claro    | 4490                       |                         | 
+ 2113948820912 | DPI           | Lesvia Argentina          | Hernandez Vasquez       |       217 | 58738412     | Claro    | 2911                       |                         | 
+ 2604940620301 | DPI           | Manuel Francisco          | Pop Arzu                |       224 | 47582383     | Claro    | 4793                       |                         | 
+ 2760773260101 | DPI           | Douglas Steve             | Lopez Castillo          |       231 | 54108256     | Claro    | 6678                       |                         | 
+ 1905695571601 | DPI           | Olga Priscilla Esperanza  | Enriquez Paau           |       240 | 55551596     | Claro    | 2561                       |                         | 
+ 2363975831406 | DPI           | Eligia Marcela            | Mazariegos Bocel        |       246 | 43913849     | Movistar | 9664                       |                         | 
+ 1650440551703 | DPI           | Fredy                     | Pocasangre Donis        |       248 | 50184638     | Claro    | 3926                       |                         | 
+ 2092580470301 | DPI           | Lucero Esmeralda          | Hernandez               |       249 | 54395003     | Claro    | 2571                       |                         | 
+ 1607849130207 | DPI           | Jose Manuel               | Estrada Gonzalez        |       259 | 54828193     | Claro    | 2743                       |                         | 
+ 2249415690101 | DPI           | Edgar Lizardo             | De Leon Castro          |       262 | 54828192     | Claro    | 4064                       |                         | 
+ 1739317070101 | DPI           | Ricardo Alexander         | Mendoza Cruz            |       266 | 42522336     | Claro    | 9453                       |                         | 
+ 2553113540101 | DPI           | Christian Alberto         | Lopez Perez             |       270 | 58748560     | Claro    | 8743                       |                         | 
+ 1811095140108 | DPI           | Hugo Leonel               | Solares Chamale         |       207 | 41561876     | Claro    | 5320                       | 0000                    | 
+ 1688995230409 | DPI           | Maria Luisa               | Martin Matzer           |       216 | 52459372     | Movistar | 5543                       | 0000                    | 
+ 2585856330101 | DPI           | Magda Alejandra           | Asifuina Perez          |       208 | 42189021     | Claro    | 7620                       | 0000                    | 0000
+ 2581777131801 | DPI           | Fatima Imelda De Lourdes  | Perez Vela              |       209 | 57154300     | Claro    | 6816                       | 0000                    | 0000
+ 2630852871215 | DPI           | Enmanuel Jonatan          | Domingo Maldonado       |       213 | 55799933     | Claro    | 7907                       | 0000                    | 0000
+ 1672893810116 | DPI           | Gerber Jesus              | Juarez Sanchez          |       214 | 54828085     | Claro    | 9065                       | 0000                    | 0000
+ 1610219641703 | DPI           | Gerson Antonio            | Quixaj Miss             |       215 | 54662717     | Claro    | 8936                       | 0000                    | 0000
+ 2672475830101 | DPI           | Glenda Xiomara            | Alvarez Morales         |       222 | 58749586     | Claro    | 3865                       | 0000                    | 
+ 1944198190304 | DPI           | Juan Agustin              | Puc Solloy              |       218 | 58729969     | Claro    | 1593                       | 0000                    | 0000
+ 1625551210108 | DPI           | Marvin Wilfrido           | Soto Ordonez            |       219 | 58307303     | Claro    | 5449                       | 0000                    | 0000
+ 2612168211905 | DPI           | Emely Waldina             | Perez Cordon            |       220 | 59271010     | Claro    | 4371                       | 0000                    | 0000
+ 1815577460101 | DPI           | Monica Yohana             | Solorzano Giron         |       221 | 51398447     | Claro    | 4862                       | 0000                    | 0000
+ 1716095811013 | DPI           | Esdras Abel               | Lino Mendoza            |       227 | 55799837     | Claro    | 9416                       | 0000                    | 
+ 2571775150922 | DPI           | Marvin Daniel             | Maldonado Lopez         |       223 | 54105419     | Claro    | 1797                       | 0000                    | 0000
+ 2067013731804 | DPI           | Ledy Lorena               | Gonzalez Aguilar        |       225 | 55124379     | Claro    | 8200                       | 0000                    | 0000
+ 1726481651207 | DPI           | Misael Abdulio            | Perez Escobar           |       226 | 58650023     | Claro    | 4367                       | 0000                    | 0000
+ 1811297011401 | DPI           | Carlos Hilario            | Abac Castro             |       228 | 56963540     | Claro    | 4788                       | 0000                    | 
+ 1649126490502 | DPI           | Helda Danira              | Misa Colin              |       232 | 58749733     | Claro    | 2177                       | 0000                    | 
+ 2610468290415 | DPI           | Carlos Francisco          | Balan Diaz              |       230 | 42767946     | Claro    | 3983                       | 0000                    | 0000
+ 2447947150101 | DPI           | Jorge Armando             | Sepez Alvarado          |       234 | 58300586     | Claro    | 7209                       | 0000                    | 
+ 1721904361020 | DPI           | Erika Ruth                | Garcia Cumes            |       233 | 57158129     | Claro    | 9487                       | 0000                    | 0000
+ 2643706270101 | DPI           | Mynor Esteban             | Velasco                 |       247 | 59147902     | Claro    | 1163                       | 0000                    | 
+ 1872133562201 | DPI           | Jose Rolando              | Yanes Gudiel            |       235 | 41506769     | Claro    | 4144                       | 0000                    | 0000
+ 2175012730901 | DPI           | Byron Samuel              | Chaj Mendez             |       236 | 54108259     | Claro    | 7866                       | 0000                    | 0000
+ 2553278460101 | DPI           | Cristian Armando          | Morales Velasquez       |       237 | 34501848     | Movistar | 6360                       | 0000                    | 0000
+ 2249024900101 | DPI           | Veronica Emperatriz       | Orellana                |       238 | 41155858     | Claro    | 1008                       | 0000                    | 0000
+ 1664400190101 | DPI           | Haroldo Ernesto           | Montenegro Marin        |       239 | 54662201     | Claro    | 1246                       | 0000                    | 0000
+ 1864315460101 | DPI           | Emilia Elizabeth          | Trigueno Arriaga        |       241 | 54767761     | Claro    | 2707                       | 0000                    | 0000
+ 2417713900101 | DPI           | Manuel Alfredo            | Tercero Mejia           |       242 | 56465199     | Movistar | 9376                       | 0000                    | 0000
+ 2680577290101 | DPI           | Johnatan Daniel           | Higueros Noguera        |       243 | 55124324     | Claro    | 9785                       | 0000                    | 0000
+ 2765819540101 | DPI           | Jonatan Jeziel            | Recinos Munoz           |       244 | 47110771     | Claro    | 8785                       | 0000                    | 0000
+ 1722080250101 | DPI           | Carlos Manuel             | Garavito Reyes          |       245 | 55857777     | Claro    | 6805                       | 0000                    | 0000
+ 2533958790101 | DPI           | Erick Roberto             | Esquivel Aba            |       257 | 42246844     | Claro    | 4168                       | 0000                    | 
+ 2200188630901 | DPI           | Oscar Wilfredo            | Diaz De Leon            |       250 | 54662471     | Claro    | 1695                       | 0000                    | 0000
+ 1676625381101 | DPI           | Alan Abimael              | Gil Mejia               |       251 | 54662254     | Claro    | 3552                       | 0000                    | 0000
+ 2639308231301 | DPI           | Oliver Romendy            | Villatoro Gomez         |       253 | 41230284     | Claro    | 9297                       | 0000                    | 0000
+ 2522568590101 | DPI           | Juan Jose                 | Acevedo Vivar           |       254 | 56320543     | Claro    | 9001                       | 0000                    | 0000
+ 1769016121603 | DPI           | Nelida Patricia           | Hernandez Sucup         |       255 | 42160566     | Claro    | 9014                       | 0000                    | 0000
+ 2505767080101 | DPI           | Jose Daniel               | Zelaya Franco           |       256 | 58720471     | Claro    | 7580                       | 0000                    | 0000
+ 1846554980401 | DPI           | Aureliano                 | Argueta Munoz           |       260 | 42755555     | Claro    | 7514                       | 0000                    | 
+ 1604342620101 | DPI           | Carlos Estuardo           | Lemus Quinonez          |       258 | 58749615     | Claro    | 7481                       | 0000                    | 0000
+ 2151840681801 | DPI           | Edwin Brian               | Caceres Contreras       |       268 | 55608977     | Claro    | 3352                       | 0000                    | 
+ 2301739500101 | DPI           | Marylin Brigitte          | Salazar Arroyo          |       261 | 53908889     | Movistar | 8324                       | 0000                    | 0000
+ 1607486070101 | DPI           | Zaira Josefa              | Arguello Vasquez        |       263 | 58731157     | Claro    | 5963                       | 0000                    | 0000
+ 2365583582101 | DPI           | Yessenia Maribel          | Raymundo Gonzalez       |       264 | 55124398     | Claro    | 5160                       | 0000                    | 0000
+ 1988974050101 | DPI           | Kevin Leonel              | Motta Sotoj             |       265 | 58294527     | Claro    | 3868                       | 0000                    | 0000
+ 1582654160208 | DPI           | Dalia Magali              | Juarez Aguirre          |       267 | 58618264     | Claro    | 9628                       | 0000                    | 0000
+ 1671019510302 | DPI           | Eldin Jose                | Godinez                 |       271 | 42109812     | Claro    | 5420                       | 0000                    | 
+ 1635452860608 | DPI           | Liliana Lisseth           | Giron Bautista          |       269 | 56322655     | Claro    | 6408                       | 0000                    | 0000
+ 1731764450506 | DPI           | Alba Lorena               | Urizar Sagastume        |       272 | 54123020     | Claro    | 1606                       | 0000                    | 0000
+ 2249442900101 | DPI           | Laura Eugenia             | Anzueto Montero         |       275 | 55799947     | Claro    | 3606                       |                         | 
+ 1609773471801 | DPI           | Wendy Marisela            | Herrera Asturias        |       276 | 59236081     | Claro    | 7791                       |                         | 
+ 3097890870612 | DPI           | Oscar Raul                | Ruano Gil               |       278 | 55135181     | Claro    | 8949                       |                         | 
+ 3167398711503 | DPI           | Jurgen  Marco Tulio       | Mendoza Jeronimo        |       283 | 41094232     | Claro    | 5927                       |                         | 
+ 1974730401604 | DPI           | Hector  Everildo          | Sierra Coc              |       292 | 47694181     | Claro    | 9612                       |                         | 
+ 2088895070101 | DPI           | Ana  Margarita            | Boror Cabnal            |       299 | 35461620     | Movistar | 3142                       |                         | 
+ 2799662020101 | DPI           | Aura Azucena              | Puac Caballeros         |       306 | 58308867     | Claro    | 5416                       |                         | 
+ 2483774930411 | DPI           | Anderson Neftali          | Lucero Castillo         |       317 | 42108216     | Claro    | 9971                       |                         | 
+ 2656135580301 | DPI           | Carlos Efrain             | Castellanos Vielman     |       321 | 42749093     | Claro    | 4791                       |                         | 
+ 2911955710101 | DPI           | Monica Alejandra          | Cuyun Lemus             |       324 | 56074378     | Movistar | 6289                       |                         | 
+ 2446820540101 | DPI           | Elsa Isolina              | Chavez Rafael           |       329 | 42797806     | Claro    | 1733                       |                         | 
+ 1687388210409 | DPI           | Edy Everildo              | Buch Loch               |       332 | 34160428     | Movistar | 2125                       |                         | 
+ 1984076530117 | DPI           | Rafael Amilcar            | Dieguez Tije            |       337 | 55587449     | Claro    | 8036                       |                         | 
+ 2504937480101 | DPI           | Sheyli Gabriela           | Barrios Osorio          |       274 | 59478596     | Claro    | 6160                       | 0000                    | 
+ 2257812391010 | DPI           | Dulce Melissa             | Lopez Lopez             |       289 | 54377660     | Claro    | 2016                       | 0000                    | 
+ 2556323390101 | DPI           | Josue Ismael              | Villatoro Teni          |       277 | 55799922     | Claro    | 1121                       | 0000                    | 0000
+ 2992014730101 | DPI           | Ursula Marllely           | Salazar Gomez           |       279 | 59864919     | Claro    | 8184                       | 0000                    | 0000
+ 2960589201705 | DPI           | Jimmy Eduardo             | Ruano Najera            |       280 | 42748954     | Claro    | 2630                       | 0000                    | 0000
+ 2542839341202 | DPI           | Yuri Janeth               | Fuentes Ardiano         |       281 | 59428301     | Claro    | 5341                       | 0000                    | 0000
+ 1994459661703 | DPI           | Yasser  Joran             | Mendez Colli            |       282 | 55122479     | Claro    | 1628                       | 0000                    | 0000
+ 2437653040602 | DPI           | Jaqueline                 | Flores Gutierrez        |       284 | 54282445     | Claro    | 1851                       | 0000                    | 0000
+ 1605363322211 | DPI           | Valder Enemias            | Sanchez Vasquez         |       285 | 55571544     | Claro    | 9903                       | 0000                    | 0000
+ 2300430541309 | DPI           | Jose Gustavo              | Castillo Velasquez      |       286 | 42767162     | Claro    | 1037                       | 0000                    | 0000
+ 2522498360101 | DPI           | Hector  Rene              | Oliva  Lopez            |       287 | 56941112     | Claro    | 3680                       | 0000                    | 0000
+ 1853427361001 | DPI           | Damaris Nohemi            | Alonzo Hipolito         |       288 | 54299163     | Claro    | 9720                       | 0000                    | 0000
+ 2165950291705 | DPI           | Jenny Maricela            | Gonzalez del Cid        |       293 | 47004370     | Claro    | 9123                       | 0000                    | 
+ 1617490970207 | DPI           | Jorge Alberto             | Reyes Marcos            |       290 | 55310589     | Claro    | 8097                       | 0000                    | 0000
+ 1797153051001 | DPI           | Mario Enrique             | Dardon Valladares       |       291 | 57170881     | Claro    | 1177                       | 0000                    | 0000
+ 1997561200401 | DPI           | David                     | Elel Morales            |       298 | 42990014     | Claro    | 4821                       | 0000                    | 
+ 1960420971312 | DPI           | Dulio Keler               | Lucas Gomez             |       294 | 42767489     | Claro    | 7613                       | 0000                    | 0000
+ 2225057531101 | DPI           | Melvin Raul               | Ramirez Escobar         |       295 | 54315037     | Claro    | 2739                       | 0000                    | 0000
+ 2597095810901 | DPI           | Carlos Alberto            | Ochoa Ordonez           |       296 | 54455462     | Claro    | 7336                       | 0000                    | 0000
+ 2717645461710 | DPI           | Mario Efrain              | Chun Ical               |       297 | 42769625     | Claro    | 8462                       | 0000                    | 0000
+ 2324757251020 | DPI           | Jennifer Francisca        | Cheves Quintana         |       307 | 56761818     | Movistar | 1621                       | 0000                    | 
+ 1765556761601 | DPI           | Cesar  Adan               | Mejicanos  Galicia      |       301 | 54662386     | Claro    | 7838                       | 0000                    | 0000
+ 2629553501703 | DPI           | Eugenio Rene              | Marquez Benitez         |       302 | 42076509     | Claro    | 3063                       | 0000                    | 0000
+ 2681797351703 | DPI           | Rony Alexander            | Morente Castro          |       303 | 55122741     | Claro    | 2908                       | 0000                    | 0000
+ 1897001570502 | DPI           | Manuel Francisco          | Toma Martinez           |       304 | 58590561     | Claro    | 7853                       | 0000                    | 0000
+ 2088795360501 | DPI           | Luis Francisco            | Chivalan Calicio        |       305 | 54453780     | Claro    | 1133                       | 0000                    | 0000
+ 1887163191222 | DPI           | Raul Alfredo              | Robles Palacios         |       315 | 51180055     | Claro    | 8125                       | 0000                    | 
+ 1620466690101 | DPI           | Elsa Victoria             | Gomez Gonzalez          |       308 | 47440585     | Claro    | 2591                       | 0000                    | 0000
+ 2098212131705 | DPI           | Esvin  Osvaldo            | Cristales Santos        |       309 | 54108261     | Claro    | 6042                       | 0000                    | 0000
+ 2354956701615 | DPI           | Juan                      | Rax Cucul               |       310 | 54428793     | Claro    | 6433                       | 0000                    | 0000
+ 1647035351202 | DPI           | Juan Carlos               | Aguilar Orozco          |       311 | 54455546     | Claro    | 2831                       | 0000                    | 0000
+ 2051131170101 | DPI           | Bella Merary              | De Leon Abarca          |       312 | 59686557     | Claro    | 3232                       | 0000                    | 0000
+ 1947335721004 | DPI           | Daisy Corina              | Solval Tahual           |       313 | 54828131     | Claro    | 2440                       | 0000                    | 0000
+ 2256431621003 | DPI           | Rogger Geovanny           | de la Cruz Lizama       |       314 | 44621472     | Movistar | 8682                       | 0000                    | 0000
+ 2786210580114 | DPI           | Felix Alfonso Rosental    | Lopez Fuentes           |       316 | 34210553     | Movistar | 7746                       | 0000                    | 
+ 1783336030101 | DPI           | Xiomara Sussely           | Aguilar Matzir          |       338 | 57942118     | Movistar | 5893                       | 0000                    | 
+ 1765401130101 | DPI           | Roxana  Yamileth          | Ovalle Lopez            |       318 | 42204512     | Claro    | 9985                       | 0000                    | 0000
+ 1994106230101 | DPI           | Juan Jose                 | Mazariegos Monterroso   |       319 | 42108202     | Claro    | 2178                       | 0000                    | 0000
+ 2093809422001 | DPI           | Gloria Amparo             | Lemus Monroy            |       322 | 42116019     | Claro    | 9276                       | 0000                    | 0000
+ 2605169101901 | DPI           | Jairo Neftali             | Salguero y Salguero     |       323 | 42870441     | Claro    | 1305                       | 0000                    | 0000
+ 2105079690101 | DPI           | Astrid Roxana             | Sandoval Barrios        |       325 | 42497811     | Claro    | 9591                       | 0000                    | 0000
+ 2642652111001 | DPI           | Juan Armando Gerardo      | Calvo Borrayo           |       326 | 54461076     | Claro    | 1563                       | 0000                    | 0000
+ 2176821970805 | DPI           | Clara Luz                 | Chanchavac Castro       |       327 | 42907910     | Claro    | 4545                       | 0000                    | 0000
+ 2075448831602 | DPI           | Edgar Arturo              | Juarez Reyes            |       328 | 44626370     | Movistar | 8356                       | 0000                    | 0000
+ 1928235151009 | DPI           | Vilma Olivia              | Tzuban Raguex           |       330 | 42762165     | Claro    | 2235                       | 0000                    | 0000
+ 3104262940701 | DPI           | Jose Carlos               | Vasquez Ordonez         |       331 | 58438201     | Claro    | 9530                       | 0000                    | 0000
+ 2351300520920 | DPI           | Nely Nicolasa             | Sacalxot Romero         |       333 | 52587819     | Movistar | 8119                       | 0000                    | 0000
+ 3250813361009 | DPI           | Lilian Esmeralda          | Vasquez Yax             |       334 | 42587148     | Claro    | 9732                       | 0000                    | 0000
+ 2189186230101 | DPI           | Pablo  Luis               | Perez Us                |       335 | 56155926     | Claro    | 1628                       | 0000                    | 0000
+ 3002002500101 | DPI           | Leslie Gabriela           | Lopez Catalan           |       336 | 59597474     | Claro    | 7518                       | 0000                    | 0000
+ 1970368130101 | DPI           | Evelyn  Yolanda           | Ichich Sosa             |       339 | 59592991     | Claro    | 6750                       | 0000                    | 0000
+ 2996615390101 | DPI           | Cristian Alexander        | Bran Reinoso            |       340 | 58433479     | Claro    | 1933                       | 0000                    | 0000
+ 3089755960406 | DPI           | Rigoberto Anibal          | Cristal Rucuch          |       341 | 54527496     | Claro    | 8594                       |                         | 
+ 2493824311901 | DPI           | Renato Anibal             | Anton Salguero          |       349 | 42108185     | Claro    | 6175                       |                         | 
+ 1667611922214 | DPI           | Helen  Lily               | Jimenez Sarceno         |       353 | 34194314     | Movistar | 9077                       |                         | 
+ 2220084740108 | DPI           | Dorcas Paola              | Valenzuela Mesias       |       354 | 34194314     | Movistar | 8328                       |                         | 
+ 2179930521102 | DPI           | Jose Miguel               | Sanchez Sacor           |       370 | 59792115     | Claro    | 3810                       |                         | 
+ 2515695190101 | DPI           | Danny Melissa Samantha    | Rodriguez Castro        |       371 | 58329022     | Claro    | 3564                       |                         | 
+ 2665490470101 | DPI           | Gabriela Jamileth         | Lavarreda Alvarez       |       375 | 59712697     | Claro    | 7451                       |                         | 
+ 3105213191406 | DPI           | Mirna  Isabel             | Perebal Rios            |       377 | 57124357     | Claro    | 6209                       |                         | 
+ 1941085700901 | DPI           | Kevin Guillermo           | Martinez Can            |       388 | 55363554     | Claro    | 3444                       |                         | 
+ 2575510770101 | DPI           | Evelyn Gabriela           | Tacam Jacinto           |       389 | 44586414     | Movistar | 7324                       |                         | 
+ 1607674310301 | DPI           | Jonatan Leonidas          | Rodriguez Echeverria    |       390 | 47135271     | Claro    | 4651                       |                         | 
+ 1979574200101 | DPI           | Hector Humberto           | Arriola Ortiz           |       393 | 34431283     | Movistar | 3040                       |                         | 
+ 2486037870101 | DPI           | Cindy Karina              | Merino Revolorio        |       394 | 35050461     | Movistar | 2172                       |                         | 
+ 2179841500304 | DPI           | Albino Dinael             | Cubur Segura            |       395 | 55145707     | Claro    | 5224                       |                         | 
+ 2725505070101 | DPI           | Reina Yessenia            | Ordonez Orozco          |       400 | 35461620     | Movistar | 7386                       |                         | 
+ 2484863060101 | DPI           | Mildred Patricia          | Canel Ventura           |       408 | 44055126     | Movistar | 3140                       |                         | 
+ 2370384551202 | DPI           | Mayda Maribel             | Fuentes Miranda         |       346 | 55619662     | Claro    | 2787                       | 0000                    | 
+ 2506492330203 | DPI           | Eduardo  Clodomiro        | Monzon Larios           |       344 | 58392013     | Claro    | 6921                       | 0000                    | 0000
+ 2879469240117 | DPI           | Keila Nineth              | Mendez Gonzalez         |       345 | 47483796     | Claro    | 3714                       | 0000                    | 0000
+ 3061110120305 | DPI           | Darly Sucely              | Say Marroquin           |       351 | 42117131     | Claro    | 8658                       | 0000                    | 
+ 1853543270101 | DPI           | Elmer  Rene               | Chajon Aguilar          |       347 | 35113561     | Movistar | 8360                       | 0000                    | 0000
+ 2725162440101 | DPI           | Monica Abigail            | Alvizurez Barrios       |       348 | 52184251     | Movistar | 4390                       | 0000                    | 0000
+ 2766238350101 | DPI           | Rony Eder                 | Rodriguez               |       350 | 59404927     | Claro    | 3528                       | 0000                    | 0000
+ 2739394910101 | DPI           | Jorge Luis                | Godinez Orozco          |       356 | 42145203     | Claro    | 1538                       | 0000                    | 
+ 2185718440502 | DPI           | Celeste Shirley Lizeth    | Zumeta Posadas          |       352 | 47265610     | Claro    | 9364                       | 0000                    | 0000
+ 1811801970608 | DPI           | Maritza Antonia           | Hernandez Albeno        |       355 | 59374172     | Claro    | 3855                       | 0000                    | 0000
+ 2681432690301 | DPI           | Rubi Estefania            | de Leon Paredes         |       358 | 55121951     | Claro    | 6008                       | 0000                    | 
+ 2359374870101 | DPI           | Rafael Alejandro          | Samayoa                 |       357 | 41203128     | Claro    | 3503                       | 0000                    | 0000
+ 2864874032210 | DPI           | Leila Karina              | Fajardo Najarro         |       362 | 44569272     | Movistar | 9920                       | 0000                    | 
+ 1958682930101 | DPI           | Emerson Orlando           | Diaz Perez              |       360 | 57182285     | Claro    | 5526                       | 0000                    | 0000
+ 2084845230101 | DPI           | Delia Maria               | Jolon Barillas          |       361 | 47367138     | Claro    | 9004                       | 0000                    | 0000
+ 2654655830101 | DPI           | Jose Alfredo              | Escalante Portan        |       364 | 42879000     | Claro    | 8124                       | 0000                    | 
+ 2810614590111 | DPI           | Robin Esleyder            | Paredes Oxlaj           |       363 | 42928009     | Claro    | 7551                       | 0000                    | 0000
+ 1790788601801 | DPI           | Evelyn Marily             | Perez Aguirre           |       367 | 44287264     | Movistar | 1626                       | 0000                    | 
+ 2276105550901 | DPI           | Wilmer Stuardo            | Gomez Cordova           |       365 | 35176455     | Movistar | 6884                       | 0000                    | 0000
+ 1952493991020 | DPI           | Juan Andres               | Aguilar Pol             |       366 | 52476296     | Movistar | 9773                       | 0000                    | 0000
+ 1623791880101 | DPI           | Silvana Raquel            | Mendez Aguilar          |       376 | 52555540     | Movistar | 5979                       | 0000                    | 
+ 2046458320513 | DPI           | Ana Alejandra             | Rojas                   |       368 | 58547676     | Claro    | 1417                       | 0000                    | 0000
+ 3003725070101 | DPI           | Jarolyn Elena             | Recinos Barrios         |       369 | 59287465     | Claro    | 3835                       | 0000                    | 0000
+ 2596780660701 | DPI           | Agustin Tomas             | Coj Bocel               |       372 | 47161045     | Claro    | 3205                       | 0000                    | 0000
+ 1995869501201 | DPI           | Gustavo Adolfo            | Fuentes  Chojolan       |       373 | 54417830     | Claro    | 7727                       | 0000                    | 0000
+ 2410611050502 | DPI           | Carlos Giovani            | Guerra Requena          |       374 | 58259940     | Claro    | 8913                       | 0000                    | 0000
+ 1822102191901 | DPI           | Fredy Eduardo             | Hernandez Hernandez     |       386 | 55311448     | Claro    | 4249                       | 0000                    | 
+ 2505329720201 | DPI           | Marvin Giovanni           | Montes                  |       378 | 54667355     | Claro    | 9206                       | 0000                    | 0000
+ 1791180720101 | DPI           | Daniel Rodrigo            | Galindo Baran           |       379 | 42359762     | Claro    | 4906                       | 0000                    | 0000
+ 2967009591704 | DPI           | Carlitos Enrique          | Tiul  Sanchez           |       381 | 58438640     | Claro    | 9879                       | 0000                    | 0000
+ 2827949130101 | DPI           | Emili Fernanda            | Marroquin Vino          |       382 | 55354947     | Claro    | 8380                       | 0000                    | 0000
+ 2338951670101 | DPI           | Gerson Estuardo           | Hernandez Lopez         |       383 | 41911412     | Claro    | 8383                       | 0000                    | 0000
+ 1620641361001 | DPI           | Diana Fernanda            | Solval Rabanales        |       384 | 59798936     | Claro    | 6474                       | 0000                    | 0000
+ 2341317561801 | DPI           | Heidy Adriana             | Lopez Cerna             |       385 | 41869981     | Claro    | 6243                       | 0000                    | 0000
+ 2245248521908 | DPI           | Norma  Ernestina          | Linares  Gomez          |       391 | 47613479     | Claro    | 9399                       | 0000                    | 
+ 1731649861501 | DPI           | Paola Esperanza           | Raymundo  Larios        |       387 | 35212865     | Movistar | 6762                       | 0000                    | 0000
+ 2389169441202 | DPI           | Ingrid Aracely            | Calel Ixcoy             |       397 | 41434265     | Claro    | 8722                       | 0000                    | 
+ 3305632031712 | DPI           | Heber Ottoniel            | Lopez Cantoral          |       392 | 55144433     | Claro    | 5306                       | 0000                    | 0000
+ 2329265491007 | DPI           | Julio Victor              | Cuyuch Mejia            |       396 | 55133926     | Claro    | 2395                       | 0000                    | 0000
+ 2407804770114 | DPI           | Maria Ester               | Cardona Lorenzana       |       398 | 42777906     | Claro    | 7155                       | 0000                    | 
+ 1894644530101 | DPI           | Wilmer Guillermo          | Santos Sales            |       407 | 59292044     | Claro    | 6842                       | 0000                    | 
+ 2533503520101 | DPI           | Ana Dela                  | Lopez Solorzano         |       399 | 54247953     | Claro    | 7076                       | 0000                    | 0000
+ 1782415981216 | DPI           | Alberto Rosalio           | Delgado Merida          |       401 | 34969105     | Movistar | 3378                       | 0000                    | 0000
+ 2594902372007 | DPI           | Juan Jose                 | Ardon Valladares        |       402 | 55175157     | Claro    | 3496                       | 0000                    | 0000
+ 1607508301102 | DPI           | Herwin                    | Santos Colon            |       403 | 54926892     | Claro    | 4178                       | 0000                    | 0000
+ 2490297070101 | DPI           | Angelica Maria            | Palacios Gomez          |       404 | 55664582     | Claro    | 4551                       | 0000                    | 0000
+ 2252572382202 | DPI           | Izel Bereniz              | Moran Juarez            |       405 | 57135381     | Claro    | 7130                       | 0000                    | 0000
+ 2633141891001 | DPI           | Samuel Yonatan            | Espana Valdez           |       409 | 47394605     | Claro    | 6088                       | 0000                    | 0000
+ 3024018140101 | DPI           | Roberto Andre             | Reyes Garcia            |       413 | 34045725     | Movistar | 5472                       |                         | 
+ 1712330260110 | DPI           | Juan Jose                 | De Leon Trabanino       |       420 | 56322339     | Claro    | 6325                       |                         | 
+ 2427646222205 | DPI           | Jeniffer Alejandra        | Lemus Gonzalez          |       428 | 54125059     | Claro    | 4936                       |                         | 
+ 2389009080101 | DPI           | Deyvin Alexander          | Arriaza Reyes           |       433 | 55124436     | Claro    | 8721                       |                         | 
+ 2629706000101 | DPI           | Luis Eduardo              | De Leon Diaz            |       443 | 54133827     | Claro    | 2696                       |                         | 
+ 1999268670101 | DPI           | Claudia Veronica          | Arias Castillo          |       445 | 54828187     | Claro    | 8586                       |                         | 
+ 2218881791401 | DPI           | Jose Alfredo              | Rojas Barrera           |       451 | 41397204     | Claro    | 3313                       |                         | 
+ 1945671090115 | DPI           | Susan Paola               | Velasquez Santos        |       455 | 55799888     | Claro    | 1918                       |                         | 
+ 2691492950101 | DPI           | Maria Del Carmen          | Albizures Grajeda       |       460 | 41379974     | Claro    | 5204                       |                         | 
+ 1620466770101 | DPI           | Rigoberto Oliverio        | Vaides Rizo             |       462 | 51197662     | Claro    | 1499                       |                         | 
+ 2582041410701 | DPI           | Victor Moises             | Ordonez Ramos           |       468 | 52152322     | Movistar | 2447                       |                         | 
+ 2233701180101 | DPI           | Harry Jonathan            | Alvarez Castaneda       |       472 | 56001492     | Movistar | 2662                       |                         | 
+ 2490268480701 | DPI           | Silvia Angelica           | Yaxon Tuy               |       474 | 56977674     | Claro    | 2232                       |                         | 
+ 1617055960101 | DPI           | Luisa Maria               | Sian Puluc              |       411 | 55621728     | Claro    | 1348                       | 0000                    | 
+ 2493799101903 | DPI           | Imelda Dolores            | Solis Paz               |       415 | 55954816     | Claro    | 7295                       | 0000                    | 
+ 3386432812009 | DPI           | Glenda Gisela             | Marcos Perez            |       414 | 59391995     | Claro    | 2606                       | 0000                    | 0000
+ 2643507150110 | DPI           | Erik Alberto              | Marquez Peque           |       419 | 42040959     | Claro    | 2939                       | 0000                    | 
+ 2717008821001 | DPI           | Aura Carolina             | Martinez Williams       |       416 | 58755012     | Claro    | 9375                       | 0000                    | 0000
+ 1822800550913 | DPI           | Ramon Merardo             | Otzoy Yac               |       417 | 55376859     | Claro    | 5794                       | 0000                    | 0000
+ 1716266991701 | DPI           | Maynor Ariel              | Lara Seb                |       418 | 35210615     | Movistar | 4511                       | 0000                    | 0000
+ 1583603460101 | DPI           | Maria De Los Angeles      | Castillo Milian         |       429 | 42177091     | Claro    | 2151                       | 0000                    | 
+ 2994054270101 | DPI           | Jose Enrique              | Quinonez Garcia         |       421 | 42038675     | Claro    | 2831                       | 0000                    | 0000
+ 2546264590101 | DPI           | Jose  Ignacio             | Figueroa Rivera         |       422 | 42128385     | Claro    | 4857                       | 0000                    | 0000
+ 3515215850712 | DPI           | Benito                    | Perez Aquino            |       423 | 41348199     | Claro    | 7409                       | 0000                    | 0000
+ 1596468711214 | DPI           | Carlos Manuel             | Velasquez Orozco        |       424 | 51138513     | Claro    | 6932                       | 0000                    | 0000
+ 2734662751215 | DPI           | Denis Eduardo             | Perez                   |       425 | 41610452     | Claro    | 2766                       | 0000                    | 0000
+ 2121980680901 | DPI           | Carlos Ernesto            | Munoz Ovalle            |       426 | 47632067     | Claro    | 3092                       | 0000                    | 0000
+ 2559700641804 | DPI           | Damian Jose               | Gomez Arenales          |       427 | 58110678     | Claro    | 8538                       | 0000                    | 0000
+ 1944573700101 | DPI           | Mayra Aidee               | Ventura Velasquez       |       436 | 34008710     | Movistar | 1970                       | 0000                    | 
+ 2967608621707 | DPI           | Daylin Palmerinda         | Diaz Garcia             |       430 | 42430534     | Claro    | 3622                       | 0000                    | 0000
+ 1964818050609 | DPI           | Walter Orlando            | Mejia Palomo            |       431 | 54933134     | Claro    | 2384                       | 0000                    | 0000
+ 1665109201804 | DPI           | Victor Raul               | Montoya Lopez           |       432 | 50132941     | Claro    | 8401                       | 0000                    | 0000
+ 2632504070101 | DPI           | Susana Aracely            | Tocay Chun              |       435 | 58753479     | Claro    | 7425                       | 0000                    | 0000
+ 1960137470101 | DPI           | Ronald Eliezer            | Gomez Axuman            |       437 | 59218076     | Claro    | 3988                       | 0000                    | 
+ 1691908380101 | DPI           | Karin Maribel             | Miranda Gonzalez        |       438 | 58184369     | Claro    | 7361                       | 0000                    | 
+ 2546798890301 | DPI           | Luis Fernando Jose        | Bustamante Callejas     |       439 | 56359046     | Claro    | 1494                       | 0000                    | 
+ 2216821472103 | DPI           | Brenda Leticia            | Gregorio Villeda        |       452 | 42202303     | Claro    | 1716                       | 0000                    | 
+ 2133791121101 | DPI           | Karla Marina              | Farfan Cetino           |       440 | 55542649     | Claro    | 6783                       | 0000                    | 0000
+ 2611120661215 | DPI           | Cristian Ovidio           | Requena Sanchez         |       441 | 54828086     | Claro    | 6041                       | 0000                    | 0000
+ 1744523730101 | DPI           | Lucy Sofia                | Leal Herrera            |       442 | 42205783     | Claro    | 5269                       | 0000                    | 0000
+ 2753090612011 | DPI           | Berta Viviana             | Hernandez Rosales       |       444 | 58431303     | Claro    | 2236                       | 0000                    | 0000
+ 1793953940917 | DPI           | Brenda Ligia              | Gamboa Esteban          |       446 | 47392847     | Claro    | 4543                       | 0000                    | 0000
+ 2057794680101 | DPI           | Heidy Marilu              | Alvarado Ramirez        |       447 | 55799945     | Claro    | 3183                       | 0000                    | 0000
+ 2562614740108 | DPI           | Jorge Mario               | Taracena Juarez         |       448 | 42357131     | Claro    | 1406                       | 0000                    | 0000
+ 1773892570701 | DPI           | Juan Alberto              | Sacach Chiyal           |       449 | 43757751     | Movistar | 4730                       | 0000                    | 0000
+ 1599380231804 | DPI           | Hugo Leonel               | Garcia Loyo             |       450 | 47377705     | Claro    | 4673                       | 0000                    | 0000
+ 2190439810501 | DPI           | Maria Angelica            | Minauri Sandoval        |       466 | 54303440     | Claro    | 3245                       | 0000                    | 
+ 2557198921406 | DPI           | Roberto Wenceslao         | Canil Xirum             |       453 | 54108251     | Claro    | 5418                       | 0000                    | 0000
+ 1798732100101 | DPI           | Jessica Lisbeth           | Alvizures Vega          |       456 | 54604362     | Claro    | 8149                       | 0000                    | 0000
+ 2603368740101 | DPI           | Juan Carlos               | Chavez Esteban          |       457 | 59441651     | Claro    | 3552                       | 0000                    | 0000
+ 2682244551801 | DPI           | Noe Humberto              | Llanes Perez            |       458 | 55113528     | Claro    | 4749                       | 0000                    | 0000
+ 2585512400101 | DPI           | Luis Fernando             | Cruz Avalos             |       459 | 55681191     | Claro    | 7942                       | 0000                    | 0000
+ 1717743530101 | DPI           | Maria Odilia              | Guerra Vasquez          |       461 | 54602297     | Claro    | 6619                       | 0000                    | 0000
+ 1959983910101 | DPI           | Lilian Aracely            | Castillo Vargas         |       463 | 34845984     | Movistar | 5317                       | 0000                    | 0000
+ 2435039031804 | DPI           | Freddy David              | Franco Miguel           |       464 | 58615186     | Claro    | 3174                       | 0000                    | 0000
+ 1590297160502 | DPI           | Byron Abelino             | Galindo Ruiz            |       465 | 55663777     | Claro    | 1931                       | 0000                    | 0000
+ 2317469461401 | DPI           | Evelyn Leonor             | Perez Medrano           |       475 | 35307754     | Movistar | 9046                       | 0000                    | 
+ 2634260250101 | DPI           | Karin Roxana              | Bran Ortiz              |       467 | 58511595     | Claro    | 3980                       | 0000                    | 0000
+ 2364050471002 | DPI           | James Alberto             | Cotero Estrada          |       469 | 47721330     | Claro    | 1599                       | 0000                    | 0000
+ 2756441110101 | DPI           | Sandra Joaquina           | Vasquez Lanuza          |       470 | 58522772     | Claro    | 5629                       | 0000                    | 0000
+ 1815081251101 | DPI           | Douglas Estuardo          | Lopez Maldonado         |       471 | 54108271     | Claro    | 7603                       | 0000                    | 0000
+ 2169191930401 | DPI           | Gonzalo Alexander         | Ortiz Guerra            |       473 | 59321410     | Claro    | 2142                       | 0000                    | 0000
+ 2371225451101 | DPI           | Eleazar Bernabe           | Martinez Aguilar        |       476 | 55122356     | Claro    | 4315                       | 0000                    | 0000
+ 2377809921701 | DPI           | Marleni                   | Morales Martinez        |       477 | 58321532     | Claro    | 9498                       | 0000                    | 0000
+ 2159255991222 | DPI           | Byron Alexis              | Rodriguez Guzman        |       478 | 42109306     | Claro    | 2844                       | 0000                    | 0000
+ 2378008100606 | DPI           | Grecia  Azucena           | Bonilla Esquivel        |       483 | 55915728     | Claro    | 9002                       |                         | 
+ 2993603260101 | DPI           | Luis Alfredo              | Cuyan Hernandez         |       487 | 58737167     | Claro    | 1010                       |                         | 
+ 2133852440301 | DPI           | Chistian Saul             | Vasquez Aldana          |       492 | 57135173     | Claro    | 8358                       |                         | 
+ 2637723220301 | DPI           | Diego De La Cruz          | Alvarez Gonzalez        |       493 | 54140366     | Claro    | 8655                       |                         | 
+ 1983343031304 | DPI           | Mercedes Salvador         | Garcia Moreira          |       500 | 54421683     | Claro    | 3492                       |                         | 
+ 2591968781202 | DPI           | Melvin Wilder             | Fuentes Fuentes         |       505 | 54417830     | Claro    | 1936                       |                         | 
+ 2183257700108 | DPI           | Nancy Agustina            | Serra Noriega           |       509 | 42176869     | Claro    | 4918                       |                         | 
+ 2249023930101 | DPI           | Emerita Yulisa            | Pelico Morales          |       515 | 58650091     | Claro    | 5432                       |                         | 
+ 1610417870101 | DPI           | Astrid Marlene            | Chicas Garcia           |       517 | 55100087     | Claro    | 4182                       |                         | 
+ 2130147690101 | DPI           | Carla Cecilia             | Alvarez Ruiz            |       519 | 55106062     | Claro    | 3512                       |                         | 
+ 1642727201904 | DPI           | Amanda Amarilis           | Martinez Lopez          |       522 | 56339487     | Claro    | 2569                       |                         | 
+ 2298359290101 | DPI           | Luis Fernando             | Juarez Rivas            |       523 | 57952187     | Movistar | 4295                       |                         | 
+ 2494181260101 | DPI           | Daniel Norberto           | Meza Madrid             |       524 | 55799904     | Claro    | 5704                       |                         | 
+ 2462302230608 | DPI           | Jose Carlos               | Angel Marroquin         |       528 | 42117204     | Claro    | 7018                       |                         | 
+ 2440894930301 | DPI           | Melvin Alexander          | Perez Arenales          |       533 | 54388445     | Claro    | 6808                       |                         | 
+ 1817385970303 | DPI           | Javier Oswaldo            | Reyes Castillo          |       542 | 54436400     | Claro    | 9629                       |                         | 
+ 2371216461804 | DPI           | Manuel David              | Martinez Lobos          |       546 | 59231367     | Claro    | 7964                       |                         | 
+ 2496923760601 | DPI           | Noe Ivan                  | Munoz Estrada           |       486 | 35113507     | Movistar | 2801                       | 0000                    | 
+ 1940522060101 | DPI           | Sandra Filomena           | Chile Pirir             |       480 | 35183188     | Movistar | 9243                       | 0000                    | 0000
+ 2075451891327 | DPI           | Roberto                   | Ortiz Vicente           |       481 | 44363941     | Movistar | 6394                       | 0000                    | 0000
+ 2348288700101 | DPI           | Thania Renne              | Alfaro Gonzalez         |       482 | 42178918     | Claro    | 5261                       | 0000                    | 0000
+ 1574972240609 | DPI           | Angela Patricia           | Perez Perez             |       484 | 50151632     | Claro    | 6078                       | 0000                    | 0000
+ 1625040390101 | DPI           | Jose Pablo                | Lopez Monzon            |       489 | 42170318     | Claro    | 4048                       | 0000                    | 
+ 2719948860101 | DPI           | Andrea Mareyda            | Cordova Ruano           |       488 | 54695662     | Claro    | 2307                       | 0000                    | 0000
+ 2441009261901 | DPI           | Cristian Fernando         | Paz  de Paz             |       494 | 55677644     | Claro    | 8349                       | 0000                    | 
+ 2169408340101 | DPI           | Cristian Daniel           | Izep Valenzuela         |       490 | 50713709     | Movistar | 5772                       | 0000                    | 0000
+ 2140350341013 | DPI           | Luis Ramiro               | Vicente Aju             |       491 | 58670168     | Claro    | 5845                       | 0000                    | 0000
+ 2093216950101 | DPI           | Carlos  Alejandro         | Obando Natareno         |       496 | 35448450     | Movistar | 4968                       | 0000                    | 
+ 2715379731805 | DPI           | Victoria Anaydi           | Leonardo Chacon         |       495 | 52524141     | Movistar | 9490                       | 0000                    | 0000
+ 2236934050101 | DPI           | Lester Vinicio            | Mix Hernandez           |       501 | 58280396     | Claro    | 1648                       | 0000                    | 
+ 2534670470101 | DPI           | Luisa  Fernanda           | Hernandez Hernandez     |       497 | 58533771     | Claro    | 4217                       | 0000                    | 0000
+ 2982693330101 | DPI           | Jose Arnoldo              | Leiva Contreras         |       498 | 42249090     | Claro    | 2095                       | 0000                    | 0000
+ 1649182641712 | DPI           | Wendy Liseth              | Telon Rodriguez         |       499 | 54287715     | Claro    | 9311                       | 0000                    | 0000
+ 1621545340701 | DPI           | Juan Antonio              | Quezada Zuniga          |       526 | 59585078     | Claro    | 1028                       | 0000                    | 
+ 1576752700920 | DPI           | Jose Manuel               | Gonzalez Martinez       |       503 | 42705672     | Claro    | 5257                       | 0000                    | 0000
+ 1623019520207 | DPI           | Mirian Aydee              | Estrada Moreno          |       504 | 56961518     | Claro    | 2634                       | 0000                    | 0000
+ 1763155000106 | DPI           | Gricelda                  | Xuya Peinado            |       506 | 59872550     | Claro    | 8647                       | 0000                    | 0000
+ 2409118490207 | DPI           | Carlos Antonio            | Oscal Perez             |       507 | 54662761     | Claro    | 3973                       | 0000                    | 0000
+ 2144139772001 | DPI           | Roy Alexis                | Balderramos Flores      |       508 | 54790095     | Claro    | 2959                       | 0000                    | 0000
+ 1911165052004 | DPI           | Gumercindo                | Garcia Rivera           |       510 | 47705428     | Claro    | 1193                       | 0000                    | 0000
+ 2735372450406 | DPI           | Pablo Antonio             | Lopez Oliveros          |       511 | 58573585     | Claro    | 9728                       | 0000                    | 0000
+ 1795910880901 | DPI           | Wilfred Randy             | Gonzalez Acabal         |       512 | 56984546     | Claro    | 4098                       | 0000                    | 0000
+ 1859084890901 | DPI           | Selvin Spencer            | Sac Fuentes             |       513 | 52166529     | Movistar | 4491                       | 0000                    | 0000
+ 2487966900101 | DPI           | Lesley Del Refugio        | Rodas Villagran         |       514 | 42164273     | Claro    | 6388                       | 0000                    | 0000
+ 2250912160101 | DPI           | Helen Maryory             | Guevara Vargas          |       516 | 42101877     | Claro    | 3035                       | 0000                    | 0000
+ 2467981301507 | DPI           | Alex Nehemias             | Rodriguez De Leon       |       518 | 42107981     | Claro    | 9026                       | 0000                    | 0000
+ 1972089080109 | DPI           | Antonio Napoli            | Chile Monroy            |       520 | 54694836     | Claro    | 3880                       | 0000                    | 0000
+ 1607486310101 | DPI           | Juan Victor               | Jolon Cifuentes         |       521 | 58650092     | Claro    | 5977                       | 0000                    | 0000
+ 2352414661804 | DPI           | Edin Rolando              | Diaz Carranza           |       525 | 59128445     | Claro    | 9790                       | 0000                    | 0000
+ 2613210210101 | DPI           | Brian Enrique             | Rafael Carias           |       535 | 58731892     | Claro    | 5165                       | 0000                    | 
+ 2502577502212 | DPI           | Rudy Otoniel              | Aquino Salazar          |       527 | 54108246     | Claro    | 9045                       | 0000                    | 0000
+ 1783234030101 | DPI           | Luis Eduardo              | Coy Xol                 |       529 | 56001608     | Movistar | 2412                       | 0000                    | 0000
+ 2589857040609 | DPI           | Iris Zulema               | Contreras Quevedo       |       530 | 58123258     | Claro    | 1149                       | 0000                    | 0000
+ 2793199320901 | DPI           | Luis Augusto              | Reyes De Leon           |       531 | 42697412     | Claro    | 7825                       | 0000                    | 0000
+ 1656039841904 | DPI           | Claudia Liseth            | Orellana Palencia       |       532 | 47694135     | Claro    | 6386                       | 0000                    | 0000
+ 2261035440101 | DPI           | Marco Antonio             | Chiroy Chocon           |       534 | 35230793     | Movistar | 4521                       | 0000                    | 0000
+ 1607877420101 | DPI           | Cintia Sucelly            | Alvarez del Cid         |       537 | 50197623     | Claro    | 2807                       | 0000                    | 0000
+ 2524320530207 | DPI           | Maria Otilia              | Ucelo Morales           |       538 | 54147494     | Claro    | 9784                       | 0000                    | 0000
+ 2619755361712 | DPI           | Sucely Guadalupe          | Paredes Mancilla        |       539 | 54474304     | Claro    | 1632                       | 0000                    | 0000
+ 2190669140101 | DPI           | Cesar Eduardo             | Abal Diaz               |       540 | 42116806     | Claro    | 2554                       | 0000                    | 0000
+ 2083345480101 | DPI           | Jorge Esteban             | Meng Zimeri             |       541 | 54114892     | Claro    | 1061                       | 0000                    | 0000
+ 1657950500108 | DPI           | William Josue             | de Paz                  |       543 | 54818822     | Claro    | 4585                       | 0000                    | 0000
+ 1764725410103 | DPI           | Jose Luis                 | Gomez Garcia            |       544 | 41506473     | Claro    | 1167                       | 0000                    | 0000
+ 1730199000101 | DPI           | Jenniffer Rossanna        | Bosch Cojon             |       545 | 41031111     | Claro    | 1581                       | 0000                    | 0000
+ 2767658341801 | DPI           | Marlon Felipe             | Santos Lopez            |       547 | 54420587     | Claro    | 9532                       | 0000                    | 0000
+ 2659295120101 | DPI           | William Estuardo          | Castillo Escobar        |       549 | 51243157     | Claro    | 4336                       |                         | 
+ 1693970760102 | DPI           | Byron Rene                | Diocute                 |       559 | 44565770     | Movistar | 1147                       |                         | 
+ 2773827690920 | DPI           | Wendy Sulema              | Barrios Rossell         |       562 | 59892648     | Claro    | 7102                       |                         | 
+ 2077343640101 | DPI           | Ludwing Josue             | Ortiz Reyes             |       564 | 50168650     | Claro    | 9890                       |                         | 
+ 2804886450101 | DPI           | Mayuri  Suceli            | Simon Perez             |       570 | 54608343     | Claro    | 8490                       |                         | 
+ 2351952270102 | DPI           | Jose Enmanuel             | Garcia Gomez            |       579 | 54229201     | Claro    | 9753                       |                         | 
+ 2569259760607 | DPI           | Maria Del Rosario         | Zepeda Aceituno         |       580 | 59728296     | Claro    | 2541                       |                         | 
+ 2247644030101 | DPI           | Edwin Oswaldo             | Zeta Flores             |       584 | 54108270     | Claro    | 6078                       |                         | 
+ 3014232290101 | DPI           | Kimberly Marisol          | Espinoza Ruano          |       586 | 44197718     | Movistar | 5550                       |                         | 
+ 2233271580101 | DPI           | Evelyn Liliana            | Vargas Ramirez          |       592 | 47306230     | Claro    | 7385                       |                         | 
+ 1713800610101 | DPI           | Antonio Renato            | Amezquita               |       612 | 58735943     | Claro    | 5061                       |                         | 
+ 2109876260101 | DPI           | Esteban Amilcar           | Iboy Matias             |       614 | 43338412     | Movistar | 6350                       |                         | 
+ 2052048800302 | DPI           | Leonel Estuardo           | Valle                   |       616 | 54015453     | Movistar | 2063                       |                         | 
+ 1689957861013 | DPI           | Silvia Lorena             | Poncio Culum            |       560 | 58672295     | Claro    | 4829                       | 0000                    | 
+ 2318600720917 | DPI           | Carlos Gudiel             | Mendoza Cajas           |       550 | 54662170     | Claro    | 4763                       | 0000                    | 0000
+ 2357125742217 | DPI           | Morena Isabel             | Rodriguez Oliva         |       551 | 52766990     | Movistar | 3121                       | 0000                    | 0000
+ 2420883840612 | DPI           | Maria Soledad             | Revolorio Quevedo       |       553 | 42622750     | Claro    | 2784                       | 0000                    | 0000
+ 2820149420901 | DPI           | Juan Carlos               | Alvarez Hernandez       |       554 | 54850890     | Claro    | 7221                       | 0000                    | 0000
+ 2503432070101 | DPI           | Luis Enrique              | Pineda Padilla          |       555 | 59587504     | Claro    | 5193                       | 0000                    | 0000
+ 1782416871701 | DPI           | Marta Beatriz             | Hernandez               |       556 | 41881488     | Claro    | 8871                       | 0000                    | 0000
+ 2068930000501 | DPI           | Luis Daniel               | Rivera Castaneda        |       557 | 54668585     | Claro    | 7844                       | 0000                    | 0000
+ 2458099100102 | DPI           | Oto Rene                  | Balan Elias             |       558 | 54473928     | Claro    | 1637                       | 0000                    | 0000
+ 2301779480101 | DPI           | Marco Antonio             | Herrarte Diaz           |       574 | 43060341     | Movistar | 5113                       | 0000                    | 
+ 2527805740611 | DPI           | Jorge Emilser             | Ramirez Perez           |       561 | 41286463     | Claro    | 2507                       | 0000                    | 0000
+ 1573642670101 | DPI           | Sofia Victoria            | Garcia Lopez            |       563 | 55869809     | Claro    | 7188                       | 0000                    | 0000
+ 2786265480114 | DPI           | Nery Alejandro            | Carrillo Diaz           |       565 | 54193982     | Claro    | 3855                       | 0000                    | 0000
+ 2308208751215 | DPI           | Amarilis  Vanessa         | Chun de los Reyes       |       566 | 55619662     | Claro    | 8552                       | 0000                    | 0000
+ 1663373230101 | DPI           | Edwin Antonio             | Garcia  Perez           |       567 | 42966303     | Claro    | 8680                       | 0000                    | 0000
+ 2606295100917 | DPI           | Gamaliel Isai             | Hernandez Salam         |       568 | 52239228     | Movistar | 2402                       | 0000                    | 0000
+ 1941956350507 | DPI           | Luis Felipe               | Marin Garcia            |       569 | 35221317     | Movistar | 2704                       | 0000                    | 0000
+ 2372488080101 | DPI           | Melvin Geovanny           | Tebalan Donis           |       571 | 58276699     | Claro    | 8650                       | 0000                    | 0000
+ 2877114120101 | DPI           | Carlos  Roberto           | Amaya Mendoza           |       572 | 59698043     | Claro    | 9035                       | 0000                    | 0000
+ 3235198140509 | DPI           | Junior Ivan               | Perez Cruz              |       573 | 55574447     | Claro    | 1721                       | 0000                    | 0000
+ 2816007750101 | DPI           | Deby Fernanda             | Garcia Jeronimo         |       577 | 44467096     | Movistar | 1368                       | 0000                    | 
+ 1727285091201 | DPI           | Nydia Yosmara             | Calderon Orozco         |       575 | 41510674     | Claro    | 5574                       | 0000                    | 0000
+ 2498495930901 | DPI           | Jose Eduardo              | Arriola Ralon           |       587 | 34743742     | Movistar | 3865                       | 0000                    | 
+ 2059764840507 | DPI           | Juan Guillermo            | Ixtamul Hernandez       |       578 | 55122065     | Claro    | 3361                       | 0000                    | 0000
+ 1640248240116 | DPI           | Wendy  Magaly             | Chacon Revolorio        |       581 | 55908754     | Claro    | 6776                       | 0000                    | 0000
+ 1698806720101 | DPI           | Jesus Alberto             | Rayo Gatica             |       582 | 58380246     | Claro    | 8046                       | 0000                    | 0000
+ 2365090040101 | DPI           | Luis Manuel               | Zamora Alvarez          |       583 | 41648295     | Claro    | 9186                       | 0000                    | 0000
+ 2388267080101 | DPI           | Lesly Maribel             | Arango Ramirez          |       585 | 56001803     | Movistar | 1367                       | 0000                    | 0000
+ 2091153860111 | DPI           | Jorge Benjamin            | Locon Pena              |       589 | 55439731     | Claro    | 3070                       | 0000                    | 
+ 1771568641013 | DPI           | Juan Gregorio             | Sapalu Ratzan           |       588 | 54833668     | Claro    | 4880                       | 0000                    | 0000
+ 2558262810203 | DPI           | Erick  Gilberto           | Rodriguez  Barillas     |       591 | 35059090     | Movistar | 4436                       | 0000                    | 
+ 1589665702101 | DPI           | Abraham Roberto Antonio   | Salguero  Cuc           |       590 | 55121853     | Claro    | 7434                       | 0000                    | 0000
+ 3001831430101 | DPI           | Glendy Vanessa            | Rodriguez Hernandez     |       596 | 54227219     | Claro    | 4365                       | 0000                    | 
+ 2748921620501 | DPI           | Hector Andres             | Hernandez Estrada       |       593 | 56267103     | Claro    | 6288                       | 0000                    | 0000
+ 1599283031202 | DPI           | Roberto Carlos            | Navarro Joachin         |       594 | 35536638     | Movistar | 5704                       | 0000                    | 0000
+ 2308357080101 | DPI           | Kevin Fernando            | Escobar Reyes           |       595 | 58518148     | Claro    | 4047                       | 0000                    | 0000
+ 2954786080701 | DPI           | David Eduardo             | Lex Catita              |       601 | 54108265     | Claro    | 3195                       | 0000                    | 
+ 1958429520608 | DPI           | Selvin Rolando            | Arias Melgar            |       597 | 41718473     | Claro    | 1012                       | 0000                    | 0000
+ 1839642170601 | DPI           | Marvin Adolfo             | Chacon Ramos            |       598 | 47179091     | Claro    | 8894                       | 0000                    | 0000
+ 2541888770101 | DPI           | Marvin Vinicio            | Hernandez Sanchez       |       600 | 54760700     | Claro    | 9600                       | 0000                    | 0000
+ 1967715600611 | DPI           | Abdias                    | Garcia Escobar          |       615 | 56378040     | Claro    | 4817                       | 0000                    | 
+ 2434634480101 | DPI           | Gabriel Enrique           | Alcor Nerio             |       602 | 58265377     | Claro    | 7723                       | 0000                    | 0000
+ 1877257800101 | DPI           | Maria Romelia             | Ortiz Marquez           |       603 | 56416747     | Movistar | 9656                       | 0000                    | 0000
+ 1845878831501 | DPI           | Anayanci Maribel          | Jacinto Mendez          |       604 | 59530264     | Claro    | 3693                       | 0000                    | 0000
+ 1793530470608 | DPI           | Salvador Antonio          | Criollo                 |       605 | 54187851     | Claro    | 7825                       | 0000                    | 0000
+ 2362333862001 | DPI           | Sergio Armando            | Perez Solorzano         |       606 | 42024910     | Claro    | 1196                       | 0000                    | 0000
+ 1953648212211 | DPI           | Sohemia Emely             | Revolorio Corado        |       607 | 59796696     | Claro    | 5184                       | 0000                    | 0000
+ 2167336690101 | DPI           | Eduardo  Rafael           | Lopez Fajardo           |       608 | 42108167     | Claro    | 7857                       | 0000                    | 0000
+ 2044514340108 | DPI           | Byron Leonardo            | Socop Ortiz             |       609 | 47367956     | Claro    | 8672                       | 0000                    | 0000
+ 1771934331221 | DPI           | Walter  Yury              | Montiel Aguilar         |       610 | 42722345     | Claro    | 9682                       | 0000                    | 0000
+ 2203903710502 | DPI           | Alexander Rafael          | Aguilar Cardenas        |       611 | 54828630     | Claro    | 4744                       | 0000                    | 0000
+ 2670345981301 | DPI           | Onasis Maximiliano        | Perez  Sosa             |       613 | 42719389     | Claro    | 8931                       | 0000                    | 0000
+ 1974257710101 | DPI           | Edgar Rolando             | Rodriguez Donis         |       619 | 42669740     | Claro    | 4950                       |                         | 
+ 1988040160108 | DPI           | Flor De Maria             | Gabriel Castillo        |       622 | 51289438     | Claro    | 5180                       |                         | 
+ 2247751030101 | DPI           | Harol Antonio             | Diaz Cano               |       626 | 55122350     | Claro    | 5923                       |                         | 
+ 2068957980101 | DPI           | Sandy Elizabeth           | Alvarez Maldonado       |       650 | 59732388     | Claro    | 1341                       |                         | 
+ 2367783230101 | DPI           | Angelica Rocio            | Barrera Aragon          |       651 | 41345591     | Claro    | 3070                       |                         | 
+ 1831159960101 | DPI           | Brenda Jeniser            | Az Fajardo              |       652 | 55884887     | Claro    | 9536                       |                         | 
+ 2595718060101 | DPI           | Luis Alberto              | Avila Jimenez           |       654 | 55122031     | Claro    | 1544                       |                         | 
+ 2980374750101 | DPI           | Karla  Beatris            | Revolorio Diaz          |       664 | 54520982     | Claro    | 8402                       |                         | 
+ 2295768260301 | DPI           | Cesar Augusto             | Orrego Machado          |       675 | 54657834     | Claro    | 9227                       |                         | 
+ 1975682890206 | DPI           | Rossy Mariella            | Perez Marroquin         |       680 | 47318381     | Claro    | 5658                       |                         | 
+ 2558859891201 | DPI           | Arnoldo Otoniel           | Gonzalez Yat            |       620 | 44118936     | Movistar | 6241                       | 0000                    | 
+ 1612989820901 | DPI           | Byron Josue               | Mendez Ixcot            |       618 | 42108178     | Claro    | 2395                       | 0000                    | 0000
+ 3499436050101 | DPI           | Yanzy Paola               | Blanco Gonzalez         |       624 | 50153728     | Claro    | 9577                       | 0000                    | 
+ 2592430350101 | DPI           | Guillermo                 | Loch Chopox             |       621 | 59299237     | Claro    | 9922                       | 0000                    | 0000
+ 1738496870117 | DPI           | Marjorie Elieth           | Castro Nunez            |       623 | 52899311     | Movistar | 3168                       | 0000                    | 0000
+ 2438614780114 | DPI           | Alba Marina               | Argueta Cruz            |       631 | 54588963     | Claro    | 3629                       | 0000                    | 
+ 2389090931215 | DPI           | Hury Hander               | Tuells Escobar          |       625 | 55572853     | Claro    | 3884                       | 0000                    | 0000
+ 1664314350101 | DPI           | Cesar Javier              | Soto Valenzuela         |       627 | 34138310     | Movistar | 5581                       | 0000                    | 0000
+ 2281463210101 | DPI           | Gerson Betzai             | Alvarado Cardona        |       628 | 55131726     | Claro    | 6181                       | 0000                    | 0000
+ 1790280810101 | DPI           | Nancy  Michelle           | Marroquin Salguero      |       629 | 41278510     | Claro    | 7137                       | 0000                    | 0000
+ 2443730192001 | DPI           | Oscar Arturo              | Guerra Moran            |       630 | 56338691     | Claro    | 8848                       | 0000                    | 0000
+ 2165974040508 | DPI           | Maira  Esperanza          | Lotzoj Marroquin        |       659 | 54213587     | Claro    | 2980                       | 0000                    | 
+ 2562372550114 | DPI           | Pedro Luis                | Godines Vasquez         |       633 | 52737386     | Movistar | 7224                       | 0000                    | 0000
+ 2379572050101 | DPI           | Monica Victoria           | Solares Revolorio       |       634 | 55112118     | Claro    | 6220                       | 0000                    | 0000
+ 2214215721804 | DPI           | Jose  Randolfo            | Pleites Lopez           |       635 | 54662532     | Claro    | 8416                       | 0000                    | 0000
+ 2076651680101 | DPI           | Josue  Alejandro          | Hernandez Orozco        |       636 | 51085287     | Movistar | 2067                       | 0000                    | 0000
+ 1752203280101 | DPI           | Roxana Haydee             | De Leon Ambrocio        |       637 | 59221773     | Claro    | 1928                       | 0000                    | 0000
+ 1689248700101 | DPI           | Luis Eduardo              | Gomez Alvarez           |       638 | 42504922     | Claro    | 5543                       | 0000                    | 0000
+ 3534610080101 | DPI           | Jorge Eduardo             | Brun Maldonado          |       639 | 55540444     | Claro    | 5003                       | 0000                    | 0000
+ 2933977400101 | DPI           | Mildred Lorena            | Mejia Gonzalez          |       640 | 58729640     | Claro    | 3744                       | 0000                    | 0000
+ 2766819160101 | DPI           | Yonatan Benjamin          | Recinos Garcia          |       641 | 47669380     | Claro    | 3551                       | 0000                    | 0000
+ 2594163980101 | DPI           | Oscar Rene                | Ovalle Letran           |       642 | 58734468     | Claro    | 5927                       | 0000                    | 0000
+ 1917673012212 | DPI           | Rene Ronaldo              | Hernandez Delgado       |       643 | 41231965     | Claro    | 9922                       | 0000                    | 0000
+ 1979966121001 | DPI           | Maria Jose                | Palacios Obregon        |       644 | 54947381     | Claro    | 9249                       | 0000                    | 0000
+ 2358883381201 | DPI           | Erick Fernando            | Lopez Ramos             |       645 | 42979634     | Claro    | 1536                       | 0000                    | 0000
+ 1678520430101 | DPI           | Kandy Margoth             | Paz Hernandez           |       646 | 42200038     | Claro    | 8314                       | 0000                    | 0000
+ 2365322510101 | DPI           | Rudy Saturnino            | Vargas Folgar           |       647 | 54662725     | Claro    | 8210                       | 0000                    | 0000
+ 3028765880106 | DPI           | Maria  del Carmen         | Lopez Guillen           |       648 | 41118998     | Claro    | 9238                       | 0000                    | 0000
+ 2629622410101 | DPI           | Norma Liseth              | Morales Gomez           |       649 | 55354457     | Claro    | 1093                       | 0000                    | 0000
+ 2428648050101 | DPI           | Ricardo Antonio           | Barrientos Turris       |       653 | 54946584     | Claro    | 4950                       | 0000                    | 0000
+ 2428388470101 | DPI           | Danilo Rene               | Somoza Ochoa            |       655 | 54828149     | Claro    | 6146                       | 0000                    | 0000
+ 3256563201013 | DPI           | Joselyn Maribel           | Chaclan Buchan          |       656 | 54850629     | Claro    | 8006                       | 0000                    | 0000
+ 1577870520101 | DPI           | Noel Aparicio             | Hernandez Puac          |       657 | 42117673     | Claro    | 4672                       | 0000                    | 0000
+ 2083140750920 | DPI           | Ana Gabriela              | Arango Barrios          |       658 | 50204424     | Movistar | 7069                       | 0000                    | 0000
+ 2261296320101 | DPI           | Lubia Audili              | Barrios                 |       661 | 58259957     | Claro    | 3077                       | 0000                    | 
+ 1933208190101 | DPI           | Lisbeth Marisol           | Quan  de Leon           |       660 | 42377126     | Claro    | 6683                       | 0000                    | 0000
+ 2285191440101 | DPI           | Nancy Johana              | Flores Barrera          |       677 | 47358125     | Claro    | 4336                       | 0000                    | 
+ 1839542541307 | DPI           | Baldivi Lizeth            | Montejo Martinez        |       663 | 55122650     | Claro    | 6846                       | 0000                    | 0000
+ 2632225000506 | DPI           | Meriam Rocio              | Bardales Ortigoza       |       665 | 56214669     | Claro    | 6705                       | 0000                    | 0000
+ 2589872510101 | DPI           | Eva Kristabel             | Morales Cifuentes       |       666 | 54458435     | Claro    | 5617                       | 0000                    | 0000
+ 2751310920101 | DPI           | Cruz Estuardo             | Hernandez Paxtor        |       667 | 43497755     | Movistar | 4733                       | 0000                    | 0000
+ 2609177880506 | DPI           | Pablo Samuel              | Lam Garcia              |       668 | 54108266     | Claro    | 5514                       | 0000                    | 0000
+ 2565607061804 | DPI           | Nadian Sulmeyran          | Morales Cordova         |       669 | 55121706     | Claro    | 1888                       | 0000                    | 0000
+ 2839529971020 | DPI           | Jennie Juliecita          | Gonzalez Sanchez        |       670 | 42308521     | Claro    | 9935                       | 0000                    | 0000
+ 2283286591805 | DPI           | Karla  Yadira             | Morales Chiguela        |       671 | 42126130     | Claro    | 3818                       | 0000                    | 0000
+ 2086751590509 | DPI           | Carlos Enrique            | Santos Chinchilla       |       672 | 55352892     | Claro    | 5080                       | 0000                    | 0000
+ 3149550461301 | DPI           | Luis Fernando             | Saenz                   |       673 | 58152216     | Claro    | 8581                       | 0000                    | 0000
+ 2139481170803 | DPI           | Edgar Enrique             | Matul Alvarado          |       674 | 58256214     | Claro    | 4970                       | 0000                    | 0000
+ 1822286490206 | DPI           | Jairo Josue               | Muralles Ramirez        |       676 | 42074295     | Claro    | 2471                       | 0000                    | 0000
+ 2986901600101 | DPI           | Heysel Suzett             | Garcia Barrientos       |       678 | 43343390     | Movistar | 5360                       | 0000                    | 0000
+ 2668572990101 | DPI           | Lucio Alberto             | Lopez Mendez            |       679 | 54928352     | Claro    | 1112                       | 0000                    | 0000
+ 1890761431301 | DPI           | Jaime Nery                | Lopez Escobedo          |       681 | 59283465     | Claro    | 2534                       | 0000                    | 0000
+ 2412962771302 | DPI           | Henry David               | Domingo Cano            |       682 | 56238684     | Claro    | 2276                       | 0000                    | 0000
+ 2652557590101 | DPI           | Astrid Maribel            | Itzol Cotufa            |       684 | 54241184     | Claro    | 6886                       | 0000                    | 0000
+ 2655612990404 | DPI           | Lilian Veronica           | Chacon Can              |       690 | 52479459     | Movistar | 2759                       |                         | 
+ 2598885160101 | DPI           | Eduardo Arturo            | Rodas Duran             |       692 | 56920350     | Claro    | 4747                       |                         | 
+ 2911679690207 | DPI           | Marelyn Paola             | Alegria Lopez           |       696 | 54683674     | Claro    | 5882                       |                         | 
+ 2547674350316 | DPI           | Edgar Rolando             | Lopez Gomez             |       697 | 34235115     | Movistar | 5437                       |                         | 
+ 1598684402214 | DPI           | Elio Mauricio             | Castaneda               |       701 | 47333043     | Claro    | 9001                       |                         | 
+ 2537448220101 | DPI           | Melvin Israel             | Osorio Cordero          |       702 | 58114006     | Claro    | 2455                       |                         | 
+ 2790545130101 | DPI           | Kimberly Manuela          | Garcia Monterroso       |       705 | 58563480     | Claro    | 8997                       |                         | 
+ 3010129970101 | DPI           | Lucia Maribel             | Socoy Lopez             |       710 | 55774877     | Claro    | 5888                       |                         | 
+ 3003396660101 | DPI           | Mercy Dayana              | Castillo Juarez         |       713 | 47307308     | Claro    | 1160                       |                         | 
+ 2607739561105 | DPI           | Jose Angel                | Custodio Chim           |       717 | 34017792     | Movistar | 8216                       |                         | 
+ 2994156270101 | DPI           | Randy Steven              | Diaz Aceytuno           |       718 | 59579001     | Claro    | 7251                       |                         | 
+ 2374327810101 | DPI           | Ingrid Maribel            | Giron Veliz             |       725 | 56331628     | Claro    | 5273                       |                         | 
+ 2735586760101 | DPI           | Ana Lucia                 | Castanon Carias         |       737 | 50179360     | Claro    | 4296                       |                         | 
+ 2539588490101 | DPI           | Jacqueline Judith         | Vega Villeda            |       738 | 43914900     | Movistar | 3627                       |                         | 
+ 2623567401326 | DPI           | Gilberto Agustin          | Alvarado Xoquic         |       740 | 47503308     | Claro    | 3046                       |                         | 
+ 1897823660101 | DPI           | Rosaura Elizabeth         | Ramos Bajan             |       741 | 54746721     | Claro    | 8313                       |                         | 
+ 2282519660101 | DPI           | Roberto Francisco         | Beltranena Lorenzana    |       742 | 44504339     | Movistar | 3119                       |                         | 
+ 1690135290101 | DPI           | Jorge Mario               | Motta Sandoval          |       743 | 56322087     | Claro    | 4002                       |                         | 
+ 2503410690610 | DPI           | Edy Estuardo              | Ramos Lorenzana         |       749 | 42332386     | Claro    | 7243                       |                         | 
+ 2516165920101 | DPI           | Domingo Estuardo          | Sierra Culajay          |       687 | 58281747     | Claro    | 2930                       | 0000                    | 
+ 2443497970602 | DPI           | Eduardo Arnulfo           | Villatoro Lopez         |       686 | 51103916     | Claro    | 8210                       | 0000                    | 0000
+ 1908642061101 | DPI           | Francisco                 | Martinez Castro         |       688 | 42656301     | Claro    | 5839                       | 0000                    | 
+ 2225748010614 | DPI           | Darlin Adali              | Perez Sanchez           |       689 | 42324410     | Claro    | 9794                       | 0000                    | 
+ 2503613880101 | DPI           | Carlos Enrique            | Alvarez Ixcajoc         |       694 | 42189572     | Claro    | 5920                       | 0000                    | 
+ 2279098360101 | DPI           | Giovanni Bladimir         | Torres Cajas            |       691 | 58348343     | Claro    | 5920                       | 0000                    | 0000
+ 2550703141001 | DPI           | Henry Omar                | Valle Garcia            |       693 | 59419218     | Claro    | 8996                       | 0000                    | 0000
+ 2431262041901 | DPI           | Pablo Enrique             | Perez  Moscoso          |       695 | 54245510     | Claro    | 7896                       | 0000                    | 
+ 2612159141501 | DPI           | Erick Alejandro           | Hernandez  Cap          |       698 | 47147297     | Claro    | 3326                       | 0000                    | 
+ 1603171341217 | DPI           | Luis Alfredo              | Guillen Garcia          |       703 | 54880706     | Claro    | 7117                       | 0000                    | 
+ 3472505720115 | DPI           | Astrid Fabiola            | Juarez Ovando           |       700 | 56329223     | Claro    | 3538                       | 0000                    | 0000
+ 1776146410101 | DPI           | Erwin Edgardo             | Castro Gramajo          |       706 | 55380420     | Claro    | 9041                       | 0000                    | 
+ 2998028410101 | DPI           | Daniel Andres             | Asturias Fuentes        |       704 | 35231428     | Movistar | 1387                       | 0000                    | 0000
+ 1905406562216 | DPI           | Vielman Oswaldo           | Franco Boteo            |       711 | 42759609     | Claro    | 1400                       | 0000                    | 
+ 2380846391712 | DPI           | Lourdes Amarilis          | Lara Hernandez          |       707 | 55575629     | Claro    | 9562                       | 0000                    | 0000
+ 2327524352010 | DPI           | Ferdy Danilo              | Gonzalez Mendez         |       708 | 42439421     | Claro    | 2980                       | 0000                    | 0000
+ 2216898770101 | DPI           | Heydi Araceli             | Lopez Vasquez           |       709 | 41254991     | Claro    | 7402                       | 0000                    | 0000
+ 2144886670920 | DPI           | Sonia Arleny              | Ortiz Pablo             |       715 | 42959047     | Claro    | 3831                       | 0000                    | 
+ 2267786060117 | DPI           | Ismael                    | Palacios Orozco         |       712 | 42961859     | Claro    | 1467                       | 0000                    | 0000
+ 1708606631326 | DPI           | Ofmara Rosabel            | Bouyssou Molina         |       714 | 56992763     | Claro    | 6837                       | 0000                    | 0000
+ 1880188400303 | DPI           | Mariana del Pilar         | Valle Sanchez           |       716 | 56736918     | Movistar | 6104                       | 0000                    | 
+ 2497516662215 | DPI           | Eugenio                   | Lorenzo Diaz            |       724 | 51293056     | Claro    | 1436                       | 0000                    | 
+ 2789002400101 | DPI           | Juan Manuel               | Valle Solares           |       719 | 59635019     | Claro    | 7994                       | 0000                    | 0000
+ 2537060091312 | DPI           | Mario Magdonal            | Perez Lopez             |       720 | 42682512     | Claro    | 5880                       | 0000                    | 0000
+ 2149073920108 | DPI           | Lester Giovanni           | Cifuentes Corado        |       721 | 59498632     | Claro    | 8446                       | 0000                    | 0000
+ 3281528891707 | DPI           | Edinson Obed              | Tacen Perez             |       722 | 47595383     | Claro    | 1149                       | 0000                    | 0000
+ 1618992850101 | DPI           | Pedro Andres              | Castillo Mazariegos     |       723 | 56365388     | Claro    | 2530                       | 0000                    | 0000
+ 3162446430504 | DPI           | Jaqueline Dayana          | Lam Menendez            |       726 | 58744176     | Claro    | 1177                       | 0000                    | 
+ 2335132801201 | DPI           | Otto David                | Solis Argueta           |       728 | 42905051     | Claro    | 3197                       | 0000                    | 0000
+ 1651956730901 | DPI           | Aroldo Danilo             | Cifuentes Diaz          |       729 | 35375217     | Movistar | 7593                       | 0000                    | 0000
+ 2535307250101 | DPI           | Sergio  Alejandro         | Perez Esquivel          |       730 | 47105428     | Claro    | 9086                       | 0000                    | 0000
+ 1982824191303 | DPI           | Jose Eduardo              | Ramos Ordonez           |       731 | 47531010     | Claro    | 6908                       | 0000                    | 0000
+ 3389693651001 | DPI           | Dairin Vanessa            | Gomez                   |       732 | 42827653     | Claro    | 3380                       | 0000                    | 0000
+ 2192045781001 | DPI           | Obed Eliasaf              | Marcial Herrarte        |       733 | 47113452     | Claro    | 5682                       | 0000                    | 0000
+ 3244152651006 | DPI           | Letty Dolores             | Ixquereu Fuentes        |       734 | 41954310     | Claro    | 6786                       | 0000                    | 0000
+ 2551548440901 | DPI           | Jose                      | Tax                     |       735 | 55880227     | Claro    | 4364                       | 0000                    | 0000
+ 1854371840701 | DPI           | Ana Veronica              | Diaz Cabrera            |       736 | 51136150     | Claro    | 8117                       | 0000                    | 0000
+ 1756966750801 | DPI           | Gabriela Josefina         | Pacheco Tzul            |       739 | 42010578     | Claro    | 3932                       | 0000                    | 0000
+ 3479921530101 | DPI           | Kimberly Azucena          | Rivera Cabrera          |       744 | 41998659     | Claro    | 1481                       | 0000                    | 0000
+ 1657364100101 | DPI           | Angel Daniel              | Ruiz Javier             |       745 | 55951864     | Claro    | 3863                       | 0000                    | 0000
+ 2911201561704 | DPI           | Jennifer  Estefania       | Chi Guevara             |       746 | 42856016     | Claro    | 9012                       | 0000                    | 0000
+ 1741804461202 | DPI           | Julissa Celeste           | Fuentes Cardona         |       747 | 41395781     | Claro    | 8125                       | 0000                    | 0000
+ 2696107151213 | DPI           | Jose Eduardo              | Ochoa Chavez            |       748 | 47660328     | Claro    | 3360                       | 0000                    | 0000
+ 2451112470101 | DPI           | Paula Guadalupe           | Fajardo Bin             |       750 | 51397995     | Claro    | 7984                       | 0000                    | 0000
+ 2340822240101 | DPI           | Hellen Georgeanna         | Lorenzana Flores        |       751 | 43089229     | Movistar | 8015                       | 0000                    | 0000
+ 3312046301801 | DPI           | Jhony Humberto            | Aguirre  Genis          |       752 | 55691750     | Claro    | 3047                       | 0000                    | 0000
+ 2181627900103 | DPI           | Karla Rubi                | Hernandez Montejo       |       756 | 47154767     | Claro    | 3778                       |                         | 
+ 2382794050409 | DPI           | Edy Francisco             | Cacatzi Ajxolo          |       758 | 58705173     | Claro    | 9196                       |                         | 
+ 2116728581215 | DPI           | Hugo Saul                 | Mayen Canizales         |       767 | 56990657     | Claro    | 9735                       |                         | 
+ 3028524920106 | DPI           | Anderson  Ivan            | Tunche Huertas          |       768 | 42200674     | Claro    | 6758                       |                         | 
+ 2622412260101 | DPI           | Veronica Oglemi           | Chavez De Leon          |       769 | 41502293     | Claro    | 2865                       |                         | 
+ 1853232780101 | DPI           | Josue Geovanny            | Miranda Rosales         |       775 | 42201051     | Claro    | 8327                       |                         | 
+ 3066870970601 | DPI           | Meilyn Jailinne           | Herrarte Cazun          |       777 | 42461860     | Claro    | 4299                       |                         | 
+ 2568700550101 | DPI           | Lucy Azalea               | Rivas Cividanis         |       778 | 47097119     | Claro    | 7357                       |                         | 
+ 3626061960101 | DPI           | Josseline  Guadalupe      | Solorzano Calles        |       786 | 43412876     | Movistar | 3034                       |                         | 
+ 3002628410101 | DPI           | Franty Josue              | Moran Rodriguez         |       788 | 34033111     | Movistar | 3676                       |                         | 
+ 2079738060101 | DPI           | Yessica  Marleni          | Monrroy Con             |       791 | 54237573     | Claro    | 6384                       |                         | 
+ 2449735391213 | DPI           | Yocelin Marilu            | Sales Tovar             |        50 | 55765834     | Claro    | 9257                       | 0000                    | 0000
+ 1732481602217 | DPI           | Cleotilde Francisco       | Escobar Gutierrez       |        12 | 56320571     | Claro    | 4974                       | 0000                    | 0000
+ 2249024580101 | DPI           | Carol Jessenia            | Barahona Vargas         |        45 | 58747365     | Claro    | 9811                       | 0000                    | 
+ 2437645450101 | DPI           | Kevin  Orlando            | Galicia  Ralda          |        69 | 52116351     | Movistar | 4416                       | 0000                    | 0000
+ 1836959090902 | DPI           | Luis  Eduardo             | Tobar  Soto             |        83 | 56748802     | Movistar | 8310                       | 0000                    | 0000
+ 2524441082203 | DPI           | Felix  Francisco          | Navas Guerra            |       108 | 58357414     | Claro    | 1214                       | 0000                    | 0000
+ 1868314390110 | DPI           | Eliseo                    | Ajvix Sajquiy           |       128 | 55121888     | Claro    | 4829                       | 0000                    | 0000
+ 2310454090101 | DPI           | Johana Jamileth           | Escobar Menjivar        |       137 | 47394290     | Claro    | 7216                       | 0000                    | 
+ 2354187571211 | DPI           | Claver Osbeli             | De Leon De Leon         |       149 | 42732997     | Claro    | 4659                       | 0000                    | 
+ 2072852410416 | DPI           | Ronald Vladimir           | Siquinajay Jiatz        |       174 | 42108212     | Claro    | 6585                       | 0000                    | 0000
+ 2802478500101 | DPI           | Gabriela Maria Jose       | Contreras Montepeque    |       194 | 34922546     | Movistar | 5612                       | 0000                    | 0000
+ 2501058531801 | DPI           | Karla Eunice              | Mejia Godoy             |       205 | 42409033     | Claro    | 2100                       | 0000                    | 0000
+ 1635193230101 | DPI           | Josue Francisco           | Monroy Alvarez          |       229 | 52334964     | Movistar | 4199                       | 0000                    | 0000
+ 2338263940101 | DPI           | Carlos Estuardo           | Marroquin Valdez        |       252 | 54122928     | Claro    | 5797                       | 0000                    | 0000
+ 2615350210103 | DPI           | Angelica Asuncion         | Lopez Fajardo           |       273 | 56919458     | Claro    | 2313                       | 0000                    | 0000
+ 2305299761705 | DPI           | Walter Emanuel            | Sofoifa Carranza        |       300 | 54428702     | Claro    | 6474                       | 0000                    | 0000
+ 3243542071601 | DPI           | Kenssy Michelle           | Natareno Sierra         |       320 | 51165138     | Claro    | 4577                       | 0000                    | 0000
+ 3040553600111 | DPI           | Rudy Humberto             | Nij Lopez               |       342 | 47244359     | Claro    | 6303                       | 0000                    | 0000
+ 2259639570101 | DPI           | Juan Carlos               | Guzman Coronado         |       343 | 47698254     | Claro    | 5622                       | 0000                    | 0000
+ 1948275420802 | DPI           | Beatriz Yaneth            | Tzum Tecum              |       359 | 44069274     | Movistar | 9990                       | 0000                    | 0000
+ 2516894840101 | DPI           | Pedro Miguel              | Granados Santos         |       380 | 35491946     | Movistar | 4953                       | 0000                    | 0000
+ 2563216980101 | DPI           | Elba Ileana               | De Leon Montenegro      |       406 | 56364344     | Claro    | 2651                       | 0000                    | 
+ 2984064110501 | DPI           | Rolando Estuardo          | Ibarra Golon            |       410 | 56358651     | Claro    | 2888                       | 0000                    | 0000
+ 2987744290101 | DPI           | Mynor Alberto             | Virula Lopez            |       412 | 50722361     | Movistar | 7859                       | 0000                    | 0000
+ 2366025000303 | DPI           | Marco Vinicio             | Vasquez Vielman         |       434 | 58259921     | Claro    | 3987                       | 0000                    | 
+ 1894839110101 | DPI           | Sandra Maria              | Rueda Lopez             |       454 | 41810073     | Claro    | 3716                       | 0000                    | 0000
+ 2177526670101 | DPI           | William  Rolando          | Perez  Perez            |       781 | 34041218     | Movistar | 3868                       | 0000                    | 
+ 2754401411901 | DPI           | Josue  Hector Orlando     | Vargas  Pineda          |       753 | 59497453     | Claro    | 4265                       | 0000                    | 0000
+ 3305003761711 | DPI           | Jorge Carlos              | Sosa Perez              |       754 | 42153464     | Claro    | 7822                       | 0000                    | 0000
+ 2591436770101 | DPI           | Maria De Los Angeles      | Alvarez Sanchez         |       755 | 41503073     | Claro    | 7214                       | 0000                    | 0000
+ 3457705600509 | DPI           | Irma Yomira               | Palma Boch              |       757 | 58549649     | Claro    | 5089                       | 0000                    | 0000
+ 1924776172001 | DPI           | Edgar Edmundo             | Sance Sintuj            |       759 | 59124243     | Claro    | 1005                       | 0000                    | 0000
+ 2111659051019 | DPI           | Pedro Karol               | Gomez Lopez             |       760 | 55755219     | Claro    | 3481                       | 0000                    | 0000
+ 2100742640801 | DPI           | Giovani Valentin          | Chavez Gutierrez        |       761 | 51128511     | Claro    | 2040                       | 0000                    | 0000
+ 2238674460101 | DPI           | Wendoly Lesli             | Barrios Avendano        |       762 | 56388982     | Claro    | 5942                       | 0000                    | 0000
+ 2460709270301 | DPI           | Guillermo Ismael          | Meza Castillo           |       763 | 41797745     | Claro    | 9650                       | 0000                    | 0000
+ 2459758610301 | DPI           | Sulibeth Estela           | Ortega Mendez           |       764 | 42832167     | Claro    | 8753                       | 0000                    | 0000
+ 2048225720502 | DPI           | Lester Alexis             | Curiales Arevalo        |       765 | 54560151     | Claro    | 7210                       | 0000                    | 0000
+ 1667979360705 | DPI           | Lucas Evaristo            | Tambriz y Tambriz       |       766 | 54763138     | Claro    | 5590                       | 0000                    | 0000
+ 1579699750101 | DPI           | Luis Javier               | Piril Reynoso           |       770 | 59221592     | Claro    | 6175                       | 0000                    | 0000
+ 1889436841505 | DPI           | Otto Ariel                | Ruiz Alvarado           |       771 | 41509470     | Claro    | 9198                       | 0000                    | 0000
+ 2294253480207 | DPI           | Heber  Gerardo            | Gonzalez Moscoso        |       772 | 51267266     | Claro    | 9013                       | 0000                    | 0000
+ 1577687400801 | DPI           | Kristhian Alexander       | Chinchilla Perez        |       773 | 59315282     | Claro    | 9726                       | 0000                    | 0000
+ 2553170341222 | DPI           | Darwin Danilo             | Escobar Martinez        |       774 | 55499560     | Movistar | 7193                       | 0000                    | 0000
+ 3008243860101 | DPI           | Emanuel Alexander         | Estrada Esquivel        |       776 | 41088099     | Claro    | 8677                       | 0000                    | 0000
+ 3329008271804 | DPI           | Yessica Paola             | Aldana Lopez            |       779 | 42922711     | Claro    | 3966                       | 0000                    | 0000
+ 2768910580115 | DPI           | Aura Fidelia              | Garcia Urias            |       790 | 43183934     | Movistar | 6127                       | 0000                    | 
+ 3528614951001 | DPI           | Karla Fabiola             | Calderon Reyes          |       782 | 42479341     | Claro    | 4996                       | 0000                    | 0000
+ 3308680391801 | DPI           | Hector Daniel Anibal      | Rodriguez Erazo         |       783 | 54544460     | Claro    | 6915                       | 0000                    | 0000
+ 2450940591801 | DPI           | Carlos Eduardo            | Ramirez Estrada         |       784 | 59633949     | Claro    | 8573                       | 0000                    | 0000
+ 2234052211001 | DPI           | Jessica Vanessa           | Barrios Fuego           |       785 | 54567512     | Claro    | 5090                       | 0000                    | 0000
+ 2328609470115 | DPI           | Jorge Eduardo             | Castillo  Penate        |       787 | 41117522     | Claro    | 2469                       | 0000                    | 0000
+ 1687657210608 | DPI           | Dimas Leonel              | Jolon Perez             |       789 | 41188862     | Claro    | 6547                       | 0000                    | 0000
+ 1582204201703 | DPI           | Marvin Isaias             | Estrada Molina          |       479 | 54415333     | Claro    | 5413                       | 0000                    | 0000
+ 2489173230101 | DPI           | Jose Daniel               | Moctezuma Canel         |       485 | 53133152     | Movistar | 3397                       | 0000                    | 0000
+ 3031928360108 | DPI           | Delmy Mishelle            | Escobar Escobar         |       502 | 42268947     | Claro    | 1396                       | 0000                    | 0000
+ 1774482020614 | DPI           | Josue                     | Hernandez Divas         |       536 | 50700380     | Movistar | 8137                       | 0000                    | 0000
+ 1806917240917 | DPI           | Edy Roberto               | Garcia Xente            |       548 | 54828105     | Claro    | 5513                       | 0000                    | 0000
+ 2392227412101 | DPI           | Juan Jose                 | Jimenez Escobar         |       552 | 42117758     | Claro    | 8271                       | 0000                    | 0000
+ 2209354750101 | DPI           | Lucero Marisol            | Granados Herrera        |       576 | 34856950     | Movistar | 4829                       | 0000                    | 0000
+ 2153629180921 | DPI           | Edwin Rocael              | Gomez Elias             |       599 | 55122702     | Claro    | 9657                       | 0000                    | 0000
+ 2069081642007 | DPI           | Juana Nataly              | Mayorga Dubon           |       617 | 41685309     | Claro    | 9040                       | 0000                    | 0000
+ 1662649971703 | DPI           | Jenny Humberta            | Alvarado Barrera        |       632 | 52524142     | Movistar | 5234                       | 0000                    | 0000
+ 1705225120407 | DPI           | Jose Eligio               | Xinico Upun             |       662 | 55796633     | Claro    | 9158                       | 0000                    | 
+ 2758715920101 | DPI           | Zoe Lilieth               | Zamora Avalos           |       683 | 55483535     | Movistar | 4498                       | 0000                    | 0000
+ 2538567522206 | DPI           | Natanael Mariano          | Jimenez Ordonez         |       685 | 54892589     | Claro    | 8345                       | 0000                    | 0000
+ 2150362040101 | DPI           | Dulce Rocio Candida       | Hernandez Soliz         |       699 | 43601046     | Movistar | 7349                       | 0000                    | 0000
+ 2404462590101 | DPI           | Karen Johanna             | Revolorio Chojolan      |       727 | 42044426     | Claro    | 7173                       | 0000                    | 0000
+ 2080196180108 | DPI           | Christian  Orlando        | Hurtarte  Monzon        |       780 | 42792482     | Claro    | 3134                       | 0000                    | 0000
+(791 rows)
+

@@ -345,12 +345,16 @@ class gMFPools {
      private $dbConfig;
      private $dbConn;
      private $channel;
+     private $pool;
+     private $job_type;
 
 /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  CONSTRUCTORS
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-     function __construct($vChannel) {
-         $this->channel = $vChannel;
+     function __construct($vChannel, $vJobType, $vPool) {
+        $this->channel = $vChannel;
+        $this->pool = $vPool;
+        $this->job_type = $vJobType;
         try {
             $this->appConfig = new configLoader('config/application.json');
             $this->dbConfig = new configLoader('config/db.json');
@@ -380,10 +384,21 @@ class gMFPools {
  PUBLIC FUNCTIONS
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
      public function getTasksChunk(){
-         
+         try {
+             $this->dbConn->setQuery(QRY_GET_POOL_BULK.$this->pool.QRY_JUNCTION_AND.QRY_FILTER_JOBS_CHANNEL.$this->channel.QRY_JUNCTION_AND.QRY_FILTER_JOBS_TYPE.$this->job_type.QRY_LIMIT.$this->appConfig->structure['channels'][$this->channel]['bulk_size'], Array());
+             $response = $this->dbConn->execQry();
+             if(empty($response)){
+                 $response = null;
+             }
+         } catch (Exception $gException) {
+            $this->logger->writeLog(LOGERROR, $this->logger->logModule, $this->logger->logModule.' fail getting pool '.$this->pool.' for channel '.$this->channel.' and job type '.$this->job_type.'.');
+            $this->logger->writeLog(LOGDEBUG, $this->logger->logModule, $this->logger->logModule.' fail getting pool '.$this->pool.' for channel '.$this->channel.' and job type '.$this->job_type.'.',$gException);
+            $response = false;
+         }
+         return $response;
      }
      
-     public function setTaskStatus(){
+     public function setTaskStatus($vTaskId, $vTaskStatus){
          
      }
      

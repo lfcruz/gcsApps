@@ -1,0 +1,8 @@
+{
+    "dbtype" : "PGS",
+    "dbhost" : "localhost",
+    "dbport" : "15432",
+    "dbname" : "ccValidator",
+    "dbuser" : "postgres",
+    "dbpass" : "T3mp0r4ldev"
+}

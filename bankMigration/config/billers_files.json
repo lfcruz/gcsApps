@@ -1,0 +1,32 @@
+{
+    "CAASD" : {
+        "inputFileDirectory" : "data/input/incoming/",
+        "inputFilePrefix" : "CAASD",
+        "outputFileDirectory" : "data/output/processed/"
+    },
+    "CPL" : {
+        "inputFileDirectory" : "data/input/incoming/",
+        "inputFilePrefix" : "CPL",
+        "outputFileDirectory" : "data/output/processed/"
+    },
+    "ADN" : {
+        "inputFileDirectory" : "data/input/incoming/",
+        "inputFilePrefix" : "ADN",
+        "outputFileDirectory" : "data/output/processed/"
+    },
+    "CVG" : {
+        "inputFileDirectory" : "data/input/incoming/",
+        "inputFilePrefix" : "CVG",
+        "outputFileDirectory" : "data/output/processed/"
+    },
+    "GCSYPT800RQ" : {
+        "inputFileDirectory" : "data/input/incoming/",
+        "inputFilePrefix" : "GCSYPT800RQ",
+        "outputFileDirectory" : "data/output/processed/"
+    },
+    "GCSYPT855RQ" : {
+        "inputFileDirectory" : "data/input/incoming/",
+        "inputFilePrefix" : "GCSYPT855RQ",
+        "outputFileDirectory" : "data/output/processed/"
+    }
+}

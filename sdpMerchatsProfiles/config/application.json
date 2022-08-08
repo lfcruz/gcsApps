@@ -1,0 +1,11 @@
+{
+    "appStatus":true,
+    "dailyTransactionsLimit":4,
+    "dailySalesLimit":1600,
+    "weeklyTransactionsLimit":25,
+    "weeklySalesLimit":350000,
+    "monthlyTransactionLimit": 100,
+    "monthlySalesLimit":50000,
+    "deoxys_host": "10.225.193.138",
+    "deoxys_port": "21001"
+}

@@ -1,0 +1,14 @@
+{
+    "customer" :{"dbtype" : "PGS",
+                 "dbhost" : "10.225.192.130",
+                 "dbport" : "5432",
+                 "dbname" : "bulkenrollment",
+                 "dbuser" : "postgres",
+                 "dbpass" : "T3mp0r4ldev"},
+    "connector" : {"dbtype" : "PGS",
+                   "dbhost" : "10.225.192.130",
+                   "dbport" : "5432",
+                   "dbname" : "gconnectordbdev",
+                   "dbuser" : "postgres",
+                   "dbpass" : "T3mp0r4ldev"}
+}

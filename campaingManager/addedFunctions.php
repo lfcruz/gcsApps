@@ -80,13 +80,12 @@ function dbpg_query($dbpgStructure)
     }
     
     $queryResult = pg_execute($dbConnector,$dbpgStructure['dbQueryName'],$dbpgStructure['dbQueryVariables']);
-    
-    if (!$queryResult){
+    if (substr($dbpgStructure['dbQuery'], 0, 6) == 'select' and !$queryResult){
         echo 'Failed to get result......';
     }
     else {
         $recordString = pg_fetch_all($queryResult);
-        if(!(substr($dbpgStructure['dbQuery'], 1, 6) == 'select')){
+        if(!(substr($dbpgStructure['dbQuery'], 0, 6) == 'select')){
             pg_prepare($dbConnector,'commit','commit');
             pg_exec($dbConnector, 'commit');
         }
@@ -135,7 +134,7 @@ function sentToSocket($enviroment,$port,$msg){
 
 function ldap_auth($user, $password, $group) {
         // Active Directory server
-        $ldap_host = "172.22.1.4";
+        $ldap_host = "172.22.1.5";
 
         // Active Directory DN
         $ldap_dn = "dc=gcs,dc=local";
@@ -193,10 +192,10 @@ function ldap_auth($user, $password, $group) {
 
 function bcmLogin($user) {
     $dbpgStructure = array ("dbIP" => "localhost",
-        "dbPort" => "5432",
+        "dbPort" => "15432",
         "dbName" => "campaings",
-        "dbUser" => "devuser",
-        "dbPassword" => "L1nux2kkk",
+        "dbUser" => "postgres",
+        "dbPassword" => "T3mp0r4ldev",
         "dbQueryName" => "storeLogin",
         "dbQuery" => "insert into t_login (id,username,last_login) values (DEFAULT, $1, DEFAULT)",
         "dbQueryVariables" => array($user));
@@ -206,10 +205,10 @@ function bcmLogin($user) {
 function pgQResult($pgQry, $pgVARArray) {
     $pgQRYName = "qry_".rand(0,999999);
     $dbpgStructure = array ("dbIP" => "localhost",
-        "dbPort" => "5432",
+        "dbPort" => "15432",
         "dbName" => "campaings",
-        "dbUser" => "pgadmin",
-        "dbPassword" => "L1nux2kkk",
+        "dbUser" => "postgres",
+        "dbPassword" => "T3mp0r4ldev",
         "dbQueryName" => $pgQRYName,
         "dbQuery" => $pgQry,
         "dbQueryVariables" => $pgVARArray);

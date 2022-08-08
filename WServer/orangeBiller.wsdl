@@ -1,0 +1,388 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions name="EBanking" targetNamespace="http://webservices-ext.orange.com.do" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://webservices-ext.orange.com.do" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://webservices-ext.orange.com.do" xmlns="http://webservices-ext.orange.com.do" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:complexType name="balanceReplyMsg">
+<xs:sequence>
+<xs:element minOccurs="0" name="dueAmount" type="xs:string" />
+<xs:element minOccurs="0" name="dueAmountCdt" type="xs:string" />
+<xs:element minOccurs="0" name="dueAmountIsc" type="xs:string" />
+<xs:element minOccurs="0" name="dueAmountItbis" type="xs:string" />
+<xs:element minOccurs="0" name="dueDate" type="xs:string" />
+<xs:element minOccurs="0" name="mobileNumber" type="xs:string" />
+<xs:element minOccurs="0" name="openAmount" type="xs:string" />
+<xs:element minOccurs="0" name="openAmountCdt" type="xs:string" />
+<xs:element minOccurs="0" name="openAmountIsc" type="xs:string" />
+<xs:element minOccurs="0" name="openAmountItbis" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="contractInfoMsg">
+<xs:sequence>
+<xs:element minOccurs="0" name="customerType" type="xs:string" />
+<xs:element name="postpaid" type="xs:boolean" />
+<xs:element name="prepaid" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="InvalidCustomerStatusException" type="InvalidCustomerStatusException" />
+<xs:complexType name="InvalidCustomerStatusException">
+<xs:sequence />
+</xs:complexType>
+<xs:element name="AuthenticationException" type="AuthenticationException" />
+<xs:complexType name="AuthenticationException">
+<xs:sequence />
+</xs:complexType>
+<xs:element name="ServiceNotAvailableException" type="ServiceNotAvailableException" />
+<xs:complexType name="ServiceNotAvailableException">
+<xs:sequence />
+</xs:complexType>
+<xs:element name="InvalidNumberException" type="InvalidNumberException" />
+<xs:complexType name="InvalidNumberException">
+<xs:sequence />
+</xs:complexType>
+<xs:element name="InvalidNumberFormatException" type="InvalidNumberFormatException" />
+<xs:complexType name="InvalidNumberFormatException">
+<xs:sequence />
+</xs:complexType>
+<xs:element name="InvalidAmountFormatException" type="InvalidAmountFormatException" />
+<xs:complexType name="InvalidAmountFormatException">
+<xs:sequence />
+</xs:complexType>
+<xs:element name="InvalidAmountException" type="InvalidAmountException" />
+<xs:complexType name="InvalidAmountException">
+<xs:sequence />
+</xs:complexType>
+<xs:element name="getBalanceByNumber" type="getBalanceByNumber" />
+<xs:complexType name="getBalanceByNumber">
+<xs:sequence>
+<xs:element minOccurs="0" name="number" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="getBalanceByNumberResponse" type="getBalanceByNumberResponse" />
+<xs:complexType name="getBalanceByNumberResponse">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="getBalanceByNumberOO" type="getBalanceByNumberOO" />
+<xs:complexType name="getBalanceByNumberOO">
+<xs:sequence>
+<xs:element minOccurs="0" name="number" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="getBalanceByNumberOOResponse" type="getBalanceByNumberOOResponse" />
+<xs:complexType name="getBalanceByNumberOOResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="BalanceReplyMsg" type="balanceReplyMsg" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="getContractInfoOO" type="getContractInfoOO" />
+<xs:complexType name="getContractInfoOO">
+<xs:sequence>
+<xs:element minOccurs="0" name="number" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="getContractInfoOOResponse" type="getContractInfoOOResponse" />
+<xs:complexType name="getContractInfoOOResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="ContractInfoMsg" type="contractInfoMsg" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="getContractInfo" type="getContractInfo" />
+<xs:complexType name="getContractInfo">
+<xs:sequence>
+<xs:element minOccurs="0" name="number" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="getContractInfoResponse" type="getContractInfoResponse" />
+<xs:complexType name="getContractInfoResponse">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="processPayment" type="processPayment" />
+<xs:complexType name="processPayment">
+<xs:sequence>
+<xs:element minOccurs="0" name="number" type="xs:string" />
+<xs:element minOccurs="0" name="amount" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="processPaymentResponse" type="processPaymentResponse" />
+<xs:complexType name="processPaymentResponse">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="processPaymentOO" type="processPaymentOO" />
+<xs:complexType name="processPaymentOO">
+<xs:sequence>
+<xs:element minOccurs="0" name="number" type="xs:string" />
+<xs:element minOccurs="0" name="amount" type="xs:string" />
+</xs:sequence>
+</xs:complexType>
+<xs:element name="processPaymentOOResponse" type="processPaymentOOResponse" />
+<xs:complexType name="processPaymentOOResponse">
+<xs:sequence />
+</xs:complexType>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getBalanceByNumberOO">
+    <wsdl:part element="tns:getBalanceByNumberOO" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getBalanceByNumberOOResponse">
+    <wsdl:part element="tns:getBalanceByNumberOOResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="AuthenticationException">
+    <wsdl:part element="tns:AuthenticationException" name="AuthenticationException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getBalanceByNumberResponse">
+    <wsdl:part element="tns:getBalanceByNumberResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getContractInfoOO">
+    <wsdl:part element="tns:getContractInfoOO" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getContractInfo">
+    <wsdl:part element="tns:getContractInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="processPaymentOOResponse">
+    <wsdl:part element="tns:processPaymentOOResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getContractInfoResponse">
+    <wsdl:part element="tns:getContractInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ServiceNotAvailableException">
+    <wsdl:part element="tns:ServiceNotAvailableException" name="ServiceNotAvailableException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="processPayment">
+    <wsdl:part element="tns:processPayment" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="InvalidCustomerStatusException">
+    <wsdl:part element="tns:InvalidCustomerStatusException" name="InvalidCustomerStatusException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="InvalidNumberException">
+    <wsdl:part element="tns:InvalidNumberException" name="InvalidNumberException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="InvalidAmountException">
+    <wsdl:part element="tns:InvalidAmountException" name="InvalidAmountException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="processPaymentOO">
+    <wsdl:part element="tns:processPaymentOO" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="InvalidAmountFormatException">
+    <wsdl:part element="tns:InvalidAmountFormatException" name="InvalidAmountFormatException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="processPaymentResponse">
+    <wsdl:part element="tns:processPaymentResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getBalanceByNumber">
+    <wsdl:part element="tns:getBalanceByNumber" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getContractInfoOOResponse">
+    <wsdl:part element="tns:getContractInfoOOResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="InvalidNumberFormatException">
+    <wsdl:part element="tns:InvalidNumberFormatException" name="InvalidNumberFormatException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ebanking">
+    <wsdl:operation name="getBalanceByNumber">
+      <wsdl:input message="tns:getBalanceByNumber" name="getBalanceByNumber">
+    </wsdl:input>
+      <wsdl:output message="tns:getBalanceByNumberResponse" name="getBalanceByNumberResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBalanceByNumberOO">
+      <wsdl:input message="tns:getBalanceByNumberOO" name="getBalanceByNumberOO">
+    </wsdl:input>
+      <wsdl:output message="tns:getBalanceByNumberOOResponse" name="getBalanceByNumberOOResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:InvalidCustomerStatusException" name="InvalidCustomerStatusException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:InvalidNumberException" name="InvalidNumberException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:AuthenticationException" name="AuthenticationException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:InvalidNumberFormatException" name="InvalidNumberFormatException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:ServiceNotAvailableException" name="ServiceNotAvailableException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getContractInfoOO">
+      <wsdl:input message="tns:getContractInfoOO" name="getContractInfoOO">
+    </wsdl:input>
+      <wsdl:output message="tns:getContractInfoOOResponse" name="getContractInfoOOResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:InvalidCustomerStatusException" name="InvalidCustomerStatusException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:InvalidNumberException" name="InvalidNumberException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:AuthenticationException" name="AuthenticationException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:InvalidNumberFormatException" name="InvalidNumberFormatException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:ServiceNotAvailableException" name="ServiceNotAvailableException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getContractInfo">
+      <wsdl:input message="tns:getContractInfo" name="getContractInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:getContractInfoResponse" name="getContractInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="processPayment">
+      <wsdl:input message="tns:processPayment" name="processPayment">
+    </wsdl:input>
+      <wsdl:output message="tns:processPaymentResponse" name="processPaymentResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="processPaymentOO">
+      <wsdl:input message="tns:processPaymentOO" name="processPaymentOO">
+    </wsdl:input>
+      <wsdl:output message="tns:processPaymentOOResponse" name="processPaymentOOResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:InvalidCustomerStatusException" name="InvalidCustomerStatusException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:InvalidNumberException" name="InvalidNumberException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:AuthenticationException" name="AuthenticationException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:InvalidAmountException" name="InvalidAmountException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:InvalidAmountFormatException" name="InvalidAmountFormatException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:InvalidNumberFormatException" name="InvalidNumberFormatException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:ServiceNotAvailableException" name="ServiceNotAvailableException">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EBankingSoapBinding" type="tns:ebanking">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getBalanceByNumber">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getBalanceByNumber">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getBalanceByNumberResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBalanceByNumberOO">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getBalanceByNumberOO">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getBalanceByNumberOOResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="InvalidCustomerStatusException">
+        <soap:fault name="InvalidCustomerStatusException" use="literal" />
+      </wsdl:fault>
+      <wsdl:fault name="InvalidNumberException">
+        <soap:fault name="InvalidNumberException" use="literal" />
+      </wsdl:fault>
+      <wsdl:fault name="AuthenticationException">
+        <soap:fault name="AuthenticationException" use="literal" />
+      </wsdl:fault>
+      <wsdl:fault name="InvalidNumberFormatException">
+        <soap:fault name="InvalidNumberFormatException" use="literal" />
+      </wsdl:fault>
+      <wsdl:fault name="ServiceNotAvailableException">
+        <soap:fault name="ServiceNotAvailableException" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getContractInfo">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getContractInfo">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getContractInfoResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getContractInfoOO">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getContractInfoOO">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getContractInfoOOResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="InvalidCustomerStatusException">
+        <soap:fault name="InvalidCustomerStatusException" use="literal" />
+      </wsdl:fault>
+      <wsdl:fault name="InvalidNumberException">
+        <soap:fault name="InvalidNumberException" use="literal" />
+      </wsdl:fault>
+      <wsdl:fault name="AuthenticationException">
+        <soap:fault name="AuthenticationException" use="literal" />
+      </wsdl:fault>
+      <wsdl:fault name="InvalidNumberFormatException">
+        <soap:fault name="InvalidNumberFormatException" use="literal" />
+      </wsdl:fault>
+      <wsdl:fault name="ServiceNotAvailableException">
+        <soap:fault name="ServiceNotAvailableException" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="processPayment">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="processPayment">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="processPaymentResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="processPaymentOO">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="processPaymentOO">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="processPaymentOOResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="InvalidCustomerStatusException">
+        <soap:fault name="InvalidCustomerStatusException" use="literal" />
+      </wsdl:fault>
+      <wsdl:fault name="InvalidNumberException">
+        <soap:fault name="InvalidNumberException" use="literal" />
+      </wsdl:fault>
+      <wsdl:fault name="AuthenticationException">
+        <soap:fault name="AuthenticationException" use="literal" />
+      </wsdl:fault>
+      <wsdl:fault name="InvalidAmountException">
+        <soap:fault name="InvalidAmountException" use="literal" />
+      </wsdl:fault>
+      <wsdl:fault name="InvalidAmountFormatException">
+        <soap:fault name="InvalidAmountFormatException" use="literal" />
+      </wsdl:fault>
+      <wsdl:fault name="InvalidNumberFormatException">
+        <soap:fault name="InvalidNumberFormatException" use="literal" />
+      </wsdl:fault>
+      <wsdl:fault name="ServiceNotAvailableException">
+        <soap:fault name="ServiceNotAvailableException" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EBanking">
+    <wsdl:port binding="tns:EBankingSoapBinding" name="EBanking">
+      <soap:address location="https://webservices-ext.orange.com.do/ebanking/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

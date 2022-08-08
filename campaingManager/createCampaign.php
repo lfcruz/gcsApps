@@ -37,13 +37,13 @@ and open the template in the editor.
         <div class="container">
             <form action="storeCampaign.php" method="post">
                 <label class="control-label" for="displayname">Campaign Name</label>
-                <input name="name" type="text" class="form-control" placeholder="Campaign Name" required autofocus>
+                <input name="name" type="text" class="form-control" placeholder="Campaign Name" maxlength="20" required autofocus>
                 <label for="displayname">Campaign Description</label>
-                <input name="description" type="text" class="form-control" placeholder="Campaign Description" required>
+                <input name="description" type="text" class="form-control" placeholder="Campaign Description" maxlength="50" required>
                 <?php
                     include 'addedFunctions.php';
                     $campaignTypeDS = pgQResult("select * from t_target_types", array());
-                    $targetsDS = pgQResult("select targets_id, name from t_targets where status = 'I'", array());
+                    $targetsDS = pgQResult("select targets_id, name from t_targets where status = 'I' and country = $1", array($_SESSION['country']));
                     echo "<label for='displayname'>Campaign Type</label><br>";
                     echo "<select name='type' required>";
                     foreach ($campaignTypeDS as $cRecrod){

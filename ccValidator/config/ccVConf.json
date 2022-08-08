@@ -1,0 +1,10 @@
+{
+    "appStatus":true,
+    "homeDirectory":"/opt/ccValidator/",
+    "updateRecordsLimit":"100",
+    "updateRecordsTime":"60",
+    "deleteRecordsLimit":"100",
+    "deleteRecordsTime":"300",
+    "bankRouterHost":"10.225.192.35",
+    "bankRouterPort":"8888"
+}

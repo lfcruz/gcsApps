@@ -4,7 +4,7 @@ if(date("H:i") > date($_SESSION['expiretime'])){
     session_destroy();
     header("Location: index.php");
 }
-$_SESSION['expiretime'] = date("H:i", strtotime('+20 minutes'));
+$_SESSION['expiretime'] = date("H:i", strtotime('+10 minutes'));
 ?>
 <!DOCTYPE html>
 <html>
@@ -29,6 +29,6 @@ $_SESSION['expiretime'] = date("H:i", strtotime('+20 minutes'));
 </html>
 <?php
 include 'addedFunctions.php';
-pgQResult("delete from t_campaings where targets_id = $1", array($_GET['record']));
-header("Location: uploadTargets.php");
+pgQResult("delete from t_campaings where campaing_id = $1", array($_GET['record']));
+header("Location: uploadCampaigns.php");
 ?>

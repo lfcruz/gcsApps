@@ -283,7 +283,7 @@ class isoPack {
 
     //Decode ISO to Array
     private function _parseData() {
-        if ($this->_data[1] == '?') {
+        if (key_exists(1, $this->_data) and $this->_data[1] == '?') {
             $inp	= substr($this->_iso, 4+32, strlen($this->_iso)-4-32);
         }
         else {
