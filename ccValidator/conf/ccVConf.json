@@ -1,9 +1,0 @@
-{
-    "appStatus":"On",
-    "homeDirectory":"/opt/ccValidator/",
-    "dbHostname":"localhost",
-    "dbPort":"5432",
-    "dbName":"ccValidator",
-    "dbUser":"devuser",
-    "dbPassword":"L1nux2kkk"
-}
