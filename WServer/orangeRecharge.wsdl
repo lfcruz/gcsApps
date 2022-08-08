@@ -1,0 +1,1538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://webservices.orange.com.do/recharge-ws/services/RechargeService" xmlns:intf="http://webservices.orange.com.do/recharge-ws/services/RechargeService" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns1="http://exception.recharge.ws.orange.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema targetNamespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://exception.recharge.ws.orange.com"/>
+   <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+   <complexType name="ArrayOf_xsd_double">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="xsd:double[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="CancelDirectRechargeRequest">
+    <sequence>
+     <element name="msisdn" nillable="true" type="xsd:string"/>
+     <element name="rechargeTransactionId" type="xsd:long"/>
+     <element name="sourceTransactionId" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="CancelDirectRechargeResponse">
+    <sequence>
+     <element name="cancellationTransactionId" type="xsd:long"/>
+     <element name="responseMessage" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="RechargeException">
+    <sequence/>
+   </complexType>
+   <complexType name="INNotAvaliableException">
+    <complexContent>
+     <extension base="impl:RechargeException">
+      <sequence/>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="InvalidAccountException">
+    <complexContent>
+     <extension base="impl:RechargeException">
+      <sequence/>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="AccountDataTimeOutException">
+    <complexContent>
+     <extension base="impl:RechargeException">
+      <sequence/>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="RechargeDAOException">
+    <complexContent>
+     <extension base="impl:RechargeException">
+      <sequence/>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="InvalidAmountException">
+    <complexContent>
+     <extension base="impl:RechargeException">
+      <sequence/>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="CancellationTimeExceededException">
+    <complexContent>
+     <extension base="impl:RechargeException">
+      <sequence/>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="DirectRechargeNotFoundException">
+    <complexContent>
+     <extension base="impl:RechargeException">
+      <sequence/>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="RechargeAlreadyCanceledException">
+    <complexContent>
+     <extension base="impl:RechargeException">
+      <sequence/>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="PaymentServiceException">
+    <complexContent>
+     <extension base="impl:RechargeException">
+      <sequence/>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="RejectedRechargeException">
+    <complexContent>
+     <extension base="impl:RechargeException">
+      <sequence/>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="TaxParameterNotFoundException">
+    <complexContent>
+     <extension base="impl:RechargeException">
+      <sequence/>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="AmountsRechargeLoanRequest">
+    <sequence>
+     <element name="loanType" nillable="true" type="xsd:int"/>
+     <element name="msisdn" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="Amount">
+    <sequence>
+     <element name="amount" nillable="true" type="xsd:int"/>
+     <element name="charge" nillable="true" type="xsd:double"/>
+     <element name="description" nillable="true" type="xsd:string"/>
+     <element name="id" type="xsd:int"/>
+     <element name="pkgId" type="xsd:int"/>
+     <element name="type" type="xsd:int"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfAmount">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="impl:Amount[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="AmountsRechargeLoanResponse">
+    <sequence>
+     <element name="amounts" nillable="true" type="impl:ArrayOfAmount"/>
+     <element name="msisdn" nillable="true" type="xsd:string"/>
+     <element name="status" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="RechargeLoanRequest">
+    <sequence>
+     <element name="loanId" nillable="true" type="xsd:int"/>
+     <element name="msisdn" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="RechargeLoanResponse">
+    <sequence>
+     <element name="description" nillable="true" type="xsd:string"/>
+     <element name="msisdn" nillable="true" type="xsd:string"/>
+     <element name="status" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="RechargeRequest">
+    <sequence>
+     <element name="amount" type="xsd:double"/>
+     <element name="clientId" type="xsd:int"/>
+     <element name="creditCardExpirationDate" nillable="true" type="xsd:string"/>
+     <element name="creditCardName" nillable="true" type="xsd:string"/>
+     <element name="creditCardNumber" nillable="true" type="xsd:string"/>
+     <element name="cvv" nillable="true" type="xsd:string"/>
+     <element name="ip" nillable="true" type="xsd:string"/>
+     <element name="msisdn" nillable="true" type="xsd:string"/>
+     <element name="transactionId" nillable="true" type="xsd:string"/>
+     <element name="usr" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="RechargeResponse">
+    <sequence>
+     <element name="amount" type="xsd:double"/>
+     <element name="amountPlusTax" type="xsd:double"/>
+     <element name="authorizationCode" nillable="true" type="xsd:string"/>
+     <element name="authorizationDate" nillable="true" type="xsd:string"/>
+     <element name="ccPaymentResponseMessage" nillable="true" type="xsd:string"/>
+     <element name="ccPaymentTransactionId" nillable="true" type="xsd:string"/>
+     <element name="referenceNumber" nillable="true" type="xsd:string"/>
+     <element name="responseMessage" nillable="true" type="xsd:string"/>
+     <element name="transactionId" nillable="true" type="xsd:long"/>
+    </sequence>
+   </complexType>
+   <complexType name="RejectedCreditCardPaymentException">
+    <sequence>
+     <element name="faultCodeAsString" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_xsd_string">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="xsd:string[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ApplyRechargeBonusRequest">
+    <sequence>
+     <element name="msisdn" nillable="true" type="xsd:string"/>
+     <element name="sourceINTransactionId" type="xsd:long"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_xsd_long">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="xsd:long[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ApplyRechargeBonusResponse">
+    <sequence>
+     <element name="bonusTransactionIds" nillable="true" type="impl:ArrayOf_xsd_long"/>
+     <element name="responseMessage" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="DirectRechargeRequest">
+    <sequence>
+     <element name="amount" type="xsd:double"/>
+     <element name="msisdn" nillable="true" type="xsd:string"/>
+     <element name="sourceTransactionId" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="RechargePacket">
+    <sequence>
+     <element name="amount" type="xsd:int"/>
+     <element name="packetId" type="xsd:int"/>
+     <element name="price" type="xsd:double"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfRechargePacket">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="impl:RechargePacket[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="DiscountAmountRequest">
+    <sequence>
+     <element name="amount" type="xsd:double"/>
+     <element name="msisdn" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+  </schema>
+  <schema targetNamespace="http://exception.recharge.ws.orange.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService"/>
+   <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+   <complexType name="RechargeFormatException">
+    <sequence/>
+   </complexType>
+   <complexType name="BonusNotFoundException">
+    <complexContent>
+     <extension base="impl:RechargeException">
+      <sequence/>
+     </extension>
+    </complexContent>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="applyDirectRechargeByPacketResponse">
+
+      <wsdl:part name="applyDirectRechargeByPacketReturn" type="impl:RechargeResponse">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="applyRechargeBonusResponse">
+
+      <wsdl:part name="applyRechargeBonusReturn" type="impl:ApplyRechargeBonusResponse">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="RejectedCreditCardPaymentException">
+
+      <wsdl:part name="fault" type="impl:RejectedCreditCardPaymentException">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="discountAmountResponse">
+
+      <wsdl:part name="discountAmountReturn" type="impl:RechargeResponse">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getRechargePacketsResponse">
+
+      <wsdl:part name="getRechargePacketsReturn" type="impl:ArrayOfRechargePacket">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="cancelDirectRechargeRequest">
+
+      <wsdl:part name="request" type="impl:CancelDirectRechargeRequest">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="RechargeAlreadyCanceledException">
+
+      <wsdl:part name="fault" type="impl:RechargeAlreadyCanceledException">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAmountsRechargeLoanRequest">
+
+      <wsdl:part name="request" type="impl:AmountsRechargeLoanRequest">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="InvalidAccountException">
+
+      <wsdl:part name="fault" type="impl:InvalidAccountException">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="BonusNotFoundException">
+
+      <wsdl:part name="fault" type="tns1:BonusNotFoundException">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="rechargeByAmountResponse">
+
+      <wsdl:part name="rechargeByAmountReturn" type="impl:RechargeResponse">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="onInitRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="InvalidAmountException">
+
+      <wsdl:part name="fault" type="impl:InvalidAmountException">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="responseResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getAvailableRechargeAmountsResponse">
+
+      <wsdl:part name="getAvailableRechargeAmountsReturn" type="impl:ArrayOf_xsd_double">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="processPaymentRechargeRequest">
+
+      <wsdl:part name="userLogin" type="xsd:string">
+
+      </wsdl:part>
+
+      <wsdl:part name="userPassword" type="xsd:string">
+
+      </wsdl:part>
+
+      <wsdl:part name="usr" type="xsd:string">
+
+      </wsdl:part>
+
+      <wsdl:part name="usrProfile" type="xsd:string">
+
+      </wsdl:part>
+
+      <wsdl:part name="customerId" type="xsd:int">
+
+      </wsdl:part>
+
+      <wsdl:part name="ccNumber" type="xsd:string">
+
+      </wsdl:part>
+
+      <wsdl:part name="ccExpDate" type="xsd:string">
+
+      </wsdl:part>
+
+      <wsdl:part name="ccCvv" type="xsd:string">
+
+      </wsdl:part>
+
+      <wsdl:part name="amount" type="xsd:double">
+
+      </wsdl:part>
+
+      <wsdl:part name="smsNumber" type="xsd:string">
+
+      </wsdl:part>
+
+      <wsdl:part name="TT" type="xsd:string">
+
+      </wsdl:part>
+
+      <wsdl:part name="TTC" type="xsd:string">
+
+      </wsdl:part>
+
+      <wsdl:part name="ccHolder" type="xsd:string">
+
+      </wsdl:part>
+
+      <wsdl:part name="IP" type="xsd:string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="RechargeDAOException">
+
+      <wsdl:part name="fault" type="impl:RechargeDAOException">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="rechargeLoanResponse">
+
+      <wsdl:part name="rechargeLoanReturn" type="impl:RechargeLoanResponse">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="reloadStaticMemoryRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="getAmountsRechargeLoanResponse">
+
+      <wsdl:part name="getAmountsRechargeLoanReturn" type="impl:AmountsRechargeLoanResponse">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="rechargeLoanRequest">
+
+      <wsdl:part name="request" type="impl:RechargeLoanRequest">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="INNotAvaliableException">
+
+      <wsdl:part name="fault" type="impl:INNotAvaliableException">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="RechargeException">
+
+      <wsdl:part name="fault" type="impl:RechargeException">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="applyDirectRechargeByPacketRequest">
+
+      <wsdl:part name="request" type="impl:DirectRechargeRequest">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="onInitResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="discountAmountRequest">
+
+      <wsdl:part name="request" type="impl:DiscountAmountRequest">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="TaxParameterNotFoundException">
+
+      <wsdl:part name="fault" type="impl:TaxParameterNotFoundException">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getRechargePacketsRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="DirectRechargeNotFoundException">
+
+      <wsdl:part name="fault" type="impl:DirectRechargeNotFoundException">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="reloadStaticMemoryResponse">
+
+      <wsdl:part name="reloadStaticMemoryReturn" type="xsd:boolean">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="RechargeFormatException">
+
+      <wsdl:part name="fault" type="tns1:RechargeFormatException">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="AccountDataTimeOutException">
+
+      <wsdl:part name="fault" type="impl:AccountDataTimeOutException">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="processPaymentRechargeResponse">
+
+      <wsdl:part name="processPaymentRechargeReturn" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="cancelDirectRechargeResponse">
+
+      <wsdl:part name="cancelDirectRechargeReturn" type="impl:CancelDirectRechargeResponse">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="CancellationTimeExceededException">
+
+      <wsdl:part name="fault" type="impl:CancellationTimeExceededException">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="PaymentServiceException">
+
+      <wsdl:part name="fault" type="impl:PaymentServiceException">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAvailableRechargeAmountsRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="applyRechargeBonusRequest">
+
+      <wsdl:part name="request" type="impl:ApplyRechargeBonusRequest">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="responseRequest">
+
+      <wsdl:part name="response" type="xsd:string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="applyDirectRechargeRequest">
+
+      <wsdl:part name="request" type="impl:DirectRechargeRequest">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="rechargeByAmountRequest">
+
+      <wsdl:part name="request" type="impl:RechargeRequest">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="applyDirectRechargeResponse">
+
+      <wsdl:part name="applyDirectRechargeReturn" type="impl:RechargeResponse">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="RechargeEndPoint">
+
+      <wsdl:operation name="response" parameterOrder="response">
+
+         <wsdl:input message="impl:responseRequest" name="responseRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:responseResponse" name="responseResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAvailableRechargeAmounts">
+
+         <wsdl:input message="impl:getAvailableRechargeAmountsRequest" name="getAvailableRechargeAmountsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getAvailableRechargeAmountsResponse" name="getAvailableRechargeAmountsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="cancelDirectRecharge" parameterOrder="request">
+
+         <wsdl:input message="impl:cancelDirectRechargeRequest" name="cancelDirectRechargeRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:cancelDirectRechargeResponse" name="cancelDirectRechargeResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:AccountDataTimeOutException" name="AccountDataTimeOutException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:DirectRechargeNotFoundException" name="DirectRechargeNotFoundException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:InvalidAccountException" name="InvalidAccountException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:RechargeAlreadyCanceledException" name="RechargeAlreadyCanceledException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:RechargeDAOException" name="RechargeDAOException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:InvalidAmountException" name="InvalidAmountException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:CancellationTimeExceededException" name="CancellationTimeExceededException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:INNotAvaliableException" name="INNotAvaliableException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:RechargeException" name="RechargeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAmountsRechargeLoan" parameterOrder="request">
+
+         <wsdl:input message="impl:getAmountsRechargeLoanRequest" name="getAmountsRechargeLoanRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getAmountsRechargeLoanResponse" name="getAmountsRechargeLoanResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="rechargeLoan" parameterOrder="request">
+
+         <wsdl:input message="impl:rechargeLoanRequest" name="rechargeLoanRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:rechargeLoanResponse" name="rechargeLoanResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="reloadStaticMemory">
+
+         <wsdl:input message="impl:reloadStaticMemoryRequest" name="reloadStaticMemoryRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:reloadStaticMemoryResponse" name="reloadStaticMemoryResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="onInit">
+
+         <wsdl:input message="impl:onInitRequest" name="onInitRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:onInitResponse" name="onInitResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="rechargeByAmount" parameterOrder="request">
+
+         <wsdl:input message="impl:rechargeByAmountRequest" name="rechargeByAmountRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:rechargeByAmountResponse" name="rechargeByAmountResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:RechargeFormatException" name="RechargeFormatException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:AccountDataTimeOutException" name="AccountDataTimeOutException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:InvalidAccountException" name="InvalidAccountException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:RechargeDAOException" name="RechargeDAOException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:TaxParameterNotFoundException" name="TaxParameterNotFoundException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:PaymentServiceException" name="PaymentServiceException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:InvalidAmountException" name="InvalidAmountException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:RejectedCreditCardPaymentException" name="RejectedCreditCardPaymentException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:INNotAvaliableException" name="INNotAvaliableException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:RechargeException" name="RechargeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="processPaymentRecharge" parameterOrder="userLogin userPassword usr usrProfile customerId ccNumber ccExpDate ccCvv amount smsNumber TT TTC ccHolder IP">
+
+         <wsdl:input message="impl:processPaymentRechargeRequest" name="processPaymentRechargeRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:processPaymentRechargeResponse" name="processPaymentRechargeResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="applyRechargeBonus" parameterOrder="request">
+
+         <wsdl:input message="impl:applyRechargeBonusRequest" name="applyRechargeBonusRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:applyRechargeBonusResponse" name="applyRechargeBonusResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:InvalidAccountException" name="InvalidAccountException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:RechargeDAOException" name="RechargeDAOException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:INNotAvaliableException" name="INNotAvaliableException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:RechargeException" name="RechargeException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:BonusNotFoundException" name="BonusNotFoundException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="applyDirectRecharge" parameterOrder="request">
+
+         <wsdl:input message="impl:applyDirectRechargeRequest" name="applyDirectRechargeRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:applyDirectRechargeResponse" name="applyDirectRechargeResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:RechargeFormatException" name="RechargeFormatException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:AccountDataTimeOutException" name="AccountDataTimeOutException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:InvalidAccountException" name="InvalidAccountException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:RechargeDAOException" name="RechargeDAOException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:TaxParameterNotFoundException" name="TaxParameterNotFoundException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:InvalidAmountException" name="InvalidAmountException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:INNotAvaliableException" name="INNotAvaliableException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:RechargeException" name="RechargeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="applyDirectRechargeByPacket" parameterOrder="request">
+
+         <wsdl:input message="impl:applyDirectRechargeByPacketRequest" name="applyDirectRechargeByPacketRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:applyDirectRechargeByPacketResponse" name="applyDirectRechargeByPacketResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:RechargeFormatException" name="RechargeFormatException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:AccountDataTimeOutException" name="AccountDataTimeOutException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:InvalidAccountException" name="InvalidAccountException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:RechargeDAOException" name="RechargeDAOException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:TaxParameterNotFoundException" name="TaxParameterNotFoundException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:InvalidAmountException" name="InvalidAmountException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:INNotAvaliableException" name="INNotAvaliableException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:RechargeException" name="RechargeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getRechargePackets">
+
+         <wsdl:input message="impl:getRechargePacketsRequest" name="getRechargePacketsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getRechargePacketsResponse" name="getRechargePacketsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="discountAmount" parameterOrder="request">
+
+         <wsdl:input message="impl:discountAmountRequest" name="discountAmountRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:discountAmountResponse" name="discountAmountResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:RechargeFormatException" name="RechargeFormatException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:AccountDataTimeOutException" name="AccountDataTimeOutException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:InvalidAccountException" name="InvalidAccountException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:RechargeDAOException" name="RechargeDAOException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:TaxParameterNotFoundException" name="TaxParameterNotFoundException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:InvalidAmountException" name="InvalidAmountException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:INNotAvaliableException" name="INNotAvaliableException">
+
+       </wsdl:fault>
+
+         <wsdl:fault message="impl:RechargeException" name="RechargeException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="RechargeServiceSoapBinding" type="impl:RechargeEndPoint">
+
+      <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="response">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="responseRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="responseResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAvailableRechargeAmounts">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getAvailableRechargeAmountsRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getAvailableRechargeAmountsResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="cancelDirectRecharge">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="cancelDirectRechargeRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="cancelDirectRechargeResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="AccountDataTimeOutException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="AccountDataTimeOutException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="DirectRechargeNotFoundException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="DirectRechargeNotFoundException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="InvalidAccountException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="InvalidAccountException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="RechargeAlreadyCanceledException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="RechargeAlreadyCanceledException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="RechargeDAOException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="RechargeDAOException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="InvalidAmountException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="InvalidAmountException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="CancellationTimeExceededException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="CancellationTimeExceededException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="INNotAvaliableException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="INNotAvaliableException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="RechargeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="RechargeException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAmountsRechargeLoan">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getAmountsRechargeLoanRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getAmountsRechargeLoanResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="rechargeLoan">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="rechargeLoanRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="rechargeLoanResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="reloadStaticMemory">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="reloadStaticMemoryRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="reloadStaticMemoryResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="onInit">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="onInitRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="onInitResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="rechargeByAmount">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="rechargeByAmountRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="rechargeByAmountResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="RechargeFormatException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="RechargeFormatException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="AccountDataTimeOutException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="AccountDataTimeOutException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="InvalidAccountException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="InvalidAccountException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="RechargeDAOException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="RechargeDAOException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="TaxParameterNotFoundException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="TaxParameterNotFoundException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="PaymentServiceException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="PaymentServiceException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="InvalidAmountException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="InvalidAmountException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="RejectedCreditCardPaymentException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="RejectedCreditCardPaymentException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="INNotAvaliableException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="INNotAvaliableException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="RechargeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="RechargeException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="processPaymentRecharge">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="processPaymentRechargeRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="processPaymentRechargeResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="applyRechargeBonus">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="applyRechargeBonusRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="applyRechargeBonusResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="InvalidAccountException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="InvalidAccountException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="RechargeDAOException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="RechargeDAOException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="INNotAvaliableException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="INNotAvaliableException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="RechargeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="RechargeException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="BonusNotFoundException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="BonusNotFoundException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="applyDirectRecharge">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="applyDirectRechargeRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="applyDirectRechargeResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="RechargeFormatException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="RechargeFormatException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="AccountDataTimeOutException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="AccountDataTimeOutException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="InvalidAccountException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="InvalidAccountException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="RechargeDAOException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="RechargeDAOException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="TaxParameterNotFoundException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="TaxParameterNotFoundException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="InvalidAmountException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="InvalidAmountException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="INNotAvaliableException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="INNotAvaliableException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="RechargeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="RechargeException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="applyDirectRechargeByPacket">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="applyDirectRechargeByPacketRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="applyDirectRechargeByPacketResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="RechargeFormatException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="RechargeFormatException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="AccountDataTimeOutException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="AccountDataTimeOutException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="InvalidAccountException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="InvalidAccountException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="RechargeDAOException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="RechargeDAOException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="TaxParameterNotFoundException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="TaxParameterNotFoundException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="InvalidAmountException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="InvalidAmountException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="INNotAvaliableException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="INNotAvaliableException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="RechargeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="RechargeException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getRechargePackets">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getRechargePacketsRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getRechargePacketsResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="discountAmount">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="discountAmountRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="discountAmountResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="RechargeFormatException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="RechargeFormatException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="AccountDataTimeOutException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="AccountDataTimeOutException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="InvalidAccountException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="InvalidAccountException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="RechargeDAOException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="RechargeDAOException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="TaxParameterNotFoundException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="TaxParameterNotFoundException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="InvalidAmountException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="InvalidAmountException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="INNotAvaliableException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="INNotAvaliableException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+         <wsdl:fault name="RechargeException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="RechargeException" namespace="http://webservices.orange.com.do/recharge-ws/services/RechargeService" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="RechargeEndPointService">
+
+      <wsdl:port binding="impl:RechargeServiceSoapBinding" name="RechargeService">
+
+         <wsdlsoap:address location="https://webservices-ext.orange.com.do/recharge-ws/services/RechargeService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
