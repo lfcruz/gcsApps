@@ -1,0 +1,34 @@
+{
+    "gutil" : {
+    "dbtype" : "PGS",
+    "dbhost" : "10.226.192.61",
+    "dbport" : "5432",
+    "dbname" : "gutil",
+    "dbuser" : "lcruz",
+    "dbpass" : "Prueba100"
+    },
+    "txn" : {
+    "dbtype" : "PGS",
+    "dbhost" : "10.226.192.121",
+    "dbport" : "55431",
+    "dbname" : "txndev",
+    "dbuser" : "sa",
+    "dbpass" : "password"
+    },
+    "neo" : {
+    "dbtype" : "PGS",
+    "dbhost" : "10.226.192.61",
+    "dbport" : "5432",
+    "dbname" : "neo",
+    "dbuser" : "lcruz",
+    "dbpass" : "Prueba100"
+    },
+    "bhub" : {
+    "dbtype" : "PGS",
+    "dbhost" : "10.226.192.199",
+    "dbport" : "5432",
+    "dbname" : "billerhub",
+    "dbuser" : "sa",
+    "dbpass" : "password"
+    }
+}

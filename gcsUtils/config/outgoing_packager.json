@@ -1,0 +1,29 @@
+{
+    "AAA" : {
+        "header" : {
+            "query" : "select b.externalid as billerid, count(1) as transactions, trunc(sum(amount)) as collected, to_char(now(),'yyyymmdd') as reportdate, brokerid as brokerid from t_postedpayments a, t_billers b where b.id = a.id_biller and a.status = 'S' and a.reported is false and a.id_biller = $1 and onliquidation is true group by b.externalid, reportdate, brokerid",
+            "id" : "01",
+            "structure" : {
+                "1" : {"name" : "billerid", "length" : "5", "padding" : " ", "orientation" : "0"},
+                "2" : {"name" : "brokerid", "length" : "8", "padding" : "0", "orientation" : "0"},
+                "3" : {"name" : "transactions", "length" : "7", "padding" : "0", "orientation" : "0"},
+                "4" : {"name" : "collected", "length" : "15", "padding" : "0", "orientation" : "0"},
+                "5" : {"name" : "reportdate", "length" : "8", "padding" : "", "orientation" : "0"},
+                "6" : {"name" : "filler", "length" : "10", "padding" : " ", "orientation" : "1"}
+                
+            }
+        },
+        "body" : {
+            "query" : "select id, nic, trunc(amount) as amount, to_char(applydate,'yyyymmdd') as fecha, paymentmethod from t_postedpayments where status = 'S' and reported is false and id_biller = $1",
+            "id" : "02",
+            "structure" : { 
+                "1" : {"name" : "id", "length" : "20", "padding" : "0", "orientation" : "0"},
+                "2" : {"name" : "paymentmethod", "length" : "2", "padding" : "", "orientation" : "0"},
+                "3" : {"name" : "amount", "length" : "13", "padding" : "0", "orientation" : "0"},
+                "4" : {"name" : "fecha", "length" : "8", "padding" : "", "orientation" : "0"},
+                "5" : {"name" : "nic", "length" : "10", "padding" : "0", "orientation" : "0"},
+                "6" : {"name" : "filler", "length" : "10", "padding" : " ", "orientation" : "1"}
+            }
+        }
+    }
+}
