@@ -12,6 +12,8 @@ class configLoader {
         return $this->status;
     }
     
+    
+    
     public function reload() {
         if(file_exists($this->filename)){
             try {

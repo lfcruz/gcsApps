@@ -18,5 +18,15 @@
         "inputFileDirectory" : "data/input/incoming/",
         "inputFilePrefix" : "CVG",
         "outputFileDirectory" : "data/output/processed/"
+    },
+    "SII800" : {
+        "inputFileDirectory" : "data/input/incoming/",
+        "inputFilePrefix" : "SII800",
+        "outputFileDirectory" : "data/output/processed/"
+    },
+    "SII855" : {
+        "inputFileDirectory" : "data/input/incoming/",
+        "inputFilePrefix" : "SII855",
+        "outputFileDirectory" : "data/output/processed/"
     }
 }
