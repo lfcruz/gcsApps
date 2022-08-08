@@ -1,0 +1,4 @@
+{
+    "logfile": "logs/qrLimitProcess.log",
+    "loglevel": "DEBUG"
+}

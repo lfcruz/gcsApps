@@ -1,0 +1,9 @@
+INFO - 2021-02-22 00:59:17 - +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+ Starting Limits Validatios +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+INFO - 2021-02-22 00:59:17 - Getting active merchants.....
+INFO - 2021-02-22 00:59:17 - Active merchnats found.
+DEBUG - 2021-02-22 00:59:17 - Active merchnats list: '0000','24000000002','24000000003','24000000008','24000000016','24000000023','24000000033','24000000041','24000000042','24000000046','24000000159'
+INFO - 2021-02-22 00:59:17 - Getting merchants over the threshold.....
+INFO - 2021-02-22 00:59:17 - Merchnats to block found.
+DEBUG - 2021-02-22 00:59:17 - Merchnats to block list: '00000000000','24000000041'
+INFO - 2021-02-22 00:59:17 - Merchant 24000000041 has been disabled.
+INFO - 2021-02-22 00:59:17 - +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+ Finished Limits Validatios +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
