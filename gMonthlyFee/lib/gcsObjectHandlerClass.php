@@ -154,6 +154,7 @@ class gMFBills {
             }else {
                 $query = QRY_GET_MF_BASE.QRY_FILTER_ENGINE_AGEING_TOP.$vMaxAge.QRY_INTERVAL_DAY.QRY_FILTER_ENGINE_AGEING_BOT.$vMinAge.QRY_INTERVAL_DAY.QRY_FILTER_ACTIVE_ACCOUNTS;
             }
+            $this->logger->writeLog(LOGINFO, $this->logger->logModule, 'Getting monthly bills for channel '.$this->channel);
             $this->dbConn->setQuery($query, Array());
             $vBillsList = $this->dbConn->execQry();
         } catch (Exception $gException) {
@@ -217,8 +218,6 @@ class gMFConfigure {
             $this->logger->writeLog(LOGDEBUG, $this->logger->logModule, $this->logger->logModule.' fail on constructor:',$gException);
             $response = false;
         }
-        //var_dump($this->channelGeneralParameters);
-        //var_dump($this->channelEngine);
         return $response;
     }
     
@@ -250,12 +249,12 @@ class gMFConfigure {
                         : false
                     : false
                     : false;
-                    $result = ($this->engConfig->structure[$this->channel]['queues']['1']['bot_days'] == 0) ? 
-                        ($this->engConfig->structure[$this->channel]['queues']['1']['top_days'] > $this->engConfig->structure[$this->channel]['queues']['1']['bot_days']) ? 
-                        ($this->engConfig->structure[$this->channel]['queues']['2']['bot_days'] > $this->engConfig->structure[$this->channel]['queues']['1']['top_days']) ?
-                        ($this->engConfig->structure[$this->channel]['queues']['2']['top_days'] > $this->engConfig->structure[$this->channel]['queues']['2']['bot_days']) ?
-                        ($this->engConfig->structure[$this->channel]['queues']['3']['bot_days'] > $this->engConfig->structure[$this->channel]['queues']['2']['top_days']) ?
-                        ($this->engConfig->structure[$this->channel]['queues']['3']['top_days'] > $this->engConfig->structure[$this->channel]['queues']['3']['bot_days']) ? true : false
+                    $result = ($this->engConfig->structure[$this->channel][ENGINE_AGEING]['queues']['1']['bot_days'] == 0) ? 
+                        ($this->engConfig->structure[$this->channel][ENGINE_AGEING]['queues']['1']['top_days'] > $this->engConfig->structure[$this->channel][ENGINE_AGEING]['queues']['1']['bot_days']) ? 
+                        ($this->engConfig->structure[$this->channel][ENGINE_AGEING]['queues']['2']['bot_days'] > $this->engConfig->structure[$this->channel][ENGINE_AGEING]['queues']['1']['top_days']) ?
+                        ($this->engConfig->structure[$this->channel][ENGINE_AGEING]['queues']['2']['top_days'] > $this->engConfig->structure[$this->channel][ENGINE_AGEING]['queues']['2']['bot_days']) ?
+                        ($this->engConfig->structure[$this->channel][ENGINE_AGEING]['queues']['3']['bot_days'] > $this->engConfig->structure[$this->channel][ENGINE_AGEING]['queues']['2']['top_days']) ?
+                        ($this->engConfig->structure[$this->channel][ENGINE_AGEING]['queues']['3']['top_days'] > $this->engConfig->structure[$this->channel][ENGINE_AGEING]['queues']['3']['bot_days']) ? true : false
                         : false
                     : false
                     : false
@@ -295,15 +294,15 @@ class gMFConfigure {
                 }else {
                     $jsonParameters .= ',"'.$parameter['gen_parameter_name'].'":{"display_name":"'.$parameter['param_display_name'].'","param_value":"'.$parameter['parameter_value'].'"}';
                 }
-            }            
-            $jsonParameters .= ',"pools":'.$this->appConfig->structure['channels'][$this->channel]['pools'].',"by_subscribers":'.(int)$this->appConfig->structure['channels'][$this->channel]['by_subscribers'].',"bulk_size":'.$this->appConfig->structure['channels'][$this->channel]['bulk_size'].'}';
+            }      
+            $jsonParameters .= ',"pools":'.json_encode($this->appConfig->structure['channels'][$this->channel]['pool']).',"by_subscribers":'.(int)$this->appConfig->structure['channels'][$this->channel]['by_subscribers'].',"bulk_size":'.$this->appConfig->structure['channels'][$this->channel]['bulk_size'].'}';
         } catch (Exception $gException) {
                 $this->logger->writeLog(LOGERROR, $this->logger->logModule, 'There was an exception getting general parameters for channel '.$this->channel);
                 $this->logger->writeLog(LOGDEBUG, $this->logger->logModule, 'There was an exception getting general parameters for channel '.$this->channel, $gException);
                 return false;
         }
-        //$this->logger->writeLog(LOGTRACE, $this->logger->logModule, var_dump(var_dump($this->channelGeneralParameters)));
         $this->channelGeneralParameters = json_decode($jsonParameters, true);
+        $this->logger->writeLog(LOGTRACE, $this->logger->logModule, json_encode($this->channelGeneralParameters));
         return true;
     }
     
@@ -318,7 +317,7 @@ class gMFConfigure {
             }
         }
         if($this->validateEngineConfiguration($engineCounter)){
-            //$this->logger->writeLog(LOGTRACE, $this->logger->logModule, var_dump($this->channelEngine));
+            $this->logger->writeLog(LOGTRACE, $this->logger->logModule, json_encode($this->channelEngine));
             return true;
         }else {
         return false;

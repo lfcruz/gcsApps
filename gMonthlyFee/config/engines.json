@@ -4,7 +4,7 @@
             "active": false
         },
         "Ageing":{
-            "active": false,
+            "active": true,
             "queues":{
                 "1": {
                     "bot_days": 0,
@@ -21,7 +21,7 @@
             }
         },
         "Banks":{
-            "active": true,
+            "active": false,
             "bank_codes":"'102','SCT','BRD','APA'"
         }
     },

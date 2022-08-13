@@ -10,8 +10,8 @@ var_dump($mfConfig->channelEngine);
 
 
 echo "************************************************************************\n";
-$mfBills = new gMFBills('TPGDR');
-var_dump($mfBills->getMFBills($mfConfig->channelGeneralParameters['CollectorSchedulerDays']['param_value']));
+//$mfBills = new gMFBills('TPGDR');
+//var_dump($mfBills->getMFBills($mfConfig->channelGeneralParameters['CollectorSchedulerDays']['param_value']));
 
 //var_dump($mfConfig);
 //var_dump($mfBills);
