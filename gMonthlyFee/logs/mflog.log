@@ -565,3 +565,19 @@
 2022-08-13T13:46:06 - gMFConfigure - 3 - Engine Ageing active status is: true
 2022-08-13T13:46:06 - gMFConfigure - 3 - Engine Banks active status is: false
 2022-08-13T13:46:06 - gMFConfigure - 3 - {"engineName":"Ageing","engineConf":{"active":true,"queues":{"1":{"bot_days":0,"top_days":30},"2":{"bot_days":31,"top_days":60},"3":{"bot_days":61,"top_days":90}}}}
+2022-08-13T13:55:15 - gMFConfigure - 3 - Channel TPGDR active status is: true
+2022-08-13T13:55:15 - gMFConfigure - 2 - Getting General Parameters......
+2022-08-13T13:55:15 - gMFConfigure - 3 - {"CollectorSchedulerDays":{"display_name":"Collector Scheduler Days","param_value":"90"},"GCSInActivityFee":{"display_name":"GCS Inactivity Fee","param_value":"0"},"InactivityDays":{"display_name":"No of days aft whh inactivity fee applied","param_value":"35"},"CustomerMonthlyFee":{"display_name":"Customer Monthly Fee","param_value":"30"},"pools":{"size":5,"db_profile":"pools_db"},"by_subscribers":0,"bulk_size":100}
+2022-08-13T13:55:15 - gMFConfigure - 2 - Getting channel paramerters......
+2022-08-13T13:55:15 - gMFConfigure - 3 - Engine Default active status is: false
+2022-08-13T13:55:15 - gMFConfigure - 3 - Engine Ageing active status is: false
+2022-08-13T13:55:15 - gMFConfigure - 3 - Engine Banks active status is: true
+2022-08-13T13:55:15 - gMFConfigure - 3 - {"engineName":"Banks","engineConf":{"active":true,"bank_codes":"'102','SCT','BRD','APA'"}}
+2022-08-13T13:56:42 - gMFConfigure - 3 - Channel TPGDR active status is: true
+2022-08-13T13:56:42 - gMFConfigure - 2 - Getting General Parameters......
+2022-08-13T13:56:42 - gMFConfigure - 3 - {"CollectorSchedulerDays":{"display_name":"Collector Scheduler Days","param_value":"90"},"GCSInActivityFee":{"display_name":"GCS Inactivity Fee","param_value":"0"},"InactivityDays":{"display_name":"No of days aft whh inactivity fee applied","param_value":"35"},"CustomerMonthlyFee":{"display_name":"Customer Monthly Fee","param_value":"30"},"pools":{"size":5,"db_profile":"pools_db"},"by_subscribers":0,"bulk_size":100}
+2022-08-13T13:56:42 - gMFConfigure - 2 - Getting channel paramerters......
+2022-08-13T13:56:42 - gMFConfigure - 3 - Engine Default active status is: true
+2022-08-13T13:56:42 - gMFConfigure - 3 - Engine Ageing active status is: false
+2022-08-13T13:56:42 - gMFConfigure - 3 - Engine Banks active status is: false
+2022-08-13T13:56:42 - gMFConfigure - 3 - {"engineName":"Default","engineConf":{"active":true}}
