@@ -1,0 +1,18 @@
+{
+     "database" :{
+          "dbtype" : "PGS",
+          "dbhost" : "postgresdb.gcs.dev",
+          "dbport" : "5432",
+          "dbname" : "cross_tech_data",
+          "dbschema" : "api_security",
+          "dbuser" : "lcruz",
+          "dbpass" : "Prueba100"
+     },
+     "token" :{
+          "type" : "JWT",
+          "alg" : "HS512",
+          "default-lifetime" : 300,
+          "password-minimum-lenght" : 8,
+          "password-regex-pattern" : "^\\S*(?=\\S{8,})(?=\\S*[a-z])(?=\\S*[A-Z])(?=\\S*[\\d])\\S*$"
+     }
+}
