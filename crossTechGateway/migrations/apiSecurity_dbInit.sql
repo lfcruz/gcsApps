@@ -41,6 +41,7 @@ create table api_security.functions (
     service_id  bigint      not null references services(id),
     api_tag     varchar(50) not null,
     description varchar(100),
+    secure      bool default true not null,
     active      bool default false not null
 );
 alter table api_security.functions owner to lcruz;
@@ -62,4 +63,12 @@ create table api_security.roles_definition(
     functions_id bigint not null references functions(id)
 );
 alter table api_security.roles_definition owner to lcruz;
+
+create sequence api_security.seq_users_roles start with 1 increment 1 minvalue 1 cache 1;
+create table api_security.users_roles(
+    id      bigint not null default nextval('seq_users_roles') primary key,
+    user_id bigint not null references users(id),
+    role_id bigint not null references roles(id)
+);
+alter table api_security.users_roles owner to lcruz;
 

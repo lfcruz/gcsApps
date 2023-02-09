@@ -1,0 +1,17 @@
+{
+     "error_codes": {
+          "security" : {
+               "0000" : { "api_code" : "0000", "api_description" : "OK" },
+               "9999" : { "api_code" : "9899", "api_description" : "FAIL" },
+               "9998" : { "api_code" : "9899", "api_description" : "FAIL" },
+               "8001" : { "api_code" : "8001", "api_description" : "Invalid Authorization." }
+          },
+          "purchase-code" : {
+               "0000" : { "api_code" : "0000", "api_description" : "OK" },
+               "9999" : { "api_code" : "9899", "api_description" : "FAIL" },
+               "9998" : { "api_code" : "9899", "api_description" : "FAIL" },
+               "8001" : { "api_code" : "8001", "api_description" : "Invalid Authorization." },
+               "9996" : { "api_code" : "9996", "api_description" : "Error generating purchase code"}
+          }
+     }
+}

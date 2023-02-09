@@ -4,9 +4,15 @@
           "dbhost" : "10.226.192.61",
           "dbport" : "5432",
           "dbname" : "cross_tech_data",
-          "dbschema" : "api_security",
+          "dbschema" : "api_purchasecode",
           "dbuser" : "lcruz",
           "dbpass" : "Prueba100"
+     },
+     "code" : {
+          "currencies" : {
+               "214" : true,
+               "810" : false
+          }
      },
      "token" :{
           "header" : { "alg" : "RSH512",

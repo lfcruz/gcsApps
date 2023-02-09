@@ -78,18 +78,22 @@ class dbRequest {
     }
     
     private function pgExec(){
-        pg_prepare($this->dbConnector,$this->queryStructure['qryName'],$this->queryStructure['dbQuery']);
-        $queryResult = pg_execute($this->dbConnector,$this->queryStructure['qryName'],$this->queryStructure['qryParameters']);
-        if (!$queryResult){
-            $recordFetched = Array();
-        }else {
-            if(substr($this->queryStructure['dbQuery'], 0, 6) <> 'select') {
-                $recordFetched = true;
-            }else {
-                $recordFetched = pg_fetch_all($queryResult);
-            }
-        }
-        pg_free_result($queryResult);
+         try {
+               pg_prepare($this->dbConnector,$this->queryStructure['qryName'],$this->queryStructure['dbQuery']);
+               $queryResult = pg_execute($this->dbConnector,$this->queryStructure['qryName'],$this->queryStructure['qryParameters']);
+               if (!$queryResult){
+                    $recordFetched = Array();
+               }else {
+                    if(substr($this->queryStructure['dbQuery'], 0, 6) <> 'select') {
+                         $recordFetched = true;
+                    }else {
+                         $recordFetched = pg_fetch_all($queryResult);
+                    }
+               }
+               pg_free_result($queryResult);
+         }catch(Exception $ex){
+              
+         }
         return $recordFetched;
     }
     
