@@ -9,19 +9,19 @@
           "dbpass" : "Prueba100"
      },
      "token" :{
-          "header" : { "alg" : "RSH512",
+          "header" : { "alg" : "RS512",
                        "type" : "JWT"
           },
           "body" : { "iss" : "GCS",
                      "sub" : "",
                      "nbf" : "",
                      "exp" : "",
-                     "ist" : "",
+                     "iat" : "",
                      "jti" : ""
           },
           "rsa_public_file" : "../config/jwtAPI_public.pem",
           "rsa_private_file" : "../config/jwtAPI_private.pem",
-          "default_lifetime" : 300,
+          "default_lifetime" : 86400,
           "password_minimum_lenght" : 8,
           "password_regex_pattern" : "^\\S*(?=\\S{8,})(?=\\S*[a-z])(?=\\S*[A-Z])(?=\\S*[\\d])\\S*$"
      }

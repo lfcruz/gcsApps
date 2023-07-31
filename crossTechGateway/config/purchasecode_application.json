@@ -12,7 +12,8 @@
           "currencies" : {
                "214" : true,
                "810" : false
-          }
+          },
+          "default-lifetime" : 300
      },
      "token" :{
           "header" : { "alg" : "RSH512",

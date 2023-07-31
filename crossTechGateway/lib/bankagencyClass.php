@@ -3,7 +3,8 @@ include_once 'dbClass.php';
 include_once 'configClass.php';
 include_once 'constants.php';
 include_once 'LogClass.php';
-class gCodes {
+include_once 'socketClass.php';
+class gBankAgency {
     private $config;
     private $db;
     private $lastResponse;
@@ -66,7 +67,7 @@ class gCodes {
                   $this->codeDTO['unique_customer_id'] = $vRequest['unique_customer_id'];
                   $this->codeDTO['amount'] = $vRequest['amount'];
                   $this->codeDTO['currency'] = $vRequest['currency'];
-                  $this->codeDTO['lifetime'] = (isset($vRequest['lifetime'])) ? $vRequest['lifetime'] : $this->config->structure['code']['default-lifetime'];
+                  $this->codeDTO['lifetime'] = $vRequest['lifetime'];
                   $this->codeDTO['merchant_id'] = (isset($vRequest['merchant_id'])) ? $vRequest['merchant_id'] : null;
                   $this->codeDTO['terminal_id'] = (isset($vRequest['terminal_id'])) ? $vRequest['terminal_id'] : null;
                   $this->codeDTO['creation_date'] = date('YmdHis');
@@ -158,35 +159,10 @@ class gCodes {
          return $result;
     }//Done.
     
-    //PUBLIC FUNCTIONS ********************************************************************
-    public function getCode($vHttpRequest) {
-        try {
-             if($this->registryRequest($vHttpRequest['body'])){
-                  $result = ($this->validateUniqueCustomer()) ? 
-                          $result = (!$this->generateCode()) ? false : 
-                          $result = (!$this->setExpireDate()) ? false : $this->activateCode()
-                          : 
-                          $result = (!$this->cancelUniqueCustormerCodes(true)) ? false : 
-                          $result = (!$this->generateCode()) ? false : 
-                          $result = (!$this->setExpireDate()) ? false : 
-                          $result = (!$this->activateCode()) ? false : true;
-                  $this->lastResponse = ($result) ? Array("error_code"=>PROC_OK, "payload"=>Array("reference_id"=>$this->codeDTO['reference_id'],
-                                                                                                    "purchase_code"=>$this->codeDTO['partner_id'].$this->codeDTO['purchase_code'],
-                                                                                                    "expire_datetime"=>$this->codeDTO['expire_date'])) : Array("error_code"=>E_GENERATING_CODE, "payload"=>"");
-             }else{
-                  $result = false;
-                  $this->lastResponse = Array("error_code"=>E_GENERATING_CODE, "payload"=>"");
-             }
-        } catch (Exception $ex) {
-             echo $ex->getTraceAsString();
-             $result = false;
-             $this->lastResponse = Array("error_code"=>E_GENERATING_CODE, "payload"=>"");
-        }
-        return $this->lastResponse;
-    }
     
-    public function cancelCode($vHttpRequest){
-         try {
+    //PUBLIC FUNCTIONS ********************************************************************
+    public function xml($vHttpRequest) {
+        try {
              if($this->registryRequest($vHttpRequest['body'])){
                   $result = ($this->validateUniqueCustomer()) ? 
                           $result = (!$this->generateCode()) ? false : 
@@ -211,13 +187,6 @@ class gCodes {
         return $this->lastResponse;
     }
     
-    public function expireCodes(){
-         
-    }
-    
-    public function get(){
-         
-    }
     
  //End of the Class   
  }

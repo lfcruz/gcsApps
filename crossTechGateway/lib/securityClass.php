@@ -24,6 +24,10 @@ class gSecure {
           $this->valid = $this->validateToken();
      }
     //PRIVATE FUNCTIONS *******************************************************************
+     private function base64url($data, $action = true){
+         return ($action) ? rtrim(strtr(base64_encode($data), '+/', '-_'), '=') : base64_decode(strtr($data, '-_', '+/'));
+     }
+     
      private function verifyUser($vPartner,$vUsername, $vPassword){
           try {
                $this->db->setQuery(DTO_USER_VALIDATION, Array($vUsername, $vPartner));
@@ -39,23 +43,18 @@ class gSecure {
      
      private function getTokenComponent($vToken){
           $rawComponents = explode(".", $vToken);
-          $tempBody = json_decode(base64_decode(urldecode($rawComponents[1])), true);
-          $tempExp = date_create($tempBody['exp']);
-          $this->valid = ($tempExp > date_create("now")) ? true : false;
           $this->tokenInfo['header'] = (!empty($rawComponents[0])) ? $rawComponents[0] : "";
           $this->tokenInfo['body'] = (!empty($rawComponents[1])) ? $rawComponents[1] : "";
           $this->tokenInfo['signature'] = (!empty($rawComponents[2])) ? $rawComponents[2] : "";
-          unset($tempBody);
-          unset($tempExp);
+          $this->tokenInfo['data'] = json_decode($this->base64url($this->tokenInfo['body'], false), true);
      }
      
      private function verifySingnature(){
-          $result = ($this->valid) ?  openssl_verify($this->tokenInfo['header'].'.'.$this->tokenInfo['body'], base64_decode(urldecode($this->tokenInfo['signature'])), file_get_contents($this->config->structure['token']['rsa_public_file']), OPENSSL_ALGO_SHA512) : false;
-          return $result;
+         return openssl_verify($this->tokenInfo['header'].'.'.$this->tokenInfo['body'], $this->base64url($this->tokenInfo['signature'], false), file_get_contents($this->config->structure['token']['rsa_public_file']), OPENSSL_ALGO_SHA512);
      }
      
      private function generateTokenHeader(){
-          return urlencode(base64_encode(json_encode($this->config->structure['token']['header'])));
+          return $this->base64url(json_encode($this->config->structure['token']['header']), true);
      }
      
      private function generateTokenBody(){
@@ -67,9 +66,11 @@ class gSecure {
                $this->tokenBodyDTO['sna'] = $this->userDTO[0]['partner_code'];
                $this->tokenBodyDTO['uid'] = $this->userDTO[0]['user_id'];
                $this->tokenBodyDTO['una'] = $this->userDTO[0]['username'];
-               $this->tokenBodyDTO['ist'] = date('YmdHis');
-               $this->tokenBodyDTO['nbf'] = date('YmdHis', strtotime(date('YmdHis').'+1 seconds'));
-               $this->tokenBodyDTO['exp'] = date('YmdHis', strtotime($this->tokenBodyDTO['nbf'].'+'.$this->config->structure['token']['default_lifetime'].' seconds'));
+               $this->tokenBodyDTO['iat'] = strtotime(date('YmdHis'));
+               //$this->tokenBodyDTO['nbf'] = date('YmdHis', strtotime(date('YmdHis').'+1 seconds'));
+               //$this->tokenBodyDTO['exp'] = date('YmdHis', strtotime($this->tokenBodyDTO['nbf'].'+'.$this->config->structure['token']['default_lifetime'].' seconds'));
+               $this->tokenBodyDTO['nbf'] = strtotime('+1 seconds');
+               $this->tokenBodyDTO['exp'] = strtotime(date('YmdHis', $this->tokenBodyDTO['nbf']).'+'.$this->config->structure['token']['default_lifetime'].' seconds');
                $this->tokenBodyDTO['jti'] = uniqid($this->tokenBodyDTO['sub'].'-'.$this->userDTO[0]['username'].'-', true);
                foreach ($userPermits as $key=>$permit){
                     $this->tokenBodyDTO['aud'][$permit['permits']] = true;
@@ -77,21 +78,25 @@ class gSecure {
           } catch (Exception $ex) {
                echo $ex->getTraceAsString();
           }
-          return urldecode(base64_encode(json_encode($this->tokenBodyDTO)));
+          return $this->base64url(json_encode($this->tokenBodyDTO), true);
      }
      
      private function generateTokenSignature(){
           openssl_sign($this->tokenInfo['header'].'.'.$this->tokenInfo['body'], $signature, openssl_get_privatekey(file_get_contents($this->config->structure['token']['rsa_private_file']), DTO_GET_DATA), OPENSSL_ALGO_SHA512);
-          return urlencode(base64_encode($signature));
+          return $this->base64url($signature, true);
           
+     }
+     
+     private function getTokenBodyData() {
+          return json_decode($this->base64url($this->tokenInfo['body'], false), true);
      }
      
      private function validateToken(){
         try {
-             return $this->verifySingnature();
-           
+             return ($this->tokenInfo['data']['exp'] > strtotime('now')) ? $this->verifySingnature() : false;
         } catch (Exception $ex) {
              echo $ex->getTraceAsString();
+             return false;
         }
     }
 

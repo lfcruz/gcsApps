@@ -72,3 +72,18 @@ create table api_security.users_roles(
 );
 alter table api_security.users_roles owner to lcruz;
 
+create sequence api_security.seq_authentication_keys start with 1 increment 1 minvalue 1 cache 1;
+create table api_security.authentication_keys(
+    id         bigint not null default nextval('seq_authentication_keys') primary key,
+    key_name   varchar(50) not null unique,
+    key_weight smallint not null unique
+);
+alter table api_security.authentication_keys owner to lcruz;
+
+create sequence api_security.seq_service_authentication_keys start with 1 increment 1 minvalue 1 cache 1;
+create table api_security.service_authentication_keys(
+    id         bigint not null default nextval('seq_service_authentication_keys') primary key,
+    key_code   varchar(50),
+    service_id bigint not null references services(id)
+);
+
