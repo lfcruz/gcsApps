@@ -99,6 +99,17 @@ class gSecure {
              return false;
         }
     }
+    
+     private function generateJWK(){
+          $keyInfo = openssl_pkey_get_details(openssl_pkey_get_public(file_get_contents($this->config->structure['token']['rsa_public_file'])));
+          $jsonData = ["kty" => "RSA",
+                       "n" => rtrim(str_replace(['+', '/'], ['-', '_'], base64_encode($keyInfo['rsa']['n'])), '='),
+                       "e" => rtrim(str_replace(['+', '/'], ['-', '_'], base64_encode($keyInfo['rsa']['e'])), '='),
+                       "alg" => $this->config->structure['token']['header']['alg'],
+                       "use" => "sig"
+                      ];
+          return $jsonData;
+     }
 
     //PUBLIC FUNCTIONS ********************************************************************
     
@@ -122,6 +133,16 @@ class gSecure {
               $response = Array("error_code"=>E_GENERAL, "payload"=>"");
          }
          
+         return $response;
+    }
+    
+    public function getJWK(){
+         try {
+              $response = Array("error_code"=>PROC_OK, "payload"=>$this->generateJWK());
+         } catch (Exception $ex) {
+              echo $ex->getTraceAsString();
+              $response = Array("error_code"=>E_GENERAL, "payload"=>"");
+         }
          return $response;
     }
     

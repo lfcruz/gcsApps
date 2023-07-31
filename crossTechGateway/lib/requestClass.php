@@ -195,6 +195,9 @@ class coreRequest {
                  break;
             case HTTP_GET:
                  switch ($this->httpRequest[1]) {
+                    case "get-jwk":
+                         $apiResponse = $this->generateResponse($this->secure->getJWK());
+                         break;
                     default:
                          $apiResponse = $this->generateResponse(Array("error_code"=>E_PROCESS, "payload"=>""));
                          break;
@@ -226,7 +229,7 @@ class coreRequest {
 ## PUBLIC FUNCTIONS ------------------------------------------------------------
     public function process (){
         $httpResponse = $this->generateResponse(Array("error_code"=>E_GENERAL, "payload"=>""));
-        if ($this->secure->valid or ($this->httpRequest[0] == 'security' and $this->httpRequest[1] == 'get-token')){
+        if ($this->secure->valid or ($this->httpRequest[0] == 'security' and ($this->httpRequest[1] == 'get-token' or $this->httpRequest[1] == 'get-jwk'))){
              switch ($this->httpRequest[0]){
                   case "security":
                        $httpResponse = $this->handlerSecurity($this->httpRequest);

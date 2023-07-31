@@ -87,3 +87,6 @@ create table api_security.service_authentication_keys(
     service_id bigint not null references services(id)
 );
 
+insert into api_security.functions values (default, 1, 'get-token', 'Generate jwt api token', true);
+insert into api_security.functions values (default, 1, 'get-jwk', 'Get jwk signing validation', true);
+insert into api_security.functions values (default, 1, 'set-password', 'Cambio password usuario', true);
