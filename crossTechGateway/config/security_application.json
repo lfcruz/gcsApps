@@ -10,7 +10,8 @@
      },
      "token" :{
           "header" : { "alg" : "RS512",
-                       "type" : "JWT"
+                       "type" : "JWT",
+                       "kid" : "e9c08f377247b035592875485b4ff61e2d955a52"
           },
           "body" : { "iss" : "GCS",
                      "sub" : "",

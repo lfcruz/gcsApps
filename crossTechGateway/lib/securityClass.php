@@ -103,10 +103,13 @@ class gSecure {
      private function generateJWK(){
           $keyInfo = openssl_pkey_get_details(openssl_pkey_get_public(file_get_contents($this->config->structure['token']['rsa_public_file'])));
           $jsonData = ["kty" => "RSA",
+                       "alg" => $this->config->structure['token']['header']['alg'],
+                       "use" => "sig",
+                       "kid" => "e9c08f377247b035592875485b4ff61e2d955a52",
+                       "x5t" => "e9c08f377247b035592875485b4ff61e2d955a52",
                        "n" => rtrim(str_replace(['+', '/'], ['-', '_'], base64_encode($keyInfo['rsa']['n'])), '='),
                        "e" => rtrim(str_replace(['+', '/'], ['-', '_'], base64_encode($keyInfo['rsa']['e'])), '='),
-                       "alg" => $this->config->structure['token']['header']['alg'],
-                       "use" => "sig"
+                       "x5c" => "MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAu10B4bayhEiMbvHJ2sPF0tzTcDmwYvBU49Wvvtbn4T36wRhYGpy3+YAfuauxEgaNqSAAYDbDpd9eEmz19knIhpmYaGOeqB0eGFwymWmvgsundbLQAXNaKbHMViDHHjsoQSt5O4ggo720QUuonVakB8aLHp4k4+EZqo3wHe/3siVa/ohBk0uKKIjcb47udH9kcckKUzQupSG579kymDCOQicxzognQqftEIveVgWRx8SXRuswpb90YXyvuPkMAc/fmIgis3wFVX1v/NbBFxxC16p2nt8NLOd2xAnYS/29J1iFOmtI+1Vw89wTyhWib+EBe1cejDYVRAHmptC/UVs2HMs0XYoPjgB8dDjWK7dkUriur94H+i1Ii0ceDlC5H4qaIH7wKvUrN+YRX5yS0Pbapwr69CDF3jKy4uxx7IArckE/e8Nj9xC9A+Pxhj0wnYLfDrLvwD7ov+65YcduESgq0/FTSepd/ANPzL8SS7Z2NlXScfzcPbVf8IhoRw5JZnKLVobygwo5LMCYJgTq/a6C08isNdYrrrtuJZZ+fsBFhaSeq3OGLUUmDBv+RjFhFkjgRkawsFCxf7NKB38exCuMgYouDXsE6crNrdxRxzJ7aHg0S7dzaqXOawaEX5ahL0qxo9e1iAfzn8JupSEeW5TPpL+NsX8/P1AqrfCIqKj8tWkCAwEAAQ=="
                       ];
           return $jsonData;
      }
