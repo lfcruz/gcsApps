@@ -11,7 +11,7 @@
      "token" :{
           "header" : { "alg" : "RS512",
                        "type" : "JWT",
-                       "kid" : "e9c08f377247b035592875485b4ff61e2d955a52"
+                       "kid" : "be67dd1889ddc74501aebd5c170db8e89b8d38d7"
           },
           "body" : { "iss" : "GCS",
                      "sub" : "",

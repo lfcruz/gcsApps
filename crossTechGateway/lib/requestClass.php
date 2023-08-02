@@ -55,7 +55,7 @@ class coreRequest {
     }
     
     private function handlerPurchaseCode(){
-         $vTokenInfo = $this->secure->getTokenInfo();
+         $vTokenInfo = $this->secure->tokenInfo['data'];
          $this->code = new gCodes($vTokenInfo['sub'], $vTokenInfo['uid']);
          switch ($this->httpRequest["method"]){
             case HTTP_POST:
@@ -118,7 +118,7 @@ class coreRequest {
     }
     
     private function handlerBankAgency(){
-         $vTokenInfo = $this->secure->getTokenInfo();
+         $vTokenInfo = $this->secure->tokenInfo['data'];
          $this->sab = new gBankAgency($vTokenInfo['sub'], $vTokenInfo['uid']);
          switch ($this->httpRequest["method"]){
             case HTTP_POST:
