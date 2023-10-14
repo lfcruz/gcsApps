@@ -1,0 +1,6 @@
+{
+     "active" : false,
+     "bulk_size" : 1,
+     "dakota_host" : "10.226.192.36",
+     "dakota_port" : "8888"
+}

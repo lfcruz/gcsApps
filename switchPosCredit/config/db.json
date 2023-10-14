@@ -1,0 +1,8 @@
+{
+    "dbtype" : "PGS",
+    "dbhost" : "10.226.192.61",
+    "dbport" : "5432",
+    "dbname" : "mako",
+    "dbuser" : "lcruz",
+    "dbpass" : "Prueba100"
+}
