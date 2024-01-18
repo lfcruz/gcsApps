@@ -32,16 +32,17 @@ class SwitchposProcessor {
      public function getPendingNotifications($vBulkSize){
           try {
                $this->dbConnector->startTransactions();
-               $this->dbConnector->setQuery(DTO_GET_BULK.$vBulkSize.")",[]);
+               $this->dbConnector->setQuery("update accountoperation set status = '".$this->threadid."' where id in (select id from accountoperation where status = 'I' and rc is null and errormessage is null order by id limit ".$vBulkSize." for update)",[]);
                $resultset = $this->dbConnector->execQry();
-               if($resultset){
-                    foreach ($resultset as $row){
-                         $this->dbConnector->setQuery("update accountoperation set status = '".$this->threadid."' where id = ".$row['id'], []);
-                         $this->dbConnector->execQry();
-                    }
+               if ($resultset) {
                     $this->dbConnector->commitTransactions();
+                    $this->logger->writeLog(INFO_LOG, "Transactions marked for thread: ".$this->threadid);
+                    $this->dbConnector->setQuery("select * from accountoperation where status = '".$this->threadid."'", []);
+                    $resultset = $this->dbConnector->execQry();
                }else {
                     $this->dbConnector->rollbacTransactions();
+                    $this->logger->writeLog(ERROR_LOG, "Transactions NOT MARKED for thread: ".$this->threadid);
+                    $resultset = [];
                }
           } catch (Exception $ex) {
                $this->dbConnector->rollbacTransactions();

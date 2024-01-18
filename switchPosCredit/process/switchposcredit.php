@@ -21,14 +21,14 @@ try {
 }
 
 while ($config->structure['active']){
-     if (time() > $timer+30){
+     if (time() > $timer+10){
           $config->reload();
           $logger->writeLog(INFO_LOG, "[SwitchPosCredit-".$threadid."]: Configuration Reloaded - Bulk size: ".$config->structure['bulk_size']);
           $timer = time();
      }
      try {
           $queue = json_decode($switchporEngine->getPendingNotifications($config->structure['bulk_size']), true);
-          $logger->writeLog(INFO_LOG, "[SwitchPosCredit-$threadid]: New queue loaded:\n". json_encode($queue));
+          $logger->writeLog(INFO_LOG, "[SwitchPosCredit-$threadid]: New queue loaded for trhead: [".$threadid."]\n". json_encode($queue));
           foreach ($queue as $row){
                $jsonStructure['MESSAGE']['BANKID'] = $row['bankid'];
                $jsonStructure['MESSAGE']['PARTNERID'] = $row['mid'];
@@ -54,9 +54,9 @@ while ($config->structure['active']){
                $jsonStructure = json_decode($response, true);
                $logger->writeLog(INFO_LOG, "[SwitchPosCredit-".$threadid."]: Notification response: [".$jsonStructure['MESSAGE']['TRANSACTION']['RESPONSECODE'][0]."]");
                if($jsonStructure['MESSAGE']['TRANSACTION']['RESPONSECODE'][0] == PROC_OK){                    
-                    $response = $switchporEngine->setCompletedNotification($row['id'], $jsonStructure['MESSAGE']['TRANSACTION']['RESPONSECODE'][0], $jsonStructure['MESSAGE']['TRANSACTION']['RECEIPT-NUMBER']);
+                    $response = $switchporEngine->setCompletedNotification($row['id'], $jsonStructure['MESSAGE']['TRANSACTION']['RESPONSECODE'][0], $jsonStructure['MESSAGE']['TRANSACTION']['RECEIPT-NUMBER'][0]);
                }else {
-                    $response = $switchporEngine->setCompletedNotification($row['id'], $jsonStructure['MESSAGE']['TRANSACTION']['RESPONSECODE'][0], $jsonStructure['MESSAGE']['TRANSACTION']['RECEIPT-NUMBER']);
+                    $response = $switchporEngine->setCompletedNotification($row['id'], $jsonStructure['MESSAGE']['TRANSACTION']['RESPONSECODE'][0], $jsonStructure['MESSAGE']['TRANSACTION']['RECEIPT-NUMBER'][0]);
                }
                $logger->writeLog(INFO_LOG, "[SwitchPosCredit-$threadid]: Notification completed: [$response]");
           }
